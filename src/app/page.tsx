@@ -1,65 +1,170 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Nav */}
+      <nav className="flex items-center justify-between px-6 py-6 max-w-6xl mx-auto sm:px-8">
+        <div className="font-heading text-xl font-bold tracking-tight">
+          <span className="text-foreground">Unbound</span>
+          <span className="text-teal">24</span>
+        </div>
+        <a
+          href="mailto:brittany@unbound24.com"
+          className="text-sm text-grey/70 hover:text-teal transition-colors"
+        >
+          Contact
+        </a>
+      </nav>
+
+      {/* Hero */}
+      <section className="px-6 pt-24 pb-32 max-w-6xl mx-auto sm:px-8 sm:pt-32 sm:pb-40">
+        <p className="text-teal text-sm font-medium tracking-widest uppercase mb-6">
+          Business Consulting
+        </p>
+        <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight max-w-2xl sm:text-5xl sm:leading-tight">
+          We install systems that create predictable growth.
+        </h1>
+        <p className="mt-6 text-lg text-grey/70 max-w-xl leading-relaxed">
+          Branding, lead generation, online presence, and sales enablement
+          for service businesses ready to scale without the chaos.
+        </p>
+        <a
+          href="mailto:brittany@unbound24.com"
+          className="inline-block mt-10 px-8 py-3.5 bg-teal text-background font-medium rounded-lg hover:bg-cyan transition-colors"
+        >
+          Start a Conversation
+        </a>
+      </section>
+
+      {/* What We Do */}
+      <section className="px-6 py-24 border-t border-foreground/10 sm:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-teal text-sm font-medium tracking-widest uppercase mb-4">
+            What We Do
+          </p>
+          <h2 className="font-heading text-2xl font-bold tracking-tight max-w-lg mb-16 sm:text-3xl">
+            Clear systems. No fluff. No confusion.
+          </h2>
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <ServiceCard
+              title="Brand Strategy"
+              description="High-level positioning, visual identity, and messaging that builds the most trusted presence in your market."
+            />
+            <ServiceCard
+              title="Lead Generation"
+              description="SEO, content, and digital presence systems that create consistent inbound calls instead of chasing referrals."
+            />
+            <ServiceCard
+              title="Sales Enablement"
+              description="Pipelines, sequences, and follow-up systems that convert leads without manual chaos."
+            />
+            <ServiceCard
+              title="Operational SOPs"
+              description="Documented processes that let your business run without you being the bottleneck."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="px-6 py-24 border-t border-foreground/10 sm:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-teal text-sm font-medium tracking-widest uppercase mb-4">
+            How We Work
+          </p>
+          <h2 className="font-heading text-2xl font-bold tracking-tight max-w-lg mb-16 sm:text-3xl">
+            Sustainable growth, not frantic marketing.
+          </h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <ValueCard
+              title="Growth"
+              description="We build measurable, scalable momentum. Revenue, systems, and opportunity that compounds."
+            />
+            <ValueCard
+              title="Freedom"
+              description="Our systems create independence, not dependency. They work even when you're not."
+            />
+            <ValueCard
+              title="Integrity"
+              description="We treat your business like it's ours. Honest expectations, real conversations about ROI."
+            />
+            <ValueCard
+              title="Simplicity"
+              description="Clear strategies. Clear results. No noise. If it feels overwhelming, something is wrong."
+            />
+            <ValueCard
+              title="Balance"
+              description="Growth that doesn't destroy peace. Defined scope, defined timelines, sustainable scale."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-24 border-t border-foreground/10 sm:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-heading text-2xl font-bold tracking-tight sm:text-3xl">
+            Ready to build systems that scale?
+          </h2>
+          <p className="mt-4 text-grey/70 max-w-md mx-auto">
+            We work with service businesses that are ready to grow
+            without adding complexity.
+          </p>
+          <a
+            href="mailto:brittany@unbound24.com"
+            className="inline-block mt-8 px-8 py-3.5 bg-teal text-background font-medium rounded-lg hover:bg-cyan transition-colors"
+          >
+            Start a Conversation
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-6 py-8 border-t border-foreground/10 sm:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <div className="font-heading text-sm font-bold tracking-tight">
+            <span className="text-foreground">Unbound</span>
+            <span className="text-teal">24</span>
+          </div>
+          <p className="text-xs text-grey/40">
+            &copy; {new Date().getFullYear()} Unbound24 Consulting. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </footer>
+    </div>
+  );
+}
+
+function ServiceCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div>
+      <div className="w-10 h-10 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+        <div className="w-2.5 h-2.5 rounded-full bg-teal" />
+      </div>
+      <h3 className="font-heading text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-sm text-grey/60 leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+function ValueCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="p-6 rounded-xl border border-foreground/5 bg-foreground/[0.02]">
+      <h3 className="font-heading text-lg font-semibold mb-2 text-teal">
+        {title}
+      </h3>
+      <p className="text-sm text-grey/60 leading-relaxed">{description}</p>
     </div>
   );
 }
