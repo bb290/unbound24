@@ -6,109 +6,107 @@ const COURSE_URL = "#";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Nav */}
-      <nav className="flex items-center justify-between px-4 py-5 max-w-5xl mx-auto sm:px-8">
-        <Wordmark />
-        <a
-          href={COURSE_URL}
-          className="px-5 py-2.5 rounded-full bg-cyan text-foreground text-sm font-extrabold hover:brightness-95 transition"
-        >
-          Get the free course
-        </a>
-      </nav>
+      {/* Hero: full-width cyan band with a slanted bottom edge */}
+      <header className="bg-cyan [clip-path:polygon(0_0,100%_0,100%_88%,0_100%)] pb-24 sm:pb-32">
+        <nav className="flex items-center justify-between px-4 py-5 max-w-6xl mx-auto sm:px-8">
+          <Wordmark />
+          <a
+            href={COURSE_URL}
+            className="px-5 py-2.5 rounded-full bg-background text-foreground text-sm font-extrabold hover:bg-card transition"
+          >
+            Get the free course
+          </a>
+        </nav>
 
-      {/* Hero */}
-      <section className="px-4 pt-16 pb-24 max-w-3xl mx-auto text-center sm:px-8 sm:pt-28 sm:pb-32">
-        <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-6">
-          A free course for home service owners
-        </p>
-        <h1 className="text-4xl font-black leading-tight tracking-tight text-balance sm:text-6xl sm:leading-[1.08]">
-          Running a business is simple.
-        </h1>
-        <p className="mt-5 text-2xl font-extrabold text-cyan-text sm:text-3xl">
-          Why is it so complicated?
-        </p>
-        <Image
-          src="/hero-juggling.webp"
-          alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
-          width={1536}
-          height={1024}
-          priority
-          className="mt-6 w-full max-w-lg mx-auto h-auto mix-blend-multiply"
-        />
-        <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl mx-auto sm:text-xl">
-          Own Your 24 helps plumbers, electricians, HVAC techs and roofers get
-          their business out of their head and onto paper. One short lesson at
-          a time, with Claude doing the writing.
-        </p>
-        <CourseButton className="mt-10" />
-        <p className="mt-4 text-sm text-muted">Free. No sales call. No catch.</p>
-      </section>
+        <div className="px-4 pt-10 max-w-6xl mx-auto grid items-center gap-12 sm:px-8 sm:pt-16 lg:grid-cols-[1.1fr_1fr]">
+          <div>
+            <p className="text-sm font-extrabold tracking-widest uppercase mb-5">
+              A free course for home service owners
+            </p>
+            <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
+              Running a business is simple.
+            </h1>
+            <p className="mt-5 text-2xl font-extrabold sm:text-3xl">
+              Why is it so complicated?
+            </p>
+            <p className="mt-6 text-lg leading-relaxed max-w-lg">
+              Own Your 24 helps plumbers, electricians, HVAC techs and roofers
+              get their business out of their head and onto paper. One short
+              lesson at a time, with Claude doing the writing.
+            </p>
+            <CourseButton dark className="mt-9" />
+            <p className="mt-4 text-sm font-semibold">Free. No sales call. No catch.</p>
+          </div>
+          <div className="rounded-[2.5rem] bg-background p-4 shadow-[0_24px_60px_rgba(10,28,51,0.18)] rotate-2 sm:p-6">
+            <Image
+              src="/hero-juggling.webp"
+              alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
+              width={1536}
+              height={1024}
+              priority
+              className="w-full h-auto -rotate-2"
+            />
+          </div>
+        </div>
+      </header>
 
       {/* Simple habits */}
-      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading
-            eyebrow="What actually works"
-            title="Simple habits beat fancy marketing."
-          >
-            The shops that stay booked aren&rsquo;t doing anything fancy. They
-            pick up the phone, they&rsquo;re easy to find, they get reviews, and
-            they stay in touch with past customers. That&rsquo;s what I&rsquo;ll
-            help you build.
-          </SectionHeading>
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
-            <HabitCard title="Be easy to find" description="Show up when someone nearby needs you." />
-            <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
-            <HabitCard title="Follow up" description="Past customers are your easiest next job." />
-          </div>
+      <FeatureRow
+        eyebrow="What actually works"
+        title="Simple habits beat fancy marketing."
+        body="The shops that stay booked aren't doing anything fancy. They pick up the phone, they're easy to find, they get reviews, and they stay in touch with past customers. That's what I'll help you build."
+      >
+        <div className="grid gap-4 sm:grid-cols-2">
+          <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
+          <HabitCard title="Be easy to find" description="Show up when someone nearby needs you." />
+          <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
+          <HabitCard title="Follow up" description="Past customers are your easiest next job." />
         </div>
-      </section>
+      </FeatureRow>
 
       {/* How it works */}
-      <section className="px-4 py-20 sm:px-8 sm:py-28">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading eyebrow="How it works" title="One brick at a time." />
-          <div className="mt-14 grid gap-4 sm:grid-cols-3">
-            <StepCard number="1" title="Watch one short lesson" description="One idea per lesson. Fits between jobs." />
-            <StepCard number="2" title="Do one Action with Claude" description="Each lesson has one prompt. You talk, Claude writes it up." />
-            <StepCard number="3" title="Keep what you made" description="Your process, your numbers, your way of doing things, written down." />
-          </div>
+      <FeatureRow
+        reverse
+        tinted
+        eyebrow="How it works"
+        title="One brick at a time."
+        body="No overhaul, no new software. Each lesson takes one small piece of your business and gets it written down."
+      >
+        <div className="flex flex-col gap-4">
+          <StepCard number="1" title="Watch one short lesson" description="One idea per lesson. Fits between jobs." />
+          <StepCard number="2" title="Do one Action with Claude" description="Each lesson has one prompt. You talk, Claude writes it up." />
+          <StepCard number="3" title="Keep what you made" description="Your process, your numbers, your way of doing things, written down." />
         </div>
-      </section>
+      </FeatureRow>
 
       {/* What you'll build */}
-      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading eyebrow="What you'll build" title="Your whole business, not a handful of tricks.">
-            Level 1 lays the foundation. Level 2 helps you grow on purpose.
-          </SectionHeading>
-          <div className="mt-12 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            {AREAS.map((area) => (
-              <span
-                key={area}
-                className="px-5 py-3 rounded-2xl bg-background border border-line text-base font-bold"
-              >
-                <span className="inline-block w-2.5 h-2.5 rounded-sm bg-cyan mr-2.5 align-middle" />
-                {area}
-              </span>
-            ))}
-          </div>
+      <FeatureRow
+        eyebrow="What you'll build"
+        title="Your whole business, not a handful of tricks."
+        body="Level 1 lays the foundation. Level 2 helps you grow on purpose."
+      >
+        <div className="flex flex-wrap gap-3">
+          {AREAS.map((area) => (
+            <span
+              key={area}
+              className="px-5 py-3 rounded-2xl bg-card border border-line text-lg font-bold"
+            >
+              <span className="inline-block w-3 h-3 rounded-sm bg-cyan mr-3 align-middle" />
+              {area}
+            </span>
+          ))}
         </div>
-      </section>
+      </FeatureRow>
 
       {/* About */}
-      <section className="px-4 py-20 sm:px-8 sm:py-28">
-        <div className="max-w-3xl mx-auto flex flex-col items-center gap-8 text-center sm:flex-row sm:text-left">
+      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
+        <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-[auto_1fr]">
           {/* TODO: Brittany's photo */}
-          <div className="shrink-0 w-36 h-36 rounded-full bg-highlight border-4 border-cyan" aria-hidden="true" />
-          <div>
-            <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-3">
-              Who&rsquo;s teaching
-            </p>
-            <h2 className="text-3xl font-black tracking-tight">Hi, I&rsquo;m Brittany.</h2>
-            <p className="mt-4 text-lg text-muted leading-relaxed">
+          <div className="w-48 h-48 rounded-full bg-highlight border-4 border-cyan sm:w-64 sm:h-64" aria-hidden="true" />
+          <div className="max-w-2xl">
+            <Eyebrow>Who&rsquo;s teaching</Eyebrow>
+            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Hi, I&rsquo;m Brittany.</h2>
+            <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">
               I&rsquo;ve spent [15] years running a service business. I built
               this course because nobody should need a $2,000 a month coach to
               write down how their own business works.
@@ -118,10 +116,13 @@ export default function Home() {
       </section>
 
       {/* For / not for */}
-      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading eyebrow="Fair warning" title="Is this for you?" />
-          <div className="mt-14 grid gap-4 sm:grid-cols-2">
+      <section className="px-4 py-20 sm:px-8 sm:py-28">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <Eyebrow>Fair warning</Eyebrow>
+            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Is this for you?</h2>
+          </div>
+          <div className="mt-12 grid gap-4 max-w-4xl mx-auto sm:grid-cols-2">
             <ListCard
               title="It's for you if"
               highlight
@@ -144,12 +145,18 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 py-20 sm:px-8 sm:py-28">
-        <div className="max-w-3xl mx-auto">
-          <SectionHeading eyebrow="Questions" title="What's the catch?" />
-          <div className="mt-12 flex flex-col gap-4">
+      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
+        <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+          <div>
+            <Eyebrow>Questions</Eyebrow>
+            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">What&rsquo;s the catch?</h2>
+            <p className="mt-5 text-lg text-muted leading-relaxed">
+              There isn&rsquo;t one. Here are the questions people ask.
+            </p>
+          </div>
+          <div className="flex flex-col gap-4">
             {FAQS.map((faq) => (
-              <div key={faq.q} className="p-6 rounded-3xl bg-card border border-line">
+              <div key={faq.q} className="p-6 rounded-3xl bg-background border border-line">
                 <h3 className="text-lg font-extrabold">{faq.q}</h3>
                 <p className="mt-2 text-muted leading-relaxed">{faq.a}</p>
               </div>
@@ -159,19 +166,17 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="px-4 pb-24 sm:px-8 sm:pb-32">
-        <div className="max-w-5xl mx-auto rounded-[2rem] bg-foreground px-6 py-16 text-center sm:py-20">
-          <h2 className="text-3xl font-black tracking-tight text-background sm:text-5xl">
-            Build it once. Brick by brick.
-          </h2>
-          <p className="mt-4 text-lg text-line">Free. No sales call. No catch.</p>
-          <CourseButton className="mt-10" />
-        </div>
+      <section className="px-4 py-24 text-center sm:px-8 sm:py-32">
+        <h2 className="text-4xl font-black tracking-tight sm:text-5xl">
+          Build it once. Brick by brick.
+        </h2>
+        <p className="mt-4 text-lg text-muted">Free. No sales call. No catch.</p>
+        <CourseButton dark className="mt-10" />
       </section>
 
       {/* Footer */}
       <footer className="px-4 py-8 border-t border-line sm:px-8">
-        <div className="max-w-5xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
           <Wordmark small />
           <p className="text-sm text-muted">
             Questions?{" "}
@@ -220,49 +225,68 @@ const FAQS = [
 
 function Wordmark({ small = false }: { small?: boolean }) {
   return (
-    <div className={`font-black tracking-tight ${small ? "text-base" : "text-xl"}`}>
+    <div className={`font-black tracking-tight ${small ? "text-base" : "text-2xl"}`}>
       <span>Unbound</span>
-      <span className="text-cyan-text">24</span>
+      <span className={small ? "text-cyan-text" : ""}>24</span>
     </div>
   );
 }
 
-function CourseButton({ className = "" }: { className?: string }) {
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-4">
+      {children}
+    </p>
+  );
+}
+
+function CourseButton({ dark = false, className = "" }: { dark?: boolean; className?: string }) {
   return (
     <a
       href={COURSE_URL}
-      className={`inline-block px-9 py-4 rounded-full bg-cyan text-foreground text-lg font-extrabold shadow-[0_8px_24px_rgba(46,212,232,0.35)] hover:brightness-95 transition ${className}`}
+      className={`inline-flex items-center gap-3 px-9 py-4 rounded-full text-lg font-extrabold transition ${
+        dark
+          ? "bg-foreground text-background hover:bg-[#16304f]"
+          : "bg-cyan text-foreground hover:brightness-95"
+      } ${className}`}
     >
-      Get the free course
+      Get the free course <span aria-hidden="true">&rarr;</span>
     </a>
   );
 }
 
-function SectionHeading({
+function FeatureRow({
   eyebrow,
   title,
+  body,
   children,
+  reverse = false,
+  tinted = false,
 }: {
   eyebrow: string;
   title: string;
-  children?: React.ReactNode;
+  body: string;
+  children: React.ReactNode;
+  reverse?: boolean;
+  tinted?: boolean;
 }) {
   return (
-    <div className="text-center max-w-2xl mx-auto">
-      <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-4">
-        {eyebrow}
-      </p>
-      <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
-      {children && (
-        <p className="mt-5 text-lg text-muted leading-relaxed">{children}</p>
-      )}
-    </div>
+    <section className={`px-4 py-20 sm:px-8 sm:py-28 ${tinted ? "bg-card" : ""}`}>
+      <div className="max-w-6xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className={reverse ? "lg:order-2" : ""}>
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h2 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">{title}</h2>
+          <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{body}</p>
+        </div>
+        <div className={reverse ? "lg:order-1" : ""}>{children}</div>
+      </div>
+    </section>
   );
 }
 
 function HabitCard({ title, description }: { title: string; description: string }) {
   return (
-    <div className="p-6 rounded-3xl bg-background border border-line">
+    <div className="p-6 rounded-3xl bg-card border border-line">
       <div className="w-8 h-4 rounded bg-cyan mb-5" aria-hidden="true" />
       <h3 className="text-lg font-extrabold">{title}</h3>
       <p className="mt-2 text-muted leading-relaxed">{description}</p>
@@ -280,12 +304,14 @@ function StepCard({
   description: string;
 }) {
   return (
-    <div className="p-7 rounded-3xl bg-card border border-line">
-      <div className="w-11 h-11 rounded-full bg-cyan flex items-center justify-center text-lg font-black mb-5">
+    <div className="flex gap-5 p-6 rounded-3xl bg-background border border-line">
+      <div className="shrink-0 w-11 h-11 rounded-full bg-cyan flex items-center justify-center text-lg font-black">
         {number}
       </div>
-      <h3 className="text-xl font-extrabold">{title}</h3>
-      <p className="mt-2 text-muted leading-relaxed">{description}</p>
+      <div>
+        <h3 className="text-xl font-extrabold">{title}</h3>
+        <p className="mt-1 text-muted leading-relaxed">{description}</p>
+      </div>
     </div>
   );
 }
