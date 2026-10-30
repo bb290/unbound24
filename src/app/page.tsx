@@ -20,9 +20,12 @@ export default function Home() {
         <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-6">
           A free course for home service owners
         </p>
-        <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-6xl sm:leading-[1.08]">
-          Running a business shouldn&rsquo;t be this complicated.
+        <h1 className="text-4xl font-black leading-tight tracking-tight text-balance sm:text-6xl sm:leading-[1.08]">
+          Running a business is simple.
         </h1>
+        <p className="mt-5 text-2xl font-extrabold text-cyan-text sm:text-3xl">
+          Why is it so complicated?
+        </p>
         <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl mx-auto sm:text-xl">
           Own Your 24 helps plumbers, electricians, HVAC techs and roofers get
           their business out of their head and onto paper. One short lesson at
