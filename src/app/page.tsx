@@ -62,14 +62,23 @@ export default function Home() {
         eyebrow="What actually works"
         title="Simple habits beat fancy marketing."
         body="The shops that stay booked aren't doing anything fancy. They pick up the phone, they're easy to find, they get reviews, and they stay in touch with past customers. That's what I'll help you build."
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
-          <HabitCard title="Be easy to find" description="Show up when someone nearby needs you." />
-          <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
-          <HabitCard title="Follow up" description="Past customers are your easiest next job." />
-        </div>
-      </FeatureRow>
+        visual={
+          <Illustration
+            src="/habits-phone.webp"
+            alt="A smiling stick figure in a cap answering a phone, with a check mark in a speech bubble"
+            width={1000}
+            height={833}
+          />
+        }
+        below={
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
+            <HabitCard title="Be easy to find" description="Show up when someone nearby needs you." />
+            <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
+            <HabitCard title="Follow up" description="Past customers are your easiest next job." />
+          </div>
+        }
+      />
 
       {/* How it works */}
       <FeatureRow
@@ -78,8 +87,16 @@ export default function Home() {
         eyebrow="How it works"
         title="One brick at a time."
         body="No overhaul, no new software. Each lesson takes one small piece of your business and gets it written down."
+        visual={
+          <Illustration
+            src="/brick-stack.webp"
+            alt="A stick figure placing a cyan brick on top of a short stack of bricks"
+            width={1000}
+            height={889}
+          />
+        }
       >
-        <div className="flex flex-col gap-4">
+        <div className="mt-8 flex flex-col gap-4">
           <StepCard number="1" title="Watch one short lesson" description="One idea per lesson. Fits between jobs." />
           <StepCard number="2" title="Do one Action with Claude" description="Each lesson has one prompt. You talk, Claude writes it up." />
           <StepCard number="3" title="Keep what you made" description="Your process, your numbers, your way of doing things, written down." />
@@ -91,8 +108,16 @@ export default function Home() {
         eyebrow="What you'll build"
         title="Your whole business, not a handful of tricks."
         body="Level 1 lays the foundation. Level 2 helps you grow on purpose."
+        visual={
+          <Illustration
+            src="/brick-house.webp"
+            alt="A proud stick figure leaning on a small house built from cyan bricks"
+            width={1000}
+            height={833}
+          />
+        }
       >
-        <div className="flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           {AREAS.map((area) => (
             <span
               key={area}
@@ -107,9 +132,14 @@ export default function Home() {
 
       {/* About */}
       <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-[auto_1fr]">
-          {/* TODO: Brittany's photo */}
-          <div className="w-48 h-48 rounded-full bg-highlight border-4 border-cyan sm:w-64 sm:h-64" aria-hidden="true" />
+        <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <Illustration
+            src="/hello-wave.webp"
+            alt="A smiling stick figure waving hello, holding a laptop under one arm"
+            width={1000}
+            height={951}
+            className="max-w-sm"
+          />
           <div className="max-w-2xl">
             <Eyebrow>Who&rsquo;s teaching</Eyebrow>
             <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Hi, I&rsquo;m Brittany.</h2>
@@ -174,6 +204,13 @@ export default function Home() {
 
       {/* CTA */}
       <section className="px-4 py-24 text-center sm:px-8 sm:py-32">
+        <Illustration
+          src="/relaxed.webp"
+          alt="A happy stick figure relaxing in a lawn chair with a coffee, everything it was juggling packed in a cyan box beside it"
+          width={1000}
+          height={624}
+          className="max-w-xl mb-10"
+        />
         <h2 className="text-4xl font-black tracking-tight sm:text-5xl">
           Build it once. Brick by brick.
         </h2>
@@ -269,14 +306,18 @@ function FeatureRow({
   eyebrow,
   title,
   body,
+  visual,
   children,
+  below,
   reverse = false,
   tinted = false,
 }: {
   eyebrow: string;
   title: string;
   body: string;
-  children: React.ReactNode;
+  visual: React.ReactNode;
+  children?: React.ReactNode;
+  below?: React.ReactNode;
   reverse?: boolean;
   tinted?: boolean;
 }) {
@@ -287,10 +328,36 @@ function FeatureRow({
           <Eyebrow>{eyebrow}</Eyebrow>
           <h2 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">{title}</h2>
           <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{body}</p>
+          {children}
         </div>
-        <div className={reverse ? "lg:order-1" : ""}>{children}</div>
+        <div className={reverse ? "lg:order-1" : ""}>{visual}</div>
       </div>
+      {below && <div className="max-w-6xl mx-auto mt-14">{below}</div>}
     </section>
+  );
+}
+
+function Illustration({
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`w-full h-auto mx-auto ${className}`}
+    />
   );
 }
 
