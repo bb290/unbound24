@@ -144,8 +144,7 @@ export default function Home() {
             <Eyebrow>Who&rsquo;s teaching</Eyebrow>
             <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Hi, I&rsquo;m Brittany.</h2>
             <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">
-              I&rsquo;ve spent [15] years running a service business. I built
-              this course because nobody should need a $2,000 a month coach to
+              I&rsquo;ve been in business since 2010. I built this course because nobody should need a $2,000 a month coach to
               write down how their own business works.
             </p>
           </div>
