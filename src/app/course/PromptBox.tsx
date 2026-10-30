@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 
-export default function PromptBox({ prompt, filename }: { prompt: string; filename: string }) {
+export default function PromptBox({
+  prompt,
+  filename,
+  title = "Your Claude prompt",
+}: {
+  prompt: string;
+  filename: string;
+  title?: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   async function copy() {
@@ -23,7 +31,7 @@ export default function PromptBox({ prompt, filename }: { prompt: string; filena
   return (
     <div className="mt-6 rounded-2xl bg-background border border-line overflow-hidden">
       <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-3 border-b border-line">
-        <p className="text-sm font-extrabold">Your Claude prompt</p>
+        <p className="text-sm font-extrabold">{title}</p>
         <div className="flex gap-2">
           <button
             type="button"

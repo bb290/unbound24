@@ -115,14 +115,35 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
           <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{lesson.action.title}</h2>
           <p className="mt-3 text-lg leading-relaxed">{lesson.action.text}</p>
-          {lesson.action.prompt && (
-            <PromptBox prompt={lesson.action.prompt} filename={`own-your-24-${lesson.num}-${lesson.slug}-prompt.txt`} />
+          {lesson.action.skill && (
+            <a
+              href={lesson.action.skill.href}
+              download
+              className="inline-flex items-center gap-3 mt-6 px-7 py-3.5 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
+            >
+              {lesson.action.skill.label} <span aria-hidden="true">&darr;</span>
+            </a>
           )}
+          {lesson.action.prompt && (
+            <PromptBox
+              prompt={lesson.action.prompt}
+              title={lesson.action.promptLabel}
+              filename={`own-your-24-${lesson.num}-${lesson.slug}-${lesson.action.skill ? "SKILL.md" : "prompt.txt"}`}
+            />
+          )}
+          {lesson.action.prompts?.map((item, i) => (
+            <PromptBox
+              key={item.title}
+              prompt={item.prompt}
+              title={item.title}
+              filename={`own-your-24-${lesson.num}-${lesson.slug}-prompt-${i + 1}.txt`}
+            />
+          ))}
         </section>
       )}
 
       <div className="mt-16 flex flex-wrap items-center gap-4">
-        <CompleteButton num={lesson.num} />
+        <CompleteButton slug={lesson.slug} />
         <SaveProgress compact />
       </div>
 

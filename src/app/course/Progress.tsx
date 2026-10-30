@@ -5,13 +5,13 @@ import { READY_LESSONS } from "@/content/course";
 import { CheckIcon } from "./CourseSidebar";
 import { useProgress } from "./useStored";
 
-export function CompleteButton({ num }: { num: string }) {
+export function CompleteButton({ slug }: { slug: string }) {
   const progress = useProgress();
-  const done = progress.has(num);
+  const done = progress.has(slug);
   return (
     <button
       type="button"
-      onClick={() => progress.toggle(num)}
+      onClick={() => progress.toggle(slug)}
       aria-pressed={done}
       className={`inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-lg font-extrabold transition ${
         done ? "bg-highlight border border-cyan hover:bg-card" : "bg-foreground text-background hover:bg-[#16304f]"
@@ -30,8 +30,8 @@ export function CompleteButton({ num }: { num: string }) {
 
 export function ProgressSummary() {
   const progress = useProgress();
-  const done = READY_LESSONS.filter((lesson) => progress.has(lesson.num)).length;
-  const nextLesson = READY_LESSONS.find((lesson) => !progress.has(lesson.num));
+  const done = READY_LESSONS.filter((lesson) => progress.has(lesson.slug)).length;
+  const nextLesson = READY_LESSONS.find((lesson) => !progress.has(lesson.slug));
   if (done === 0) return null;
   const percent = Math.round((done / READY_LESSONS.length) * 100);
   return (

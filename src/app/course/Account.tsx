@@ -34,7 +34,7 @@ function parse(raw: string): string[] {
 }
 
 export function AccountProvider({ children }: { children: React.ReactNode }) {
-  const [rawProgress, setRawProgress] = useStored("oy24-progress", "[]");
+  const [rawProgress, setRawProgress] = useStored("oy24-progress-v2", "[]");
   const [enabled, setEnabled] = useState(false);
   const [email, setEmail] = useState<string | null>(null);
   const [notice, setNotice] = useState<AccountState["notice"]>(null);
@@ -56,7 +56,7 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
       .then((data) => {
         setEnabled(Boolean(data.enabled));
         if (!data.email) return;
-        const local = parse(window.localStorage.getItem("oy24-progress") ?? "[]");
+        const local = parse(window.localStorage.getItem("oy24-progress-v2") ?? "[]");
         const merged = [...new Set([...local, ...(data.progress ?? [])])].sort();
         synced.current = JSON.stringify(data.progress ?? []);
         setRawProgress(JSON.stringify(merged));

@@ -61,5 +61,6 @@ export function useStoredList(key: string) {
 }
 
 export function useProgress() {
-  return useStoredList("oy24-progress");
+  // Finished lessons, by slug (slugs never change when lessons are renumbered).
+  return useStoredList("oy24-progress-v2");
 }

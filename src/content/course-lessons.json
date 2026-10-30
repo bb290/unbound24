@@ -1,6 +1,16 @@
 [
  {
   "num": "0.1",
+  "title": "End State",
+  "area": "Start Here",
+  "module": 0,
+  "slug": "end-state",
+  "status": "soon",
+  "sections": [],
+  "note": "What we're building, and what your business looks like at the end of this course."
+ },
+ {
+  "num": "0.2",
   "title": "The Framework",
   "area": "Start Here",
   "module": 0,
@@ -166,7 +176,7 @@
   "summary": "Why it's called Own Your 24, who this free course is for, the house framework everything is built on, and why your brand is the roof."
  },
  {
-  "num": "0.2",
+  "num": "0.3",
   "title": "Stuck? Check your foundation",
   "area": "Start Here",
   "module": 0,
@@ -429,7 +439,7 @@
     "kind": "step",
     "title": "What's in Level 1",
     "paras": [
-     "Here's what's in Level 1. Documentation: why to document, what to document, and where to keep it. Data: your customers, your jobs, and the few numbers that matter. Then one brick each for Delivery, Reputation, Attract, Convert, Retain, and Brand."
+     "Here's what's in Level 1. Documentation: why to document, what to document, and where to keep it. Then you'll connect Claude to your Notion, email, and calendar, and add your first skill, /boss, which runs every project after that with you. Then one brick each for Data, Delivery, Reputation, Attract, Convert, Retain, and Brand. And to finish, you'll learn to make skills of your own."
     ]
    },
    {
@@ -444,8 +454,8 @@
   "summary": "Why growth stalls, why more leads won't fix it, why you don't need a new system, and the simple loop you'll use to fix one area at a time."
  },
  {
-  "num": "0.3",
-  "title": "AI set up",
+  "num": "0.4",
+  "title": "AI Essentials",
   "area": "Start Here",
   "module": 0,
   "slug": "ai-set-up",
@@ -527,14 +537,87 @@
     "paras": [
      "A few guardrails. Don't paste in customer personal information, card numbers, or passwords. Read everything before it goes to a customer. You're the one responsible for what gets sent. And remember, AI can be confidently wrong. You're the expert in your trade. If something doesn't sound right, it probably isn't."
     ]
+   },
+   {
+    "kind": "step",
+    "title": "Drafts only",
+    "paras": [
+     "Here's the rule I use every day: Claude drafts, I send. Anything that goes to a customer, Claude writes as a draft. I read it, fix what's off, and send it myself."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Words that sound like jargon",
+    "paras": [
+     "If a word in this course sounds like jargon, check Nerd Alert at the end of Level 1. Plain-English answers, no quiz."
+    ]
    }
   ],
   "intro": "Before we start Level 1, let's get you set up with AI. This lesson covers what Claude is, which model to use, why context matters, and the basics of asking it for what you want.",
   "action": {
    "title": "Get set up",
-   "text": "Sign up for Claude Pro at claude.ai, then pick Opus 5.5 in the model menu. That's it. Nothing else yet. We'll start using it together in Level 1."
+   "text": "Sign up for Claude Pro at claude.ai, then pick Opus 5.5 in the model menu. That's it. In the next lesson, we'll set up your project."
   },
   "summary": "Get set up with Claude: what a model is, why context matters, prompting basics, and the guardrails to keep in mind."
+ },
+ {
+  "num": "0.5",
+  "title": "Claude Projects",
+  "area": "AI",
+  "module": 0,
+  "slug": "claude-projects",
+  "status": "ready",
+  "summary": "Set up a Claude project for your business, so every chat already knows who you are, what you do, and how you sound.",
+  "intro": "Every new chat with Claude starts from zero. In this lesson we'll fix that with a project: a home base where Claude already knows your business.",
+  "sections": [
+   {
+    "kind": "step",
+    "title": "The symptom",
+    "paras": [
+     "You open a new chat, explain that you're a roofer, explain your area, explain your crew, and you still get an answer that sounds like it was written for anyone. Then you do it all again tomorrow."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "What a project is",
+    "paras": [
+     "A project is a home base inside Claude. It has instructions Claude reads every single time, and files it can look at. Set it up once, and every chat inside it already knows who you are and how you work."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Always work inside your work project",
+    "paras": [
+     "From here on, every time you use Claude for your business, start the chat inside your project. That one habit is what makes everything else in this course work."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "What goes in your instructions",
+    "paras": [
+     "Who you are, what you do, who you serve, the tools you use, how you want Claude to talk to you, and how you sound. Plus a few standing rules, like this one: everything for a customer is a draft, and you send it yourself."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Your voice, in your own words",
+    "paras": [
+     "You don't need a brand guide yet. Claude will ask for two or three texts or emails you've already sent customers, and pick up how you sound from those. We'll go deeper on your values and voice in Brand 1.0."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Your instructions grow with you",
+    "paras": [
+     "Your instructions point to your Notion pages, like your Brand page and your SOPs. As you fill those in, Claude picks them up. You won't have to rewrite your instructions every time something changes."
+    ]
+   }
+  ],
+  "action": {
+   "title": "Set up your project",
+   "text": "Open Claude, start a new chat, paste in this prompt, and answer the questions. At the end, Claude gives you your project instructions and tells you exactly where to paste them.",
+   "prompt": "I want to set up a Claude project for my business, so I never have to re-explain who I am or how I work. Interview me, then write my project instructions.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- If my answer is vague, ask one follow-up. If I say \"skip,\" move on.\n- Tell me roughly how many questions are left every few questions.\n\nAsk me about:\n1. My first name and the name of my business.\n2. My trade, the main services I offer, and the services I don't do.\n3. My service area: the towns or areas I cover.\n4. How long I've been in business, and who's on the team (just me, or how many people and what they do).\n5. Who my best customers are: the kind of jobs and people I want more of.\n6. The tools I use every week: scheduling, estimates, invoicing, accounting, calendar, email, texting, photos.\n7. How I want you to talk to me: short and direct, or more detail and explanation.\n8. My voice: ask me to paste two or three texts or emails I've already sent customers. If I don't have any handy, ask me to describe how I talk to customers in a sentence or two.\n9. Anything you should never do or never say.\n\nWhen we're done, write my project instructions as one block I can copy, with these sections:\n- About me and my business (from my answers, in plain language).\n- My customers.\n- My tools.\n- How to talk to me.\n- My voice: three to five short notes on how I sound, based on my examples. Use my words, not marketing words.\n- Standing rules:\n  - Everything you write for customers is a draft. I read it and send it myself.\n  - Never ask for or keep customer personal information, card numbers, or passwords.\n  - If you're not sure about something in my trade, say so. I'm the expert.\n  - Ask me questions one at a time.\n  - My business is documented in Notion. Once it's connected, check my \"Start Here\" page and my SOPs before answering questions about how my business works.\n  - Before writing anything customer-facing, read my \"Brand\" page in Notion if it exists, and match it.\n\nThen tell me how to save it: start a new project in Claude, name it after my business, and paste the block into the project instructions. Remind me to work inside this project from now on.\n\nStart with question 1."
+  }
  },
  {
   "num": "1.1",
@@ -688,7 +771,7 @@
     "kind": "step",
     "title": "Data",
     "paras": [
-     "And the third thing to document is your data. Your customers, your jobs, and the handful of numbers that actually tell you how the business is doing. That gets its own lesson, 1.3."
+     "And the third thing to document is your data. Your customers, your jobs, and the handful of numbers that actually tell you how the business is doing. That gets its own lesson, 1.5."
     ]
    }
   ],
@@ -711,6 +794,131 @@
  },
  {
   "num": "1.3",
+  "title": "Connectors",
+  "area": "AI",
+  "module": 1,
+  "slug": "connectors",
+  "status": "ready",
+  "summary": "Connect Claude to your Notion, email, and calendar, build your business home in Notion, and document your tech stack.",
+  "intro": "Right now, Claude only knows what you paste into it. Connectors let it read your Notion, your email, and your calendar, so you can stop copying and pasting.",
+  "sections": [
+   {
+    "kind": "step",
+    "title": "What a connector is",
+    "paras": [
+     "A connector is an approved link between Claude and an app you already use. You turn it on once in Claude's settings, choose what it can see, and from then on Claude can look things up for you."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Start with three",
+    "paras": [
+     "Notion, where your business lives. Email, so Claude can help you answer customers. And your calendar, so it knows what your week looks like."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Read first, drafts only",
+    "paras": [
+     "Start by letting Claude read. When it writes an email for you, it saves a draft. You read it, and you hit send. That rule never changes."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Build your business home",
+    "paras": [
+     "With Notion connected, Claude can build your whole setup for you: a Start Here page it reads every session, a Dashboard with one project at a time, and a home for your SOPs, sorted into Attract, Convert, Deliver, and Retain."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "One project at a time",
+    "paras": [
+     "Your Dashboard holds one Current Project, a short task list, and an Idea Bank. Every new idea goes in the Idea Bank, so nothing gets lost and nothing pulls you off what you're working on."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Then your tech stack",
+    "paras": [
+     "Before you change any tools, write down the ones you have. The second prompt walks you through every app you use or pay for, and writes it all on one page, including where each login lives. Never the password itself."
+    ]
+   }
+  ],
+  "action": {
+   "title": "Connect and build",
+   "text": "First, turn on the Notion, email, and calendar connectors in Claude's settings. Then run these two prompts inside your work project, one at a time.",
+   "prompts": [
+    {
+     "title": "Prompt 1: Build your business home",
+     "prompt": "Build my business home in Notion. Use the Notion connector. If you can't reach my Notion, tell me exactly how to connect it (Claude settings, Connectors, Notion, allow access to my workspace) and wait until I say it's done.\n\nBefore you build anything, show me the plan in a short list and ask if it looks right. Then build it, and tell me as you finish each part.\n\nBuild this, in my Notion workspace, all under one top page called \"My Business HQ\":\n\n1. \"Start Here\": a page Claude reads at the start of every session. Give it three headings:\n   - \"Rules\": my standing rules (copy them from my project instructions).\n   - \"Current state\": one short paragraph about where things stand. Leave a placeholder for now.\n   - \"Session log\": newest entries go at the top. Add a first entry with today's date: \"Business HQ set up.\"\n\n2. \"Dashboard\": the one place I work from, one project at a time.\n   - A \"Current Project\" box at the top: the project name and a short \"Done when\" list. Ask me what my first project should be. If I'm not sure, suggest \"Document how my business runs today.\"\n   - A \"Project Tasks\" database with these columns: Task (title), Order (number, 1 is next), Status (Open, Waiting, Done), and Notes (text). Add three to five starter tasks for the current project.\n   - An \"Idea Bank\" database with these columns: Idea (title), Status (Idea, Maybe later, Promoted), Added (date), and Why (text). Every idea goes here so it doesn't pull me off my current project.\n\n3. \"SOPs\": how my business runs.\n   - \"Systems\", with three empty pages: \"Tech stack\", \"Brand\", and \"Billing\" (my price book and how I invoice).\n   - \"Processes\", with four pages: \"Attract\" (how customers find me), \"Convert\" (appointment, estimate, signed), \"Deliver\" (schedule, order materials, do the job, invoice, get paid), and \"Retain\" (review, refer, recurring, repeat). At the top of each, add a short line saying what it covers, and a \"Procedures\" heading underneath.\n   - \"Scenarios\": a page for if-this-then-that situations. Add one line at the top: \"If it's happened twice, write it down here.\"\n\nKeep everything plain and simple. Use my business's name where it fits. Don't fill in my SOPs yet; we do that one project at a time.\n\nWhen you're done, give me the link to \"My Business HQ\" and a three-line summary of what's where."
+    },
+    {
+     "title": "Prompt 2: Document your tech stack",
+     "prompt": "Help me document my tech stack: every tool my business uses. Interview me, then write it to the \"Tech stack\" page under SOPs, Systems in my Notion \"My Business HQ\". If you can't reach my Notion, write it here in the chat instead and tell me where to paste it.\n\nHow to interview me:\n- Ask one question at a time.\n- Start by asking me to list every app, program, or service I use or pay for, even the small ones. Prompt me with categories if I get stuck: phone and texting, email, calendar, scheduling and dispatch, estimates and quotes, invoicing and payments, accounting, CRM or customer list, photos and files, website, Google Business Profile, reviews, social media, marketing, payroll, and anything my crew uses.\n- Then, for each tool, ask: what step of my business it runs, who uses it, about what it costs each month, and where the login is kept (for example \"password manager\" or \"my phone\"). Never ask for or write down a password.\n\nWrite it up as a table with these columns: Tool, What it does for us, Step (Attract, Convert, Deliver, Retain, or Back office), Who uses it, Cost per month, Where the login lives.\n\nUnder the table, add:\n- Total monthly cost.\n- Overlaps: any two tools that seem to do the same job.\n- Gaps: any step of my business that doesn't have a tool, or that lives only in my head or on paper.\n- Unused: anything I pay for but barely use.\n\nDon't tell me to buy anything new. Just help me see what I have."
+    }
+   ]
+  }
+ },
+ {
+  "num": "1.4",
+  "title": "Your first skill: /boss",
+  "area": "AI",
+  "module": 1,
+  "slug": "boss-skill",
+  "status": "ready",
+  "summary": "Add /boss, the skill that runs your work sessions: it catches you up, works your current project one task at a time, and logs where you left off.",
+  "intro": "You've got a project, connectors, and a Dashboard. Now let's make it run, with your first skill.",
+  "sections": [
+   {
+    "kind": "step",
+    "title": "What a skill is",
+    "paras": [
+     "A skill is a saved set of instructions Claude follows when you ask for it. Instead of finding and pasting a long prompt every time, you just say the word."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Meet /boss",
+    "paras": [
+     "Say \"boss\" and Claude opens your Dashboard, reads where you left off, asks how much time you have, and works your current project with you, one task at a time. When you stop, it writes a note in your session log, so next time picks up right where you left off."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "When the list is empty",
+    "paras": [
+     "Short on time, or nothing on the list? /boss has small jobs ready: turn your inbox into reply drafts, document one SOP, write up a scenario that's happened twice, or get the ideas out of your head and into the Idea Bank."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "When the project is done",
+    "paras": [
+     "When everything on the Done when list is finished, /boss helps you pick the next project from your Idea Bank, with the same questions from the loop: what will it cost up front and every month, how will you measure it, and does it fit your brand?"
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "How the rest of Level 1 works",
+    "paras": [
+     "From here on, every lesson in Level 1 is one project. You read the lesson, add it as your Current Project, and run it through /boss. One brick at a time."
+    ]
+   }
+  ],
+  "action": {
+   "title": "Add /boss to Claude",
+   "text": "Download the skill. In Claude, open Settings, find Skills, and upload the file, then make sure it's turned on. Start a new chat in your work project and say \"boss\".",
+   "skill": {
+    "label": "Download /boss",
+    "href": "/downloads/boss.zip"
+   },
+   "prompt": "---\nname: boss\ndescription: Runs my work session from my Notion \"My Business HQ\". Use when I say \"boss\", \"/boss\", \"let's work\", \"what's next\", or \"work on my project\". Catches me up, works my current project one task at a time, falls back to small useful jobs when the list is empty or I'm short on time, and logs the session.\n---\n\n# Boss\n\nYou're my assistant for running my business, one project at a time. Everything lives in my Notion page \"My Business HQ\": \"Start Here\", \"Dashboard\" (Current Project, Project Tasks, Idea Bank), and \"SOPs\".\n\nHow to be with me: plain, brief, one thing at a time. Tell me roughly how long each thing will take. If I say \"skip\" or \"later\", note it and move on. Ask me questions one at a time.\n\n## Part 1: Connect and catch up\n\n1. Check that you can reach my Notion. If you can't, tell me exactly how to connect it (Claude settings, Connectors, Notion, allow access to my workspace) and wait until I say it's done. Don't do anything else until Notion works.\n2. Open \"Start Here\" and read it: the Rules, Current state, and the newest Session log entries. Follow the Rules.\n3. Open \"Dashboard\". Read the Current Project and its \"Done when\" list. Open \"Project Tasks\" and find rows with Status \"Open\", sorted by Order, lowest first. Read their Notes.\n4. Ask me how much time I have today.\n5. Tell me in one line where we left off (from the Session log), then show my open tasks as short numbered lines with about how long each takes. Suggest the lowest Order number that fits my time, and ask if that's okay.\n\n## Part 2: Work one task at a time\n\nFor the task I pick:\n- If it's something you can help write (an SOP, a scenario, a page, a draft message): interview me one question at a time, then write it to the right place in Notion. SOPs go under SOPs, in the right Process (Attract, Convert, Deliver, Retain) or Systems page. Scenarios go on the Scenarios page as \"If this happens, then we do this.\"\n- If it's something I do outside Notion: give me the steps one at a time, with the exact button or menu names, and wait for me to say each step is done.\n- When it's finished: add a short note in the task's Notes saying what was done and where it lives, and set Status to \"Done\" only after I confirm.\n- If I get stuck or stop partway: note where I stopped and what's blocking me. If I'm waiting on someone else, set Status to \"Waiting\".\n\nAfter each task, ask if I want the next one or want to stop.\n\n## Part 3: Fallback jobs\n\nOffer these when there are no open tasks, when I'm short on time, or when I ask for something small. Ask which one I want; do one at a time.\n1. **Inbox to drafts**: if my email is connected, find customer emails that need a reply and write reply drafts in my voice. Never send anything. Tell me where the drafts are.\n2. **Document one SOP**: pick an empty or thin page under SOPs, tell me which one, and interview me to fill it in. Start with the ideal version: what happens when nothing goes wrong.\n3. **Write up a scenario**: ask me what went sideways this week. If it's happened twice, write it up on the Scenarios page.\n4. **Capture ideas**: ask what's on my mind that isn't the current project, and add each one to the Idea Bank with today's date and my reason in \"Why\".\n\n## When the Current Project is done\n\nIf every item on the \"Done when\" list is done, tell me, then help me pick the next project from the Idea Bank. For each idea I'm considering, walk me through:\n- The cost up front (time and money) and the ongoing cost (time and money each month, and who does it).\n- How we'll measure it, and when we'll check (a week, 30, 60, or 90 days).\n- Whether it fits my brand and values (check my \"Brand\" page if it exists).\nThen write the new Current Project and its \"Done when\" list on the Dashboard, set the idea's Status to \"Promoted\", and add three to five starter tasks.\n\n## Rules\n\n- Never delete a page, a row, or anything I wrote. Never change Order numbers unless I ask.\n- Everything for customers is a draft. I read it and send it myself.\n- Never ask for, store, or write down passwords, card numbers, or customer personal information.\n- If an idea comes up that isn't the current project, put it in the Idea Bank instead of starting on it.\n- If you're unsure about something in my trade, ask. I'm the expert.\n\n## Part 4: Wrap up\n\nWhen I say I'm done, or the list is empty and I don't want a fallback job:\n1. Show a short summary: what's done, what's still open, anything I skipped.\n2. Add an entry at the top of the Session log on \"Start Here\": today's date and a few lines on what we did and what's next. Don't change older entries.\n3. If where things stand has changed, update \"Current state\" on \"Start Here\".\n4. Tell me everything is saved.\n\nStart with Part 1.",
+   "promptLabel": "What's inside the skill"
+  }
+ },
+ {
+  "num": "1.5",
   "title": "Data 1.0",
   "area": "Data",
   "module": 1,
@@ -719,7 +927,7 @@
   "sections": []
  },
  {
-  "num": "1.4",
+  "num": "1.6",
   "title": "Delivery 1.0: Define it, do it the same way",
   "area": "Delivery",
   "module": 1,
@@ -729,7 +937,7 @@
   "note": "The service, the standard, what \"done\" looks like."
  },
  {
-  "num": "1.5",
+  "num": "1.7",
   "title": "Reputation 1.0: Keep your promises, earn the reviews",
   "area": "Reputation",
   "module": 1,
@@ -739,17 +947,17 @@
   "note": "No business track record yet? Then your reputation is your personal one. Do what you say you'll do and make promises you can keep. Saying no is powerful: a no you keep beats a yes you break."
  },
  {
-  "num": "1.6",
-  "title": "Attract 1.0: Know your customer, be easy to find",
+  "num": "1.8",
+  "title": "Attract 1.0: Know your customer",
   "area": "Attract",
   "module": 1,
   "slug": "know-your-customer-be-easy-to-find",
   "status": "soon",
   "sections": [],
-  "note": "Who you want more of, what they need, and where they're looking."
+  "note": "Who you want more of, what they need, and where they're looking. (Your website comes in Level 2.)"
  },
  {
-  "num": "1.7",
+  "num": "1.9",
   "title": "Convert 1.0: Estimates and follow-up",
   "area": "Convert",
   "module": 1,
@@ -759,7 +967,7 @@
   "note": "Clear, fast, and easy to say yes to."
  },
  {
-  "num": "1.8",
+  "num": "1.10",
   "title": "Retain 1.0: The four Rs",
   "area": "Retain",
   "module": 1,
@@ -768,7 +976,7 @@
   "sections": []
  },
  {
-  "num": "1.9",
+  "num": "1.11",
   "title": "Brand 1.0: Your values and your promise",
   "area": "Brand",
   "module": 1,
@@ -776,6 +984,166 @@
   "status": "soon",
   "sections": [],
   "note": "Your values and the promise you make every customer. Brand 2.0 builds the brand guide."
+ },
+ {
+  "num": "1.12",
+  "title": "Custom skills: /skillz",
+  "area": "AI",
+  "module": 1,
+  "slug": "custom-skills",
+  "status": "ready",
+  "summary": "Turn the jobs you repeat every week into your own Claude skills, with /skillz doing the writing.",
+  "intro": "Here's the last piece of Level 1: making your own skills, so Claude handles the jobs you repeat every week.",
+  "sections": [
+   {
+    "kind": "step",
+    "title": "If you've done it three times, make it a skill",
+    "paras": [
+     "Remember the rule for scenarios: twice is a pattern. Skills work the same way. If you've asked Claude for the same kind of thing three times, it's time to save it."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Good first skills",
+    "paras": [
+     "Start small, with something you do every week: the follow-up text after an estimate, the review request after a job, a job summary for the customer, or turning your voice notes into an SOP."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "What makes a good skill",
+    "paras": [
+     "A clear name. A short description of when to use it. The steps, in order. Where Claude should look first, like your Brand page or your price book. What it should never do. And when it should stop and ask you."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Let Claude write it",
+    "paras": [
+     "You don't need to write a skill from scratch. /skillz interviews you about the task, one question at a time, writes the skill file, and walks you through adding it to Claude."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Test it, then fix it",
+    "paras": [
+     "Try your new skill in a fresh chat. If something's off, tell /skillz what was wrong and it'll fix it. Same loop as everything else: build it, check it, make it better."
+    ]
+   }
+  ],
+  "action": {
+   "title": "Build your first skill",
+   "text": "Download /skillz and add it to Claude the same way you added /boss. Then start a new chat in your work project, say \"skillz\", and build one skill of your own.",
+   "skill": {
+    "label": "Download /skillz",
+    "href": "/downloads/skillz.zip"
+   },
+   "prompt": "---\nname: skillz\ndescription: Helps me turn a task I keep doing with Claude into my own reusable skill. Use when I say \"skillz\", \"/skillz\", \"make a skill\", \"turn this into a skill\", or \"I keep doing this\". Interviews me about the task and writes a finished SKILL.md file I can add to Claude.\n---\n\n# Skillz\n\nYou help me build my own Claude skills. A skill is a saved set of instructions Claude follows whenever I ask for that task, so I stop copying and pasting the same prompt.\n\nHow to be with me: plain, brief, one question at a time. No jargon. If I use a word you're not sure about, ask.\n\n## Step 1: Pick the task\n\nAsk what task I want to turn into a skill. If I'm not sure, ask what I've done with Claude three or more times, and suggest one or two from my answer. Good first skills are small and repeat every week: a follow-up text after an estimate, a review request, a job summary for the customer, turning my notes into an SOP.\n\nIf the task is really big (\"run my marketing\"), help me pick one small piece of it.\n\n## Step 2: Interview me\n\nAsk, one at a time:\n1. What do you call this task? (This becomes the skill's name.)\n2. When do you do it? What usually kicks it off?\n3. What do you give Claude to start? (Notes, a photo, a customer's name and job, an email.)\n4. Walk me through how you do it today, step by step. (Follow up until the steps are clear.)\n5. What should come out at the end? (A text, an email, a page in Notion, a checklist.) How long, and in what format?\n6. Where should Claude look first? (My Brand page, an SOP, my price book.)\n7. What should Claude never do? (Never send anything, never promise a date, never quote a price.)\n8. When should Claude stop and ask me instead of guessing?\n9. Can you show me one example of a good result? (Optional, but it helps a lot.)\n\n## Step 3: Write the skill\n\nWrite a complete SKILL.md file in one copyable block:\n- It starts with this header, between two lines of three dashes:\n  - `name:` the task name in lowercase, with hyphens instead of spaces (for example `estimate-follow-up`).\n  - `description:` one or two sentences saying what the skill does and when to use it, including the words I'd naturally say to ask for it.\n- Then plain instructions to Claude: what to ask me first, the steps in order, where to look, what to produce and in what format, the never-do list, when to stop and ask, and my example if I gave one.\n- Always include: \"Anything for a customer is a draft. I read it and send it myself.\" and \"Never ask for or store passwords, card numbers, or customer personal information.\"\n\nKeep it short. A good skill fits on one screen.\n\n## Step 4: Help me add it\n\nWalk me through it one step at a time and wait for me after each:\n1. Make a folder named exactly like the skill's name.\n2. Save the block as a file named SKILL.md inside that folder.\n3. Zip the folder.\n4. In Claude, open Settings, find Skills, and upload the zip. Make sure it's turned on.\n5. Test it: start a new chat in my work project and ask for the task the way I normally would.\n\nIf the test result is off, ask me what's wrong, fix the SKILL.md, and have me upload it again.\n\n## Step 5: Save a note\n\nIf my Notion is connected, add a line to the \"Tech stack\" page under SOPs, Systems (or a \"My skills\" page if I have one) with the skill's name, what it does, and today's date.\n\nStart with Step 1.",
+   "promptLabel": "What's inside the skill"
+  }
+ },
+ {
+  "num": "1.13",
+  "title": "Nerd Alert (bonus)",
+  "area": "AI",
+  "module": 1,
+  "slug": "nerd-alert",
+  "status": "ready",
+  "summary": "Plain-English answers for the AI words you'll hear: models, prompts, context, tokens, hallucinations, projects, connectors, and skills.",
+  "intro": "Optional. Plain-English answers for the AI words you'll hear. Skip it, or come back whenever a word trips you up.",
+  "sections": [
+   {
+    "kind": "step",
+    "title": "Claude",
+    "paras": [
+     "An AI assistant made by a company called Anthropic. You type or talk, and it answers."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Model",
+    "paras": [
+     "The brain behind the chat. Some models are faster, some are smarter. For this course, use Opus 5.5."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Prompt",
+    "paras": [
+     "What you ask Claude to do. A good prompt says who you are, what you want, and the details."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Context",
+    "paras": [
+     "Everything Claude knows during a chat: your project instructions, your files, and the conversation so far. The right context gets you better answers."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Context window",
+    "paras": [
+     "How much Claude can keep in mind at once. Very long chats can run out of room, so start a fresh chat for each new task."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Token",
+    "paras": [
+     "The small chunks AI reads text in. One token is about three quarters of a word."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Hallucination",
+    "paras": [
+     "When AI says something wrong, confidently. That's why you check its work, especially numbers, prices, and codes."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Knowledge cutoff",
+    "paras": [
+     "The date a model's training stops. It may not know about anything newer, unless it can search the web."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Project",
+    "paras": [
+     "A home base in Claude with instructions and files, so every chat already knows your business. (Lesson 0.5)"
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Connector",
+    "paras": [
+     "A link that lets Claude read another app, like Notion, email, or your calendar. (Lesson 1.3)"
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Skill",
+    "paras": [
+     "Saved instructions Claude follows when you ask, like /boss. (Lessons 1.4 and 1.12)"
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Draft",
+    "paras": [
+     "Anything Claude writes for a customer. You read it, and you send it yourself."
+    ]
+   },
+   {
+    "kind": "step",
+    "title": "Personal information",
+    "paras": [
+     "Customer names with phone numbers or addresses, card numbers, passwords. Keep it out of your chats."
+    ]
+   }
+  ]
  },
  {
   "num": "2.1",

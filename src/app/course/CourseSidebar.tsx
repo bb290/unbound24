@@ -41,7 +41,7 @@ function LessonList({ headerAction }: { headerAction?: React.ReactNode }) {
       {MODULES.map((module) => {
         const lessons = lessonsInModule(module.id);
         const ready = lessons.filter((lesson) => lesson.status === "ready");
-        const done = ready.filter((lesson) => progress.has(lesson.num)).length;
+        const done = ready.filter((lesson) => progress.has(lesson.slug)).length;
         const open = !closed.has(String(module.id));
         const listId = `module-${module.id}-lessons`;
         return (
@@ -77,7 +77,7 @@ function LessonList({ headerAction }: { headerAction?: React.ReactNode }) {
                       </li>
                     );
                   }
-                  const finished = progress.has(lesson.num);
+                  const finished = progress.has(lesson.slug);
                   return (
                     <li key={lesson.num}>
                       <Link

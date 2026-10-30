@@ -13,6 +13,12 @@ export type LessonAction = {
   title: string;
   text: string;
   prompt?: string;
+  // Heading for the prompt box; defaults to "Your Claude prompt".
+  promptLabel?: string;
+  // Lessons with more than one prompt list them here instead.
+  prompts?: { title: string; prompt: string }[];
+  // A downloadable Claude skill (zip in public/downloads).
+  skill?: { label: string; href: string };
 };
 
 export type Lesson = {
@@ -49,9 +55,14 @@ export const READY_LESSONS = LESSONS.filter((lesson) => lesson.status === "ready
 
 // One illustration per finished lesson; falls back to the brick stack.
 const LESSON_ART: Record<string, { src: string; alt: string; width: number; height: number }> = {
-  "0.1": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
-  "0.2": { src: "/hero-juggling.webp", alt: "A stick figure juggling a phone, a clipboard, a wrench, a calendar, a mug, a house and papers", width: 960, height: 724 },
-  "0.3": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
+  "0.2": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
+  "0.3": { src: "/hero-juggling.webp", alt: "A stick figure juggling a phone, a clipboard, a wrench, a calendar, a mug, a house and papers", width: 960, height: 724 },
+  "0.4": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
+  "0.5": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
+  "1.3": { src: "/habits-phone.webp", alt: "A smiling stick figure on the phone, with a check mark in a speech bubble", width: 1000, height: 833 },
+  "1.4": { src: "/relaxed.webp", alt: "A happy stick figure relaxing in a lawn chair with a coffee, everything packed neatly in a box", width: 1000, height: 624 },
+  "1.12": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
+  "1.13": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
 };
 
 export function lessonArt(lesson: Lesson) {

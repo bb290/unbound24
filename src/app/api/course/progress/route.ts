@@ -2,7 +2,7 @@ import { READY_LESSONS } from "@/content/course";
 import { accountsEnabled, sessionEmail } from "@/lib/auth";
 import { findContact, parseProgress, saveProgress } from "@/lib/crm";
 
-const LESSON_NUMS = new Set(READY_LESSONS.map((lesson) => lesson.num));
+const LESSON_SLUGS = new Set(READY_LESSONS.map((lesson) => lesson.slug));
 
 export async function GET() {
   if (!accountsEnabled()) return Response.json({ enabled: false });
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   if (!email) return Response.json({ error: "Not signed in." }, { status: 401 });
   const body = await request.json().catch(() => ({}));
   const progress = Array.isArray(body.progress)
-    ? [...new Set(body.progress.map(String).filter((num: string) => LESSON_NUMS.has(num)))].sort()
+    ? [...new Set(body.progress.map(String).filter((slug: string) => LESSON_SLUGS.has(slug)))].sort()
     : [];
   try {
     await saveProgress(email, progress as string[]);
