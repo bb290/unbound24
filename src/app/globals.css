@@ -9,6 +9,9 @@
   --highlight: #E6F9FC;
   --cyan: #2ED4E8;
   --cyan-text: #0B9CB0;
+  --magenta: #E8399B;
+  --magenta-text: #C01F7A;
+  --magenta-soft: #FDEAF4;
 }
 
 @theme inline {
@@ -20,6 +23,9 @@
   --color-highlight: var(--highlight);
   --color-cyan: var(--cyan);
   --color-cyan-text: var(--cyan-text);
+  --color-magenta: var(--magenta);
+  --color-magenta-text: var(--magenta-text);
+  --color-magenta-soft: var(--magenta-soft);
   --font-sans: var(--font-nunito);
 }
 

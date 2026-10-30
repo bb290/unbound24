@@ -67,7 +67,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
       <header className="mt-4 grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase">Lesson {lesson.num}</p>
+          <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Lesson {lesson.num}</p>
           <h1 className="mt-2 text-4xl font-black leading-tight tracking-tight sm:text-5xl">{lesson.title}</h1>
           <p className="mt-4 text-sm font-bold text-muted">
             {readingMinutes(lesson)} min read{lesson.action ? " · 1 Action" : ""}
@@ -92,7 +92,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
       <div className="mt-12 max-w-3xl">
         {lesson.sections.map((section, i) =>
           section.kind === "part" ? (
-            <section key={i} className="mt-16 first:mt-0 pt-10 border-t-4 border-cyan">
+            <section key={i} className="mt-16 first:mt-0 pt-10 border-t-4 border-magenta">
               <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{section.title}</h2>
               {section.paras.map((para, j) => (
                 <p key={j} className="mt-4 text-lg text-muted leading-relaxed">{para}</p>
@@ -111,7 +111,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
       {lesson.action && (
         <section className="mt-16 rounded-3xl bg-highlight border border-cyan p-6 sm:p-8">
-          <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
+          <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
           <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{lesson.action.title}</h2>
           <p className="mt-3 text-lg leading-relaxed">{lesson.action.text}</p>
           {lesson.action.prompt && (

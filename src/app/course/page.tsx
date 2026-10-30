@@ -36,7 +36,7 @@ export default function CourseHome() {
 
       <section className="grid items-center gap-8 md:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-4">The free course</p>
+          <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase mb-4">The free course</p>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-6xl">Own Your 24</h1>
           <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">
             Build your business one brick at a time. Short lessons, one Action each, and a Claude
@@ -78,7 +78,7 @@ export default function CourseHome() {
                       href={`/course/${lesson.slug}`}
                       className="group p-5 rounded-3xl bg-card border border-line hover:border-cyan transition"
                     >
-                      <p className="text-sm font-extrabold text-cyan-text">{lesson.num}</p>
+                      <p className="text-sm font-extrabold text-magenta-text">{lesson.num}</p>
                       <h3 className="mt-1 text-lg font-extrabold group-hover:underline">{lesson.title}</h3>
                       {lesson.summary && <p className="mt-2 text-muted leading-relaxed">{lesson.summary}</p>}
                     </Link>

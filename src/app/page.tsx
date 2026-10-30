@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
               Business is Simple.
             </h1>
-            <p className="mt-5 text-2xl font-extrabold sm:text-3xl">
+            <p className="mt-5 text-2xl font-extrabold text-magenta-text sm:text-3xl">
               Why is it so complicated?
             </p>
             <p className="mt-6 text-lg leading-relaxed max-w-lg">
@@ -50,9 +50,9 @@ export default function Home() {
         below={
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
-            <HabitCard title="Be easy to find" description="Show up when someone nearby needs you." />
+            <HabitCard magenta title="Be easy to find" description="Show up when someone nearby needs you." />
             <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
-            <HabitCard title="Follow up" description="Past customers are your easiest next job." />
+            <HabitCard magenta title="Follow up" description="Past customers are your easiest next job." />
           </div>
         }
       />
@@ -95,12 +95,12 @@ export default function Home() {
         }
       >
         <div className="mt-8 flex flex-wrap gap-3">
-          {AREAS.map((area) => (
+          {AREAS.map((area, i) => (
             <span
               key={area}
               className="px-5 py-3 rounded-2xl bg-card border border-line text-lg font-bold"
             >
-              <span className="inline-block w-3 h-3 rounded-sm bg-cyan mr-3 align-middle" />
+              <span className={`inline-block w-3 h-3 rounded-sm mr-3 align-middle ${i % 2 ? "bg-magenta" : "bg-cyan"}`} />
               {area}
             </span>
           ))}
@@ -231,7 +231,7 @@ const FAQS = [
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-cyan-text text-sm font-extrabold tracking-widest uppercase mb-4">
+    <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase mb-4">
       {children}
     </p>
   );
@@ -307,10 +307,10 @@ function Illustration({
   );
 }
 
-function HabitCard({ title, description }: { title: string; description: string }) {
+function HabitCard({ title, description, magenta = false }: { title: string; description: string; magenta?: boolean }) {
   return (
     <div className="p-6 rounded-3xl bg-card border border-line">
-      <div className="w-8 h-4 rounded bg-cyan mb-5" aria-hidden="true" />
+      <div className={`w-8 h-4 rounded mb-5 ${magenta ? "bg-magenta" : "bg-cyan"}`} aria-hidden="true" />
       <h3 className="text-lg font-extrabold">{title}</h3>
       <p className="mt-2 text-muted leading-relaxed">{description}</p>
     </div>
@@ -328,7 +328,7 @@ function StepCard({
 }) {
   return (
     <div className="flex gap-5 p-6 rounded-3xl bg-background border border-line">
-      <div className="shrink-0 w-11 h-11 rounded-full bg-cyan flex items-center justify-center text-lg font-black">
+      <div className="shrink-0 w-11 h-11 rounded-full bg-magenta flex items-center justify-center text-lg font-black">
         {number}
       </div>
       <div>
