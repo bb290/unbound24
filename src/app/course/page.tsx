@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LESSONS, MODULES, READY_LESSONS, lessonsInModule } from "@/content/course";
 import { ProgressSummary } from "./Progress";
+import { SaveProgress } from "./Account";
 
 export const metadata: Metadata = {
   title: "Own Your 24: A free business course for home service owners",
@@ -17,14 +18,14 @@ const courseJsonLd = {
   name: "Own Your 24",
   description:
     "A free course for home service business owners: document your processes, systems and numbers one lesson at a time, using Claude to do the writing.",
-  provider: { "@type": "Organization", name: "Unbound24", url: "https://unbound24.com" },
+  provider: { "@type": "Organization", name: "Unbound24", url: "https://www.unbound24.com" },
   isAccessibleForFree: true,
   inLanguage: "en",
   hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", courseWorkload: "PT10H" },
   hasPart: READY_LESSONS.map((lesson) => ({
     "@type": "LearningResource",
     name: `${lesson.num} ${lesson.title}`,
-    url: `https://unbound24.com/course/${lesson.slug}`,
+    url: `https://www.unbound24.com/course/${lesson.slug}`,
   })),
 };
 
@@ -62,6 +63,9 @@ export default function CourseHome() {
       </section>
 
       <ProgressSummary />
+      <div className="mt-4">
+        <SaveProgress />
+      </div>
 
       <div className="mt-16 flex flex-col gap-10">
         {MODULES.map((module) => {

@@ -3,6 +3,6 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://unbound24.com/sitemap.xml",
+    sitemap: "https://www.unbound24.com/sitemap.xml",
   };
 }

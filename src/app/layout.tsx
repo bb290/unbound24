@@ -8,7 +8,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://unbound24.com"),
+  metadataBase: new URL("https://www.unbound24.com"),
   title: "Own Your 24 | A free course for home service owners",
   description:
     "A free, simple course for plumbers, electricians, HVAC techs and roofers. Write down how your business runs, one short lesson at a time, with Claude doing the writing.",

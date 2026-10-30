@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { MODULES, READY_LESSONS, getLesson, lessonArt, neighbors, readingMinutes } from "@/content/course";
 import PromptBox from "../PromptBox";
 import { CompleteButton } from "../Progress";
+import { SaveProgress } from "../Account";
 
 export const dynamicParams = false;
 
@@ -39,17 +40,17 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         "@type": "LearningResource",
         name: `${lesson.num} ${lesson.title}`,
         description: lesson.summary,
-        url: `https://unbound24.com/course/${lesson.slug}`,
+        url: `https://www.unbound24.com/course/${lesson.slug}`,
         isAccessibleForFree: true,
         learningResourceType: "Lesson",
-        isPartOf: { "@type": "Course", name: "Own Your 24", url: "https://unbound24.com/course" },
+        isPartOf: { "@type": "Course", name: "Own Your 24", url: "https://www.unbound24.com/course" },
         author: { "@type": "Person", name: "Brittany French" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Course", item: "https://unbound24.com/course" },
-          { "@type": "ListItem", position: 2, name: lesson.title, item: `https://unbound24.com/course/${lesson.slug}` },
+          { "@type": "ListItem", position: 1, name: "Course", item: "https://www.unbound24.com/course" },
+          { "@type": "ListItem", position: 2, name: lesson.title, item: `https://www.unbound24.com/course/${lesson.slug}` },
         ],
       },
     ],
@@ -122,7 +123,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
       <div className="mt-16 flex flex-wrap items-center gap-4">
         <CompleteButton num={lesson.num} />
-        <p className="text-sm text-muted">Your progress is saved in this browser.</p>
+        <SaveProgress compact />
       </div>
 
       <nav aria-label="Lesson navigation" className="mt-8 grid gap-4 sm:grid-cols-2">

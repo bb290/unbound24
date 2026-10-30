@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { READY_LESSONS } from "@/content/course";
 
-const BASE = "https://unbound24.com";
+const BASE = "https://www.unbound24.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
