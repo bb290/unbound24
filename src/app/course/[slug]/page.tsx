@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MODULES, READY_LESSONS, getLesson, lessonArt, neighbors, readingMinutes } from "@/content/course";
 import PromptBox from "../PromptBox";
+import { CompleteButton } from "../Progress";
 
 export const dynamicParams = false;
 
@@ -119,7 +120,12 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         </section>
       )}
 
-      <nav aria-label="Lesson navigation" className="mt-16 grid gap-4 sm:grid-cols-2">
+      <div className="mt-16 flex flex-wrap items-center gap-4">
+        <CompleteButton num={lesson.num} />
+        <p className="text-sm text-muted">Your progress is saved in this browser.</p>
+      </div>
+
+      <nav aria-label="Lesson navigation" className="mt-8 grid gap-4 sm:grid-cols-2">
         {prev ? (
           <Link href={`/course/${prev.slug}`} className="p-5 rounded-3xl border border-line hover:border-cyan transition">
             <p className="text-sm font-bold text-muted">&larr; Previous</p>

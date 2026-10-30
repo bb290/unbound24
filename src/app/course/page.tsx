@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { LESSONS, MODULES, READY_LESSONS, lessonsInModule } from "@/content/course";
+import { ProgressSummary } from "./Progress";
 
 export const metadata: Metadata = {
   title: "Own Your 24: A free business course for home service owners",
@@ -59,6 +60,8 @@ export default function CourseHome() {
           className="w-full max-w-sm h-auto mx-auto"
         />
       </section>
+
+      <ProgressSummary />
 
       <div className="mt-16 flex flex-col gap-10">
         {MODULES.map((module) => {
