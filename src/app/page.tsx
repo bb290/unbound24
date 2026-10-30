@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 // TODO: replace with the Stan Store course link once the store page is live.
 const COURSE_URL = "#";
 
@@ -26,6 +28,14 @@ export default function Home() {
         <p className="mt-5 text-2xl font-extrabold text-cyan-text sm:text-3xl">
           Why is it so complicated?
         </p>
+        <Image
+          src="/hero-juggling.webp"
+          alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
+          width={1536}
+          height={1024}
+          priority
+          className="mt-6 w-full max-w-lg mx-auto h-auto mix-blend-multiply"
+        />
         <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl mx-auto sm:text-xl">
           Own Your 24 helps plumbers, electricians, HVAC techs and roofers get
           their business out of their head and onto paper. One short lesson at
