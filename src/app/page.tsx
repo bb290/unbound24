@@ -236,11 +236,11 @@ export default function Home() {
   );
 }
 
-// TODO: Mission and Blog pages don't exist yet.
+// TODO: Mission and Course pages don't exist yet.
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Mission", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Course", href: "#" },
 ];
 
 const AREAS = [
