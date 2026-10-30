@@ -6,25 +6,34 @@ const COURSE_URL = "#";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero: full-width cyan band with a slanted bottom edge */}
-      <header className="bg-cyan [clip-path:polygon(0_0,100%_0,100%_88%,0_100%)] pb-24 sm:pb-32">
-        <nav className="flex items-center justify-between px-4 py-5 max-w-6xl mx-auto sm:px-8">
-          <Wordmark />
+      <header className="pb-16 sm:pb-24">
+        <nav className="flex items-center justify-between gap-4 px-4 py-5 max-w-6xl mx-auto sm:px-8">
+          <div className="flex items-center gap-8 sm:gap-12">
+            <Wordmark />
+            <div className="hidden items-center gap-8 text-base font-bold sm:flex">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={link.href === "/" ? "text-foreground" : "text-muted hover:text-foreground transition"}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
           <a
             href={COURSE_URL}
-            className="px-5 py-2.5 rounded-full bg-background text-foreground text-sm font-extrabold hover:bg-card transition"
+            className="px-5 py-2.5 rounded-full bg-cyan text-foreground text-sm font-extrabold hover:brightness-95 transition"
           >
-            Get the free course
+            Free Course
           </a>
         </nav>
 
         <div className="px-4 pt-10 max-w-6xl mx-auto grid items-center gap-12 sm:px-8 sm:pt-16 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <p className="text-sm font-extrabold tracking-widest uppercase mb-5">
-              A free course for home service owners
-            </p>
             <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
-              Running a business is simple.
+              Business is Simple.
             </h1>
             <p className="mt-5 text-2xl font-extrabold sm:text-3xl">
               Why is it so complicated?
@@ -34,19 +43,17 @@ export default function Home() {
               get their business out of their head and onto paper. One short
               lesson at a time, with Claude doing the writing.
             </p>
-            <CourseButton dark className="mt-9" />
+            <CourseButton className="mt-9" />
             <p className="mt-4 text-sm font-semibold">Free. No sales call. No catch.</p>
           </div>
-          <div className="rounded-[2.5rem] bg-background p-4 shadow-[0_24px_60px_rgba(10,28,51,0.18)] rotate-2 sm:p-6">
-            <Image
-              src="/hero-juggling.webp"
-              alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
-              width={1536}
-              height={1024}
-              priority
-              className="w-full h-auto -rotate-2"
-            />
-          </div>
+          <Image
+            src="/hero-juggling.webp"
+            alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
+            width={960}
+            height={724}
+            priority
+            className="w-full h-auto"
+          />
         </div>
       </header>
 
@@ -171,7 +178,7 @@ export default function Home() {
           Build it once. Brick by brick.
         </h2>
         <p className="mt-4 text-lg text-muted">Free. No sales call. No catch.</p>
-        <CourseButton dark className="mt-10" />
+        <CourseButton className="mt-10" />
       </section>
 
       {/* Footer */}
@@ -192,6 +199,13 @@ export default function Home() {
     </div>
   );
 }
+
+// TODO: Mission and Blog pages don't exist yet.
+const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Mission", href: "#" },
+  { label: "Blog", href: "#" },
+];
 
 const AREAS = [
   "Documentation",
@@ -227,7 +241,7 @@ function Wordmark({ small = false }: { small?: boolean }) {
   return (
     <div className={`font-black tracking-tight ${small ? "text-base" : "text-2xl"}`}>
       <span>Unbound</span>
-      <span className={small ? "text-cyan-text" : ""}>24</span>
+      <span className="text-cyan-text">24</span>
     </div>
   );
 }
@@ -240,17 +254,13 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CourseButton({ dark = false, className = "" }: { dark?: boolean; className?: string }) {
+function CourseButton({ className = "" }: { className?: string }) {
   return (
     <a
       href={COURSE_URL}
-      className={`inline-flex items-center gap-3 px-9 py-4 rounded-full text-lg font-extrabold transition ${
-        dark
-          ? "bg-foreground text-background hover:bg-[#16304f]"
-          : "bg-cyan text-foreground hover:brightness-95"
-      } ${className}`}
+      className={`inline-flex items-center gap-3 px-9 py-4 rounded-full bg-cyan text-foreground text-lg font-extrabold hover:brightness-95 transition ${className}`}
     >
-      Get the free course <span aria-hidden="true">&rarr;</span>
+      Free Course <span aria-hidden="true">&rarr;</span>
     </a>
   );
 }
