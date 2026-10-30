@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["600", "700"],
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Unbound24 | Business Consulting",
+  title: "Own Your 24 | A free course for home service owners",
   description:
-    "We install systems that create predictable growth. Branding, lead generation, and sales enablement for service businesses.",
+    "A free, simple course for plumbers, electricians, HVAC techs and roofers. Write down how your business runs, one short lesson at a time, with Claude doing the writing.",
 };
 
 export default function RootLayout({
@@ -25,10 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${nunito.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );

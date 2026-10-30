@@ -1,21 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1C2433;
-  --foreground: #F8FAFC;
-  --teal: #2DD4BF;
-  --cyan: #00FFFF;
-  --grey: #E2E8F0;
+  --background: #FFFFFF;
+  --foreground: #0A1C33;
+  --muted: #5B6B80;
+  --card: #F3F6FA;
+  --line: #DCE3EC;
+  --highlight: #E6F9FC;
+  --cyan: #2ED4E8;
+  --cyan-text: #0B9CB0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-teal: var(--teal);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-highlight: var(--highlight);
   --color-cyan: var(--cyan);
-  --color-grey: var(--grey);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-poppins);
+  --color-cyan-text: var(--cyan-text);
+  --font-sans: var(--font-nunito);
 }
 
 body {
