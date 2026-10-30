@@ -1,34 +1,11 @@
 import Image from "next/image";
-
-// TODO: replace with the Stan Store course link once the store page is live.
-const COURSE_URL = "#";
+import { COURSE_URL, SiteFooter, SiteNav } from "@/components/site";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="pb-16 sm:pb-24">
-        <nav className="flex items-center justify-between gap-4 px-4 py-5 max-w-6xl mx-auto sm:px-8">
-          <div className="flex items-center gap-8 sm:gap-12">
-            <Wordmark />
-            <div className="hidden items-center gap-8 text-base font-bold sm:flex">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={link.href === "/" ? "text-foreground" : "text-muted hover:text-foreground transition"}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-          <a
-            href={COURSE_URL}
-            className="px-5 py-2.5 rounded-full bg-cyan text-foreground text-sm font-extrabold hover:brightness-95 transition"
-          >
-            Free Course
-          </a>
-        </nav>
+        <SiteNav active="/" />
 
         <div className="px-4 pt-10 max-w-6xl mx-auto grid items-center gap-12 sm:px-8 sm:pt-16 lg:grid-cols-[1.1fr_1fr]">
           <div>
@@ -217,31 +194,10 @@ export default function Home() {
         <CourseButton className="mt-10" />
       </section>
 
-      {/* Footer */}
-      <footer className="px-4 py-8 border-t border-line sm:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <Wordmark small />
-          <p className="text-sm text-muted">
-            Questions?{" "}
-            <a href="mailto:brittany@unbound24.com" className="text-cyan-text font-bold hover:underline">
-              brittany@unbound24.com
-            </a>
-          </p>
-          <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} Unbound Consulting LLC
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
-
-// TODO: Mission and Course pages don't exist yet.
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Mission", href: "#" },
-  { label: "Course", href: "#" },
-];
 
 const AREAS = [
   "Documentation",
@@ -272,15 +228,6 @@ const FAQS = [
     a: "No. The course stands on its own.",
   },
 ];
-
-function Wordmark({ small = false }: { small?: boolean }) {
-  return (
-    <div className={`font-black tracking-tight ${small ? "text-base" : "text-2xl"}`}>
-      <span>Unbound</span>
-      <span className="text-cyan-text">24</span>
-    </div>
-  );
-}
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
