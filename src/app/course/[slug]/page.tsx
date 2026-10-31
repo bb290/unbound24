@@ -74,7 +74,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           </p>
           {lesson.summary && <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{lesson.summary}</p>}
         </div>
-        <Image src={art.src} alt={art.alt} width={art.width} height={art.height} priority className="w-full max-w-[14rem] md:max-w-xs h-auto mx-auto" />
+        <Image src={art.src} alt={art.alt} width={art.width} height={art.height} priority className="w-full max-w-[14rem] md:max-w-xs h-auto max-h-56 md:max-h-64 object-contain mx-auto" />
       </header>
 
       {lesson.video && (
