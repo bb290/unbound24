@@ -63,7 +63,7 @@
           "Level 1 puts one brick in every area, built evenly so no pillar gets ahead of the others.",
           "Level 2 builds on the foundation you've laid, one area at a time.",
           "Each brick is one small project: plan it, build it, write it down, then hand it off.",
-          "Next lesson: what to do when you feel stuck, and how to pick your first brick."
+          "Next: get set up with Claude, so it can do the writing for you as you go."
         ]
       }
     ],
@@ -77,77 +77,11 @@
     ],
     "action": {
       "title": "Sketch your house",
-      "text": "Grab a notepad and write the eight parts: delivery, documentation, data, reputation, attract, convert, retain, and brand. Next to each, write one line on how you handle it today. Don't fix anything yet. Keep it handy for the next lesson."
+      "text": "Grab a notepad and write the eight parts: delivery, documentation, data, reputation, attract, convert, retain, and brand. Next to each, write one line on how you handle it today. Don't fix anything yet."
     }
   },
   {
     "num": "0.3",
-    "title": "Stuck? Check your foundation",
-    "area": "Start Here",
-    "module": 0,
-    "slug": "check-your-foundation",
-    "status": "ready",
-    "sections": [
-      {
-        "title": "Stuck? Look underneath",
-        "bullets": [
-          "When a business has been stuck in the same place for a year or two, or five, the problem underneath is usually a weak foundation.",
-          "Stuck looks like this: too many priorities and no order, you do everything, nothing is written down, your numbers are a guess, and your marketing is random.",
-          "More leads won't fix it. Pour more work onto a weak foundation and the cracks get bigger: more chaos, more mistakes, more bad reviews.",
-          "**Quick foundation check.** Delivery: do you do the job the same way every time? Documentation: could someone follow your process without calling you? Data: do you know where your leads come from, how many become jobs, and which jobs make money? Reputation: do you keep your promises, and do your reviews show it?",
-          "The fix: pick the one area that's most broken, and focus there until it's completely fixed. Then pick the next one.",
-          "Stuck doesn't mean you're failing. It means it's time to strengthen what's underneath."
-        ]
-      },
-      {
-        "title": "You don't need a new system",
-        "bullets": [
-          "When something feels broken, the first idea is usually new software. It feels like progress, but it usually isn't the fix.",
-          "Most of us already pay for tools we only use half of: Jobber, Housecall Pro, ServiceTitan, QuickBooks, Google Calendar.",
-          "Software speeds up whatever you already do. A messy process in a new system is just a faster mess.",
-          "Switching costs you time even when the software is free: moving your data, learning the tool, and fixing what breaks.",
-          "**Before you switch, ask:** Have you done the free training for the tools you have? Are your processes documented? Do you follow them? If any answer is no, the tool isn't the problem yet.",
-          "A new system is the right call when you've passed all three checks, you can name exactly what your tool can't do, and that gap is costing you time or jobs."
-        ]
-      },
-      {
-        "title": "The loop",
-        "bullets": [
-          "You never finish your business. You go around the same simple loop, and the business gets a little stronger each time.",
-          "**Plan:** step back, look at the whole house, and find the cracks.",
-          "**Pick one:** the thing that's most broken or costing you the most, not the most exciting. Before you pick, count the cost up front and every month, decide how you'll measure it and when you'll check, and make sure it fits your brand.",
-          "**Scope:** decide what done looks like, and keep it small. \"Get organized\" is too big. \"Every new lead goes into one list\" is the right size.",
-          "**Build:** do the work, then document how you did it. If it isn't documented, it isn't finished.",
-          "**Automate or delegate:** once it works the same way every time, hand it to a tool or a person. That's how you get your 24 back.",
-          "Your pace depends on your time and the project. Cleaning up your Google profile takes an hour. Door knocking needs three to six months before you can judge it.",
-          "Watch for the traps: skipping Scope, skipping the documentation, and automating before it works."
-        ]
-      },
-      {
-        "title": "Where to start",
-        "bullets": [
-          "Your business is a house. The foundation is delivery, documentation, data, and reputation. Your brand is the roof.",
-          "Everyone starts with Level 1, beginning with documentation and data, even if your one area is somewhere else.",
-          "You can't fix what you can't see. And everything you document becomes context for Claude, so it gets more useful in every lesson after.",
-          "Level 1 covers documentation, connecting Claude to your Notion, email, and calendar, and your first skill, /boss. Then one brick each for Data, Delivery, Reputation, Attract, Convert, Retain, and Brand, and making skills of your own.",
-          "Documentation doesn't mean hours at a desk anymore. You talk it through, the way you'd explain it to a new guy on the crew, and Claude writes it up."
-        ]
-      }
-    ],
-    "summary": "Why growth stalls, why more leads won't fix it, why you don't need a new system, and the simple loop you'll use to fix one area at a time.",
-    "takeaways": [
-      "When growth stalls, the problem is usually a weak foundation, not too few leads.",
-      "You probably don't need a new system. Fix the process first.",
-      "Run the loop: plan, pick one, scope, build, automate or delegate, then go around again.",
-      "Everyone starts Level 1 with documentation and data."
-    ],
-    "action": {
-      "title": "Pick your one area",
-      "text": "Run the quick foundation check above and be honest: which is most broken, delivery, documentation, data, or reputation? Write it down. That's your one area. You'll still start Level 1 with documentation, because everything else builds on it."
-    }
-  },
-  {
-    "num": "0.4",
     "title": "AI Essentials",
     "area": "Start Here",
     "module": 0,
@@ -155,7 +89,7 @@
     "status": "ready",
     "sections": [
       {
-        "title": "How we'll use AI",
+        "title": "Learn by doing",
         "bullets": [
           "No theory. Every lesson from here on ends with a Claude prompt.",
           "You paste in the prompt, Claude asks you one question at a time, and you answer the way you'd explain it to a new guy on the crew.",
@@ -164,91 +98,125 @@
         ]
       },
       {
-        "title": "Get set up",
+        "title": "Model + Context",
         "bullets": [
           "Claude is an AI assistant made by a company called Anthropic. Use claude.ai on your computer, or the Claude app on your phone.",
-          "Start with plain chat. Nothing to install or connect yet.",
           "A model is the brain behind the chat. Some are faster, some are smarter. Use Opus 5.5, picked from the model menu in the chat window.",
-          "Opus 5.5 comes with the Pro plan, and with Max, Team, and Enterprise. Pro is all you need."
-        ]
-      },
-      {
-        "title": "Context is everything",
-        "bullets": [
           "Claude only knows what you tell it. A generic question gets a generic answer.",
           "\"Write a follow-up text to a customer\" sounds like any business, anywhere. Add that you're a roofer, you just finished a tear-off, the customer was worried about the weather, and you want a review, and now it sounds like you.",
-          "**Prompting basics:** say who you are, what you want, and the details. If you have an example of what good looks like, show it.",
-          "Not sure what to tell it? Ask Claude to ask you questions first. Then tell it what's off and have it fix it. It's a conversation.",
-          "You don't have to type. Use the microphone and talk it through from the truck between jobs.",
           "Every process you document in Level 1 becomes context, so everything Claude helps you with after that gets better."
         ]
       },
       {
-        "title": "Guardrails",
+        "title": "Guardrails + Prompting",
         "bullets": [
+          "**Prompting basics:** say who you are, what you want, and the details. If you have an example of what good looks like, show it.",
+          "Not sure what to tell it? Ask Claude to ask you questions first. Then tell it what's off and have it fix it. It's a conversation.",
+          "You don't have to type. Use the microphone and talk it through from the truck between jobs.",
           "Don't paste in customer personal information, card numbers, or passwords.",
           "AI can be confidently wrong. You're the expert in your trade. If something doesn't sound right, it probably isn't.",
-          "Claude drafts, you send. Read everything before it goes to a customer.",
-          "If a word sounds like jargon, check Nerd Alert (lesson 1.13) for plain-English answers."
+          "Claude drafts, you send. Read everything before it goes to a customer."
+        ]
+      },
+      {
+        "title": "Set up + Project",
+        "bullets": [
+          "Opus 5.5 comes with the Pro plan, and with Max, Team, and Enterprise. Pro is all you need.",
+          "Every new chat starts from zero. A project fixes that: a home base inside Claude, with instructions it reads every single time and files it can look at.",
+          "Your instructions cover who you are, what you do, who you serve, the tools you use, how you want Claude to talk to you, and a few standing rules, like: everything for a customer is a draft.",
+          "No brand guide needed yet. Claude picks up how you sound from two or three texts or emails you've already sent customers.",
+          "Your instructions point to your Notion pages, like your Brand page and your SOPs. As you fill those in, Claude picks them up.",
+          "From here on, start every business chat inside your work project. That one habit makes everything else in this course work."
         ]
       }
     ],
     "action": {
       "title": "Get set up",
-      "text": "Sign up for Claude Pro at claude.ai, then pick Opus 5.5 in the model menu. That's it. In the next lesson, we'll set up your project."
+      "text": "Two steps. First, sign up for Claude Pro at claude.ai (or upgrade if you're on the free plan) and pick Opus 5.5 in the model menu. Then start a new chat, paste in the prompt below, and answer the questions. At the end, Claude gives you your project instructions and tells you exactly where to paste them.",
+      "prompt": "I want to set up a Claude project for my business, so I never have to re-explain who I am or how I work. Interview me, then write my project instructions.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- If my answer is vague, ask one follow-up. If I say \"skip,\" move on.\n- Tell me roughly how many questions are left every few questions.\n\nAsk me about:\n1. My first name and the name of my business.\n2. My trade, the main services I offer, and the services I don't do.\n3. My service area: the towns or areas I cover.\n4. How long I've been in business, and who's on the team (just me, or how many people and what they do).\n5. Who my best customers are: the kind of jobs and people I want more of.\n6. The tools I use every week: scheduling, estimates, invoicing, accounting, calendar, email, texting, photos.\n7. How I want you to talk to me: short and direct, or more detail and explanation.\n8. My voice: ask me to paste two or three texts or emails I've already sent customers. If I don't have any handy, ask me to describe how I talk to customers in a sentence or two.\n9. Anything you should never do or never say.\n\nWhen we're done, write my project instructions as one block I can copy, with these sections:\n- About me and my business (from my answers, in plain language).\n- My customers.\n- My tools.\n- How to talk to me.\n- My voice: three to five short notes on how I sound, based on my examples. Use my words, not marketing words.\n- Standing rules:\n  - Everything you write for customers is a draft. I read it and send it myself.\n  - Never ask for or keep customer personal information, card numbers, or passwords.\n  - If you're not sure about something in my trade, say so. I'm the expert.\n  - Ask me questions one at a time.\n  - My business is documented in Notion. Once it's connected, check my \"Start Here\" page and my SOPs before answering questions about how my business works.\n  - Before writing anything customer-facing, read my \"Brand\" page in Notion if it exists, and match it.\n\nThen tell me how to save it: start a new project in Claude, name it after my business, and paste the block into the project instructions. Remind me to work inside this project from now on.\n\nStart with question 1.",
+      "promptLabel": "Set up your project"
     },
-    "summary": "Get set up with Claude: what a model is, why context matters, prompting basics, and the guardrails to keep in mind.",
+    "summary": "Get set up with Claude: learn by doing, pick the right model, give it context, stay inside the guardrails, and set up a project so every chat already knows your business.",
     "takeaways": [
       "You'll learn AI by using it on your own business, one prompt at a time.",
-      "Use Claude on the Pro plan, with the Opus 5.5 model.",
-      "Context is everything: Claude only knows what you tell it.",
-      "Claude drafts, you send."
+      "Use the right model, and give it context: Claude only knows what you tell it.",
+      "Ask clearly, check its work, and remember: Claude drafts, you send.",
+      "Get Claude Pro and set up a project, so every chat already knows your business."
     ]
   },
   {
-    "num": "0.5",
-    "title": "Claude Projects",
+    "num": "0.4",
+    "title": "Nerd Alert (bonus)",
     "area": "AI",
     "module": 0,
-    "slug": "claude-projects",
+    "slug": "nerd-alert",
     "status": "ready",
-    "summary": "Set up a Claude project for your business, so every chat already knows who you are, what you do, and how you sound.",
+    "summary": "Optional. Plain-English answers for the AI words you'll hear, the key terms this course is built on, and free resources if you want to go deeper.",
     "sections": [
       {
-        "title": "Why you need a project",
+        "title": "Vocab",
         "bullets": [
-          "You open a new chat, explain that you're a roofer, your area, your crew, and still get an answer written for anyone. Then you do it all again tomorrow.",
-          "A project is a home base inside Claude, with instructions it reads every single time and files it can look at.",
-          "Set it up once, and every chat inside it already knows who you are and how you work."
+          "**AI (artificial intelligence):** software that can read, write, and answer questions in plain language.",
+          "**LLM (large language model):** the technology behind Claude. It learned from an enormous amount of text, and uses those patterns to draft, summarize, and answer.",
+          "**Claude:** an AI assistant made by a company called Anthropic. You type or talk, and it answers.",
+          "**Model:** a version of Claude, like Opus, Sonnet, or Haiku. Some are faster, some are smarter. For this course, use Opus 5.5.",
+          "**Prompt:** what you ask Claude to do. A good prompt says who you are, what you want, and the details.",
+          "**Token:** the small chunks AI reads text in. One token is about three quarters of a word.",
+          "**Training data:** the text a model learned from. It's why Claude knows general facts but nothing about your business until you tell it.",
+          "**Knowledge cutoff:** the date a model's training stops. It may not know about anything newer, unless it can search the web.",
+          "**Markdown:** a simple way of writing formatted text with symbols, like # for a heading. Skills are written in it."
         ]
       },
       {
-        "title": "What goes in your instructions",
+        "title": "Key Terms",
         "bullets": [
-          "Who you are, what you do, who you serve, and the tools you use.",
-          "How you want Claude to talk to you.",
-          "How you sound. You don't need a brand guide yet: Claude picks it up from two or three texts or emails you've already sent customers.",
-          "A few standing rules, like this one: everything for a customer is a draft, and you send it yourself."
-        ]
-      },
-      {
-        "title": "Make it a habit",
-        "bullets": [
-          "From here on, start every business chat inside your work project. That one habit makes everything else in this course work.",
-          "Your instructions point to your Notion pages, like your Brand page and your SOPs. As you fill those in, Claude picks them up.",
-          "You won't have to rewrite your instructions every time something changes. We'll go deeper on your values and voice in Brand 1.0."
+          "**Context:** everything Claude knows during a chat: your project instructions, your files, and the conversation so far. The right context gets you better answers.",
+          "**Context window:** how much Claude can keep in mind at once. Very long chats run out of room, so start a fresh chat for each new task.",
+          "**Iteration:** the second and third ask. The first answer is a starting point; telling Claude what's off is where it gets good.",
+          "**Hallucination:** when AI says something wrong, confidently. That's why you check its work, especially numbers, prices, and codes.",
+          "**AI slop:** generic, unedited AI writing that sounds like it came from anywhere. Context in, your edits out, and nobody can tell.",
+          "**Drafts only:** anything Claude writes for a customer is a draft. You read it, and you send it yourself.",
+          "**Guardrails:** the limits you set on what AI does on its own, like drafts only and no personal information.",
+          "**Personal information:** customer names with phone numbers or addresses, card numbers, passwords. Keep it out of your chats.",
+          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (Lesson 0.3)",
+          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Lesson 1.3)",
+          "**Skill:** saved instructions Claude follows when you ask, like /boss. (Lessons 1.4 and 1.12)",
+          "**Automation:** work a tool does for you on its own, the same way every time, once you've proven how it should be done."
         ]
       }
     ],
-    "action": {
-      "title": "Set up your project",
-      "text": "Open Claude, start a new chat, paste in this prompt, and answer the questions. At the end, Claude gives you your project instructions and tells you exactly where to paste them.",
-      "prompt": "I want to set up a Claude project for my business, so I never have to re-explain who I am or how I work. Interview me, then write my project instructions.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- If my answer is vague, ask one follow-up. If I say \"skip,\" move on.\n- Tell me roughly how many questions are left every few questions.\n\nAsk me about:\n1. My first name and the name of my business.\n2. My trade, the main services I offer, and the services I don't do.\n3. My service area: the towns or areas I cover.\n4. How long I've been in business, and who's on the team (just me, or how many people and what they do).\n5. Who my best customers are: the kind of jobs and people I want more of.\n6. The tools I use every week: scheduling, estimates, invoicing, accounting, calendar, email, texting, photos.\n7. How I want you to talk to me: short and direct, or more detail and explanation.\n8. My voice: ask me to paste two or three texts or emails I've already sent customers. If I don't have any handy, ask me to describe how I talk to customers in a sentence or two.\n9. Anything you should never do or never say.\n\nWhen we're done, write my project instructions as one block I can copy, with these sections:\n- About me and my business (from my answers, in plain language).\n- My customers.\n- My tools.\n- How to talk to me.\n- My voice: three to five short notes on how I sound, based on my examples. Use my words, not marketing words.\n- Standing rules:\n  - Everything you write for customers is a draft. I read it and send it myself.\n  - Never ask for or keep customer personal information, card numbers, or passwords.\n  - If you're not sure about something in my trade, say so. I'm the expert.\n  - Ask me questions one at a time.\n  - My business is documented in Notion. Once it's connected, check my \"Start Here\" page and my SOPs before answering questions about how my business works.\n  - Before writing anything customer-facing, read my \"Brand\" page in Notion if it exists, and match it.\n\nThen tell me how to save it: start a new project in Claude, name it after my business, and paste the block into the project instructions. Remind me to work inside this project from now on.\n\nStart with question 1."
-    },
-    "takeaways": [
-      "Every new chat starts from zero. A project fixes that.",
-      "Your instructions tell Claude who you are, how you work, and how you sound.",
-      "Start every business chat inside your work project."
+    "shape": "glossary",
+    "resources": [
+      {
+        "title": "Claude 101",
+        "desc": "Anthropic's free course on using Claude for everyday work: drafting, summarizing, research, and the core features.",
+        "href": "https://anthropic.skilljar.com/claude-101"
+      },
+      {
+        "title": "AI Fluency for Small Businesses",
+        "desc": "Anthropic's free course on putting AI to work in a small business.",
+        "href": "https://anthropic.skilljar.com/ai-fluency-for-small-businesses"
+      },
+      {
+        "title": "AI Fluency: Framework & Foundations",
+        "desc": "The free foundations course: how to hand work to AI, describe what you want, and judge what comes back.",
+        "href": "https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+      },
+      {
+        "title": "AI Capabilities and Limitations",
+        "desc": "What AI is reliably good at, and the ways it goes wrong. Good for building judgment.",
+        "href": "https://anthropic.skilljar.com/ai-capabilities-and-limitations"
+      },
+      {
+        "title": "What are projects?",
+        "desc": "Claude's own help article on projects, if you want more than lesson 0.3 covers.",
+        "href": "https://support.claude.com/en/articles/9517075-what-are-projects"
+      },
+      {
+        "title": "Introduction to Agent Skills",
+        "desc": "Anthropic's free course on skills, for when you're ready to go past /boss and /skillz.",
+        "href": "https://anthropic.skilljar.com/introduction-to-agent-skills"
+      }
     ]
   },
   {
@@ -557,7 +525,7 @@
         "bullets": [
           "/skillz interviews you about the task, one question at a time, writes the skill file, and walks you through adding it to Claude.",
           "Try your new skill in a fresh chat.",
-          "If something's off, tell /skillz what was wrong and it'll fix it. Same loop as everything else: build it, check it, make it better."
+          "If something's off, tell /skillz what was wrong and it'll fix it. Same as everything else: build it, check it, make it better."
         ]
       }
     ],
@@ -576,60 +544,6 @@
       "A good skill is short: a name, when to use it, the steps, and what never to do.",
       "/skillz writes the skill for you. Test it, then fix it."
     ]
-  },
-  {
-    "num": "1.13",
-    "title": "Nerd Alert (bonus)",
-    "area": "AI",
-    "module": 1,
-    "slug": "nerd-alert",
-    "status": "ready",
-    "summary": "Plain-English answers for the AI words you'll hear: models, prompts, context, tokens, hallucinations, projects, connectors, and skills.",
-    "sections": [
-      {
-        "title": "The basics",
-        "bullets": [
-          "**Claude:** an AI assistant made by a company called Anthropic. You type or talk, and it answers.",
-          "**Model:** the brain behind the chat. Some models are faster, some are smarter. For this course, use Opus 5.5.",
-          "**Prompt:** what you ask Claude to do. A good prompt says who you are, what you want, and the details."
-        ]
-      },
-      {
-        "title": "Context",
-        "bullets": [
-          "**Context:** everything Claude knows during a chat: your project instructions, your files, and the conversation so far. The right context gets you better answers.",
-          "**Context window:** how much Claude can keep in mind at once. Very long chats can run out of room, so start a fresh chat for each new task.",
-          "**Token:** the small chunks AI reads text in. One token is about three quarters of a word."
-        ]
-      },
-      {
-        "title": "Staying safe",
-        "bullets": [
-          "**Hallucination:** when AI says something wrong, confidently. That's why you check its work, especially numbers, prices, and codes.",
-          "**Knowledge cutoff:** the date a model's training stops. It may not know about anything newer, unless it can search the web.",
-          "**Draft:** anything Claude writes for a customer. You read it, and you send it yourself.",
-          "**Personal information:** customer names with phone numbers or addresses, card numbers, passwords. Keep it out of your chats."
-        ]
-      },
-      {
-        "title": "The tools in this course",
-        "bullets": [
-          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (Lesson 0.5)",
-          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Lesson 1.3)",
-          "**Skill:** saved instructions Claude follows when you ask, like /boss. (Lessons 1.4 and 1.12)"
-        ]
-      }
-    ],
-    "takeaways": [
-      "A prompt is what you ask. The model is the brain that answers.",
-      "Context is everything Claude knows during a chat, and long chats run out of room.",
-      "AI can be confidently wrong, so check its work and keep personal information out.",
-      "Projects, connectors, and skills are the three tools this course builds on."
-    ],
-    "action": {
-      "title": "Look up one word",
-      "text": "Pick any word in this course that still feels fuzzy. Open a chat in your work project and ask Claude to explain it with an example from your trade."
-    }
   },
   {
     "num": "2.1",

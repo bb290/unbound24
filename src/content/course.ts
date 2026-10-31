@@ -33,6 +33,9 @@ export type Lesson = {
   note?: string;
   takeaways?: string[];
   sections: LessonSection[];
+  // "glossary" lessons (Nerd Alert) skip takeaways and the action: vocab, key terms, then resources.
+  shape?: "glossary";
+  resources?: { title: string; desc: string; href: string }[];
   action?: LessonAction;
   // YouTube video id, once the lesson video exists.
   video?: string;
@@ -57,13 +60,11 @@ export const READY_LESSONS = LESSONS.filter((lesson) => lesson.status === "ready
 // One illustration per finished lesson; falls back to the brick stack.
 const LESSON_ART: Record<string, { src: string; alt: string; width: number; height: number }> = {
   "0.2": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
-  "0.3": { src: "/hero-juggling.webp", alt: "A stick figure juggling a phone, a clipboard, a wrench, a calendar, a mug, a house and papers", width: 960, height: 724 },
+  "0.3": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
   "0.4": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
-  "0.5": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
   "1.3": { src: "/habits-phone.webp", alt: "A smiling stick figure on the phone, with a check mark in a speech bubble", width: 1000, height: 833 },
   "1.4": { src: "/relaxed.webp", alt: "A happy stick figure relaxing in a lawn chair with a coffee, everything packed neatly in a box", width: 1000, height: 624 },
   "1.12": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
-  "1.13": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
 };
 
 export function lessonArt(lesson: Lesson) {

@@ -109,25 +109,29 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
       {lesson.action && <ActionBox lesson={lesson} />}
 
-      <div className="mt-16 max-w-3xl">
-        {lesson.sections.map((section, i) => (
-          <section key={i} className="mt-14 first:mt-0 pt-8 border-t-4 border-magenta">
-            <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-              <span className="text-magenta-text">{i + 1}.</span> {section.title}
-            </h2>
-            <ul className="mt-5 space-y-3">
-              {section.bullets.map((bullet, j) => (
-                <li key={j} className="flex gap-3 text-lg leading-relaxed">
-                  <span className="mt-[0.7rem] w-2 h-2 shrink-0 rounded-full bg-cyan" aria-hidden="true" />
-                  <span>
-                    <Bullet text={bullet} />
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
+      {lesson.shape === "glossary" ? (
+        <Glossary lesson={lesson} />
+      ) : (
+        <div className="mt-16 max-w-3xl">
+          {lesson.sections.map((section, i) => (
+            <section key={i} className="mt-14 first:mt-0 pt-8 border-t-4 border-magenta">
+              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+                <span className="text-magenta-text">{i + 1}.</span> {section.title}
+              </h2>
+              <ul className="mt-5 space-y-3">
+                {section.bullets.map((bullet, j) => (
+                  <li key={j} className="flex gap-3 text-lg leading-relaxed">
+                    <span className="mt-[0.7rem] w-2 h-2 shrink-0 rounded-full bg-cyan" aria-hidden="true" />
+                    <span>
+                      <Bullet text={bullet} />
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      )}
 
       {lesson.action && <ActionBox lesson={lesson} />}
 
@@ -196,5 +200,54 @@ function Bullet({ text }: { text: string }) {
     <>
       <strong className="font-extrabold">{match[1]}</strong> {match[2]}
     </>
+  );
+}
+
+function Glossary({ lesson }: { lesson: Lesson }) {
+  return (
+    <div className="mt-12">
+      {lesson.sections.map((section) => (
+        <section key={section.title} className="mt-14 first:mt-0 pt-8 border-t-4 border-magenta">
+          <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{section.title}</h2>
+          <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+            {section.bullets.map((bullet) => {
+              const match = bullet.match(/^\*\*(.+?):\*\*\s*([\s\S]*)$/);
+              return (
+                <div key={bullet} className="p-5 rounded-3xl bg-card border border-line">
+                  <dt className="text-lg font-extrabold">{match ? match[1] : bullet}</dt>
+                  {match && (
+                    <dd className="mt-2 text-muted leading-relaxed">
+                      {match[2].charAt(0).toUpperCase() + match[2].slice(1)}
+                    </dd>
+                  )}
+                </div>
+              );
+            })}
+          </dl>
+        </section>
+      ))}
+      {lesson.resources && (
+        <section className="mt-14 pt-8 border-t-4 border-magenta">
+          <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Resources</h2>
+          <p className="mt-3 text-lg text-muted">Free, if you want to go deeper. All optional.</p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {lesson.resources.map((resource) => (
+              <a
+                key={resource.href}
+                href={resource.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-5 rounded-3xl bg-highlight border border-cyan hover:brightness-[0.98] transition"
+              >
+                <p className="text-lg font-extrabold group-hover:underline">
+                  {resource.title} <span aria-hidden="true">&#8599;</span>
+                </p>
+                <p className="mt-2 text-muted leading-relaxed">{resource.desc}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
   );
 }
