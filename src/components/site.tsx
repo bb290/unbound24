@@ -35,12 +35,6 @@ export function SiteNav({ active }: { active: string }) {
           ))}
         </div>
       </div>
-      <Link
-        href={COURSE_URL}
-        className="px-5 py-2.5 rounded-full bg-cyan text-foreground text-sm font-extrabold hover:brightness-95 transition"
-      >
-        Free Course
-      </Link>
     </nav>
   );
 }

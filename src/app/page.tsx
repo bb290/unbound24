@@ -16,9 +16,8 @@ export default function Home() {
               Why is it so complicated?
             </p>
             <p className="mt-6 text-lg leading-relaxed max-w-lg">
-              Own Your 24 helps service business operators simplify, prioritize
-              &amp; break free from never-ending to-do lists, customer demands
-              &amp; roller coaster sales.
+              Unbound24 helps service business operators break free from
+              never-ending to-do lists &amp; roller coaster sales.
             </p>
             <CourseButton className="mt-9" />
             <p className="mt-4 text-sm font-semibold">Free. No sales call. No catch.</p>
