@@ -20,7 +20,6 @@ export default function Home() {
               never-ending to-do lists &amp; roller coaster sales.
             </p>
             <CourseButton className="mt-9" />
-            <p className="mt-4 text-sm font-semibold">Free. No sales call. No catch.</p>
           </div>
           <Image
             src="/hero-juggling.webp"
