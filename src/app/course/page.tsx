@@ -29,6 +29,37 @@ const courseJsonLd = {
   })),
 };
 
+// What this course is and who it's for (moved here from the old lesson 0.2, 2026-10-31).
+const ABOUT = [
+  {
+    title: "Why it's called Own Your 24",
+    bullets: [
+      "There are only 24 hours in a day, and at least half of them go to doing the actual work. You also have your family, your health, and your responsibilities at home.",
+      "This course is about using the time you do have to build the business, instead of spending it on countless courses, new systems, and getting pulled in 200 directions.",
+      "I've been in business since 2010, and I've spent my share of time and money on courses, templates, and apps that never quite fit. If that sounds familiar, you're in the right place.",
+      "I'm giving this course away for free because local service businesses are the backbone of our economy.",
+    ],
+  },
+  {
+    title: "Who it's for",
+    bullets: [
+      "Home service trades: plumbers, electricians, HVAC, roofers.",
+      "You've been in business at least a year. You know how to do the job, get paid, and keep customers happy, so I won't teach you business basics.",
+      "You're the expert at your craft. Where most of us struggle is the computer side: websites, SEO, CRMs, invoicing, and systems.",
+      "It's not for product businesses, e-commerce, online businesses, or coaches and consultants. Under a year in? Focus on getting jobs and doing great work first, then come back.",
+    ],
+  },
+  {
+    title: "How it works",
+    bullets: [
+      "Step by step, at your own pace. There's no timeline: three months or the rest of your life are both fine.",
+      "You cycle through the same coursework, and each pass builds on the foundation you've already laid. Grow as big as you want, or keep it small and tight.",
+      "This is also an AI course. Claude asks you the questions and writes it all down. You learn AI by using it on your own business.",
+      "No \"have to's.\" I'll walk you through the pros and cons of each choice, and you decide what fits your business.",
+    ],
+  },
+];
+
 export default function CourseHome() {
   const first = READY_LESSONS[0];
   return (
@@ -65,6 +96,24 @@ export default function CourseHome() {
       <ProgressSummary />
       <div className="mt-4">
         <SaveProgress />
+      </div>
+
+      <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        {ABOUT.map((block, i) => (
+          <section key={block.title} className="p-6 rounded-3xl bg-card border border-line">
+            <h2 className="text-2xl font-black tracking-tight">
+              <span className={i % 2 ? "text-magenta-text" : "text-cyan-text"}>{i + 1}.</span> {block.title}
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {block.bullets.map((bullet) => (
+                <li key={bullet} className="flex gap-3 leading-relaxed">
+                  <span className="mt-[0.6rem] w-2 h-2 shrink-0 rounded-full bg-cyan" aria-hidden="true" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
 
       <div className="mt-16 flex flex-col gap-10">

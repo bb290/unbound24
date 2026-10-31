@@ -11,40 +11,39 @@
   },
   {
     "num": "0.2",
-    "title": "The Framework",
+    "title": "Business Breakdown",
     "area": "Start Here",
     "module": 0,
-    "slug": "the-framework",
+    "slug": "business-breakdown",
     "status": "ready",
     "sections": [
       {
-        "title": "Why it's called Own Your 24",
+        "title": "Your business is a house",
         "bullets": [
-          "There are only 24 hours in a day, and at least half of them go to doing the actual work.",
-          "You also have your family, your health, and your responsibilities at home.",
-          "This course is about using the time you do have to build the business, instead of spending it on countless courses, new systems, and getting pulled in 200 directions.",
-          "I've been in business since 2010, and I've spent my share of time and money on courses, templates, and apps that never quite fit. If that sounds familiar, you're in the right place.",
-          "I'm giving this course away for free because local service businesses are the backbone of our economy."
+          "Every service business is built from the same parts, whatever the trade.",
+          "**The foundation** holds everything up.",
+          "**Three pillars** are how customers find you, hire you, and come back.",
+          "**The roof** is your brand, and it covers the whole house.",
+          "When something feels broken, this is the map you use to find where."
         ]
       },
       {
-        "title": "Who it's for",
+        "title": "The foundation",
         "bullets": [
-          "Home service trades: plumbers, electricians, HVAC, roofers.",
-          "You've been in business at least a year. You know how to do the job, get paid, and keep customers happy, so I won't teach you business basics.",
-          "You're the expert at your craft. Where most of us struggle is the computer side: websites, SEO, CRMs, invoicing, and systems.",
-          "You're not chasing a quick win. You want to keep building, spend more time with your customers, your team, and your family, and add real value to your community.",
-          "It's not for product businesses, e-commerce, online businesses, or coaches and consultants. Under a year in? Focus on getting jobs and doing great work first, then come back."
+          "**Delivery:** doing the job the same way every time, from scheduling and materials to the invoice and getting paid.",
+          "**Documentation:** how your business runs, written down clearly enough that someone else could follow it without calling you.",
+          "**Data:** your customers, your jobs, and the handful of numbers that tell you how it's going. Where leads come from, how many become jobs, and which jobs make money.",
+          "**Reputation:** keeping your promises, and reviews that show it.",
+          "Every lesson ties back to the foundation. The pillars depend on it."
         ]
       },
       {
-        "title": "How it works",
+        "title": "The three pillars",
         "bullets": [
-          "Step by step, at your own pace. There's no timeline: three months or the rest of your life are both fine.",
-          "You cycle through the same coursework, and each pass builds on the foundation you've already laid. Grow as big as you want, or keep it small and tight.",
-          "The goal is to know enough to be dangerous: build the simple version yourself, and know exactly what to hire when it's time to hire.",
-          "This is also an AI course. Claude asks you the questions and writes it all down. You learn AI by using it on your own business.",
-          "No \"have to's.\" I'll walk you through the pros and cons of each choice, and you decide what fits your business."
+          "**Attract:** how people find you and reach out.",
+          "**Convert:** how they become a customer: the appointment, the estimate, and getting it signed.",
+          "**Retain:** what happens after the job. Review, refer, recurring, and repeat.",
+          "Every customer moves through all three. A weak pillar shows up as slow months, lost estimates, or customers who never call back."
         ]
       },
       {
@@ -54,21 +53,31 @@
           "How you answer the phone, show up on time, do the work, leave the job site, send the invoice, and follow up either builds your brand up or chips away at it.",
           "It's the roof because it covers every pillar. If the roof leaks, everything underneath gets wet.",
           "Watch for the gap: great marketing and a slick sales process, then once the agreement is signed, the service doesn't match. That's where brands break and bad reviews come from.",
-          "Your brand is what people expect from you. Your reputation is whether you deliver it. Documentation keeps it consistent when you're slammed, or when your crew is on the job instead of you.",
-          "In lesson 2.8 we'll build your Brand Guide: how you look and how you sound. But the brand itself is the promise you keep, every time."
+          "Your brand is what people expect from you. Your reputation is whether you deliver it."
+        ]
+      },
+      {
+        "title": "Brick by brick",
+        "bullets": [
+          "You don't build the whole house at once. You lay one brick at a time.",
+          "Level 1 puts one brick in every area, built evenly so no pillar gets ahead of the others.",
+          "Level 2 builds on the foundation you've laid, one area at a time.",
+          "Each brick is one small project: plan it, build it, write it down, then hand it off.",
+          "Next lesson: what to do when you feel stuck, and how to pick your first brick."
         ]
       }
     ],
-    "summary": "Why it's called Own Your 24, who this free course is for, the house framework everything is built on, and why your brand is the roof.",
+    "summary": "The parts of every service business, laid out as a house: the foundation, three pillars, and your brand as the roof. Then how you build it, brick by brick.",
     "takeaways": [
-      "Own Your 24 is about getting the most out of the few hours you have to work on your business.",
-      "It's built for home service trades who've been in business at least a year.",
-      "You build it your way, at your own pace, with Claude doing the heavy lifting.",
-      "Your brand is the roof: everything a customer experiences, at every step."
+      "Your business is a house: a foundation, three pillars, and a roof.",
+      "The foundation is delivery, documentation, data, and reputation.",
+      "The three pillars are attract, convert, and retain.",
+      "Your brand is the roof that covers all of it.",
+      "You build it brick by brick, one level at a time."
     ],
     "action": {
-      "title": "Walk through your own job",
-      "text": "Grab a notepad. List every point where a customer deals with your business, from the first call to the final invoice and follow-up. Circle the one that least matches the promise you make. Keep the list handy for the next lesson."
+      "title": "Sketch your house",
+      "text": "Grab a notepad and write the eight parts: delivery, documentation, data, reputation, attract, convert, retain, and brand. Next to each, write one line on how you handle it today. Don't fix anything yet. Keep it handy for the next lesson."
     }
   },
   {
