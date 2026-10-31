@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MODULES, READY_LESSONS, getLesson, lessonArt, neighbors, readingMinutes } from "@/content/course";
+import { MODULES, READY_LESSONS, getLesson, lessonArt, neighbors, readingMinutes, type Lesson } from "@/content/course";
 import PromptBox from "../PromptBox";
-import { CompleteButton } from "../Progress";
-import { SaveProgress } from "../Account";
+import { LessonCta } from "../Account";
 
 export const dynamicParams = false;
 
@@ -73,7 +72,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           <p className="mt-4 text-sm font-bold text-muted">
             {readingMinutes(lesson)} min read{lesson.action ? " · 1 Action" : ""}
           </p>
-          {lesson.intro && <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{lesson.intro}</p>}
+          {lesson.summary && <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{lesson.summary}</p>}
         </div>
         <Image src={art.src} alt={art.alt} width={art.width} height={art.height} priority className="w-full max-w-[14rem] md:max-w-xs h-auto mx-auto" />
       </header>
@@ -90,62 +89,49 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         </div>
       )}
 
-      <div className="mt-12 max-w-3xl">
-        {lesson.sections.map((section, i) =>
-          section.kind === "part" ? (
-            <section key={i} className="mt-16 first:mt-0 pt-10 border-t-4 border-magenta">
-              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{section.title}</h2>
-              {section.paras.map((para, j) => (
-                <p key={j} className="mt-4 text-lg text-muted leading-relaxed">{para}</p>
-              ))}
-            </section>
-          ) : (
-            <section key={i} className="mt-10 first:mt-0">
-              <h3 className="text-xl font-extrabold sm:text-2xl">{section.title}</h3>
-              {section.paras.map((para, j) => (
-                <p key={j} className="mt-3 text-lg leading-relaxed">{para}</p>
-              ))}
-            </section>
-          ),
-        )}
-      </div>
-
-      {lesson.action && (
-        <section className="mt-16 rounded-3xl bg-highlight border border-cyan p-6 sm:p-8">
-          <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
-          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{lesson.action.title}</h2>
-          <p className="mt-3 text-lg leading-relaxed">{lesson.action.text}</p>
-          {lesson.action.skill && (
-            <a
-              href={lesson.action.skill.href}
-              download
-              className="inline-flex items-center gap-3 mt-6 px-7 py-3.5 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
-            >
-              {lesson.action.skill.label} <span aria-hidden="true">&darr;</span>
-            </a>
-          )}
-          {lesson.action.prompt && (
-            <PromptBox
-              prompt={lesson.action.prompt}
-              title={lesson.action.promptLabel}
-              filename={`own-your-24-${lesson.num}-${lesson.slug}-${lesson.action.skill ? "SKILL.md" : "prompt.txt"}`}
-            />
-          )}
-          {lesson.action.prompts?.map((item, i) => (
-            <PromptBox
-              key={item.title}
-              prompt={item.prompt}
-              title={item.title}
-              filename={`own-your-24-${lesson.num}-${lesson.slug}-prompt-${i + 1}.txt`}
-            />
-          ))}
+      {lesson.takeaways && (
+        <section className="mt-12 max-w-3xl" aria-labelledby="takeaways">
+          <h2 id="takeaways" className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">
+            Key Takeaways
+          </h2>
+          <ol className="mt-4 divide-y divide-line border-y border-line">
+            {lesson.takeaways.map((takeaway, i) => (
+              <li key={i} className="flex gap-5 py-4">
+                <span className={`w-8 shrink-0 text-3xl font-black leading-none ${i % 2 ? "text-magenta-text" : "text-cyan-text"}`}>
+                  {i + 1}
+                </span>
+                <span className="text-lg font-bold leading-snug">{takeaway}</span>
+              </li>
+            ))}
+          </ol>
         </section>
       )}
 
-      <div className="mt-16 flex flex-wrap items-center gap-4">
-        <CompleteButton slug={lesson.slug} />
-        <SaveProgress compact />
+      {lesson.action && <ActionBox lesson={lesson} />}
+
+      <div className="mt-16 max-w-3xl">
+        {lesson.sections.map((section, i) => (
+          <section key={i} className="mt-14 first:mt-0 pt-8 border-t-4 border-magenta">
+            <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+              <span className="text-magenta-text">{i + 1}.</span> {section.title}
+            </h2>
+            <ul className="mt-5 space-y-3">
+              {section.bullets.map((bullet, j) => (
+                <li key={j} className="flex gap-3 text-lg leading-relaxed">
+                  <span className="mt-[0.7rem] w-2 h-2 shrink-0 rounded-full bg-cyan" aria-hidden="true" />
+                  <span>
+                    <Bullet text={bullet} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
+
+      {lesson.action && <ActionBox lesson={lesson} />}
+
+      <LessonCta slug={lesson.slug} />
 
       <nav aria-label="Lesson navigation" className="mt-8 grid gap-4 sm:grid-cols-2">
         {prev ? (
@@ -164,5 +150,51 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         )}
       </nav>
     </article>
+  );
+}
+
+function ActionBox({ lesson }: { lesson: Lesson }) {
+  const action = lesson.action!;
+  return (
+    <section className="mt-16 rounded-3xl bg-highlight border border-cyan p-6 sm:p-8">
+      <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
+      <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{action.title}</h2>
+      <p className="mt-3 text-lg leading-relaxed">{action.text}</p>
+      {action.skill && (
+        <a
+          href={action.skill.href}
+          download
+          className="inline-flex items-center gap-3 mt-6 px-7 py-3.5 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
+        >
+          {action.skill.label} <span aria-hidden="true">&darr;</span>
+        </a>
+      )}
+      {action.prompt && (
+        <PromptBox
+          prompt={action.prompt}
+          title={action.promptLabel}
+          filename={`own-your-24-${lesson.num}-${lesson.slug}-${action.skill ? "SKILL.md" : "prompt.txt"}`}
+        />
+      )}
+      {action.prompts?.map((item, i) => (
+        <PromptBox
+          key={item.title}
+          prompt={item.prompt}
+          title={item.title}
+          filename={`own-your-24-${lesson.num}-${lesson.slug}-prompt-${i + 1}.txt`}
+        />
+      ))}
+    </section>
+  );
+}
+
+// Renders a bullet's optional bold lead-in: "**Plan:** step back..."
+function Bullet({ text }: { text: string }) {
+  const match = text.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+  if (!match) return <>{text}</>;
+  return (
+    <>
+      <strong className="font-extrabold">{match[1]}</strong> {match[2]}
+    </>
   );
 }

@@ -1,12 +1,13 @@
 import lessonData from "./course-lessons.json";
 
-// Lesson content comes from the Own Your 24 lesson scripts in Notion.
-// Sections are the scripts' talk tracks: "part" starts a new part of the lesson, "step" is one idea.
+// Lesson content started from the Own Your 24 lesson scripts in Notion.
+// Every lesson follows one format: 3-5 key takeaways, the action, one section per takeaway
+// (written as bullets), the action again, then the save-progress box.
 
 export type LessonSection = {
-  kind: "part" | "step";
   title: string;
-  paras: string[];
+  // A bullet may open with a bold lead-in: "**Plan:** step back..."
+  bullets: string[];
 };
 
 export type LessonAction = {
@@ -29,8 +30,8 @@ export type Lesson = {
   slug: string;
   status: "ready" | "soon";
   summary?: string;
-  intro?: string;
   note?: string;
+  takeaways?: string[];
   sections: LessonSection[];
   action?: LessonAction;
   // YouTube video id, once the lesson video exists.
@@ -86,7 +87,7 @@ export function neighbors(lesson: Lesson) {
 }
 
 export function readingMinutes(lesson: Lesson) {
-  const words = [lesson.intro ?? "", ...lesson.sections.flatMap((section) => section.paras)]
+  const words = [...(lesson.takeaways ?? []), ...lesson.sections.flatMap((section) => section.bullets)]
     .join(" ")
     .split(/\s+/).length;
   return Math.max(1, Math.round(words / 200));

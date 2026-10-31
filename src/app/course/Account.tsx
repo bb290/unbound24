@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { CompleteButton } from "./Progress";
 import { useStored } from "./useStored";
 
 // Optional sign-in: progress always lives in this browser; once signed in it is also
@@ -97,9 +98,9 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function SaveProgress({ compact = false }: { compact?: boolean }) {
+export function SaveProgress({ compact = false, startOpen = false }: { compact?: boolean; startOpen?: boolean }) {
   const { enabled, email, notice, signOut } = useAccount();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(startOpen);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
 
@@ -164,7 +165,10 @@ export function SaveProgress({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <form onSubmit={submit} className="w-full max-w-md p-5 rounded-3xl bg-card border border-line">
+    <form
+      onSubmit={submit}
+      className={`w-full max-w-md p-5 rounded-3xl border border-line ${startOpen ? "bg-background" : "bg-card"}`}
+    >
       <p className="font-extrabold">Save your progress</p>
       <p className="mt-1 text-sm text-muted">
         Enter your email and I&rsquo;ll send you a link. No password needed.
@@ -193,10 +197,34 @@ export function SaveProgress({ compact = false }: { compact?: boolean }) {
         >
           {status === "sending" ? "Sending..." : "Send my link"}
         </button>
-        <button type="button" onClick={() => setOpen(false)} className="text-sm font-bold text-muted hover:text-foreground">
-          Cancel
-        </button>
+        {!startOpen && (
+          <button type="button" onClick={() => setOpen(false)} className="text-sm font-bold text-muted hover:text-foreground">
+            Cancel
+          </button>
+        )}
       </div>
     </form>
+  );
+}
+
+// The box at the end of every lesson: mark it complete, then save progress by email.
+export function LessonCta({ slug }: { slug: string }) {
+  const { enabled, email } = useAccount();
+  return (
+    <section className="mt-12 rounded-3xl bg-magenta-soft p-6 sm:p-8">
+      <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Keep going</p>
+      <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Save your progress</h2>
+      <p className="mt-3 text-lg leading-relaxed">
+        {enabled && !email
+          ? "Mark this lesson complete, then add your email so your progress follows you to any device. No password needed."
+          : "Mark this lesson complete so you always know where to pick up next."}
+      </p>
+      <div className="mt-6">
+        <CompleteButton slug={slug} />
+      </div>
+      <div className="mt-6">
+        {enabled ? <SaveProgress startOpen /> : <SaveProgress compact />}
+      </div>
+    </section>
   );
 }

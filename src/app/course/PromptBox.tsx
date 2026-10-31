@@ -12,6 +12,9 @@ export default function PromptBox({
   title?: string;
 }) {
   const [copied, setCopied] = useState(false);
+  // Long prompts start folded, since each lesson shows its action twice.
+  const long = prompt.length > 600;
+  const [expanded, setExpanded] = useState(false);
 
   async function copy() {
     await navigator.clipboard.writeText(prompt);
@@ -49,7 +52,28 @@ export default function PromptBox({
           </button>
         </div>
       </div>
-      <pre className="px-5 py-4 whitespace-pre-wrap font-sans text-base leading-relaxed">{prompt}</pre>
+      <div className="relative">
+        <pre
+          className={`px-5 py-4 whitespace-pre-wrap font-sans text-base leading-relaxed ${
+            long && !expanded ? "max-h-56 overflow-hidden" : ""
+          }`}
+        >
+          {prompt}
+        </pre>
+        {long && !expanded && (
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-background to-transparent" aria-hidden="true" />
+        )}
+      </div>
+      {long && (
+        <button
+          type="button"
+          onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          className="w-full px-5 py-3 border-t border-line text-sm font-extrabold text-cyan-text hover:bg-card transition"
+        >
+          {expanded ? "Show less" : "Show the full prompt"}
+        </button>
+      )}
     </div>
   );
 }
