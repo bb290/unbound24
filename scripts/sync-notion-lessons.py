@@ -70,10 +70,18 @@ def content(lesson):
     out += [block("numbered_list_item", t) for t in lesson.get("takeaways", [])]
     a = lesson.get("action")
     if a: out += action_blocks(a)
+    glossary = lesson.get("shape") == "glossary"
     for i, s in enumerate(lesson["sections"], 1):
-        out.append(block("heading_3", f"{i}. {s['title']}"))
+        out.append(block("heading_3", s["title"] if glossary else f"{i}. {s['title']}"))
         out += [block("bulleted_list_item", b) for b in s["bullets"]]
+    if lesson.get("resources"):
+        out.append(block("heading_3", "Resources"))
+        for r in lesson["resources"]:
+            out.append({"object": "block", "type": "bulleted_list_item", "bulleted_list_item": {"rich_text": [
+                {"type": "text", "text": {"content": r["title"], "link": {"url": r["href"]}}, "annotations": {"bold": True}},
+                {"type": "text", "text": {"content": ": " + r["desc"]}}]}})
     if a: out.append(block("paragraph", "(The Action repeats here on the site, then the Save your progress box.)"))
+    elif glossary: out.append(block("paragraph", "(Glossary shape: no takeaways or action. The Save your progress box follows on the site.)"))
     return out
 
 rows = []
