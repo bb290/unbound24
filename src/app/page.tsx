@@ -36,24 +36,20 @@ export default function Home() {
 
       {/* Simple habits */}
       <FeatureRow
-        eyebrow="What actually works"
         title="Simple habits beat fancy marketing."
-        body="The shops that stay booked aren't doing anything fancy. They pick up the phone, they're easy to find, they get reviews, and they stay in touch with past customers. That's what I'll help you build."
+        subtitle="Simple &ne; easy."
+        body="No need to get fancy. Stay focused on the core 4."
         visual={
-          <Illustration
-            src="/habits-phone.webp"
-            alt="A smiling stick figure in a cap answering a phone, with a check mark in a speech bubble"
-            width={1000}
-            height={833}
-          />
-        }
-        below={
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <HabitCard title="Answer fast" description="Every call and estimate gets a quick, clear reply." />
-            <HabitCard magenta title="Be easy to find" description="Show up when someone nearby needs you." />
-            <HabitCard title="Earn the reviews" description="Keep your promises, then ask every happy customer." />
-            <HabitCard magenta title="Follow up" description="Past customers are your easiest next job." />
-          </div>
+          <ol className="divide-y divide-line border-y border-line">
+            {["Fast answers", "Easy to find", "Earn reviews", "Follow up"].map((habit, i) => (
+              <li key={habit} className="flex items-center gap-6 py-6">
+                <span className={`w-14 text-5xl font-black ${i % 2 ? "text-magenta-text" : "text-cyan-text"}`}>
+                  {i + 1}
+                </span>
+                <span className="text-3xl font-extrabold tracking-tight sm:text-4xl">{habit}</span>
+              </li>
+            ))}
+          </ol>
         }
       />
 
@@ -251,6 +247,7 @@ function CourseButton({ className = "" }: { className?: string }) {
 function FeatureRow({
   eyebrow,
   title,
+  subtitle,
   body,
   visual,
   children,
@@ -258,8 +255,9 @@ function FeatureRow({
   reverse = false,
   tinted = false,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
+  subtitle?: string;
   body: string;
   visual: React.ReactNode;
   children?: React.ReactNode;
@@ -271,8 +269,11 @@ function FeatureRow({
     <section className={`px-4 py-20 sm:px-8 sm:py-28 ${tinted ? "bg-card" : ""}`}>
       <div className="max-w-6xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div className={reverse ? "lg:order-2" : ""}>
-          <Eyebrow>{eyebrow}</Eyebrow>
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           <h2 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">{title}</h2>
+          {subtitle && (
+            <p className="mt-4 text-2xl font-extrabold text-magenta-text sm:text-3xl">{subtitle}</p>
+          )}
           <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{body}</p>
           {children}
         </div>
@@ -304,16 +305,6 @@ function Illustration({
       height={height}
       className={`w-full h-auto mx-auto ${className}`}
     />
-  );
-}
-
-function HabitCard({ title, description, magenta = false }: { title: string; description: string; magenta?: boolean }) {
-  return (
-    <div className="p-6 rounded-3xl bg-card border border-line">
-      <div className={`w-8 h-4 rounded mb-5 ${magenta ? "bg-magenta" : "bg-cyan"}`} aria-hidden="true" />
-      <h3 className="text-lg font-extrabold">{title}</h3>
-      <p className="mt-2 text-muted leading-relaxed">{description}</p>
-    </div>
   );
 }
 
