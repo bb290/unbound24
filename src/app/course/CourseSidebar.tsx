@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MODULES, lessonsInModule } from "@/content/course";
+import { COURSES, LESSONS, lessonsInCourse } from "@/content/course";
 import { useProgress, useStored, useStoredList } from "./useStored";
 
 export function CheckIcon({ className = "" }: { className?: string }) {
@@ -25,7 +25,11 @@ function Chevron({ open }: { open: boolean }) {
 function LessonList({ headerAction }: { headerAction?: React.ReactNode }) {
   const pathname = usePathname();
   const progress = useProgress();
-  const closed = useStoredList("oy24-closed-modules");
+  // The course you're in starts open and the rest start closed; a click flips that and is remembered.
+  const flipped = useStoredList("oy24-flipped-courses");
+  const currentSlug = pathname.split("/")[2];
+  const currentCourse = COURSES.find((course) => course.slug === currentSlug)?.slug ??
+    LESSONS.find((lesson) => lesson.slug === currentSlug)?.course;
 
   return (
     <nav aria-label="Course lessons" className="flex flex-col gap-5">
@@ -34,35 +38,49 @@ function LessonList({ headerAction }: { headerAction?: React.ReactNode }) {
           href="/course"
           className={`font-extrabold ${pathname === "/course" ? "text-cyan-text" : "hover:text-cyan-text"}`}
         >
-          Course overview
+          All courses
         </Link>
         {headerAction}
       </div>
-      {MODULES.map((module) => {
-        const lessons = lessonsInModule(module.id);
+      {COURSES.map((course) => {
+        const lessons = lessonsInCourse(course.slug);
         const ready = lessons.filter((lesson) => lesson.status === "ready");
         const done = ready.filter((lesson) => progress.has(lesson.slug)).length;
-        const open = !closed.has(String(module.id));
-        const listId = `module-${module.id}-lessons`;
+        const open = (course.slug === currentCourse) !== flipped.has(course.slug);
+        const listId = `course-${course.slug}-lessons`;
+        const courseHref = `/course/${course.slug}`;
         return (
-          <div key={module.id}>
+          <div key={course.slug}>
             <button
               type="button"
-              onClick={() => closed.toggle(String(module.id))}
+              onClick={() => flipped.toggle(course.slug)}
               aria-expanded={open}
               aria-controls={listId}
               className="w-full flex items-center gap-2 py-1 text-left text-xs font-extrabold tracking-widest uppercase text-muted hover:text-foreground transition"
             >
               <Chevron open={open} />
-              <span className="flex-1">{module.title}</span>
-              {ready.length > 0 && (
+              <span className="flex-1">{course.title}</span>
+              {ready.length > 0 ? (
                 <span className="normal-case tracking-normal font-bold">
                   {done}/{ready.length}
                 </span>
+              ) : (
+                <span className="normal-case tracking-normal font-bold">Soon</span>
               )}
             </button>
             {open && (
               <ul id={listId} className="mt-2 flex flex-col gap-1">
+                <li>
+                  <Link
+                    href={courseHref}
+                    aria-current={pathname === courseHref ? "page" : undefined}
+                    className={`block px-3 py-2 rounded-xl text-sm leading-snug transition ${
+                      pathname === courseHref ? "bg-highlight font-extrabold" : "font-semibold text-muted hover:bg-card"
+                    }`}
+                  >
+                    Course overview
+                  </Link>
+                </li>
                 {lessons.map((lesson) => {
                   const href = `/course/${lesson.slug}`;
                   const active = pathname === href;

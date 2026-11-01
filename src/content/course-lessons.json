@@ -1,19 +1,17 @@
 [
   {
-    "num": "0.1",
+    "num": "1.1",
     "title": "End State",
-    "area": "Start Here",
-    "module": 0,
+    "course": "own-your-24",
     "slug": "end-state",
     "status": "soon",
     "sections": [],
-    "note": "What we're building, and what your business looks like at the end of this course."
+    "note": "What owning your 24 looks and feels like."
   },
   {
-    "num": "0.2",
+    "num": "1.2",
     "title": "Business Breakdown",
-    "area": "Start Here",
-    "module": 0,
+    "course": "own-your-24",
     "slug": "business-breakdown",
     "status": "ready",
     "sections": [
@@ -60,8 +58,8 @@
         "title": "Brick by brick",
         "bullets": [
           "You don't build the whole house at once. You lay one brick at a time.",
-          "Level 1 puts one brick in every area, built evenly so no pillar gets ahead of the others.",
-          "Level 2 builds on the foundation you've laid, one area at a time.",
+          "Keep the house in balance, so no pillar gets ahead of the others.",
+          "Work on one area at a time. Whichever part of the house is lagging behind is your next project.",
           "Each brick is one small project: plan it, build it, write it down, then hand it off.",
           "Next: get set up with Claude, so it can do the writing for you as you go."
         ]
@@ -81,10 +79,54 @@
     }
   },
   {
-    "num": "0.3",
+    "num": "1.3",
+    "title": "Find Your Constraint",
+    "course": "own-your-24",
+    "slug": "find-your-constraint",
+    "status": "soon",
+    "sections": [],
+    "note": "Which part of the house is lagging behind the others? That's your next project."
+  },
+  {
+    "num": "1.4",
+    "title": "One Project at a Time",
+    "course": "own-your-24",
+    "slug": "one-project-at-a-time",
+    "status": "soon",
+    "sections": [],
+    "note": "How to pick the one project, and how to stay on it."
+  },
+  {
+    "num": "1.5",
+    "title": "The Idea Bank",
+    "course": "own-your-24",
+    "slug": "idea-bank",
+    "status": "soon",
+    "sections": [],
+    "note": "Save every great idea so you don't lose it, and don't chase it mid-project."
+  },
+  {
+    "num": "1.6",
+    "title": "Fallback Tasks",
+    "course": "own-your-24",
+    "slug": "fallback-tasks",
+    "status": "soon",
+    "sections": [],
+    "note": "What to do when the project's done or you can't focus, so you keep your momentum."
+  },
+  {
+    "num": "1.7",
+    "title": "Set Up Your Notion Hub",
+    "course": "own-your-24",
+    "slug": "notion-hub",
+    "status": "soon",
+    "sections": [],
+    "note": "Your current project, Idea Bank, tasks, and fallback list, all in one place."
+  },
+  {
+    "num": "2.1",
     "title": "AI Essentials",
-    "area": "Start Here",
-    "module": 0,
+    "course": "put-ai-to-work",
     "slug": "ai-set-up",
     "status": "ready",
     "sections": [
@@ -104,7 +146,7 @@
           "A model is the brain behind the chat. Some are faster, some are smarter. Use Opus 5.5, picked from the model menu in the chat window.",
           "Claude only knows what you tell it. A generic question gets a generic answer.",
           "\"Write a follow-up text to a customer\" sounds like any business, anywhere. Add that you're a roofer, you just finished a tear-off, the customer was worried about the weather, and you want a review, and now it sounds like you.",
-          "Every process you document in Level 1 becomes context, so everything Claude helps you with after that gets better."
+          "Every process you document becomes context, so everything Claude helps you with after that gets better."
         ]
       },
       {
@@ -145,10 +187,9 @@
     ]
   },
   {
-    "num": "0.4",
+    "num": "2.2",
     "title": "Nerd Alert (bonus)",
-    "area": "AI",
-    "module": 0,
+    "course": "put-ai-to-work",
     "slug": "nerd-alert",
     "status": "ready",
     "summary": "Optional. Plain-English answers for the AI words you'll hear, the key terms this course is built on, and free resources if you want to go deeper.",
@@ -178,9 +219,9 @@
           "**Drafts only:** anything Claude writes for a customer is a draft. You read it, and you send it yourself.",
           "**Guardrails:** the limits you set on what AI does on its own, like drafts only and no personal information.",
           "**Personal information:** customer names with phone numbers or addresses, card numbers, passwords. Keep it out of your chats.",
-          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (Lesson 0.3)",
-          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Lesson 1.3)",
-          "**Skill:** saved instructions Claude follows when you ask, like /boss. (Lessons 1.4 and 1.12)",
+          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (AI Essentials)",
+          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Connectors)",
+          "**Skill:** saved instructions Claude follows when you ask, like /boss. (/boss and Custom skills)",
           "**Automation:** work a tool does for you on its own, the same way every time, once you've proven how it should be done."
         ]
       }
@@ -209,7 +250,7 @@
       },
       {
         "title": "What are projects?",
-        "desc": "Claude's own help article on projects, if you want more than lesson 0.3 covers.",
+        "desc": "Claude's own help article on projects, if you want more than AI Essentials covers.",
         "href": "https://support.claude.com/en/articles/9517075-what-are-projects"
       },
       {
@@ -220,90 +261,9 @@
     ]
   },
   {
-    "num": "1.1",
-    "title": "Documentation 1.0: Basics",
-    "area": "Documentation",
-    "module": 1,
-    "slug": "documentation-basics",
-    "status": "ready",
-    "sections": [
-      {
-        "title": "Why document",
-        "bullets": [
-          "If it's all in your head, you can't take a day off, get sick, or step back. The business is you.",
-          "You're documenting for future you: you on a busy day, a tired day, or six months from now when you've forgotten how you handled it last time.",
-          "Documented means consistent. Same job, same way, every time. That's what customers experience as quality, and what earns you the reviews.",
-          "It makes training easier. Hand the new guy the process instead of having him follow you around for weeks.",
-          "You can't fix what you can't see. Once it's written down, the gaps show up.",
-          "It's how you get out of the work: you can't automate or delegate what isn't documented. And a business that runs on documented processes is worth more if you ever sell."
-        ]
-      },
-      {
-        "title": "What to document",
-        "bullets": [
-          "**Systems:** the tools and setup behind the work. Your tech stack (which tool runs each step, from lead to paid), your brand guide (just note what you have for now; we'll build it in 2.8), and billing: your price book and your chart of accounts.",
-          "**SOPs:** how the work actually gets done.",
-          "**Data:** your customers, your jobs, and the handful of numbers that tell you how the business is doing. That gets its own lesson, 1.5.",
-          "The rule: document how it runs today, before you change anything. You can't improve what you haven't captured."
-        ]
-      },
-      {
-        "title": "SOPs are simpler than you think",
-        "bullets": [
-          "You don't need a giant binder. An SOP is how your business does things, written clearly enough that someone else could do it too.",
-          "**The process** is the whole thing, beginning to end.",
-          "**Procedures** take you through each step. When you get to the job: set up the site, take pictures, put your signs out.",
-          "**Scenarios** are the if-thens that throw off your procedures: materials running late, the wrong color shingles, a customer who wants to reschedule, a bounced deposit. Think of them as the questions your crew asks you over and over.",
-          "You don't need to imagine every scenario. If it's happened twice, document it. Once is a surprise. Twice is a pattern."
-        ]
-      },
-      {
-        "title": "Four processes run your business",
-        "bullets": [
-          "**Attract:** how leads find you and how they reach out.",
-          "**Convert:** the appointment, the estimate, and getting it signed.",
-          "**Deliver:** scheduling, ordering materials, doing the job, invoicing, and getting paid. The job isn't delivered until you're paid.",
-          "**Retain:** the four Rs. Review, refer, recurring (service on a cadence you set up ahead of time), and repeat (they call you the next time they need you)."
-        ]
-      },
-      {
-        "title": "Where to start",
-        "bullets": [
-          "Start with your sales flow, then service delivery. Everything else builds on those.",
-          "Here's a roofing job: a lead comes in, the appointment, the estimate, they sign, schedule the job, order materials, the crew does the job, invoice, paid.",
-          "That's the ideal version: what happens when nothing goes wrong. Always start there.",
-          "Then write the procedures for each step, and add scenarios as they come up."
-        ]
-      }
-    ],
-    "action": {
-      "title": "Map your sales flow",
-      "text": "Open Claude, paste in this prompt, and answer its questions the way you'd explain it to a new guy on the crew. Typing or talking both work. Claude writes up your process at the end.",
-      "prompt": "I run a [type of business, for example roofing] business. I want to document my sales process, from the moment a lead comes in to the moment I get paid.\n\nInterview me one question at a time. Start with how a new lead first reaches me, then walk through each step in order: the appointment, the estimate, getting it signed, scheduling, ordering materials, doing the job, invoicing, and getting paid. Use plain language. If my answer is vague, ask a follow-up. Skip any step I don't do.\n\nWhen we've covered every step, write it up as:\n1. The process: a numbered list of steps, beginning to end, with who does each step and what tool they use.\n2. Gaps: any step that depends only on me, or that I do differently each time.\n3. Scenarios: any \"if this happens, then do that\" situations I mentioned along the way.\n\nKeep it simple enough that a new crew member could follow it."
-    },
-    "summary": "Why to document your business, and what to document: your systems, your SOPs (process, procedures, and scenarios), and your data.",
-    "takeaways": [
-      "If it only lives in your head, the business can't run without you.",
-      "Document three things: your systems, your SOPs, and your data.",
-      "An SOP comes in three shapes: the process, its procedures, and scenarios.",
-      "Four processes run every business: Attract, Convert, Deliver, and Retain.",
-      "Start with your sales flow, the ideal version, before anything else."
-    ]
-  },
-  {
-    "num": "1.2",
-    "title": "Documentation 1.1: Where and how",
-    "area": "Documentation",
-    "module": 1,
-    "slug": "where-and-how",
-    "status": "soon",
-    "sections": []
-  },
-  {
-    "num": "1.3",
+    "num": "2.3",
     "title": "Connectors",
-    "area": "AI",
-    "module": 1,
+    "course": "put-ai-to-work",
     "slug": "connectors",
     "status": "ready",
     "summary": "Connect Claude to your Notion, email, and calendar, build your business home in Notion with a Customer FAQs list, and document your tech stack.",
@@ -365,10 +325,9 @@
     ]
   },
   {
-    "num": "1.4",
+    "num": "2.4",
     "title": "Your first skill: /boss",
-    "area": "AI",
-    "module": 1,
+    "course": "put-ai-to-work",
     "slug": "boss-skill",
     "status": "ready",
     "summary": "Add /boss, the skill that runs your work sessions: it catches you up, works your current project one task at a time, and logs where you left off.",
@@ -401,9 +360,9 @@
         ]
       },
       {
-        "title": "How the rest of Level 1 works",
+        "title": "How the rest of the courses work",
         "bullets": [
-          "Every lesson in Level 1 is one project.",
+          "Every lesson is one project.",
           "Read the lesson, add it as your Current Project, and run it through /boss.",
           "One brick at a time."
         ]
@@ -423,82 +382,13 @@
       "A skill is a saved set of instructions: say the word instead of pasting a prompt.",
       "/boss runs your work sessions one task at a time, and logs where you left off.",
       "When the list is empty, /boss has small jobs ready, like answering customer questions.",
-      "From here on, every Level 1 lesson is one project you run through /boss."
+      "From here on, every lesson is one project you run through /boss."
     ]
   },
   {
-    "num": "1.5",
-    "title": "Data 1.0",
-    "area": "Data",
-    "module": 1,
-    "slug": "data-1-0",
-    "status": "soon",
-    "sections": []
-  },
-  {
-    "num": "1.6",
-    "title": "Delivery 1.0: Define it, do it the same way",
-    "area": "Delivery",
-    "module": 1,
-    "slug": "define-it-do-it-the-same-way",
-    "status": "soon",
-    "sections": [],
-    "note": "The service, the standard, what \"done\" looks like."
-  },
-  {
-    "num": "1.7",
-    "title": "Reputation 1.0: Keep your promises, earn the reviews",
-    "area": "Reputation",
-    "module": 1,
-    "slug": "keep-your-promises-earn-the-reviews",
-    "status": "soon",
-    "sections": [],
-    "note": "No business track record yet? Then your reputation is your personal one. Do what you say you'll do and make promises you can keep. Saying no is powerful: a no you keep beats a yes you break."
-  },
-  {
-    "num": "1.8",
-    "title": "Attract 1.0: Know your customer",
-    "area": "Attract",
-    "module": 1,
-    "slug": "know-your-customer-be-easy-to-find",
-    "status": "soon",
-    "sections": [],
-    "note": "Who you want more of, what they need, and where they're looking. (Your website comes in Level 2.)"
-  },
-  {
-    "num": "1.9",
-    "title": "Convert 1.0: Estimates and follow-up",
-    "area": "Convert",
-    "module": 1,
-    "slug": "estimates-and-follow-up",
-    "status": "soon",
-    "sections": [],
-    "note": "Clear, fast, and easy to say yes to."
-  },
-  {
-    "num": "1.10",
-    "title": "Retain 1.0: The four Rs",
-    "area": "Retain",
-    "module": 1,
-    "slug": "the-four-rs",
-    "status": "soon",
-    "sections": []
-  },
-  {
-    "num": "1.11",
-    "title": "Brand 1.0: Your values and your promise",
-    "area": "Brand",
-    "module": 1,
-    "slug": "your-values-and-your-promise",
-    "status": "soon",
-    "sections": [],
-    "note": "Your values and the promise you make every customer. Brand 2.0 builds the brand guide."
-  },
-  {
-    "num": "1.12",
+    "num": "2.5",
     "title": "Custom skills: /skillz",
-    "area": "AI",
-    "module": 1,
+    "course": "put-ai-to-work",
     "slug": "custom-skills",
     "status": "ready",
     "summary": "Turn the jobs you repeat every week into your own Claude skills, with /skillz doing the writing.",
@@ -546,81 +436,235 @@
     ]
   },
   {
-    "num": "2.1",
-    "title": "Documentation 2.0: Your crew's training manual",
-    "area": "Documentation",
-    "module": 2,
-    "slug": "your-crew-s-training-manual",
+    "num": "3.1",
+    "title": "SOP Basics",
+    "course": "get-it-out-of-your-head",
+    "slug": "documentation-basics",
+    "status": "ready",
+    "sections": [
+      {
+        "title": "Why document",
+        "bullets": [
+          "If it's all in your head, you can't take a day off, get sick, or step back. The business is you.",
+          "You're documenting for future you: you on a busy day, a tired day, or six months from now when you've forgotten how you handled it last time.",
+          "Documented means consistent. Same job, same way, every time. That's what customers experience as quality, and what earns you the reviews.",
+          "It makes training easier. Hand the new guy the process instead of having him follow you around for weeks.",
+          "You can't fix what you can't see. Once it's written down, the gaps show up.",
+          "It's how you get out of the work: you can't automate or delegate what isn't documented. And a business that runs on documented processes is worth more if you ever sell."
+        ]
+      },
+      {
+        "title": "What to document",
+        "bullets": [
+          "**Systems:** the tools and setup behind the work. Your tech stack (which tool runs each step, from lead to paid), your brand guide (just note what you have for now; we'll build it in Book the Right Customers), and billing: your price book and your chart of accounts.",
+          "**SOPs:** how the work actually gets done.",
+          "**Data:** your customers, your jobs, and the handful of numbers that tell you how the business is doing. That gets its own lesson, Data Integrity.",
+          "The rule: document how it runs today, before you change anything. You can't improve what you haven't captured."
+        ]
+      },
+      {
+        "title": "SOPs are simpler than you think",
+        "bullets": [
+          "You don't need a giant binder. An SOP is how your business does things, written clearly enough that someone else could do it too.",
+          "**The process** is the whole thing, beginning to end.",
+          "**Procedures** take you through each step. When you get to the job: set up the site, take pictures, put your signs out.",
+          "**Scenarios** are the if-thens that throw off your procedures: materials running late, the wrong color shingles, a customer who wants to reschedule, a bounced deposit. Think of them as the questions your crew asks you over and over.",
+          "You don't need to imagine every scenario. If it's happened twice, document it. Once is a surprise. Twice is a pattern."
+        ]
+      },
+      {
+        "title": "Four processes run your business",
+        "bullets": [
+          "**Attract:** how leads find you and how they reach out.",
+          "**Convert:** the appointment, the estimate, and getting it signed.",
+          "**Deliver:** scheduling, ordering materials, doing the job, invoicing, and getting paid. The job isn't delivered until you're paid.",
+          "**Retain:** the four Rs. Review, refer, recurring (service on a cadence you set up ahead of time), and repeat (they call you the next time they need you)."
+        ]
+      },
+      {
+        "title": "Where to start",
+        "bullets": [
+          "Start with your sales flow, then service delivery. Everything else builds on those.",
+          "Here's a roofing job: a lead comes in, the appointment, the estimate, they sign, schedule the job, order materials, the crew does the job, invoice, paid.",
+          "That's the ideal version: what happens when nothing goes wrong. Always start there.",
+          "Then write the procedures for each step, and add scenarios as they come up."
+        ]
+      }
+    ],
+    "action": {
+      "title": "Map your sales flow",
+      "text": "Open Claude, paste in this prompt, and answer its questions the way you'd explain it to a new guy on the crew. Typing or talking both work. Claude writes up your process at the end.",
+      "prompt": "I run a [type of business, for example roofing] business. I want to document my sales process, from the moment a lead comes in to the moment I get paid.\n\nInterview me one question at a time. Start with how a new lead first reaches me, then walk through each step in order: the appointment, the estimate, getting it signed, scheduling, ordering materials, doing the job, invoicing, and getting paid. Use plain language. If my answer is vague, ask a follow-up. Skip any step I don't do.\n\nWhen we've covered every step, write it up as:\n1. The process: a numbered list of steps, beginning to end, with who does each step and what tool they use.\n2. Gaps: any step that depends only on me, or that I do differently each time.\n3. Scenarios: any \"if this happens, then do that\" situations I mentioned along the way.\n\nKeep it simple enough that a new crew member could follow it."
+    },
+    "summary": "Why to document your business, and what to document: your systems, your SOPs (process, procedures, and scenarios), and your data.",
+    "takeaways": [
+      "If it only lives in your head, the business can't run without you.",
+      "Document three things: your systems, your SOPs, and your data.",
+      "An SOP comes in three shapes: the process, its procedures, and scenarios.",
+      "Four processes run every business: Attract, Convert, Deliver, and Retain.",
+      "Start with your sales flow, the ideal version, before anything else."
+    ]
+  },
+  {
+    "num": "3.2",
+    "title": "Where and How",
+    "course": "get-it-out-of-your-head",
+    "slug": "where-and-how",
     "status": "soon",
     "sections": [],
-    "note": "Turn your SOPs into a training manual for your crew: 'Read all of this, then I'll show you how to do it.'"
+    "note": "Where your documentation lives, and how to keep it up to date."
   },
   {
-    "num": "2.2",
-    "title": "Data 2.0: Grow on purpose",
-    "area": "Data",
-    "module": 2,
-    "slug": "grow-on-purpose",
+    "num": "3.3",
+    "title": "Data Integrity",
+    "course": "get-it-out-of-your-head",
+    "slug": "data-integrity",
     "status": "soon",
     "sections": [],
-    "note": "Pick the next brick based on your numbers."
+    "note": "What data to track, and where to track it."
   },
   {
-    "num": "2.3",
-    "title": "Delivery 2.0",
-    "area": "Delivery",
-    "module": 2,
-    "slug": "delivery-2-0",
-    "status": "soon",
-    "sections": []
-  },
-  {
-    "num": "2.4",
-    "title": "Reputation 2.0: Social proof",
-    "area": "Reputation",
-    "module": 2,
-    "slug": "social-proof",
+    "num": "3.4",
+    "title": "Data Analysis",
+    "course": "get-it-out-of-your-head",
+    "slug": "data-analysis",
     "status": "soon",
     "sections": [],
-    "note": "Put reviews and results where people make the decision."
+    "note": "Turn your numbers into decisions."
   },
   {
-    "num": "2.5",
-    "title": "Attract 2.0: Social media basics",
-    "area": "Attract",
-    "module": 2,
-    "slug": "social-media-basics",
+    "num": "4.1",
+    "title": "Define and Limit Your Services",
+    "course": "same-great-job",
+    "slug": "define-your-services",
     "status": "soon",
     "sections": [],
-    "note": "A simple rhythm you can actually keep."
+    "note": "Do it the same way every time. Riches in the niches. Say no to anything outside your SOP."
   },
   {
-    "num": "2.6",
-    "title": "Convert 2.0: Make it easy to say yes",
-    "area": "Convert",
-    "module": 2,
-    "slug": "make-it-easy-to-say-yes",
+    "num": "4.2",
+    "title": "Mistakes and Shortcomings",
+    "course": "same-great-job",
+    "slug": "mistakes",
     "status": "soon",
     "sections": [],
-    "note": "Remove options and show you're not trying to upsell them."
+    "note": "Admit it, explain why it happened, ask how to make it right, and prevent it next time."
   },
   {
-    "num": "2.7",
-    "title": "Retain 2.0: Referrals and repeat work",
-    "area": "Retain",
-    "module": 2,
-    "slug": "referrals-and-repeat-work",
+    "num": "5.1",
+    "title": "Keep Your Promises",
+    "course": "earn-the-5-stars",
+    "slug": "keep-your-promises",
     "status": "soon",
-    "sections": []
+    "sections": [],
+    "note": "To yourself, your team, and your customers. Stick to your SOPs."
   },
   {
-    "num": "2.8",
-    "title": "Brand 2.0: Brand guide",
-    "area": "Brand",
-    "module": 2,
+    "num": "5.2",
+    "title": "Earn 5-Star Reviews",
+    "course": "earn-the-5-stars",
+    "slug": "earn-reviews",
+    "status": "soon",
+    "sections": [],
+    "note": "Ask for feedback and reviews, and get your team in on it."
+  },
+  {
+    "num": "5.3",
+    "title": "Put Your Reviews to Work",
+    "course": "earn-the-5-stars",
+    "slug": "put-reviews-to-work",
+    "status": "soon",
+    "sections": [],
+    "note": "Social posts, website content, sales material, and team morale."
+  },
+  {
+    "num": "5.4",
+    "title": "Handle 1-Star Reviews",
+    "course": "earn-the-5-stars",
+    "slug": "one-star-reviews",
+    "status": "soon",
+    "sections": [],
+    "note": "Respond, admit mistakes, and stand up to bullies. A couple of 1-star reviews are okay."
+  },
+  {
+    "num": "6.1",
+    "title": "The Customer Journey",
+    "course": "book-the-right-customers",
+    "slug": "customer-journey",
+    "status": "soon",
+    "sections": [],
+    "note": "From first look to raving fan: make it easy to take the next step."
+  },
+  {
+    "num": "6.2",
+    "title": "Who Is Your Customer?",
+    "course": "book-the-right-customers",
+    "slug": "who-is-your-customer",
+    "status": "soon",
+    "sections": [],
+    "note": "Your customer has to fit your brand. Change the customer, or change the brand."
+  },
+  {
+    "num": "6.3",
+    "title": "Brand Guide",
+    "course": "book-the-right-customers",
     "slug": "brand-guide",
     "status": "soon",
     "sections": [],
-    "note": "The visual and voice side of your brand: how you look and sound, written down once so everything matches."
+    "note": "Your values, voice, and visuals, written down once so everything matches."
+  },
+  {
+    "num": "6.4",
+    "title": "A Basic Website",
+    "course": "book-the-right-customers",
+    "slug": "basic-website",
+    "status": "soon",
+    "sections": [],
+    "note": "Online booking, an instant price range, and answers to common questions."
+  },
+  {
+    "num": "6.5",
+    "title": "Google Business Profile",
+    "course": "book-the-right-customers",
+    "slug": "google-business-profile",
+    "status": "soon",
+    "sections": [],
+    "note": "Get found on Google Maps and local search."
+  },
+  {
+    "num": "6.6",
+    "title": "Local SEO",
+    "course": "book-the-right-customers",
+    "slug": "local-seo",
+    "status": "soon",
+    "sections": [],
+    "note": "Show up when people nearby search for what you do."
+  },
+  {
+    "num": "6.7",
+    "title": "Social Media Basics",
+    "course": "book-the-right-customers",
+    "slug": "social-media-basics",
+    "status": "soon",
+    "sections": [],
+    "note": "Stay on brand and post consistently."
+  },
+  {
+    "num": "7.1",
+    "title": "The Four Rs",
+    "course": "customers-for-life",
+    "slug": "the-four-rs",
+    "status": "soon",
+    "sections": [],
+    "note": "Keep customers coming back."
+  },
+  {
+    "num": "7.2",
+    "title": "Referrals and Repeat Work",
+    "course": "customers-for-life",
+    "slug": "referrals-and-repeat-work",
+    "status": "soon",
+    "sections": [],
+    "note": "Turn happy customers into your best salespeople."
   }
 ]

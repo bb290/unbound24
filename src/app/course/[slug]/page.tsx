@@ -2,33 +2,48 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MODULES, READY_LESSONS, getLesson, lessonArt, neighbors, readingMinutes, type Lesson } from "@/content/course";
+import { COURSES, READY_LESSONS, courseOf, getCourse, getLesson, lessonArt, neighbors, readingMinutes, type Lesson } from "@/content/course";
+import CoursePage from "../CoursePage";
 import PromptBox from "../PromptBox";
 import { LessonCta } from "../Account";
 
 export const dynamicParams = false;
 
+// /course/<slug> is either a course page or a lesson; their slugs never overlap.
 export function generateStaticParams() {
-  return READY_LESSONS.map((lesson) => ({ slug: lesson.slug }));
+  return [...COURSES, ...READY_LESSONS].map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const course = getCourse(slug);
+  if (course) {
+    return {
+      title: `${course.title}: a free course for home service owners | Unbound24`,
+      description: course.description,
+      alternates: { canonical: `/course/${course.slug}` },
+    };
+  }
   const lesson = getLesson(slug);
   if (!lesson) return {};
   return {
-    title: `${lesson.num} ${lesson.title} | Own Your 24`,
+    title: `${lesson.title} | ${courseOf(lesson).title}`,
     description: lesson.summary,
     alternates: { canonical: `/course/${lesson.slug}` },
   };
 }
 
-export default async function LessonPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function CourseOrLessonPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const course = getCourse(slug);
+  if (course) return <CoursePage course={course} />;
   const lesson = getLesson(slug);
   if (!lesson) notFound();
+  return <LessonPage lesson={lesson} />;
+}
 
-  const lessonModule = MODULES.find((m) => m.id === lesson.module);
+function LessonPage({ lesson }: { lesson: Lesson }) {
+  const course = courseOf(lesson);
   const { prev, next } = neighbors(lesson);
   const art = lessonArt(lesson);
 
@@ -42,14 +57,15 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         url: `https://www.unbound24.com/course/${lesson.slug}`,
         isAccessibleForFree: true,
         learningResourceType: "Lesson",
-        isPartOf: { "@type": "Course", name: "Own Your 24", url: "https://www.unbound24.com/course" },
+        isPartOf: { "@type": "Course", name: course.title, url: `https://www.unbound24.com/course/${course.slug}` },
         author: { "@type": "Person", name: "Brittany French" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Course", item: "https://www.unbound24.com/course" },
-          { "@type": "ListItem", position: 2, name: lesson.title, item: `https://www.unbound24.com/course/${lesson.slug}` },
+          { "@type": "ListItem", position: 1, name: "Courses", item: "https://www.unbound24.com/course" },
+          { "@type": "ListItem", position: 2, name: course.title, item: `https://www.unbound24.com/course/${course.slug}` },
+          { "@type": "ListItem", position: 3, name: lesson.title, item: `https://www.unbound24.com/course/${lesson.slug}` },
         ],
       },
     ],
@@ -60,9 +76,9 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <p className="text-sm font-bold text-muted">
-        <Link href="/course" className="hover:text-foreground">Course</Link>
+        <Link href="/course" className="hover:text-foreground">Courses</Link>
         <span aria-hidden="true"> / </span>
-        {lessonModule?.title}
+        <Link href={`/course/${course.slug}`} className="hover:text-foreground">{course.title}</Link>
       </p>
 
       <header className="mt-4 grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
@@ -177,7 +193,7 @@ function ActionBox({ lesson }: { lesson: Lesson }) {
         <PromptBox
           prompt={action.prompt}
           title={action.promptLabel}
-          filename={`own-your-24-${lesson.num}-${lesson.slug}-${action.skill ? "SKILL.md" : "prompt.txt"}`}
+          filename={`unbound24-${lesson.slug}-${action.skill ? "SKILL.md" : "prompt.txt"}`}
         />
       )}
       {action.prompts?.map((item, i) => (
@@ -185,7 +201,7 @@ function ActionBox({ lesson }: { lesson: Lesson }) {
           key={item.title}
           prompt={item.prompt}
           title={item.title}
-          filename={`own-your-24-${lesson.num}-${lesson.slug}-prompt-${i + 1}.txt`}
+          filename={`unbound24-${lesson.slug}-prompt-${i + 1}.txt`}
         />
       ))}
     </section>

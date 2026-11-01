@@ -28,17 +28,19 @@ export function CompleteButton({ slug }: { slug: string }) {
   );
 }
 
-export function ProgressSummary() {
+// Progress across every live lesson, or within one course when courseSlug is given.
+export function ProgressSummary({ courseSlug }: { courseSlug?: string }) {
   const progress = useProgress();
-  const done = READY_LESSONS.filter((lesson) => progress.has(lesson.slug)).length;
-  const nextLesson = READY_LESSONS.find((lesson) => !progress.has(lesson.slug));
+  const lessons = courseSlug ? READY_LESSONS.filter((lesson) => lesson.course === courseSlug) : READY_LESSONS;
+  const done = lessons.filter((lesson) => progress.has(lesson.slug)).length;
+  const nextLesson = lessons.find((lesson) => !progress.has(lesson.slug));
   if (done === 0) return null;
-  const percent = Math.round((done / READY_LESSONS.length) * 100);
+  const percent = Math.round((done / lessons.length) * 100);
   return (
     <div className="mt-8 p-5 rounded-3xl bg-highlight border border-cyan">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="font-extrabold">
-          You&rsquo;ve finished {done} of {READY_LESSONS.length} lessons
+          You&rsquo;ve finished {done} of {lessons.length} lessons
         </p>
         {nextLesson && (
           <Link href={`/course/${nextLesson.slug}`} className="font-extrabold text-cyan-text hover:underline">
@@ -52,7 +54,7 @@ export function ProgressSummary() {
         aria-valuenow={percent}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label="Course progress"
+        aria-label={courseSlug ? "Course progress" : "Progress across all courses"}
       >
         <div className="h-full bg-cyan rounded-full" style={{ width: `${percent}%` }} />
       </div>
