@@ -89,7 +89,7 @@
     ],
     "action": {
       "title": "Set up your first project",
-      "text": "Start a new chat, paste in the prompt below, and answer six quick questions. Claude writes your project instructions and walks you through setting up your first project. It takes about 15 minutes. Next up: AI Essentials.",
+      "text": "Start a new chat, paste in the prompt below, and answer six quick questions. Claude writes your project instructions and walks you through setting up your first project. It takes about 15 minutes. Next up: Job Site Prep.",
       "prompt": "I want to set up my first Claude project: a home base for my business, so every chat in it already knows how my business works. Keep it quick and easy. I'm new to this.\n\nBefore the first question, tell me two things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- There are no wrong answers. I can change any of this later, whenever I want.\n\n1. Ask me six quick questions, one at a time. For questions with options, show clickable choices if you can. If not, number the options so I can answer with numbers. Always include \"Other\" so I can type my own answer. For questions without options, show a short example answer. If I skip part of a question, that's fine; move on.\n- What's your business called, and what's your trade? (Example: \"Smith Plumbing, plumbing.\")\n- What's your role? Owner, and I'm in the field most days; Owner, and I mostly run the business; Owner, a bit of both; Office manager or admin; Other.\n- What are your main services, and the towns or areas you cover? Is there anything you don't do? (Example: \"Roof replacements and repairs, gutters. Around Tacoma. No commercial.\")\n- Which tools do you use for your business? Pick all that fit: Housecall Pro, Jobber, ServiceTitan, QuickBooks, Google (Gmail, Calendar, Drive), Microsoft 365 (Outlook, Word, Excel), Paper or spreadsheets, Other.\n- When you write to my customers, how should it sound? Pick all that fit: Friendly and down to earth; Short and to the point; Professional; Like a quick text from me, not a corporate email; Other.\n- Here are the rules I'll always follow. Do you want to change or add anything?\n  - Anything I write for your customers is a draft. If your email is connected, emails land in your drafts folder so you can review them and send them yourself.\n  - I'll never ask for card numbers, passwords, Social Security numbers, or bank account numbers.\n  - No em dashes (the long dash that makes writing look like AI wrote it).\n  - When I write to customers, I use plain words, no jargon or hype, and sound like you, not a big company.\n\n2. Write my project instructions from my answers, with these short sections: My business, My role, My services, My tools, How to write to my customers, and Rules. Use plain language. Put it in a code block so I get a copy button, and tell me to click Copy (or select all the text and copy it) so I can paste it in the next step. Then remind me I can update it anytime, like adding a new service or tool.\n\n3. Walk me through setting up the project one step at a time. Wait for me to say \"done\" before the next step. If my screen doesn't match what you describe, ask me for a screenshot.\n- Create a new project and name it after my business.\n- Paste my project instructions in and save.\n- Start a new chat inside the project and say hi, so I can see it already knows my business.\n\nFinish with a quick checklist of what we set up, and remind me to start every business chat inside this project from now on.",
       "promptLabel": "Set up your project"
     },
@@ -148,16 +148,16 @@
           "**Bad days:** we all have them. You can push through, but sometimes you have 30 minutes between jobs and you just can't.",
           "**Waiting:** sometimes you've done your part and you're waiting on someone else before the project can move forward.",
           "**Fallback tasks:** for those times, keep a short list of tasks that keep you productive and keep your momentum, like documenting a process, logging ideas, or clearing your email.",
-          "You'll build your Idea Bank and fallback list in the next lesson, AI Essentials."
+          "You'll build your Idea Bank and fallback list in the next lesson, Job Site Prep."
         ]
       }
     ]
   },
   {
     "num": "1.3",
-    "title": "AI Essentials",
+    "title": "Job Site Prep",
     "course": "hands-on-ai",
-    "slug": "ai-set-up",
+    "slug": "job-site-prep",
     "status": "ready",
     "sections": [
       {
@@ -217,9 +217,9 @@
   },
   {
     "num": "1.4",
-    "title": "Construct the Scaffolding",
+    "title": "Lay the Foundation",
     "course": "hands-on-ai",
-    "slug": "construct-the-scaffolding",
+    "slug": "lay-the-foundation",
     "status": "ready",
     "sections": [
       {
@@ -287,8 +287,8 @@
           "**Drafts only:** anything Claude writes for a customer is a draft. You read it, and you send it yourself.",
           "**Guardrails:** the limits you set on what AI does on its own, like drafts only and no personal information.",
           "**Personal information:** customer names with phone numbers or addresses, card numbers, passwords. Keep it out of your chats.",
-          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (AI Essentials)",
-          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Construct the Scaffolding)",
+          "**Project:** a home base in Claude with instructions and files, so every chat already knows your business. (Own Your 24)",
+          "**Connector:** a link that lets Claude read another app, like Notion, email, or your calendar. (Job Site Prep)",
           "**Skill:** saved instructions Claude follows when you ask, like /boss. (/boss and Custom skills)",
           "**Automation:** work a tool does for you on its own, the same way every time, once you've proven how it should be done."
         ]
@@ -318,7 +318,7 @@
       },
       {
         "title": "What are projects?",
-        "desc": "Claude's own help article on projects, if you want more than AI Essentials covers.",
+        "desc": "Claude's own help article on projects, if you want more than Own Your 24 covers.",
         "href": "https://support.claude.com/en/articles/9517075-what-are-projects"
       },
       {
