@@ -187,9 +187,9 @@ section { padding-block: 80px; }
 .opts input:focus-visible + span { outline: 3px solid var(--cyan); outline-offset: 2px; }
 .result { border-radius: 20px; padding: 20px; background: var(--highlight); border: 1.5px solid var(--cyan); display: grid; gap: 8px; }
 .result[hidden], .apply[hidden], .err[hidden], .sent[hidden], .handle[hidden], .reply[hidden] { display: none; }
-.quiz legend { float: left; width: 100%; padding: 0; display: grid; grid-template-columns: 22px 1fr; column-gap: 4px; align-items: baseline; }
+.quiz legend { float: left; width: 100%; padding: 0; display: grid; grid-template-columns: 1fr; align-items: baseline; }
 .quiz legend + * { clear: both; }
-.quiz .hint { grid-column: 2; color: var(--muted); font-weight: 700; font-size: .85rem; margin-top: 2px; }
+.quiz .hint { grid-column: 1; color: var(--muted); font-weight: 700; font-size: .85rem; margin-top: 2px; }
 .handles { display: grid; gap: 8px; }
 .handle { display: grid; gap: 4px; font-weight: 800; font-size: .9rem; }
 .handle small { color: var(--muted); font-weight: 700; }
@@ -201,7 +201,7 @@ section { padding-block: 80px; }
 .step[hidden], .qnav[hidden], .qnav button[hidden] { display: none; }
 .qbar { display: flex; align-items: center; gap: 12px; }
 .qtrack { flex: 1; height: 10px; border-radius: 999px; background: var(--card); overflow: hidden; }
-.qtrack i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--cyan); transition: width .3s ease; }
+.qtrack i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--magenta); transition: width .3s ease; }
 #qstep { font-weight: 900; font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .quiz fieldset.step { min-height: 220px; align-content: start; }
 .quiz legend { font-size: 1.35rem; }
@@ -538,7 +538,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <p class="sub">8 quick taps. <b class="noemail">No email required!</b></p>
       <form class="quiz" id="qz" novalidate>
         <div class="qbar" aria-hidden="true"><div class="qtrack"><i id="qfill"></i></div><span id="qstep">1 of 8</span></div>
-        <fieldset class="step" data-q="1"><legend><span>1</span>What runs your jobs?<small class="hint">CRM or job software</small></legend>
+        <fieldset class="step" data-q="1"><legend>What runs your jobs?<small class="hint">CRM or job software</small></legend>
           <div class="opts">
             <label><input type="radio" name="fsm" id="fsm-0" value="Housecall Pro"><span>Housecall Pro</span></label>
             <label><input type="radio" name="fsm" id="fsm-1" value="Jobber"><span>Jobber</span></label>
@@ -559,7 +559,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
           <label class="handle" for="fsm-other-text" id="fsm-other" hidden>Which one?<input id="fsm-other-text" name="fsm-other" autocomplete="off"></label>
         </fieldset>
-        <fieldset class="step" data-q="2"><legend><span>2</span>Where do you post now?<small class="hint">Check all that apply</small></legend>
+        <fieldset class="step" data-q="2"><legend>Where do you post now?<small class="hint">Check all that apply</small></legend>
           <div class="opts">
             <label><input type="checkbox" name="now" id="now-0" value="instagram"><span>Instagram</span></label>
             <label><input type="checkbox" name="now" id="now-1" value="facebook"><span>Facebook</span></label>
@@ -577,7 +577,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <label class="handle" for="h-tiktok" hidden data-for="tiktok">TikTok handle <small>(optional)</small><input id="h-tiktok" name="h-tiktok" placeholder="@yourcompany" autocomplete="off"></label>
           </div>
         </fieldset>
-        <fieldset class="step" data-q="3"><legend><span>3</span>Where do you want to post consistently?<small class="hint">Check all that apply</small></legend>
+        <fieldset class="step" data-q="3"><legend>Where do you want to post consistently?<small class="hint">Check all that apply</small></legend>
           <div class="opts">
             <label><input type="checkbox" name="want" id="want-0" value="instagram"><span>Instagram</span></label>
             <label><input type="checkbox" name="want" id="want-1" value="facebook"><span>Facebook</span></label>
@@ -587,7 +587,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <label><input type="checkbox" name="want" id="want-5" value="tiktok"><span>TikTok</span></label>
           </div>
         </fieldset>
-        <fieldset class="step" data-q="4"><legend><span>4</span>Do you have a written-down brand guide?</legend>
+        <fieldset class="step" data-q="4"><legend>Do you have a written-down brand guide?</legend>
           <div class="opts">
             <label><input type="radio" name="brand" id="brand-0" value="yes"><span>Yes</span></label>
             <label><input type="radio" name="brand" id="brand-1" value="no"><span>No</span></label>
@@ -595,7 +595,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
           <p class="reply" id="r-brand" hidden></p>
         </fieldset>
-        <fieldset class="step" data-q="5"><legend><span>5</span>Do you have defined marketing campaigns?</legend>
+        <fieldset class="step" data-q="5"><legend>Do you have defined marketing campaigns?</legend>
           <div class="opts">
             <label><input type="radio" name="camp" id="camp-0" value="yes"><span>Yes</span></label>
             <label><input type="radio" name="camp" id="camp-1" value="no"><span>No</span></label>
@@ -603,7 +603,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           </div>
           <p class="reply" id="r-camp" hidden></p>
         </fieldset>
-        <fieldset class="step" data-q="6"><legend><span>6</span>Rate your consistency right now<small class="hint">1 is chaos. 5 is on a schedule.</small></legend>
+        <fieldset class="step" data-q="6"><legend>Rate your consistency right now<small class="hint">1 is chaos. 5 is on a schedule.</small></legend>
           <div class="opts">
             <label><input type="radio" name="cons" id="cons-0" value="1"><span><b>1</b> Chaos</span></label>
             <label><input type="radio" name="cons" id="cons-1" value="2"><span><b>2</b> When I feel like it</span></label>
@@ -612,7 +612,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <label><input type="radio" name="cons" id="cons-4" value="5"><span><b>5</b> Military-level discipline</span></label>
           </div>
         </fieldset>
-        <fieldset class="step" data-q="7"><legend><span>7</span>Who posts for you now?</legend>
+        <fieldset class="step" data-q="7"><legend>Who posts for you now?</legend>
           <div class="opts">
             <label><input type="radio" name="how" id="how-0" value="me"><span>Me</span></label>
             <label><input type="radio" name="how" id="how-1" value="office"><span>Office admin</span></label>
@@ -620,7 +620,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
             <label><input type="radio" name="how" id="how-3" value="agency"><span>An agency</span></label>
           </div>
         </fieldset>
-        <fieldset class="step" data-q="8"><legend><span>8</span>What does it cost you now?</legend>
+        <fieldset class="step" data-q="8"><legend>What does it cost you now?</legend>
           <div class="opts">
             <label><input type="radio" name="cost" id="cost-0" value="0"><span>$0, just time</span></label>
             <label><input type="radio" name="cost" id="cost-1" value="lt500"><span>Under $500/mo</span></label>
