@@ -9,7 +9,7 @@ import { SaveProgress } from "./Account";
 export const metadata: Metadata = {
   title: "Free courses for home service business owners | Unbound24",
   description:
-    "Free, step-by-step courses for plumbers, electricians, HVAC techs and roofers. Start with Own Your 24, then pick the course for the part of your business that needs you most.",
+    "Free, step-by-step courses for plumbers, electricians, HVAC techs and roofers. Start with Hands-On AI as a Power Tool, then pick the course for the part of your business that needs you most.",
   alternates: { canonical: "/course" },
 };
 
@@ -25,7 +25,7 @@ const libraryJsonLd = {
   })),
 };
 
-// Who the courses are for and how they work. "Why it's called Own Your 24" moved to that course's page (2026-11-01).
+// Who the courses are for and how they work. "Why it's called Own Your 24" is now lesson 1.2's first section (2026-11-02).
 const ABOUT: AboutBlock[] = [
   {
     title: "Who it's for",
@@ -40,7 +40,7 @@ const ABOUT: AboutBlock[] = [
     title: "How it works",
     bullets: [
       "Step by step, at your own pace. There's no timeline: three months or the rest of your life are both fine.",
-      "Start with Own Your 24, then pick the course for the part of your business that needs you most. The courses link to each other, because everything in your business is connected.",
+      "Start with Hands-On AI as a Power Tool, then pick the course for the part of your business that needs you most. The courses link to each other, because everything in your business is connected.",
       "AI runs through all of it. Claude asks you the questions and writes it all down. You learn AI by using it on your own business.",
       "No \"have to's.\" I'll walk you through the pros and cons of each choice, and you decide what fits your business.",
     ],
@@ -58,7 +58,7 @@ export default function CourseLibrary() {
           <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase mb-4">Free courses</p>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-6xl">Build it brick by brick</h1>
           <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">
-            Start with Own Your 24, then pick the course for the part of your business that needs you most. Short
+            Start with Hands-On AI as a Power Tool, then pick the course for the part of your business that needs you most. Short
             lessons, one Action each, and a Claude prompt that does the writing for you. Free, no sign-up, go at
             your own pace.
           </p>

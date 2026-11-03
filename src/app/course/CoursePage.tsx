@@ -1,20 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { COURSES, lessonsInCourse, type Course } from "@/content/course";
-import AboutCards, { type AboutBlock } from "./AboutCards";
 import LessonCards from "./LessonCards";
 import { ProgressSummary } from "./Progress";
 
-// Own Your 24 is the Start Here course, so its page explains the name (moved from the library page, 2026-11-01).
-const WHY_OWN_YOUR_24: AboutBlock = {
-  title: "Why it's called Own Your 24",
-  bullets: [
-    "There are only 24 hours in a day, and at least half of them go to doing the actual work. You also have your family, your health, and your responsibilities at home.",
-    "This course is about using the time you do have to build the business, instead of spending it on countless courses, new systems, and getting pulled in 200 directions.",
-    "I've been in business since 2010, and I've spent my share of time and money on courses, templates, and apps that never quite fit. If that sounds familiar, you're in the right place.",
-    "I'm giving this course away for free because local service businesses are the backbone of our economy.",
-  ],
-};
 
 export default function CoursePage({ course }: { course: Course }) {
   const lessons = lessonsInCourse(course.slug);
@@ -79,12 +68,6 @@ export default function CoursePage({ course }: { course: Course }) {
       </section>
 
       <ProgressSummary courseSlug={course.slug} />
-
-      {course.slug === "own-your-24" && (
-        <div className="mt-12">
-          <AboutCards blocks={[WHY_OWN_YOUR_24]} />
-        </div>
-      )}
 
       <section className="mt-12">
         <h2 className="text-2xl font-black tracking-tight sm:text-3xl">Lessons</h2>

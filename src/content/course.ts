@@ -1,7 +1,8 @@
 import lessonData from "./course-lessons.json";
 
 // Lesson content started from the Own Your 24 lesson scripts in Notion.
-// The course library (2026-11-01): Own Your 24 is the Start Here course, then one course per part of the house.
+// The course library (2026-11-02, matches Notion): Hands-On AI as a Power Tool is the Start Here course
+// (Own Your 24 is its lesson 1.2), then Get It Out of Your Head, then one course per part of the house.
 // Every lesson follows one format: 3-5 key takeaways, the action, one section per takeaway
 // (written as bullets), the action again, then the save-progress box.
 
@@ -53,46 +54,38 @@ export type Course = {
 
 export const COURSES: Course[] = [
   {
-    slug: "own-your-24",
+    slug: "hands-on-ai",
     num: 1,
-    title: "Own Your 24",
+    title: "Hands-On AI as a Power Tool",
     topic: "Start here",
     description:
-      "You only have 24 hours in a day. Get the most out of them: one project at a time, an Idea Bank for every great idea, and fallback tasks for the days you can't focus. Plus the Business Breakdown, so you know which project comes next.",
-  },
-  {
-    slug: "put-ai-to-work",
-    num: 2,
-    title: "Put AI to Work",
-    topic: "AI",
-    description:
-      "Essential AI skills for home service owners. Set up Claude, connect your tools, and build skills that do real work. AI is only as good as what you've written down, so this course pairs with Get It Out of Your Head.",
+      "Hands-on AI for home service owners. Break your business down, focus on one project at a time, set up Claude, and build the scaffolding that holds it all together. AI is a power tool: it helps you build, it doesn't build for you.",
   },
   {
     slug: "get-it-out-of-your-head",
-    num: 3,
+    num: 2,
     title: "Get It Out of Your Head",
     topic: "Documentation & Data",
     description:
-      "Write down how your business runs and track the numbers that matter, so your team (and AI) can follow along without calling you.",
+      "Write down how your business runs and track the numbers that matter, so your team (and AI) can follow along without calling you. Then turn it into Claude skills that do the work with you.",
   },
   {
     slug: "same-great-job",
-    num: 4,
+    num: 3,
     title: "Same Great Job, Every Time",
     topic: "Delivery",
     description: "Define your services, do them the same way every time, and own it when something goes wrong.",
   },
   {
     slug: "earn-the-5-stars",
-    num: 5,
+    num: 4,
     title: "Earn the 5 Stars",
     topic: "Reputation",
     description: "Keep your promises, earn five-star reviews, put them to work, and handle the bad ones with class.",
   },
   {
     slug: "book-the-right-customers",
-    num: 6,
+    num: 5,
     title: "Book the Right Customers",
     topic: "Attract, Convert & Brand",
     description:
@@ -100,7 +93,7 @@ export const COURSES: Course[] = [
   },
   {
     slug: "customers-for-life",
-    num: 7,
+    num: 6,
     title: "Customers for Life",
     topic: "Retain",
     description: "Keep customers coming back, and sending their friends.",
@@ -114,9 +107,9 @@ export const READY_LESSONS = LESSONS.filter((lesson) => lesson.status === "ready
 // One illustration per finished lesson (keyed by slug); falls back to the brick stack.
 const LESSON_ART: Record<string, { src: string; alt: string; width: number; height: number }> = {
   "business-breakdown": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
+  "own-your-24": { src: "/relaxed.webp", alt: "A happy stick figure relaxing in a lawn chair with a coffee, everything it was juggling packed in a cyan box beside it", width: 1000, height: 624 },
   "ai-set-up": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
   "nerd-alert": { src: "/nerd-alert.webp", alt: "A smiling stick figure in round glasses, a cap, and a bow tie, reading an open book", width: 581, height: 1048 },
-  "connectors": { src: "/connectors-laptop.webp", alt: "A happy stick figure plugging cords into a laptop", width: 1048, height: 675 },
   "boss-skill": { src: "/boss-coach.webp", alt: "A cheerful stick figure coach with a whistle, holding a clipboard checklist", width: 829, height: 1048 },
   "custom-skills": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
 };
