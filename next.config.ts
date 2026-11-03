@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
       { source: "/course/connectors", destination: "/course/hands-on-ai", permanent: true },
     ];
   },
+  async rewrites() {
+    return [
+      // Kewl landing page (2026-11-03): a standalone page, not in the nav or sitemap.
+      { source: "/kewl", destination: "/kewl.html" },
+    ];
+  },
 };
 
 export default nextConfig;
