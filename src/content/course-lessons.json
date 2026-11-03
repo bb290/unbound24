@@ -16,42 +16,36 @@
     "status": "ready",
     "sections": [
       {
+        "title": "Don't build without a plan",
+        "bullets": [
+          "Imagine building a house with no blueprint. You just show up every day and wing it.",
+          "You watch a random YouTube video for today's task, and you run to Home Depot 40 times a day.",
+          "Nobody would build a house that way. But if you're here, I suspect that's exactly how you've been building your business.",
+          "Not anymore. Here's the big picture of what you're building:",
+          "**Qualified leads:** a steady flow of customers who are ready and able to pay market rate for the services you offer.",
+          "**Five-star work:** consistent, quality service that earns five-star reviews, repeat jobs, and referrals to friends and family.",
+          "**A good job for everyone:** a consistent, quality job for every employee, including you, the owner."
+        ]
+      },
+      {
         "title": "Your business is a house",
         "bullets": [
-          "Every service business is built from the same parts, whatever the trade.",
-          "**The foundation** holds everything up.",
-          "**Three pillars** are how customers find you, hire you, and come back.",
-          "**The roof** is your brand, and it covers the whole house.",
-          "When something feels broken, this is the map you use to find where."
+          "The framework I use has three parts: the foundation, the pillars, and the roof. Each part has its own course.",
+          "**Delivery (foundation):** your services are defined and limited, and every job is done the same great way. That's Same Great Job, Every Time.",
+          "**Reputation (foundation):** you keep your promises, you ask every customer for a review, and your reviews prove it. That's Earn the 5 Stars.",
+          "**Documentation and data (foundation):** every process is written down clearly enough that someone else could follow it without calling you, and you track the numbers that tell you how it's going. That's Get It Out of Your Head.",
+          "**Attract and convert (pillars):** the right customers find you and book. Every page and post has a clear call to action, and you answer frequently asked questions quickly and the same way every time. That's Book the Right Customers.",
+          "**Retain (pillar):** customers come back and send their friends. That's Customers for Life.",
+          "**Brand (roof):** a consistent brand and social media presence, so what people expect from you is what they get, every time. It covers the whole house."
         ]
       },
       {
-        "title": "The foundation",
+        "title": "Plan the work, work the plan",
         "bullets": [
-          "**Delivery:** doing the job the same way every time, from scheduling and materials to the invoice and getting paid.",
-          "**Documentation:** how your business runs, written down clearly enough that someone else could follow it without calling you.",
-          "**Data:** your customers, your jobs, and the handful of numbers that tell you how it's going. Where leads come from, how many become jobs, and which jobs make money.",
-          "**Reputation:** keeping your promises, and reviews that show it.",
-          "Every lesson ties back to the foundation. The pillars depend on it."
-        ]
-      },
-      {
-        "title": "The three pillars",
-        "bullets": [
-          "**Attract:** how people find you and reach out.",
-          "**Convert:** how they become a customer: the appointment, the estimate, and getting it signed.",
-          "**Retain:** what happens after the job. Review, refer, recurring, and repeat.",
-          "Every customer moves through all three. A weak pillar shows up as slow months, lost estimates, or customers who never call back."
-        ]
-      },
-      {
-        "title": "Your brand is the roof",
-        "bullets": [
-          "Your brand isn't your logo. It's everything a customer experiences when they work with you: every call, every visit, every invoice.",
-          "How you answer the phone, show up on time, do the work, leave the job site, send the invoice, and follow up either builds your brand up or chips away at it.",
-          "It's the roof because it covers every pillar. If the roof leaks, everything underneath gets wet.",
-          "Watch for the gap: great marketing and a slick sales process, then once the agreement is signed, the service doesn't match. That's where brands break and bad reviews come from.",
-          "Your brand is what people expect from you. Your reputation is whether you deliver it."
+          "There are thousands of things you could be doing every day.",
+          "There's a never-ending stream of content with new ideas and things you MUST do, and the sense of urgency is intense.",
+          "Instead, slow down and focus. Build a sound structure first, then add the amenities.",
+          "Save the ideas, the things you think are cool, and the things you want to learn to your Idea Bank. You'll set one up later in this course."
         ]
       },
       {
@@ -59,23 +53,31 @@
         "bullets": [
           "You don't build the whole house at once. You lay one brick at a time.",
           "Keep the house in balance, so no pillar gets ahead of the others.",
-          "Work on one area at a time. Whichever part of the house is lagging behind is your next project.",
-          "Each brick is one small project: plan it, build it, write it down, then hand it off.",
-          "Next: get set up with Claude, so it can do the writing for you as you go."
+          "Work on one area at a time. Whichever part of the house is lagging behind is your next project."
+        ]
+      },
+      {
+        "title": "AI is a power tool",
+        "bullets": [
+          "If you're not using AI, you're building this house with hand tools.",
+          "You use a drill to install a cabinet. The drill doesn't install the cabinet.",
+          "You use a circular saw to cut a 2x4. The saw doesn't cut the 2x4.",
+          "AI helps you build. It doesn't build for you.",
+          "Every course teaches AI the same way you probably learned to use power tools: hands-on."
         ]
       }
     ],
-    "summary": "The parts of every service business, laid out as a house: the foundation, three pillars, and your brand as the roof. Then how you build it, brick by brick.",
+    "summary": "What we're building, before we build it: the plan for your business, laid out as a house. It's the picture every other course builds toward.",
     "takeaways": [
-      "Your business is a house: a foundation, three pillars, and a roof.",
-      "The foundation is delivery, documentation, data, and reputation.",
-      "The three pillars are attract, convert, and retain.",
-      "Your brand is the roof that covers all of it.",
-      "You build it brick by brick, one level at a time."
+      "Don't build without a plan. You're building a business with qualified leads, five-star work, and a good job for everyone in it, including you.",
+      "Your business is a house: a foundation, pillars, and your brand as the roof.",
+      "Plan the work, work the plan. Build the structure first, and save new ideas for later.",
+      "You build it brick by brick, one area at a time.",
+      "AI is a power tool. It helps you build. It doesn't build for you."
     ],
     "action": {
       "title": "Sketch your house",
-      "text": "Grab a notepad and write the eight parts: delivery, documentation, data, reputation, attract, convert, retain, and brand. Next to each, write one line on how you handle it today. Don't fix anything yet."
+      "text": "Grab a notepad and draw your house. Write the eight parts: delivery, reputation, documentation, data, attract, convert, retain, and brand. Next to each, write one line on how you handle it today. Don't fix anything yet."
     }
   },
   {
