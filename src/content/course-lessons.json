@@ -88,8 +88,10 @@
       "Every other idea goes to the Idea Bank, and fallback tasks keep you moving on the bad days."
     ],
     "action": {
-      "title": "Name your constraint, then pick your one project",
-      "text": "Finish this sentence: \"My business is held back by ___ because ___.\" Then run it through the questions in section 4: can you do more or better of what you already do? Write down the one project that loosens your constraint. Everything else goes in your Idea Bank."
+      "title": "Set up your first project",
+      "text": "Start a new chat, paste in the prompt below, and answer six quick questions. Claude writes your project instructions and walks you through setting up your first project. It takes about 15 minutes. Next up: AI Essentials.",
+      "prompt": "I want to set up my first Claude project: a home base for my business, so every chat in it already knows how my business works. Keep it quick and easy. I'm new to this.\n\nBefore the first question, tell me two things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- There are no wrong answers. I can change any of this later, whenever I want.\n\n1. Ask me six quick questions, one at a time. For questions with options, show clickable choices if you can. If not, number the options so I can answer with numbers. Always include \"Other\" so I can type my own answer. For questions without options, show a short example answer. If I skip part of a question, that's fine; move on.\n- What's your business called, and what's your trade? (Example: \"Smith Plumbing, plumbing.\")\n- What's your role? Owner, and I'm in the field most days; Owner, and I mostly run the business; Owner, a bit of both; Office manager or admin; Other.\n- What are your main services, and the towns or areas you cover? Is there anything you don't do? (Example: \"Roof replacements and repairs, gutters. Around Tacoma. No commercial.\")\n- Which tools do you use for your business? Pick all that fit: Housecall Pro, Jobber, ServiceTitan, QuickBooks, Google (Gmail, Calendar, Drive), Microsoft 365 (Outlook, Word, Excel), Paper or spreadsheets, Other.\n- When you write to my customers, how should it sound? Pick all that fit: Friendly and down to earth; Short and to the point; Professional; Like a quick text from me, not a corporate email; Other.\n- Here are the rules I'll always follow. Do you want to change or add anything?\n  - Anything I write for your customers is a draft. If your email is connected, emails land in your drafts folder so you can review them and send them yourself.\n  - I'll never ask for card numbers, passwords, Social Security numbers, or bank account numbers.\n  - No em dashes (the long dash that makes writing look like AI wrote it).\n  - When I write to customers, I use plain words, no jargon or hype, and sound like you, not a big company.\n\n2. Write my project instructions from my answers, with these short sections: My business, My role, My services, My tools, How to write to my customers, and Rules. Use plain language. Put it in a code block so I get a copy button, and tell me to click Copy (or select all the text and copy it) so I can paste it in the next step. Then remind me I can update it anytime, like adding a new service or tool.\n\n3. Walk me through setting up the project one step at a time. Wait for me to say \"done\" before the next step. If my screen doesn't match what you describe, ask me for a screenshot.\n- Create a new project and name it after my business.\n- Paste my project instructions in and save.\n- Start a new chat inside the project and say hi, so I can see it already knows my business.\n\nFinish with a quick checklist of what we set up, and remind me to start every business chat inside this project from now on.",
+      "promptLabel": "Set up your project"
     },
     "sections": [
       {
@@ -146,7 +148,7 @@
           "**Bad days:** we all have them. You can push through, but sometimes you have 30 minutes between jobs and you just can't.",
           "**Waiting:** sometimes you've done your part and you're waiting on someone else before the project can move forward.",
           "**Fallback tasks:** for those times, keep a short list of tasks that keep you productive and keep your momentum, like documenting a process, logging ideas, or clearing your email.",
-          "You'll set up your Idea Bank and fallback list in Construct the Scaffolding. Next: AI Essentials."
+          "You'll build your Idea Bank and fallback list in the next lesson, AI Essentials."
         ]
       }
     ]
@@ -159,63 +161,98 @@
     "status": "ready",
     "sections": [
       {
-        "title": "Learn by doing",
+        "title": "Context",
         "bullets": [
-          "No theory. Every lesson from here on ends with a Claude prompt.",
-          "You paste in the prompt, Claude asks you one question at a time, and you answer the way you'd explain it to a new guy on the crew.",
-          "Claude writes it up. You review it, fix what's off, and keep it.",
-          "By the end of the course, your business is documented, and you know how to use AI."
+          "Claude only knows what you tell it.",
+          "Ask it to \"send the invoices for the work I did yesterday,\" and it has no idea what work, which customers, or where your invoices live.",
+          "That's why your work project helps. It carries who you are and how your business runs into every chat, so you never start from zero."
         ]
       },
       {
-        "title": "Model + Context",
+        "title": "What is AI? Deterministic vs. probabilistic",
         "bullets": [
-          "Claude is an AI assistant made by a company called Anthropic. Use claude.ai on your computer, or the Claude app on your phone.",
-          "A model is the brain behind the chat. Some are faster, some are smarter. Use Opus 5.5, picked from the model menu in the chat window.",
-          "Claude only knows what you tell it. A generic question gets a generic answer.",
-          "\"Write a follow-up text to a customer\" sounds like any business, anywhere. Add that you're a roofer, you just finished a tear-off, the customer was worried about the weather, and you want a review, and now it sounds like you.",
-          "Every process you document becomes context, so everything Claude helps you with after that gets better."
+          "**Deterministic:** a formula returns the same answer every time. 3 + 5 = 8, today, tomorrow, and a thousand times in a row.",
+          "Material + labor + overhead = total job cost. That's deterministic. Calculators and spreadsheets are tools that give you quick, exact answers.",
+          "**Probabilistic:** the output is a prediction, a best guess. AI predicts the most likely answer based on the context you give it.",
+          "Ask it the same question twice and you may get two different phrasings, and both are correct. That's not a defect. It's what lets AI draft, summarize, rephrase, and match your tone in a way no formula can.",
+          "They're good at opposite things. A formula can't write an email. AI can't be trusted to calculate a security deposit to the penny.",
+          "Both take information in and put something out, and both are useful tools. The main difference is whether being \"creatively wrong\" is OK. For a formula, wrong is a bug. For AI, a different but valid answer is expected.",
+          "**The best setup uses both, plus a human check.** Deterministic first: if this, then that. Estimates, payment terms, costs, warranties, guarantees, and answers to customer FAQs.",
+          "For example: if we install a 30-year roof, a 5-year workmanship warranty is included. If we install a 50-year roof, it's 10 years. If we make a roof repair, no workmanship warranty is included.",
+          "Then AI drafts the email that answers the customer's question. You review it quickly, edit if needed, and send."
         ]
       },
       {
-        "title": "Guardrails + Prompting",
+        "title": "Easier to read: structured data and Markdown",
         "bullets": [
-          "**Prompting basics:** say who you are, what you want, and the details. If you have an example of what good looks like, show it.",
-          "Not sure what to tell it? Ask Claude to ask you questions first. Then tell it what's off and have it fix it. It's a conversation.",
-          "You don't have to type. Use the microphone and talk it through from the truck between jobs.",
-          "Don't paste in customer personal information, card numbers, or passwords.",
-          "AI can be confidently wrong. You're the expert in your trade. If something doesn't sound right, it probably isn't.",
-          "Claude drafts, you send. Read everything before it goes to a customer."
+          "**Structured data** means the AI knows where to look for the information it needs.",
+          "A spreadsheet is structured. A Word doc usually isn't. Bullet points are structured. A long paragraph isn't.",
+          "**Markdown** is a simple way to format text, compared to PDFs, Word docs, and the like.",
+          "It's become the main way humans, websites, and AI communicate. It's the easiest way for you and AI to understand each other."
         ]
       },
       {
-        "title": "Set up + Project",
+        "title": "Notion",
         "bullets": [
-          "Opus 5.5 comes with the Pro plan, and with Max, Team, and Enterprise. Pro is all you need.",
-          "Every new chat starts from zero. A project fixes that: a home base inside Claude, with instructions it reads every single time and files it can look at.",
-          "Your instructions cover who you are, what you do, who you serve, the tools you use, how you want Claude to talk to you, and a few standing rules, like: everything for a customer is a draft.",
-          "No brand guide needed yet. Claude picks up how you sound from two or three texts or emails you've already sent customers.",
-          "Your instructions point to your Notion pages, like your Brand page and your SOPs. As you fill those in, Claude picks them up.",
-          "From here on, start every business chat inside your work project. That one habit makes everything else in this course work."
+          "I'm asking you to set up Notion.",
+          "This is where Claude will start recording your SOPs, projects, and decisions.",
+          "As we go, you'll see the pages are full of structured data, and the whole thing is written in Markdown.",
+          "That lets you and your team work with Claude as effectively as possible."
         ]
       }
     ],
-    "summary": "Get set up with Claude: learn by doing, pick the right model, give it context, stay inside the guardrails, and set up a project so every chat already knows your business.",
+    "summary": "What AI actually is, why context matters, and why we keep everything in Notion. Then you prep the job site: Claude builds the frame of your business in Notion.",
     "takeaways": [
-      "You'll learn AI by using it on your own business, one prompt at a time.",
-      "Use the right model, and give it context: Claude only knows what you tell it.",
-      "Ask clearly, check its work, and remember: Claude drafts, you send.",
-      "Get Claude Pro and set up a project, so every chat already knows your business."
-    ]
+      "Context: Claude only knows what you tell it. Your work project carries that context into every chat.",
+      "A formula gives the same answer every time. AI gives its best guess. Use each for what it's good at, and check AI's work.",
+      "AI works best with structured information: tables, bullet points, and Markdown.",
+      "Notion is where Claude records your SOPs, projects, and decisions."
+    ],
+    "action": {
+      "title": "Job Site Prep",
+      "text": "Two steps. First, sign up for Notion at notion.com. The free plan is all you need. Then open your work project in Claude, start a new chat, and paste in the prompt below. Claude connects to your Notion and builds the frame of your business: Claude: Read First, your Dashboard, SOPs, Customer FAQs, Tech Stack, Brand Guide, Metrics, and Skills. It takes about 10 minutes.",
+      "prompt": "I want to set up my business home base in Notion. Think of it as the frame of a house: we build the structure now and fill in the rooms later, one project at a time. Keep it quick and easy. I'm new to this.\n\nBefore we start, tell me two things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- There are no wrong answers. I can change any of this later, whenever I want.\n\n1. Connect Notion. Check if you can reach my Notion. If you can't, walk me through connecting it one step at a time (in Claude: Settings, then Connectors, then Notion, and allow access to my workspace). Wait for me to say \"done.\" If my screen doesn't match what you describe, ask me for a screenshot.\n\n2. Build it in my Notion. Don't ask me anything else; just build it and tell me as you finish each part. Keep it plain and simple. Pages you leave empty get one line at the top saying what they're for.\n- A top page called \"My Business HQ.\"\n- Under it, \"Claude: Read First\": the page you read at the start of every session. Write this on it:\n  - \"At the start of every session\": read this page (the Rules, Current state, and the three newest Session log entries), then open the Dashboard and look at the Current Project and its open Project Tasks, lowest Order first.\n  - \"At the end of every session\": add a Session log entry at the top with today's date, what we did, and what's next. Update Current state if things changed. Keep Project Tasks true: mark what's done and add what came up.\n  - \"How we work\":\n    - One project at a time. The Current Project stays on the Dashboard until every \"done when\" check is done. Then we pick the next one from the Idea Bank together.\n    - Project Tasks is only for the Current Project. New ideas go in the Idea Bank, with the date and why.\n    - On a bad day, or while waiting on someone, pick a Fallback Task.\n    - When we figure out how something gets done, it goes in the right SOP page: Delivery, Attract, Convert, or Retain.\n    - When a customer asks a question, it goes in Customer FAQs with an answer, an email template, and its Stage.\n    - Tools go on the Tech Stack page. Skills go in the Skills table.\n  - \"Rules\":\n    - The rules from my project instructions.\n    - Ask before deleting anything or making big changes in Notion.\n    - If you're not sure where something goes, ask me. Everything has one home.\n    - Ask me one question at a time, and keep it short.\n    - Date everything you add.\n  - \"Current state\": \"Business HQ is set up. Next: load my first project.\"\n  - \"Session log\": add today's date: \"Business HQ set up.\"\n- Under it, \"Dashboard,\" with:\n  - \"Current Project\": a project name and a \"done when\" list, left blank for now.\n  - A \"Project Tasks\" table with columns Task, Order (1 is next), and Status (Open, Waiting, Done).\n  - An \"Idea Bank\" table with columns Idea, Added (date), and Why.\n  - \"Fallback Tasks\": an empty list.\n- Under it, \"SOPs,\" with four pages: \"Delivery\" (how every job gets done), \"Attract\" (how customers find me), \"Convert\" (from first call to signed job), and \"Retain\" (reviews, referrals, and repeat customers).\n- Under it, \"Customer FAQs\": a table with columns Question, Answer, Email Template, and Stage. Answer is the basic answer. Email Template is a ready-to-send reply when a customer asks that question. Stage shows where in the process the question comes up, and a question can have more than one: Attract, Convert, Delivery, Retain.\n- Under it, \"Tech Stack\": the tools I use, what each one is for, who uses it, and where the login is kept (never the password itself).\n- Under it, \"Brand Guide\": how my business looks and sounds.\n- Under it, \"Metrics\": the numbers I track to see how my business is doing.\n- Under it, \"Skills\": a table of my Claude skills, with columns Skill, What it does, and File (the skill's file or a link to it), so you can find them in Notion.\n\n3. Give me the link to \"My Business HQ.\" Then write one line for my project instructions in a code block so I get a copy button: \"My business runs from my Notion page My Business HQ. Read Claude: Read First first, then the Dashboard.\" Tell me to click Copy, then walk me through adding it to my project instructions one step at a time. Wait for me to say \"done.\"\n\nFinish with a quick checklist of what we set up. Remind me that this is just the frame, and we'll fill in the rooms one lesson at a time. I can change anything later.",
+      "promptLabel": "Build your frame"
+    }
   },
   {
     "num": "1.4",
     "title": "Construct the Scaffolding",
     "course": "hands-on-ai",
     "slug": "construct-the-scaffolding",
-    "status": "soon",
-    "sections": [],
-    "note": "Set up Notion to hold your project, Idea Bank, and fallback tasks, and connect your tools to Claude."
+    "status": "ready",
+    "sections": [
+      {
+        "title": "See what's really going on",
+        "bullets": [
+          "Before we can fix, improve, or grow this business, we need an accurate understanding of what's going on right now.",
+          "This lesson is short. It's mostly action.",
+          "You're going to backfill your SOPs. It's a bigger prompt than usual: Claude asks you a lot of questions, you answer them, and it documents your answers in Notion, so you get a clear view of your business.",
+          "How are you getting customers, and where are they coming from? How are you turning leads into jobs? How are you doing on getting paid? Are you asking for reviews? What numbers are you tracking, if any?"
+        ]
+      },
+      {
+        "title": "Messy is fine",
+        "bullets": [
+          "Don't worry about how it should be done. Answer honestly about how it's done today.",
+          "If you don't have written processes, the answer will probably sound like this: \"Most of the time we do it like this. That's how it's supposed to go, but really we do it that way about half the time. The other half, someone texts me and I just do the job. Sometimes I forget to invoice. Usually it's not on the schedule, and nobody knows what's going on.\"",
+          "That's the reality for most one- to three-person operations. A little chaotic? That's OK. If we didn't have this problem, we wouldn't be doing this.",
+          "From there, we pick one thing at a time to improve. There's nothing wrong with your business as it is. It could just be a little better."
+        ]
+      }
+    ],
+    "summary": "Before you fix anything, get an honest picture of how your business runs today. Claude interviews you and writes it all into your Notion.",
+    "takeaways": [
+      "Before you can fix, improve, or grow your business, you need an accurate picture of what's going on right now.",
+      "Write down what actually happens, not what should happen.",
+      "Messy is normal. That's why we're cleaning it up, one thing at a time."
+    ],
+    "action": {
+      "title": "Backfill your SOPs",
+      "text": "Open your work project in Claude, start a new chat, and paste in the prompt below. Claude interviews you about how your business runs today, one area at a time (Delivery, Attract, Convert, Retain), and writes it into your SOP pages. Skip anything. Stop anytime and pick up later.",
+      "prompt": "I want to document how my business runs today, so you know how things actually work. Not how they should work. How they actually work, right now.\n\nBefore we start, tell me three things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- I can skip any question. We'll come back to it later.\n- Messy is fine. If something is chaotic or done differently every time, that's exactly what we write down.\n\nFirst, read \"Claude: Read First\" in my Notion page \"My Business HQ.\"\n\nWe'll go one area at a time, in this order: Delivery, Attract, Convert, Retain.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- Give options to pick from when it fits, and always include \"Other.\" For open questions, show a short example answer.\n- Ask up to ten questions per area. If an answer is vague, ask one follow-up for details.\n- If I say \"skip,\" move on and note it as \"Not documented yet.\"\n\nWhat to ask about:\n- Delivery: What services do I offer, and what don't I do? Push me to be specific. Then, once a customer says yes to the estimate: How does the job get scheduled? How does the work get done? Is there a checklist? When do I take before and after photos? How do I check the quality? When does the invoice go out? What happens if they don't pay, and who follows up?\n- Attract: How do I find customers today? Where do leads come in: website, texts, emails, phone calls, or all of them? Do I go to networking events? Do I post on social media? How do people find out my business exists?\n- Convert: How does a lead turn into an estimate, and an estimate into a job? Who does each step? When does it go into my systems, if it does? How does my pricing work? Do I offer any warranties or guarantees?\n- Retain: Do I get feedback from customers? Do I ask for reviews? Do customers come back or send referrals?\n\nAfter each area:\n1. Write it up on that SOP page in My Business HQ. Write it how it is, in my words, in the order things happen. Don't write what you wish it was. If it's messy or done differently every time, say so. List anything I skipped under \"Not documented yet.\"\n2. If a customer question came up, add it to Customer FAQs. If a tool came up, add it to Tech Stack.\n3. Show me a short summary and ask if anything's off. Fix it.\n4. Ask if I want to keep going to the next area or stop for today.\n\nWhen we stop, add a Session log entry on \"Claude: Read First\" with today's date, which areas are done, and which are left. Remind me I can run this prompt again anytime to pick up where we left off.",
+      "promptLabel": "Backfill your SOPs"
+    }
   },
   {
     "num": "1.5",
