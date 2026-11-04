@@ -1,0 +1,121 @@
+[
+ {
+  "file": "business-breakdown",
+  "eyebrow": "Lesson 1.1",
+  "title": "Business Breakdown",
+  "sub": "Hands-On AI as a Power Tool \u00b7 free course",
+  "art": "/brick-house.webp"
+ },
+ {
+  "file": "own-your-24",
+  "eyebrow": "Lesson 1.2",
+  "title": "Own Your 24",
+  "sub": "Hands-On AI as a Power Tool \u00b7 free course",
+  "art": "/relaxed.webp"
+ },
+ {
+  "file": "job-site-prep",
+  "eyebrow": "Lesson 1.3",
+  "title": "Job Site Prep",
+  "sub": "Hands-On AI as a Power Tool \u00b7 free course",
+  "art": "/calc-crystal.webp"
+ },
+ {
+  "file": "lay-the-foundation",
+  "eyebrow": "Lesson 1.4",
+  "title": "Lay the Foundation",
+  "sub": "Hands-On AI as a Power Tool \u00b7 free course",
+  "art": "/inspect-foundation.webp"
+ },
+ {
+  "file": "nerd-alert",
+  "eyebrow": "Lesson 1.5",
+  "title": "Nerd Alert (bonus)",
+  "sub": "Hands-On AI as a Power Tool \u00b7 free course",
+  "art": "/nerd-alert.webp"
+ },
+ {
+  "file": "documentation-basics",
+  "eyebrow": "Lesson 2.1",
+  "title": "SOP Basics",
+  "sub": "Get It Out of Your Head \u00b7 free course",
+  "art": "/brick-stack.webp"
+ },
+ {
+  "file": "boss-skill",
+  "eyebrow": "Lesson 2.5",
+  "title": "Your first skill: /boss",
+  "sub": "Get It Out of Your Head \u00b7 free course",
+  "art": "/boss-coach.webp"
+ },
+ {
+  "file": "custom-skills",
+  "eyebrow": "Lesson 2.6",
+  "title": "Custom skills: /skillz",
+  "sub": "Get It Out of Your Head \u00b7 free course",
+  "art": "/brick-house.webp"
+ },
+ {
+  "file": "home",
+  "eyebrow": "Unbound24",
+  "title": "Own Your 24",
+  "sub": "Free courses for home service owners",
+  "art": "/hero-juggling.webp"
+ },
+ {
+  "file": "course",
+  "eyebrow": "Free courses",
+  "title": "Build your business brick by brick",
+  "sub": "For plumbers, electricians, HVAC techs, roofers",
+  "art": "/brick-stack.webp"
+ },
+ {
+  "file": "course-hands-on-ai",
+  "eyebrow": "Course 1 \u00b7 Start here",
+  "title": "Hands-On AI as a Power Tool",
+  "sub": "Free course for home service owners",
+  "art": "/human-ai.webp"
+ },
+ {
+  "file": "course-get-it-out-of-your-head",
+  "eyebrow": "Course 2 \u00b7 Documentation & Data",
+  "title": "Get It Out of Your Head",
+  "sub": "Free course for home service owners",
+  "art": "/boss-coach.webp"
+ },
+ {
+  "file": "course-same-great-job",
+  "eyebrow": "Course 3 \u00b7 Delivery",
+  "title": "Same Great Job, Every Time",
+  "sub": "Free course for home service owners",
+  "art": "/brick-stack.webp"
+ },
+ {
+  "file": "course-earn-the-5-stars",
+  "eyebrow": "Course 4 \u00b7 Reputation",
+  "title": "Earn the 5 Stars",
+  "sub": "Free course for home service owners",
+  "art": "/brick-house.webp"
+ },
+ {
+  "file": "course-book-the-right-customers",
+  "eyebrow": "Course 5 \u00b7 Attract, Convert & Brand",
+  "title": "Book the Right Customers",
+  "sub": "Free course for home service owners",
+  "art": "/habits-phone.webp"
+ },
+ {
+  "file": "course-customers-for-life",
+  "eyebrow": "Course 6 \u00b7 Retain",
+  "title": "Customers for Life",
+  "sub": "Free course for home service owners",
+  "art": "/relaxed.webp"
+ },
+ {
+  "file": "kewl",
+  "eyebrow": "Kewl by Unbound24",
+  "title": "Show up every week",
+  "sub": "Branded social posts from your job photos",
+  "art": "/habits-phone.webp"
+ }
+]
