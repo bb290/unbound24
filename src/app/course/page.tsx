@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description:
     "Free, step-by-step courses for plumbers, electricians, HVAC techs and roofers. Start with Hands-On AI as a Power Tool, then pick the course for the part of your business that needs you most.",
   alternates: { canonical: "/course" },
+  openGraph: { url: "/course", images: [{ url: "/og/course.png", width: 1200, height: 630, alt: "Free courses for home service business owners" }] },
+  twitter: { card: "summary_large_image", images: ["/og/course.png"] },
 };
 
 const libraryJsonLd = {

@@ -108,7 +108,8 @@ export const READY_LESSONS = LESSONS.filter((lesson) => lesson.status === "ready
 const LESSON_ART: Record<string, { src: string; alt: string; width: number; height: number }> = {
   "business-breakdown": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },
   "own-your-24": { src: "/relaxed.webp", alt: "A happy stick figure relaxing in a lawn chair with a coffee, everything it was juggling packed in a cyan box beside it", width: 1000, height: 624 },
-  "job-site-prep": { src: "/hello-wave.webp", alt: "A smiling stick figure waving hello, holding a laptop", width: 1000, height: 951 },
+  "job-site-prep": { src: "/calc-crystal.webp", alt: "A stick figure in a cap and glasses holding a calculator in one hand and a glowing crystal ball in the other", width: 875, height: 890 },
+  "lay-the-foundation": { src: "/inspect-foundation.webp", alt: "A stick figure in a cap kneeling with a magnifying glass, inspecting cracks in a foundation", width: 934, height: 868 },
   "nerd-alert": { src: "/nerd-alert.webp", alt: "A smiling stick figure in round glasses, a cap, and a bow tie, reading an open book", width: 581, height: 1048 },
   "boss-skill": { src: "/boss-coach.webp", alt: "A cheerful stick figure coach with a whistle, holding a clipboard checklist", width: 829, height: 1048 },
   "custom-skills": { src: "/brick-house.webp", alt: "A proud stick figure leaning on a small house built from cyan bricks", width: 1000, height: 833 },

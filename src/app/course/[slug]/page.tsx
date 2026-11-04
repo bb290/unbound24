@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${course.title}: a free course for home service owners | Unbound24`,
       description: course.description,
       alternates: { canonical: `/course/${course.slug}` },
+      openGraph: { url: `/course/${course.slug}`, images: [{ url: `/og/course-${course.slug}.png`, width: 1200, height: 630, alt: course.title }] },
+      twitter: { card: "summary_large_image", images: [`/og/course-${course.slug}.png`] },
     };
   }
   const lesson = getLesson(slug);
