@@ -6,6 +6,8 @@ import { COURSES, READY_LESSONS, courseOf, getCourse, getLesson, lessonArt, neig
 import CoursePage from "../CoursePage";
 import PromptBox from "../PromptBox";
 import { LessonCta } from "../Account";
+import Feedback from "../Feedback";
+import { feedbackEnabled } from "@/lib/feedback";
 
 export const dynamicParams = false;
 
@@ -150,6 +152,8 @@ function LessonPage({ lesson }: { lesson: Lesson }) {
       )}
 
       {lesson.action && <ActionBox lesson={lesson} />}
+
+      {feedbackEnabled() && <Feedback slug={lesson.slug} />}
 
       <LessonCta slug={lesson.slug} />
 
