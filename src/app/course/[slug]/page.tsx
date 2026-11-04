@@ -190,6 +190,33 @@ function ActionBox({ lesson }: { lesson: Lesson }) {
       <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase">Your Action</p>
       <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{action.title}</h2>
       <p className="mt-3 text-lg leading-relaxed">{action.text}</p>
+      {action.steps && (
+        <ol className="mt-6 space-y-4">
+          {action.steps.map((step, i) => (
+            <li key={step.title} className="flex gap-4">
+              <span className={`w-8 shrink-0 text-3xl font-black leading-none ${i % 2 ? "text-magenta-text" : "text-cyan-text"}`}>{i + 1}</span>
+              <span className="text-lg leading-relaxed">
+                <strong className="font-extrabold">{step.title}.</strong> {step.text}
+              </span>
+            </li>
+          ))}
+        </ol>
+      )}
+      {action.helper && (
+        <div className="mt-6">
+          <p className="text-sm font-extrabold tracking-widest uppercase text-magenta-text">{action.helper.label}</p>
+          <div className="mt-2 aspect-video rounded-2xl overflow-hidden border border-line">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${action.helper.video}`}
+              title={`${action.helper.label}: ${lesson.title}`}
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+      )}
       {action.skill && (
         <a
           href={action.skill.href}

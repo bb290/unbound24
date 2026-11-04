@@ -22,6 +22,10 @@ export type LessonAction = {
   prompts?: { title: string; prompt: string }[];
   // A downloadable Claude skill (zip in public/downloads).
   skill?: { label: string; href: string };
+  // Numbered steps shown above the prompt, when the action is more than "paste this prompt".
+  steps?: { title: string; text: string }[];
+  // A short screen-recorded walkthrough of the action (YouTube video id).
+  helper?: { label: string; video: string };
 };
 
 export type Lesson = {
