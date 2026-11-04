@@ -56,6 +56,10 @@ def link_para(lesson):
 
 def action_blocks(a):
     out = [block("heading_3", "Your Action: " + a["title"]), block("paragraph", a["text"])]
+    for i, s in enumerate(a.get("steps", []), 1):
+        out.append(block("paragraph", f"**{i}. {s['title']}.** {s['text']}"))
+    if a.get("helper"):
+        out.append(block("paragraph", f"{a['helper']['label']}: https://www.youtube.com/watch?v={a['helper']['video']}"))
     if a.get("skill"):
         out.append(block("paragraph", f"Download button: {a['skill']['label']} ({a['skill']['href']})"))
     if a.get("prompt"):
