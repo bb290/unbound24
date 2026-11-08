@@ -196,11 +196,10 @@ export default function Home() {
 const AREAS = [
   "Documentation",
   "Data",
-  "Delivery",
-  "Reputation",
-  "Attract",
-  "Convert",
-  "Retain",
+  "Capture",
+  "Obtain",
+  "Deliver",
+  "Extend",
   "Brand",
 ];
 

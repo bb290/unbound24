@@ -84,29 +84,22 @@
   "art": "/boss-coach.webp"
  },
  {
-  "file": "course-same-great-job",
-  "eyebrow": "Course 3 \u00b7 Delivery",
-  "title": "Same Great Job, Every Time",
-  "sub": "Free course for home service owners",
-  "art": "/brick-stack.webp"
- },
- {
-  "file": "course-earn-the-5-stars",
-  "eyebrow": "Course 4 \u00b7 Reputation",
-  "title": "Earn the 5 Stars",
-  "sub": "Free course for home service owners",
-  "art": "/brick-house.webp"
- },
- {
   "file": "course-book-the-right-customers",
-  "eyebrow": "Course 5 \u00b7 Attract, Convert & Brand",
+  "eyebrow": "Course 3 \u00b7 Capture, Obtain & Brand",
   "title": "Book the Right Customers",
   "sub": "Free course for home service owners",
   "art": "/habits-phone.webp"
  },
  {
+  "file": "course-same-great-job",
+  "eyebrow": "Course 4 \u00b7 Deliver",
+  "title": "Same Great Job, Every Time",
+  "sub": "Free course for home service owners",
+  "art": "/brick-stack.webp"
+ },
+ {
   "file": "course-customers-for-life",
-  "eyebrow": "Course 6 \u00b7 Retain",
+  "eyebrow": "Course 5 \u00b7 Extend",
   "title": "Customers for Life",
   "sub": "Free course for home service owners",
   "art": "/relaxed.webp"

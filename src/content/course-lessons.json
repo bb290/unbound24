@@ -22,11 +22,12 @@
         "title": "Your business is a house",
         "bullets": [
           "The framework I use has three parts: the foundation, the pillars, and the roof. Each part has its own course.",
-          "**Delivery (foundation):** your services are defined and limited, and every job is done the same great way. That's Same Great Job, Every Time.",
-          "**Reputation (foundation):** you keep your promises, you ask every customer for a review, and your reviews prove it. That's Earn the 5 Stars.",
           "**Documentation and data (foundation):** every process is written down clearly enough that someone else could follow it without calling you, and you track the numbers that tell you how it's going. That's Get It Out of Your Head.",
-          "**Attract and convert (pillars):** the right customers find you and book. Every page and post has a clear call to action, and you answer frequently asked questions quickly and the same way every time. That's Book the Right Customers.",
-          "**Retain (pillar):** the four R's. Customers leave a five-star review, refer their friends and family, repeat (hire you again), and recur (sign up for regular work like a maintenance plan). That's Customers for Life.",
+          "**Four pillars, built to CODE:** a house needs four corners to stand, and so does your business. The pillars go in order, the same way every customer moves through your business: Capture, Obtain, Deliver, Extend.",
+          "**Capture:** get people's attention and bring in leads. Every page and post has a clear call to action.",
+          "**Obtain:** turn those leads into paying customers. You answer frequently asked questions quickly and the same way every time. Capture and Obtain are Book the Right Customers.",
+          "**Deliver:** do great work and give customers a great experience. Your services are defined and limited, and every job is done the same great way. That's Same Great Job, Every Time.",
+          "**Extend:** keep the relationship going after the job is done, with the four Rs. Refine: ask every customer for feedback, then use it to get better. Review: ask happy customers for a 5-star review. Refer: ask happy customers to send friends and family your way. Repeat: be the one they call next time, whether that's a maintenance plan or their next job. That's Customers for Life.",
           "**Brand (roof):** a consistent brand and social media presence, so what people expect from you is what they get, every time. It covers the whole house."
         ]
       },
@@ -61,7 +62,7 @@
     "summary": "What we're building, before we build it: the plan for your business, laid out as a house. It's the picture every other course builds toward.",
     "takeaways": [
       "Don't build without a plan. You're building a business with qualified leads, five-star work, and a good job for everyone in it, including you.",
-      "Your business is a house: a foundation, pillars, and your brand as the roof.",
+      "Your business is a house: a foundation, four pillars built to CODE (Capture, Obtain, Deliver, Extend), and your brand as the roof.",
       "Plan the work, work the plan. Build the structure first, and save new ideas for later.",
       "You build it brick by brick, one area at a time.",
       "AI is a power tool. It helps you build. It doesn't build for you."
@@ -235,7 +236,7 @@
         "label": "Watch me do it: steps 1 and 2",
         "video": "vuhLIP5Vupg"
       },
-      "prompt": "I want to set up my business home base in Notion. Think of it as the frame of a house: we build the structure now and fill in the rooms later, one project at a time. Keep it quick and easy. I'm new to this.\n\nBefore we start, tell me two things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- There are no wrong answers. I can change any of this later, whenever I want.\n\n1. Connect Notion. Check if you can reach my Notion. If you can't, walk me through connecting it one step at a time (in Claude: Settings, then Connectors, then Notion, and allow access to my workspace). Wait for me to say \"done.\" If my screen doesn't match what you describe, ask me for a screenshot.\n\n2. Build it in my Notion. Don't ask me anything else; just build it and tell me as you finish each part. Keep it plain and simple. Pages you leave empty get one line at the top saying what they're for.\n- A top page called \"My Business HQ.\"\n- Under it, \"Claude: Read First\": the page you read at the start of every session. Write this on it:\n  - \"At the start of every session\": read this page (the Rules, Current state, and the three newest Session log entries), then open the Dashboard and look at the Current Project and its open Project Tasks, lowest Order first.\n  - \"At the end of every session\": add a Session log entry at the top with today's date, what we did, and what's next. Update Current state if things changed. Keep Project Tasks true: mark what's done and add what came up.\n  - \"How we work\":\n    - One project at a time. The Current Project stays on the Dashboard until every \"done when\" check is done. Then we pick the next one from the Idea Bank together.\n    - Project Tasks is only for the Current Project. New ideas go in the Idea Bank, with the date and why.\n    - On a bad day, or while waiting on someone, pick a Fallback Task.\n    - When we figure out how something gets done, it goes in the right SOP page: Delivery, Attract, Convert, or Retain.\n    - When a customer asks a question, it goes in Customer FAQs with an answer, an email template, and its Stage.\n    - Tools go on the Tech Stack page. Skills go in the Skills table.\n  - \"Rules\":\n    - The rules from my project instructions.\n    - Ask before deleting anything or making big changes in Notion.\n    - If you're not sure where something goes, ask me. Everything has one home.\n    - Ask me one question at a time, and keep it short.\n    - Date everything you add.\n  - \"Current state\": \"Business HQ is set up. Next: load my first project.\"\n  - \"Session log\": add today's date: \"Business HQ set up.\"\n- Under it, \"Dashboard,\" with:\n  - \"Current Project\": a project name and a \"done when\" list, left blank for now.\n  - A \"Project Tasks\" table with columns Task, Order (1 is next), and Status (Open, Waiting, Done).\n  - An \"Idea Bank\" table with columns Idea, Added (date), and Why.\n  - \"Fallback Tasks\": an empty list.\n- Under it, \"SOPs,\" with four pages: \"Delivery\" (how every job gets done), \"Attract\" (how customers find me), \"Convert\" (from first call to signed job), and \"Retain\" (reviews, referrals, and repeat customers).\n- Under it, \"Customer FAQs\": a table with columns Question, Answer, Email Template, and Stage. Answer is the basic answer. Email Template is a ready-to-send reply when a customer asks that question. Stage shows where in the process the question comes up, and a question can have more than one: Attract, Convert, Delivery, Retain.\n- Under it, \"Tech Stack\": the tools I use, what each one is for, who uses it, and where the login is kept (never the password itself).\n- Under it, \"Brand Guide\": how my business looks and sounds.\n- Under it, \"Metrics\": the numbers I track to see how my business is doing.\n- Under it, \"Skills\": a table of my Claude skills, with columns Skill, What it does, and File (the skill's file or a link to it), so you can find them in Notion.\n\n3. Give me the link to \"My Business HQ.\" Then write one line for my project instructions in a code block so I get a copy button: \"My business runs from my Notion page My Business HQ. Read Claude: Read First first, then the Dashboard.\" Tell me to click Copy, then walk me through adding it to my project instructions one step at a time. Wait for me to say \"done.\"\n\nFinish with a quick checklist of what we set up. Remind me that this is just the frame, and we'll fill in the rooms one lesson at a time. I can change anything later.",
+      "prompt": "I want to set up my business home base in Notion. Think of it as the frame of a house: we build the structure now and fill in the rooms later, one project at a time. Keep it quick and easy. I'm new to this.\n\nBefore we start, tell me two things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- There are no wrong answers. I can change any of this later, whenever I want.\n\n1. Connect Notion. Check if you can reach my Notion. If you can't, walk me through connecting it one step at a time (in Claude: Settings, then Connectors, then Notion, and allow access to my workspace). Wait for me to say \"done.\" If my screen doesn't match what you describe, ask me for a screenshot.\n\n2. Build it in my Notion. Don't ask me anything else; just build it and tell me as you finish each part. Keep it plain and simple. Pages you leave empty get one line at the top saying what they're for.\n- A top page called \"My Business HQ.\"\n- Under it, \"Claude: Read First\": the page you read at the start of every session. Write this on it:\n  - \"At the start of every session\": read this page (the Rules, Current state, and the three newest Session log entries), then open the Dashboard and look at the Current Project and its open Project Tasks, lowest Order first.\n  - \"At the end of every session\": add a Session log entry at the top with today's date, what we did, and what's next. Update Current state if things changed. Keep Project Tasks true: mark what's done and add what came up.\n  - \"How we work\":\n    - One project at a time. The Current Project stays on the Dashboard until every \"done when\" check is done. Then we pick the next one from the Idea Bank together.\n    - Project Tasks is only for the Current Project. New ideas go in the Idea Bank, with the date and why.\n    - On a bad day, or while waiting on someone, pick a Fallback Task.\n    - When we figure out how something gets done, it goes in the right SOP page: Capture, Obtain, Deliver, or Extend.\n    - When a customer asks a question, it goes in Customer FAQs with an answer, an email template, and its Stage.\n    - Tools go on the Tech Stack page. Skills go in the Skills table.\n  - \"Rules\":\n    - The rules from my project instructions.\n    - Ask before deleting anything or making big changes in Notion.\n    - If you're not sure where something goes, ask me. Everything has one home.\n    - Ask me one question at a time, and keep it short.\n    - Date everything you add.\n  - \"Current state\": \"Business HQ is set up. Next: load my first project.\"\n  - \"Session log\": add today's date: \"Business HQ set up.\"\n- Under it, \"Dashboard,\" with:\n  - \"Current Project\": a project name and a \"done when\" list, left blank for now.\n  - A \"Project Tasks\" table with columns Task, Order (1 is next), and Status (Open, Waiting, Done).\n  - An \"Idea Bank\" table with columns Idea, Added (date), and Why.\n  - \"Fallback Tasks\": an empty list.\n- Under it, \"SOPs,\" with four pages, in this order: \"Capture\" (how customers find me), \"Obtain\" (from first call to signed job), \"Deliver\" (how every job gets done), and \"Extend\" (feedback, reviews, referrals, and repeat customers).\n- Under it, \"Customer FAQs\": a table with columns Question, Answer, Email Template, and Stage. Answer is the basic answer. Email Template is a ready-to-send reply when a customer asks that question. Stage shows where in the process the question comes up, and a question can have more than one: Capture, Obtain, Deliver, Extend.\n- Under it, \"Tech Stack\": the tools I use, what each one is for, who uses it, and where the login is kept (never the password itself).\n- Under it, \"Brand Guide\": how my business looks and sounds.\n- Under it, \"Metrics\": the numbers I track to see how my business is doing.\n- Under it, \"Skills\": a table of my Claude skills, with columns Skill, What it does, and File (the skill's file or a link to it), so you can find them in Notion.\n\n3. Give me the link to \"My Business HQ.\" Then write one line for my project instructions in a code block so I get a copy button: \"My business runs from my Notion page My Business HQ. Read Claude: Read First first, then the Dashboard.\" Tell me to click Copy, then walk me through adding it to my project instructions one step at a time. Wait for me to say \"done.\"\n\nFinish with a quick checklist of what we set up. Remind me that this is just the frame, and we'll fill in the rooms one lesson at a time. I can change anything later.",
       "promptLabel": "Build your frame"
     },
     "video": "WJ4qvksL9CE"
@@ -274,12 +275,12 @@
     ],
     "action": {
       "title": "Backfill your SOPs",
-      "text": "Open your work project in Claude, start a new chat, and paste in the prompt below. Claude interviews you about how your business runs today, one area at a time (Delivery, Attract, Convert, Retain), and writes it into your SOP pages. Skip anything. Stop anytime and pick up later.",
+      "text": "Open your work project in Claude, start a new chat, and paste in the prompt below. Claude interviews you about how your business runs today, one area at a time (Capture, Obtain, Deliver, Extend), and writes it into your SOP pages. Skip anything. Stop anytime and pick up later.",
       "helper": {
         "label": "Watch me do it: backfill the SOPs",
         "video": "HkqYCCCJK3Q"
       },
-      "prompt": "I want to document how my business runs today, so you know how things actually work. Not how they should work. How they actually work, right now.\n\nBefore we start, tell me three things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- I can skip any question. We'll come back to it later.\n- Messy is fine. If something is chaotic or done differently every time, that's exactly what we write down.\n\nFirst, read \"Claude: Read First\" in my Notion page \"My Business HQ.\"\n\nWe'll go one area at a time, in this order: Delivery, Attract, Convert, Retain.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- Give options to pick from when it fits, and always include \"Other.\" For open questions, show a short example answer.\n- Ask up to ten questions per area. If an answer is vague, ask one follow-up for details.\n- If I say \"skip,\" move on and note it as \"Not documented yet.\"\n\nWhat to ask about:\n- Delivery: What services do I offer, and what don't I do? Push me to be specific. Then, once a customer says yes to the estimate: How does the job get scheduled? How does the work get done? Is there a checklist? When do I take before and after photos? How do I check the quality? When does the invoice go out? What happens if they don't pay, and who follows up?\n- Attract: How do I find customers today? Where do leads come in: website, texts, emails, phone calls, or all of them? Do I go to networking events? Do I post on social media? How do people find out my business exists?\n- Convert: How does a lead turn into an estimate, and an estimate into a job? Who does each step? When does it go into my systems, if it does? How does my pricing work? Do I offer any warranties or guarantees?\n- Retain: Do I get feedback from customers? Do I ask for reviews? Do customers come back or send referrals?\n\nAfter each area:\n1. Write it up on that SOP page in My Business HQ. Write it how it is, in my words, in the order things happen. Don't write what you wish it was. If it's messy or done differently every time, say so. List anything I skipped under \"Not documented yet.\"\n2. If a customer question came up, add it to Customer FAQs. If a tool came up, add it to Tech Stack.\n3. Show me a short summary and ask if anything's off. Fix it.\n4. Ask if I want to keep going to the next area or stop for today.\n\nWhen we stop, add a Session log entry on \"Claude: Read First\" with today's date, which areas are done, and which are left. Remind me I can run this prompt again anytime to pick up where we left off.",
+      "prompt": "I want to document how my business runs today, so you know how things actually work. Not how they should work. How they actually work, right now.\n\nBefore we start, tell me three things:\n- I can type my answers, or tap the microphone in the chat box and just talk.\n- I can skip any question. We'll come back to it later.\n- Messy is fine. If something is chaotic or done differently every time, that's exactly what we write down.\n\nFirst, read \"Claude: Read First\" in my Notion page \"My Business HQ.\"\n\nWe'll go one area at a time, in this order: Capture, Obtain, Deliver, Extend.\n\nHow to interview me:\n- Ask one question at a time. Keep questions short and plain.\n- Give options to pick from when it fits, and always include \"Other.\" For open questions, show a short example answer.\n- Ask up to ten questions per area. If an answer is vague, ask one follow-up for details.\n- If I say \"skip,\" move on and note it as \"Not documented yet.\"\n\nWhat to ask about:\n- Capture: How do I find customers today? Where do leads come in: website, texts, emails, phone calls, or all of them? Do I go to networking events? Do I post on social media? How do people find out my business exists?\n- Obtain: How does a lead turn into an estimate, and an estimate into a job? Who does each step? When does it go into my systems, if it does? How does my pricing work? Do I offer any warranties or guarantees?\n- Deliver: What services do I offer, and what don't I do? Push me to be specific. Then, once a customer says yes to the estimate: How does the job get scheduled? How does the work get done? Is there a checklist? When do I take before and after photos? How do I check the quality? When does the invoice go out? What happens if they don't pay, and who follows up?\n- Extend: Do I ask customers for feedback, and do I use it? Do I ask for reviews? Do customers send referrals? Do they call me again, or sign up for a maintenance plan?\n\nAfter each area:\n1. Write it up on that SOP page in My Business HQ. Write it how it is, in my words, in the order things happen. Don't write what you wish it was. If it's messy or done differently every time, say so. List anything I skipped under \"Not documented yet.\"\n2. If a customer question came up, add it to Customer FAQs. If a tool came up, add it to Tech Stack.\n3. Show me a short summary and ask if anything's off. Fix it.\n4. Ask if I want to keep going to the next area or stop for today.\n\nWhen we stop, add a Session log entry on \"Claude: Read First\" with today's date, which areas are done, and which are left. Remind me I can run this prompt again anytime to pick up where we left off.",
       "promptLabel": "Backfill your SOPs"
     },
     "video": "gWnIUUgm-uw"
@@ -398,10 +399,11 @@
       {
         "title": "Four processes run your business",
         "bullets": [
-          "**Attract:** how leads find you and how they reach out.",
-          "**Convert:** the appointment, the estimate, and getting it signed.",
+          "They go in order, the same way every customer moves through your business. Think CODE, like building to code.",
+          "**Capture:** how leads find you and how they reach out.",
+          "**Obtain:** the appointment, the estimate, and getting it signed.",
           "**Deliver:** scheduling, ordering materials, doing the job, invoicing, and getting paid. The job isn't delivered until you're paid.",
-          "**Retain:** the four Rs. Review, refer, recurring (service on a cadence you set up ahead of time), and repeat (they call you the next time they need you)."
+          "**Extend:** the four Rs. Refine (ask for feedback and use it to get better), review (ask happy customers for a 5-star review), refer (ask them to send friends and family your way), and repeat (be the one they call next time, from a maintenance plan to their next job)."
         ]
       },
       {
@@ -424,7 +426,7 @@
       "If it only lives in your head, the business can't run without you.",
       "Document three things: your systems, your SOPs, and your data.",
       "An SOP comes in three shapes: the process, its procedures, and scenarios.",
-      "Four processes run every business: Attract, Convert, Deliver, and Retain.",
+      "Four processes run every business: Capture, Obtain, Deliver, and Extend.",
       "Start with your sales flow, the ideal version, before anything else."
     ]
   },
@@ -506,7 +508,7 @@
         "label": "Download /boss",
         "href": "/downloads/boss.zip"
       },
-      "prompt": "---\nname: boss\ndescription: Runs my work session from my Notion \"My Business HQ\". Use when I say \"boss\", \"/boss\", \"let's work\", \"what's next\", or \"work on my project\". Catches me up, works my current project one task at a time, falls back to small useful jobs when the list is empty or I'm short on time, and logs the session.\n---\n\n# Boss\n\nYou're my assistant for running my business, one project at a time. Everything lives in my Notion page \"My Business HQ\": \"Start Here\", \"Dashboard\" (Current Project, Project Tasks, Idea Bank), \"SOPs\", and \"Customer FAQs\".\n\nHow to be with me: plain, brief, one thing at a time. Tell me roughly how long each thing will take. If I say \"skip\" or \"later\", note it and move on. Ask me questions one at a time.\n\n## Part 1: Connect and catch up\n\n1. Check that you can reach my Notion. If you can't, tell me exactly how to connect it (Claude settings, Connectors, Notion, allow access to my workspace) and wait until I say it's done. Don't do anything else until Notion works.\n2. Open \"Start Here\" and read it: the Rules, Current state, and the newest Session log entries. Follow the Rules.\n3. Open \"Dashboard\". Read the Current Project and its \"Done when\" list. Open \"Project Tasks\" and find rows with Status \"Open\", sorted by Order, lowest first. Read their Notes.\n4. Ask me how much time I have today.\n5. Tell me in one line where we left off (from the Session log), then show my open tasks as short numbered lines with about how long each takes. Suggest the lowest Order number that fits my time, and ask if that's okay.\n\n## Part 2: Work one task at a time\n\nFor the task I pick:\n- If it's something you can help write (an SOP, a scenario, a page, a draft message): interview me one question at a time, then write it to the right place in Notion. SOPs go under SOPs, in the right Process (Attract, Convert, Deliver, Retain) or Systems page. Scenarios go on the Scenarios page as \"If this happens, then we do this.\"\n- If it's something I do outside Notion: give me the steps one at a time, with the exact button or menu names, and wait for me to say each step is done.\n- When it's finished: add a short note in the task's Notes saying what was done and where it lives, and set Status to \"Done\" only after I confirm.\n- If I get stuck or stop partway: note where I stopped and what's blocking me. If I'm waiting on someone else, set Status to \"Waiting\".\n\nAfter each task, ask if I want the next one or want to stop.\n\n## Part 3: Fallback jobs\n\nOffer these when there are no open tasks, when I'm short on time, or when I ask for something small. Ask which one I want; do one at a time.\n1. **Inbox to drafts**: if my email is connected, find customer emails that need a reply and write reply drafts in my voice. Never send anything. Tell me where the drafts are.\n2. **Answer customer FAQs**: find customer emails or messages asking questions. Check \"Customer FAQs\" first: if the question is there, draft the reply from my saved answer, in my voice. If it isn't, ask me how I'd answer, draft the reply, and if a customer has asked it before, add it to Customer FAQs with my answer, its topic, and today's date. Never send anything, never guess at a price or a date, and tell me which drafts used a saved answer.\n3. **Document one SOP**: pick an empty or thin page under SOPs, tell me which one, and interview me to fill it in. Start with the ideal version: what happens when nothing goes wrong.\n4. **Write up a scenario**: ask me what went sideways this week. If it's happened twice, write it up on the Scenarios page.\n5. **Capture ideas**: ask what's on my mind that isn't the current project, and add each one to the Idea Bank with today's date and my reason in \"Why\".\n\n## When the Current Project is done\n\nIf every item on the \"Done when\" list is done, tell me, then help me pick the next project from the Idea Bank. For each idea I'm considering, walk me through:\n- The cost up front (time and money) and the ongoing cost (time and money each month, and who does it).\n- How we'll measure it, and when we'll check (a week, 30, 60, or 90 days).\n- Whether it fits my brand and values (check my \"Brand\" page if it exists).\nThen write the new Current Project and its \"Done when\" list on the Dashboard, set the idea's Status to \"Promoted\", and add three to five starter tasks.\n\n## Rules\n\n- Never delete a page, a row, or anything I wrote. Never change Order numbers unless I ask.\n- Everything for customers is a draft. I read it and send it myself.\n- Never ask for, store, or write down passwords, card numbers, or customer personal information.\n- If an idea comes up that isn't the current project, put it in the Idea Bank instead of starting on it.\n- If you're unsure about something in my trade, ask. I'm the expert.\n\n## Part 4: Wrap up\n\nWhen I say I'm done, or the list is empty and I don't want a fallback job:\n1. Show a short summary: what's done, what's still open, anything I skipped.\n2. Add an entry at the top of the Session log on \"Start Here\": today's date and a few lines on what we did and what's next. Don't change older entries.\n3. If where things stand has changed, update \"Current state\" on \"Start Here\".\n4. Tell me everything is saved.\n\nStart with Part 1.",
+      "prompt": "---\nname: boss\ndescription: Runs my work session from my Notion \"My Business HQ\". Use when I say \"boss\", \"/boss\", \"let's work\", \"what's next\", or \"work on my project\". Catches me up, works my current project one task at a time, falls back to small useful jobs when the list is empty or I'm short on time, and logs the session.\n---\n\n# Boss\n\nYou're my assistant for running my business, one project at a time. Everything lives in my Notion page \"My Business HQ\": \"Start Here\", \"Dashboard\" (Current Project, Project Tasks, Idea Bank), \"SOPs\", and \"Customer FAQs\".\n\nHow to be with me: plain, brief, one thing at a time. Tell me roughly how long each thing will take. If I say \"skip\" or \"later\", note it and move on. Ask me questions one at a time.\n\n## Part 1: Connect and catch up\n\n1. Check that you can reach my Notion. If you can't, tell me exactly how to connect it (Claude settings, Connectors, Notion, allow access to my workspace) and wait until I say it's done. Don't do anything else until Notion works.\n2. Open \"Start Here\" and read it: the Rules, Current state, and the newest Session log entries. Follow the Rules.\n3. Open \"Dashboard\". Read the Current Project and its \"Done when\" list. Open \"Project Tasks\" and find rows with Status \"Open\", sorted by Order, lowest first. Read their Notes.\n4. Ask me how much time I have today.\n5. Tell me in one line where we left off (from the Session log), then show my open tasks as short numbered lines with about how long each takes. Suggest the lowest Order number that fits my time, and ask if that's okay.\n\n## Part 2: Work one task at a time\n\nFor the task I pick:\n- If it's something you can help write (an SOP, a scenario, a page, a draft message): interview me one question at a time, then write it to the right place in Notion. SOPs go under SOPs, in the right Process (Capture, Obtain, Deliver, Extend) or Systems page. Scenarios go on the Scenarios page as \"If this happens, then we do this.\"\n- If it's something I do outside Notion: give me the steps one at a time, with the exact button or menu names, and wait for me to say each step is done.\n- When it's finished: add a short note in the task's Notes saying what was done and where it lives, and set Status to \"Done\" only after I confirm.\n- If I get stuck or stop partway: note where I stopped and what's blocking me. If I'm waiting on someone else, set Status to \"Waiting\".\n\nAfter each task, ask if I want the next one or want to stop.\n\n## Part 3: Fallback jobs\n\nOffer these when there are no open tasks, when I'm short on time, or when I ask for something small. Ask which one I want; do one at a time.\n1. **Inbox to drafts**: if my email is connected, find customer emails that need a reply and write reply drafts in my voice. Never send anything. Tell me where the drafts are.\n2. **Answer customer FAQs**: find customer emails or messages asking questions. Check \"Customer FAQs\" first: if the question is there, draft the reply from my saved answer, in my voice. If it isn't, ask me how I'd answer, draft the reply, and if a customer has asked it before, add it to Customer FAQs with my answer, its topic, and today's date. Never send anything, never guess at a price or a date, and tell me which drafts used a saved answer.\n3. **Document one SOP**: pick an empty or thin page under SOPs, tell me which one, and interview me to fill it in. Start with the ideal version: what happens when nothing goes wrong.\n4. **Write up a scenario**: ask me what went sideways this week. If it's happened twice, write it up on the Scenarios page.\n5. **Capture ideas**: ask what's on my mind that isn't the current project, and add each one to the Idea Bank with today's date and my reason in \"Why\".\n\n## When the Current Project is done\n\nIf every item on the \"Done when\" list is done, tell me, then help me pick the next project from the Idea Bank. For each idea I'm considering, walk me through:\n- The cost up front (time and money) and the ongoing cost (time and money each month, and who does it).\n- How we'll measure it, and when we'll check (a week, 30, 60, or 90 days).\n- Whether it fits my brand and values (check my \"Brand\" page if it exists).\nThen write the new Current Project and its \"Done when\" list on the Dashboard, set the idea's Status to \"Promoted\", and add three to five starter tasks.\n\n## Rules\n\n- Never delete a page, a row, or anything I wrote. Never change Order numbers unless I ask.\n- Everything for customers is a draft. I read it and send it myself.\n- Never ask for, store, or write down passwords, card numbers, or customer personal information.\n- If an idea comes up that isn't the current project, put it in the Idea Bank instead of starting on it.\n- If you're unsure about something in my trade, ask. I'm the expert.\n\n## Part 4: Wrap up\n\nWhen I say I'm done, or the list is empty and I don't want a fallback job:\n1. Show a short summary: what's done, what's still open, anything I skipped.\n2. Add an entry at the top of the Session log on \"Start Here\": today's date and a few lines on what we did and what's next. Don't change older entries.\n3. If where things stand has changed, update \"Current state\" on \"Start Here\".\n4. Tell me everything is saved.\n\nStart with Part 1.",
       "promptLabel": "What's inside the skill"
     },
     "takeaways": [
@@ -568,60 +570,6 @@
   },
   {
     "num": "3.1",
-    "title": "Define and Limit Your Services",
-    "course": "same-great-job",
-    "slug": "define-your-services",
-    "status": "soon",
-    "sections": [],
-    "note": "Do it the same way every time. Riches in the niches. Say no to anything outside your SOP."
-  },
-  {
-    "num": "3.2",
-    "title": "Mistakes and Shortcomings",
-    "course": "same-great-job",
-    "slug": "mistakes",
-    "status": "soon",
-    "sections": [],
-    "note": "Admit it, explain why it happened, ask how to make it right, and prevent it next time."
-  },
-  {
-    "num": "4.1",
-    "title": "Keep Your Promises",
-    "course": "earn-the-5-stars",
-    "slug": "keep-your-promises",
-    "status": "soon",
-    "sections": [],
-    "note": "To yourself, your team, and your customers. Stick to your SOPs."
-  },
-  {
-    "num": "4.2",
-    "title": "Earn 5-Star Reviews",
-    "course": "earn-the-5-stars",
-    "slug": "earn-reviews",
-    "status": "soon",
-    "sections": [],
-    "note": "Ask for feedback and reviews, and get your team in on it."
-  },
-  {
-    "num": "4.3",
-    "title": "Put Your Reviews to Work",
-    "course": "earn-the-5-stars",
-    "slug": "put-reviews-to-work",
-    "status": "soon",
-    "sections": [],
-    "note": "Social posts, website content, sales material, and team morale."
-  },
-  {
-    "num": "4.4",
-    "title": "Handle 1-Star Reviews",
-    "course": "earn-the-5-stars",
-    "slug": "one-star-reviews",
-    "status": "soon",
-    "sections": [],
-    "note": "Respond, admit mistakes, and stand up to bullies. A couple of 1-star reviews are okay."
-  },
-  {
-    "num": "5.1",
     "title": "The Customer Journey",
     "course": "book-the-right-customers",
     "slug": "customer-journey",
@@ -630,7 +578,7 @@
     "note": "From first look to raving fan: make it easy to take the next step."
   },
   {
-    "num": "5.2",
+    "num": "3.2",
     "title": "Who Is Your Customer?",
     "course": "book-the-right-customers",
     "slug": "who-is-your-customer",
@@ -639,7 +587,7 @@
     "note": "Your customer has to fit your brand. Change the customer, or change the brand."
   },
   {
-    "num": "5.3",
+    "num": "3.3",
     "title": "Brand Guide",
     "course": "book-the-right-customers",
     "slug": "brand-guide",
@@ -648,7 +596,7 @@
     "note": "Your values, voice, and visuals, written down once so everything matches."
   },
   {
-    "num": "5.4",
+    "num": "3.4",
     "title": "A Basic Website",
     "course": "book-the-right-customers",
     "slug": "basic-website",
@@ -657,7 +605,7 @@
     "note": "Online booking, an instant price range, and answers to common questions."
   },
   {
-    "num": "5.5",
+    "num": "3.5",
     "title": "Google Business Profile",
     "course": "book-the-right-customers",
     "slug": "google-business-profile",
@@ -666,7 +614,7 @@
     "note": "Get found on Google Maps and local search."
   },
   {
-    "num": "5.6",
+    "num": "3.6",
     "title": "Local SEO",
     "course": "book-the-right-customers",
     "slug": "local-seo",
@@ -675,7 +623,7 @@
     "note": "Show up when people nearby search for what you do."
   },
   {
-    "num": "5.7",
+    "num": "3.7",
     "title": "Social Media Basics",
     "course": "book-the-right-customers",
     "slug": "social-media-basics",
@@ -684,16 +632,70 @@
     "note": "Stay on brand and post consistently."
   },
   {
-    "num": "6.1",
+    "num": "4.1",
+    "title": "Define and Limit Your Services",
+    "course": "same-great-job",
+    "slug": "define-your-services",
+    "status": "soon",
+    "sections": [],
+    "note": "Do it the same way every time. Riches in the niches. Say no to anything outside your SOP."
+  },
+  {
+    "num": "4.2",
+    "title": "Mistakes and Shortcomings",
+    "course": "same-great-job",
+    "slug": "mistakes",
+    "status": "soon",
+    "sections": [],
+    "note": "Admit it, explain why it happened, ask how to make it right, and prevent it next time."
+  },
+  {
+    "num": "5.1",
     "title": "The Four Rs",
     "course": "customers-for-life",
     "slug": "the-four-rs",
     "status": "soon",
     "sections": [],
-    "note": "Keep customers coming back."
+    "note": "Refine, review, refer, repeat: keep the relationship going after the job is done."
   },
   {
-    "num": "6.2",
+    "num": "5.2",
+    "title": "Keep Your Promises",
+    "course": "customers-for-life",
+    "slug": "keep-your-promises",
+    "status": "soon",
+    "sections": [],
+    "note": "To yourself, your team, and your customers. Stick to your SOPs."
+  },
+  {
+    "num": "5.3",
+    "title": "Earn 5-Star Reviews",
+    "course": "customers-for-life",
+    "slug": "earn-reviews",
+    "status": "soon",
+    "sections": [],
+    "note": "Ask for feedback and reviews, and get your team in on it."
+  },
+  {
+    "num": "5.4",
+    "title": "Put Your Reviews to Work",
+    "course": "customers-for-life",
+    "slug": "put-reviews-to-work",
+    "status": "soon",
+    "sections": [],
+    "note": "Social posts, website content, sales material, and team morale."
+  },
+  {
+    "num": "5.5",
+    "title": "Handle 1-Star Reviews",
+    "course": "customers-for-life",
+    "slug": "one-star-reviews",
+    "status": "soon",
+    "sections": [],
+    "note": "Respond, admit mistakes, and stand up to bullies. A couple of 1-star reviews are okay."
+  },
+  {
+    "num": "5.6",
     "title": "Referrals and Repeat Work",
     "course": "customers-for-life",
     "slug": "referrals-and-repeat-work",

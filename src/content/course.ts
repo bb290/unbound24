@@ -2,7 +2,7 @@ import lessonData from "./course-lessons.json";
 
 // Lesson content started from the Own Your 24 lesson scripts in Notion.
 // The course library (2026-11-02, matches Notion): Hands-On AI as a Power Tool is the Start Here course
-// (Own Your 24 is its lesson 1.2), then Get It Out of Your Head, then one course per part of the house.
+// (Own Your 24 is its lesson 1.2), then Get It Out of Your Head (the foundation), then the four pillars in CODE order: Capture + Obtain, Deliver, Extend (2026-11-08).
 // Every lesson follows one format: 3-5 key takeaways, the action, one section per takeaway
 // (written as bullets), the action again, then the save-progress box.
 
@@ -74,33 +74,27 @@ export const COURSES: Course[] = [
       "Write down how your business runs and track the numbers that matter, so your team (and AI) can follow along without calling you. Then turn it into Claude skills that do the work with you.",
   },
   {
-    slug: "same-great-job",
-    num: 3,
-    title: "Same Great Job, Every Time",
-    topic: "Delivery",
-    description: "Define your services, do them the same way every time, and own it when something goes wrong.",
-  },
-  {
-    slug: "earn-the-5-stars",
-    num: 4,
-    title: "Earn the 5 Stars",
-    topic: "Reputation",
-    description: "Keep your promises, earn five-star reviews, put them to work, and handle the bad ones with class.",
-  },
-  {
     slug: "book-the-right-customers",
-    num: 5,
+    num: 3,
     title: "Book the Right Customers",
-    topic: "Attract, Convert & Brand",
+    topic: "Capture, Obtain & Brand",
     description:
       "Know who you serve, be easy to find, and make it easy to say yes. Your brand, website, Google, and social media basics.",
   },
   {
+    slug: "same-great-job",
+    num: 4,
+    title: "Same Great Job, Every Time",
+    topic: "Deliver",
+    description: "Define your services, do them the same way every time, and own it when something goes wrong.",
+  },
+  {
     slug: "customers-for-life",
-    num: 6,
+    num: 5,
     title: "Customers for Life",
-    topic: "Retain",
-    description: "Keep customers coming back, and sending their friends.",
+    topic: "Extend",
+    description:
+      "Keep the relationship going after the job: ask for feedback, earn five-star reviews, get referrals, and be the one they call next time.",
   },
 ];
 
