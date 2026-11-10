@@ -244,7 +244,8 @@ section { padding-block: 80px; }
 .crow .nm small { display: block; color: var(--muted); font-weight: 700; font-size: .8rem; }
 .track2 { height: 46px; border-radius: 14px; background: var(--card); position: relative; overflow: hidden; }
 .track2 i { position: absolute; inset: 0 auto 0 0; border-radius: 14px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-style: normal; font-weight: 900; font-size: .95rem; color: var(--on-navy); background: var(--magenta); min-width: 64px; }
-.track2 i.k { background: var(--cyan); color: var(--on-cyan); justify-content: flex-start; padding-left: 12px; width: auto !important; }
+.track2 i.k { background: var(--cyan); min-width: 10px; padding: 0; }
+.track2 em { position: absolute; top: 50%; transform: translateY(-50%); font-style: normal; font-weight: 900; font-size: .95rem; color: var(--fg); white-space: nowrap; }
 .track2 .range { position: absolute; inset: 0 0 0 auto; background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--magenta) 30%, transparent) 0 8px, transparent 8px 16px); }
 .scale { font-size: .78rem; color: var(--muted); text-align: center; font-weight: 700; }
 
@@ -418,17 +419,17 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <p class="eyebrow">Every week</p>
       <h2 style="margin-top:10px">Show up every week.<br><span class="hl">Look the same everywhere.</span></h2>
       <div class="nums">
-        <div class="num"><b class="hl">3</b><span>branded posts</span></div>
+        <div class="num"><b class="hl">3-4</b><span>branded posts</span></div>
         <div class="num"><b class="mg">1</b><span>reel</span></div>
         <div class="num"><b>5</b><span>platforms</span></div>
-        <div class="num big"><b>64</b><span>posts a month</span></div>
+        <div class="num big"><b>68+</b><span>posts a month</span></div>
       </div>
-      <div class="month" aria-label="One month of posting: three posts and one reel each week">
+      <div class="month" aria-label="One month of posting: three to four posts and one reel each week">
         <div class="dn"><span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span></div>
         <div class="grid" id="month"></div>
         <div class="legend" style="margin-top:14px">
           <span><i style="width:12px;height:12px;border-radius:3px;background:var(--cyan);display:inline-block"></i>Post, 4 platforms</span>
-          <span><i style="width:12px;height:12px;border-radius:50%;background:var(--magenta);display:inline-block"></i>Reel, 4 platforms</span>
+          <span><i style="width:12px;height:12px;border-radius:50%;background:var(--magenta);display:inline-block"></i>Reel, 5 platforms</span>
         </div>
       </div>
     </div>
@@ -515,9 +516,10 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <h2 style="margin-top:10px">Agency results.<br><span class="hl">Not agency prices.</span></h2>
       </div>
       <div class="cost">
-        <div class="crow"><span class="nm">Social agency<small>per month</small></span><div class="track2"><i style="width:30%">$1,500</i><span class="range" style="width:70%"><b>$5,000+</b></span></div></div>
-        <div class="crow"><span class="nm">Kewl, run it yourself<small>per month, after setup</small></span><div class="track2"><i class="k">~$60</i></div></div>
-        <p class="scale">Agencies run $1,500 to $5,000+ a month. Bars to scale.</p>
+        <div class="crow"><span class="nm">Social agency<small>per month</small></span><div class="track2"><i style="width:100%">$1,500 to $5,000+</i></div></div>
+        <div class="crow"><span class="nm">Kewl, hands off<small>per month, we run it</small></span><div class="track2"><i class="k" style="width:8%"></i><em style="left:calc(8% + 10px)">$400</em></div></div>
+        <div class="crow"><span class="nm">Kewl, run it yourself<small>per month, after setup</small></span><div class="track2"><i class="k" style="width:1.2%"></i><em style="left:calc(1.2% + 20px)">~$60</em></div></div>
+        <p class="scale">Agencies run $1,500 to $5,000+ a month. Bars to scale at $5,000.</p>
       </div>
     </div>
   </section>
@@ -732,15 +734,15 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
   show(0);
 })();
 
-// One month: 3 posts (p) and 1 reel (r) a week, scattered across different days each week. Days run Sun..Sat.
+// One month: 3-4 posts (p) and 1 reel (r) a week, scattered across different days each week. Days run Sun..Sat.
 (function () {
   var g = document.getElementById('month');
   if (!g) return;
   var weeks = [
     '.p.rp.p',
-    'p.r.p.p',
+    'p.rpp.p',
     '.p.p.rp',
-    'r.p.pp.'
+    'rp.pp.p'
   ];
   for (var w = 0; w < 4; w++) {
     for (var d = 0; d < 7; d++) {
@@ -748,7 +750,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       cell.className = 'd';
       var c = weeks[w].charAt(d), n = 0, cls = '';
       if (c === 'p') { n = 4; }
-      if (c === 'r') { n = 4; cls = 'r'; }
+      if (c === 'r') { n = 5; cls = 'r'; }
       for (var k = 0; k < n; k++) { var i = document.createElement('i'); if (cls) i.className = cls; cell.appendChild(i); }
       g.appendChild(cell);
     }
