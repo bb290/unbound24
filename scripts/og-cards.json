@@ -110,5 +110,12 @@
   "title": "Show up every week",
   "sub": "Branded social posts from your job photos",
   "art": "/habits-phone.webp"
+ },
+ {
+  "file": "local-loud",
+  "eyebrow": "Local + Loud by Unbound24",
+  "title": "Get found. Get booked.",
+  "sub": "Reviews, local search and a website that books",
+  "art": "/brick-house.webp"
  }
 ]
