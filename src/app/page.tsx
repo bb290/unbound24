@@ -65,16 +65,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vending machine + skater */}
-      <section id="play" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
-        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24 grid gap-14 items-center lg:grid-cols-[minmax(0,440px)_1fr]">
+      {/* Value Vending Machine: the main way this site converts */}
+      <section id="vend" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
+        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex justify-center">
           <VendingMachine />
-          <div className="flex flex-col items-center gap-6 min-w-0">
-            <Label fill="bg-lilac">Click Dude</Label>
-            <div className="w-full">
-              <HalfpipeSkater />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -101,14 +95,22 @@ export default function Home() {
             </blockquote>
           </div>
 
+          <div className="flex flex-col gap-10 min-w-0 lg:mt-14">
           {/* Intro video placeholder: swap for the YouTube embed when it's recorded. */}
-          <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center lg:mt-14">
+          <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center">
             <div className="flex flex-col items-center gap-3 text-center px-6">
               <span className="grid place-items-center w-16 h-16 rounded-full bg-cyan border-2 border-border text-ink" aria-hidden="true">
                 <svg viewBox="0 0 20 20" className="w-7 h-7 ml-1"><path d="M6 4l10 6-10 6z" fill="currentColor" /></svg>
               </span>
               <span className="label text-muted">Intro video coming soon</span>
             </div>
+          </div>
+          <div className="flex flex-col items-center gap-6">
+            <Label fill="bg-lilac">Click Dude</Label>
+            <div className="w-full">
+              <HalfpipeSkater />
+            </div>
+          </div>
           </div>
         </div>
       </Section>
