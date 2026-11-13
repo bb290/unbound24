@@ -153,6 +153,8 @@ Ranked by how strongly Brittany agrees (0 to 10). Used for social posts and cont
 
 **Words we never use:** synergy, holistic, seamless, thought leadership, disruptive innovation. No em dashes.
 
+**Primary quote (Brittany, 2026-11-13):** "Local businesses are the backbone of the economy, and they're becoming an endangered species."
+
 **Who we sound like:** Brittany. On the phone: "Hi, this is B."
 
 **Sample caption:**

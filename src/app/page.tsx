@@ -88,11 +88,11 @@ export default function Home() {
                 That became Sagareus Property Management, now 800+ units, which she still owns. After years of quietly helping friends and family grow their service businesses, Unbound makes it official, with a handful of owner-operators we pick on purpose.
               </p>
               <p>
-                Why? Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species. A few simple moves, done consistently, make yours worth more and easier to hand down to someone in your own town.
+                A few simple moves, done consistently, make your business worth more and easier to hand down to someone in your own town.
               </p>
             </div>
             <blockquote className="sticker rounded-[20px] bg-surface p-6 max-w-[52ch] -rotate-1">
-              <p className="font-display font-bold text-[24px] leading-snug">&ldquo;If it costs your peace, it&apos;s too expensive.&rdquo;</p>
+              <p className="font-display font-bold text-[24px] leading-snug">&ldquo;Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species.&rdquo;</p>
               <footer className="mt-2 label text-muted">B</footer>
             </blockquote>
           </div>
