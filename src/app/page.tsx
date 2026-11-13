@@ -65,6 +65,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skater: between the spinner and About (Brittany, 2026-11-13) */}
+      <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
+        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
+          <Label fill="bg-lilac">Skate break</Label>
+          <div className="w-full">
+            <HalfpipeSkater />
+          </div>
+        </div>
+      </section>
+
       {/* About: left is B (title, video, story, quote); right is the Value Vending Machine, the main way this site converts */}
       <Section id="about">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_minmax(0,440px)] items-start">
@@ -104,16 +114,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      {/* Skater: at the very bottom (user feedback 2026-11-13) */}
-      <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
-        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
-          <Label fill="bg-lilac">Skate break</Label>
-          <div className="w-full">
-            <HalfpipeSkater />
-          </div>
-        </div>
-      </section>
 
       <SiteFooter />
     </div>
