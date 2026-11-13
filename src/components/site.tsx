@@ -56,12 +56,6 @@ export function SiteFooter() {
     <footer className="py-10 border-t-2 border-border">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex flex-col items-center justify-between gap-5 sm:flex-row">
         <Wordmark small />
-        <p className="text-sm text-muted text-center">
-          Questions? Hi, this is B:{" "}
-          <a href="mailto:brittany@unbound24.com" className="font-bold text-foreground underline decoration-2 decoration-cyan underline-offset-4">
-            brittany@unbound24.com
-          </a>
-        </p>
         <p className="text-sm text-muted">
           &copy; {new Date().getFullYear()} Unbound Consulting LLC
         </p>
