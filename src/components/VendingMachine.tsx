@@ -133,11 +133,6 @@ export function VendingMachine() {
   return (
     <div className="w-full max-w-[440px] mx-auto">
       <div className="sticker rounded-[28px] bg-cyan p-3 sm:p-4 flex flex-col gap-3">
-        {/* sign */}
-        <div className="flex justify-center">
-          <span className="torn bg-lilac font-display font-extrabold text-[22px] sm:text-[26px] tracking-[.02em] text-ink">VALUE VENDING</span>
-        </div>
-
         <div className="flex gap-3">
           {/* glass */}
           <div className="relative flex-1 min-w-0 rounded-[18px] border-2 border-ink bg-[#FFFBF4]/85 p-2 sm:p-3">

@@ -75,12 +75,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
+      {/* About: left is B (title, video, story, quote); right is the Value Vending Machine, the main way this site converts */}
       <Section id="about">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] items-start">
-          <div className="flex flex-col gap-5">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_minmax(0,440px)] items-start">
+          <div className="flex flex-col gap-6 min-w-0">
             <Label>About</Label>
             <H2>Hi, this is B.</H2>
+
+            {/* Intro video placeholder: swap for the YouTube embed when it's recorded. */}
+            <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center">
+              <div className="flex flex-col items-center gap-3 text-center px-6">
+                <span className="grid place-items-center w-16 h-16 rounded-full bg-cyan border-2 border-border text-ink" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" className="w-7 h-7 ml-1"><path d="M6 4l10 6-10 6z" fill="currentColor" /></svg>
+                </span>
+                <span className="label text-muted">Intro video coming soon</span>
+              </div>
+            </div>
+
             <div className="flex flex-col gap-4 text-lg leading-relaxed max-w-[60ch]">
               <p>
                 Brittany started as a social worker who answered a Craigslist ad for a free-rent site manager job. Over coffee, she talked the owner into letting her run all 55 of his units. She did plenty wrong, figured it out anyway, and earned a PhD from YouTube University along the way.
@@ -92,26 +103,15 @@ export default function Home() {
                 A few simple moves, done consistently, make your business worth more and easier to hand down to someone in your own town.
               </p>
             </div>
+
             <blockquote className="sticker rounded-[20px] bg-surface p-6 max-w-[52ch] -rotate-1">
               <p className="font-display font-bold text-[24px] leading-snug">&ldquo;Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species.&rdquo;</p>
               <footer className="mt-2 label text-muted">B</footer>
             </blockquote>
           </div>
 
-          <div className="flex flex-col gap-10 min-w-0 lg:mt-14">
-          {/* Intro video placeholder: swap for the YouTube embed when it's recorded. */}
-          <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center">
-            <div className="flex flex-col items-center gap-3 text-center px-6">
-              <span className="grid place-items-center w-16 h-16 rounded-full bg-cyan border-2 border-border text-ink" aria-hidden="true">
-                <svg viewBox="0 0 20 20" className="w-7 h-7 ml-1"><path d="M6 4l10 6-10 6z" fill="currentColor" /></svg>
-              </span>
-              <span className="label text-muted">Intro video coming soon</span>
-            </div>
-          </div>
-          {/* Value Vending Machine: the main way this site converts */}
-          <div id="vend" className="scroll-mt-20">
+          <div id="vend" className="scroll-mt-20 lg:sticky lg:top-24">
             <VendingMachine />
-          </div>
           </div>
         </div>
       </Section>
