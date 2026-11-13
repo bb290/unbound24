@@ -176,3 +176,4 @@ body {
 }
 :root[data-theme="dark"] .logo-chip { background: var(--cream); border: 2px solid var(--border); }
 @keyframes ub-pop { 0% { transform: scale(.85) rotate(-2deg); } 100% { transform: none; } }
+@keyframes ub-coil { to { stroke-dashoffset: -14; } }

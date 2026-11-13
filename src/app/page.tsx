@@ -1,6 +1,7 @@
 import { ChaosSpinner } from "@/components/ChaosSpinner";
 import { HalfpipeSkater } from "@/components/HalfpipeSkater";
 import { SiteFooter, SiteNav } from "@/components/site";
+import { VendingMachine } from "@/components/VendingMachine";
 import { H2, Label, Section } from "@/components/ui";
 
 // Unbound24 home (2026-11-13): a few fun things to play with. Services live on /local-loud.
@@ -64,12 +65,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skater */}
-      <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
-        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
-          <Label fill="bg-lilac">Click Dude</Label>
-          <div className="w-full">
-            <HalfpipeSkater />
+      {/* Vending machine + skater */}
+      <section id="play" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
+        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24 grid gap-14 items-center lg:grid-cols-[minmax(0,440px)_1fr]">
+          <VendingMachine />
+          <div className="flex flex-col items-center gap-6 min-w-0">
+            <Label fill="bg-lilac">Click Dude</Label>
+            <div className="w-full">
+              <HalfpipeSkater />
+            </div>
           </div>
         </div>
       </section>
