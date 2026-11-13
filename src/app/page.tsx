@@ -28,7 +28,7 @@ export default function Home() {
             Doing 10 things at 50% is still <span className="torn bg-teal">an F.</span>
           </h1>
           <p className="text-[20px] leading-relaxed max-w-[52ch]">
-            We help local businesses do the three that matter, really well. So the business you spent 10, 15, 20 years building stays strong, and stays local.
+            We help local businesses find the people they can help.
           </p>
         </div>
 

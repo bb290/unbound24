@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Mono, Figtree, Rubik } from "next/font/google";
+import { PenguinOfWisdom } from "@/components/PenguinOfWisdom";
 import "./globals.css";
 
 const rubik = Rubik({ variable: "--font-rubik", subsets: ["latin"], weight: ["700", "800"] });
@@ -29,7 +30,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       </head>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        {children}
+        <PenguinOfWisdom />
+      </body>
     </html>
   );
 }
