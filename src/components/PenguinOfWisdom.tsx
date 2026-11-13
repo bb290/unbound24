@@ -79,7 +79,7 @@ export function PenguinOfWisdom() {
             tabIndex={hidden ? -1 : 0}
             aria-label="Penguin of Wisdom. Click for a quote."
             title="Click for wisdom"
-            className="group relative w-[92px] h-[96px] sm:w-[112px] sm:h-[116px] translate-y-[18%] hover:translate-y-[6%] transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] cursor-pointer"
+            className="group relative w-[138px] h-[144px] sm:w-[168px] sm:h-[174px] translate-y-[18%] hover:translate-y-[6%] transition-transform duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] cursor-pointer"
           >
             <Penguin />
           </button>
