@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { VENDING, VENDING_COLS, VENDING_ROWS, type VendingItem } from "@/content/vending";
 
 // The Value Vending Machine (2026-11-13): 12 free one-pagers on spiral coils, 3 across and 4 down.
-// Punch a code (A1..D3), the coil turns, the item drops into the tray, and a pop-up asks for an email to send it.
+// Punch a code (A1..D3) or double-click an item, the coil turns, the item drops into the tray, and a pop-up asks for an email to send it.
 // Hover an item to see what it is and why you'd want it.
 
 const FILL: Record<VendingItem["fill"], string> = { cyan: "#03C0E8", teal: "#40E0D0", lilac: "#D3D3FF", gray: "#C4C4C4" };
@@ -99,6 +99,22 @@ export function VendingMachine() {
     vend(code);
   }
 
+  // Clicking an item picks its letter; a second click on it within half a second (a double-click or double-tap) vends it.
+  const lastTap = useRef({ code: "", at: 0 });
+  function pick(code: string) {
+    if (busy) return;
+    const now = Date.now();
+    if (lastTap.current.code === code && now - lastTap.current.at < 500) {
+      lastTap.current = { code: "", at: 0 };
+      setEntry(code);
+      vend(code);
+      return;
+    }
+    lastTap.current = { code, at: now };
+    setEntry(code[0]);
+    setMsg(`PRESS ${code[1]}`);
+  }
+
   function close() {
     setOpen(false);
     setPhase("idle");
@@ -148,7 +164,7 @@ export function VendingMachine() {
                       <button
                         type="button"
                         aria-label={`${item.code}: ${item.headline}`}
-                        onClick={() => { if (!busy) { setEntry(item.code[0]); setMsg(`PRESS ${item.code[1]}`); } }}
+                        onClick={() => pick(item.code)}
                         className="relative flex justify-center pt-1 focus-visible:outline-offset-1"
                       >
                         <span ref={(n) => { itemRefs.current[item.code] = n; }} className="relative block" style={itemStyle(item.code)}>
