@@ -65,10 +65,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value Vending Machine: the main way this site converts */}
-      <section id="vend" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
-        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex justify-center">
-          <VendingMachine />
+      {/* Skater */}
+      <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
+        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
+          <Label fill="bg-lilac">Click Dude</Label>
+          <div className="w-full">
+            <HalfpipeSkater />
+          </div>
         </div>
       </section>
 
@@ -105,11 +108,9 @@ export default function Home() {
               <span className="label text-muted">Intro video coming soon</span>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-6">
-            <Label fill="bg-lilac">Click Dude</Label>
-            <div className="w-full">
-              <HalfpipeSkater />
-            </div>
+          {/* Value Vending Machine: the main way this site converts */}
+          <div id="vend" className="scroll-mt-20">
+            <VendingMachine />
           </div>
           </div>
         </div>
