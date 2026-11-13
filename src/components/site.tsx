@@ -7,7 +7,6 @@ export const COURSE_URL = "/course";
 
 const NAV_LINKS = [
   { label: "Local + Loud", href: "/local-loud" },
-  { label: "About", href: "/#about" },
 ];
 
 export function Wordmark({ small = false }: { small?: boolean }) {
