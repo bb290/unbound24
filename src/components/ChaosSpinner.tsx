@@ -96,9 +96,8 @@ export function ChaosSpinner({ ctaHref }: { ctaHref: string }) {
         <div
           key={pop}
           aria-live="polite"
-          className="rounded-[20px] bg-surface sticker-sm p-5 min-h-[132px] flex flex-col gap-2 motion-safe:animate-[ub-pop_.45s_cubic-bezier(.2,1.6,.4,1)]"
+          className="rounded-[20px] bg-surface sticker-sm p-5 min-h-[104px] flex flex-col justify-center gap-2 motion-safe:animate-[ub-pop_.45s_cubic-bezier(.2,1.6,.4,1)]"
         >
-          <span className="label text-muted">{last < 0 ? "Today's task" : `Slice ${last + 1} of ${N}`}</span>
           <span className={`font-display font-bold text-[26px] leading-[1.05] sm:text-[32px] ${last < 0 ? "text-muted" : ""}`}>
             {last < 0 ? "Hit spin to find out." : SPINNER_THINGS[last]}
           </span>
