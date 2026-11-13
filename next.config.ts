@@ -15,14 +15,14 @@ const nextConfig: NextConfig = {
       // Renamed 2026-11-03: AI Essentials is now Job Site Prep, Construct the Scaffolding is now Lay the Foundation.
       { source: "/course/ai-set-up", destination: "/course/job-site-prep", permanent: true },
       { source: "/course/construct-the-scaffolding", destination: "/course/lay-the-foundation", permanent: true },
+      // Old static Local + Loud page (2026-11-10, old prices) replaced by the app route /local-loud on 2026-11-13.
+      { source: "/local-loud.html", destination: "/local-loud", permanent: true },
     ];
   },
   async rewrites() {
     return [
       // Kewl landing page (2026-11-03): a standalone page, not in the nav or sitemap.
       { source: "/kewl", destination: "/kewl.html" },
-      // Local + Loud landing page (2026-11-10): standalone, not in the nav or sitemap.
-      { source: "/local-loud", destination: "/local-loud.html" },
     ];
   },
 };

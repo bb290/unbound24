@@ -1,359 +1,115 @@
-import Image from "next/image";
-import { COURSE_URL, SiteFooter, SiteNav } from "@/components/site";
+import { ChaosSpinner } from "@/components/ChaosSpinner";
+import { HalfpipeSkater } from "@/components/HalfpipeSkater";
+import { SiteFooter, SiteNav } from "@/components/site";
+import { H2, Label, Section } from "@/components/ui";
+
+// Unbound24 home (2026-11-13): a few fun things to play with. Services live on /local-loud.
+// Rules: no "book a call" buttons ever (sites pre-qualify with an assessment instead); we don't say our
+// slogans, we just do them; we, not I (except B's own words); no em dashes; no invented numbers.
+
+const MARQUEE = ["A website that books jobs", "Show up every week", "Reviews on repeat", "Keep local businesses local", "Done for you"];
+
+const FQB = [
+  ["Found.", "People search for you and find you.", "bg-cyan", "-rotate-2"],
+  ["Qualified.", "Quizzes, instant estimates and tools sort the right customers in.", "bg-teal", "rotate-1 lg:translate-x-8"],
+  ["Booked.", "They read your reviews and book online.", "bg-lilac", "-rotate-1"],
+];
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="pb-16 sm:pb-24">
-        <SiteNav active="/" />
+      <SiteNav active="/" />
 
-        <div className="px-4 pt-10 max-w-6xl mx-auto grid items-center gap-12 sm:px-8 sm:pt-16 lg:grid-cols-[1.1fr_1fr]">
-          <div>
-            <h1 className="text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
-              Business is Simple.
-            </h1>
-            <p className="mt-5 text-2xl font-extrabold text-magenta-text sm:text-3xl">
-              Why is it so complicated?
-            </p>
-            <p className="mt-6 text-lg leading-relaxed max-w-lg">
-              Unbound24 helps service business operators break free from
-              never-ending to-do lists &amp; roller coaster sales.
-            </p>
-            <CourseButton className="mt-9" />
-          </div>
-          <Image
-            src="/hero-juggling.webp"
-            alt="A stick figure juggling a ringing phone, a clipboard, a wrench, a calendar, a coffee mug, a house and loose papers"
-            width={960}
-            height={724}
-            priority
-            className="w-full h-auto"
-          />
+      {/* Hero */}
+      <header className="max-w-[1200px] mx-auto px-4 pt-12 pb-16 sm:px-8 sm:pt-20 sm:pb-24 grid gap-14 items-center lg:grid-cols-[1.25fr_1fr]">
+        <div className="flex flex-col gap-6 min-w-0">
+          <Label>Marketing for local service businesses</Label>
+          <h1 className="font-display font-extrabold text-[44px] leading-[0.95] tracking-[-0.02em] sm:text-[72px] max-w-[15ch]">
+            Doing 10 things at 50% is still <span className="torn bg-teal">an F.</span>
+          </h1>
+          <p className="text-[20px] leading-relaxed max-w-[52ch]">
+            We help local businesses do the three that matter, really well. So the business you spent 10, 15, 20 years building stays strong, and stays local.
+          </p>
+        </div>
+
+        <div className="relative flex flex-col gap-5 max-w-[420px] w-full mx-auto lg:mx-0 lg:justify-self-end">
+          {FQB.map(([t, b, f, r]) => (
+            <div key={t} className={`sticker rounded-[20px] ${f} ${r} text-ink p-6`}>
+              <p className="font-display font-extrabold text-[30px] leading-none">{t}</p>
+              <p className="mt-2 text-[16px] font-medium">{b}</p>
+            </div>
+          ))}
         </div>
       </header>
 
-      {/* Simple habits */}
-      <FeatureRow
-        title="Simple habits beat fancy marketing."
-        subtitle="Simple &ne; easy."
-        body="No need to get fancy. Stay focused on the core 4."
-        visual={
-          <ol className="divide-y divide-line border-y border-line">
-            {["Fast answers", "Easy to find", "Earn reviews", "Follow up"].map((habit, i) => (
-              <li key={habit} className="flex items-center gap-6 py-6">
-                <span className={`w-14 text-5xl font-black ${i % 2 ? "text-magenta-text" : "text-cyan-text"}`}>
-                  {i + 1}
+      {/* Marquee */}
+      <div className="overflow-hidden border-y-2 border-border bg-cyan text-ink py-3.5" aria-hidden="true">
+        <div className="marquee-track">
+          {[0, 1].map((k) => (
+            <div key={k} className="flex shrink-0">
+              {MARQUEE.map((m) => (
+                <span key={m + k} className="flex items-center font-display font-extrabold text-[20px] whitespace-nowrap px-6">
+                  {m}<span className="ml-12 inline-block w-2.5 h-2.5 rounded-full bg-ink" />
                 </span>
-                <span className="text-3xl font-extrabold tracking-tight sm:text-4xl">{habit}</span>
-              </li>
-            ))}
-          </ol>
-        }
-      />
-
-      {/* How it works */}
-      <FeatureRow
-        reverse
-        tinted
-        eyebrow="How it works"
-        title="One brick at a time."
-        body="No overhaul, no new software. Each lesson takes one small piece of your business and gets it written down."
-        visual={
-          <Illustration
-            src="/brick-stack.webp"
-            alt="A stick figure placing a cyan brick on top of a short stack of bricks"
-            width={1000}
-            height={889}
-          />
-        }
-      >
-        <div className="mt-8 flex flex-col gap-4">
-          <StepCard number="1" title="Watch one short lesson" description="One idea per lesson. Fits between jobs." />
-          <StepCard number="2" title="Do one Action with Claude" description="Each lesson has one prompt. You talk, Claude writes it up." />
-          <StepCard number="3" title="Keep what you made" description="Your process, your numbers, your way of doing things, written down." />
-        </div>
-      </FeatureRow>
-
-      {/* What you'll build */}
-      <FeatureRow
-        eyebrow="What you'll build"
-        title="Your whole business, not a handful of tricks."
-        body="Level 1 lays the foundation. Level 2 helps you grow on purpose."
-        visual={
-          <Illustration
-            src="/brick-house.webp"
-            alt="A proud stick figure leaning on a small house built from cyan bricks"
-            width={1000}
-            height={833}
-          />
-        }
-      >
-        <div className="mt-8 flex flex-wrap gap-3">
-          {AREAS.map((area, i) => (
-            <span
-              key={area}
-              className="px-5 py-3 rounded-2xl bg-card border border-line text-lg font-bold"
-            >
-              <span className={`inline-block w-3 h-3 rounded-sm mr-3 align-middle ${i % 2 ? "bg-magenta" : "bg-cyan"}`} />
-              {area}
-            </span>
+              ))}
+            </div>
           ))}
         </div>
-      </FeatureRow>
+      </div>
+
+      {/* Chaos spinner */}
+      <section id="spin" className="scroll-mt-20">
+        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24">
+          <ChaosSpinner ctaHref="/local-loud" />
+        </div>
+      </section>
+
+      {/* Skater */}
+      <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
+        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
+          <Label fill="bg-lilac">Click Dude</Label>
+          <div className="w-full">
+            <HalfpipeSkater />
+          </div>
+        </div>
+      </section>
 
       {/* About */}
-      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <Illustration
-            src="/hello-wave.webp"
-            alt="A smiling stick figure waving hello, holding a laptop under one arm"
-            width={1000}
-            height={951}
-            className="max-w-sm"
-          />
-          <div className="max-w-2xl">
-            <Eyebrow>Who&rsquo;s teaching</Eyebrow>
-            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Hi, I&rsquo;m Brittany.</h2>
-            <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">
-              I&rsquo;ve been in business since 2010. I built this course because nobody should need a $2,000 a month coach to
-              write down how their own business works.
-            </p>
+      <Section id="about">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] items-start">
+          <div className="flex flex-col gap-5">
+            <Label>About</Label>
+            <H2>Hi, this is B.</H2>
+            <div className="flex flex-col gap-4 text-lg leading-relaxed max-w-[60ch]">
+              <p>
+                Brittany started as a social worker who answered a Craigslist ad for a free-rent site manager job. Over coffee, she talked the owner into letting her run all 55 of his units. She did plenty wrong, figured it out anyway, and earned a PhD from YouTube University along the way.
+              </p>
+              <p>
+                That became Sagareus Property Management, now 800+ units, which she still owns. After years of quietly helping friends and family grow their service businesses, Unbound makes it official, with a handful of owner-operators we pick on purpose.
+              </p>
+              <p>
+                Why? Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species. A few simple moves, done consistently, make yours worth more and easier to hand down to someone in your own town.
+              </p>
+            </div>
+            <blockquote className="sticker rounded-[20px] bg-surface p-6 max-w-[52ch] -rotate-1">
+              <p className="font-display font-bold text-[24px] leading-snug">&ldquo;If it costs your peace, it&apos;s too expensive.&rdquo;</p>
+              <footer className="mt-2 label text-muted">B</footer>
+            </blockquote>
+          </div>
+
+          {/* Intro video placeholder: swap for the YouTube embed when it's recorded. */}
+          <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center lg:mt-14">
+            <div className="flex flex-col items-center gap-3 text-center px-6">
+              <span className="grid place-items-center w-16 h-16 rounded-full bg-cyan border-2 border-border text-ink" aria-hidden="true">
+                <svg viewBox="0 0 20 20" className="w-7 h-7 ml-1"><path d="M6 4l10 6-10 6z" fill="currentColor" /></svg>
+              </span>
+              <span className="label text-muted">Intro video coming soon</span>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* For / not for */}
-      <section className="px-4 py-20 sm:px-8 sm:py-28">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center">
-            <Eyebrow>Fair warning</Eyebrow>
-            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Is this for you?</h2>
-          </div>
-          <div className="mt-12 grid gap-4 max-w-4xl mx-auto sm:grid-cols-2">
-            <ListCard
-              title="It's for you if"
-              highlight
-              items={[
-                "You run a home service business and you're past your first year",
-                "Everything goes through you",
-                "Your best processes live in your head",
-              ]}
-            />
-            <ListCard
-              title="It's not for you if"
-              items={[
-                "You want someone to do it for you",
-                "You're looking for another course to bookmark",
-                "You want a get-rich-quick plan",
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="px-4 py-20 bg-card sm:px-8 sm:py-28">
-        <div className="max-w-6xl mx-auto grid gap-10 lg:grid-cols-[1fr_1.4fr]">
-          <div>
-            <Eyebrow>Questions</Eyebrow>
-            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">What&rsquo;s the catch?</h2>
-            <p className="mt-5 text-lg text-muted leading-relaxed">
-              There isn&rsquo;t one. Here are the questions people ask.
-            </p>
-          </div>
-          <div className="flex flex-col gap-4">
-            {FAQS.map((faq) => (
-              <div key={faq.q} className="p-6 rounded-3xl bg-background border border-line">
-                <h3 className="text-lg font-extrabold">{faq.q}</h3>
-                <p className="mt-2 text-muted leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="px-4 py-24 text-center sm:px-8 sm:py-32">
-        <Illustration
-          src="/relaxed.webp"
-          alt="A happy stick figure relaxing in a lawn chair with a coffee, everything it was juggling packed in a cyan box beside it"
-          width={1000}
-          height={624}
-          className="max-w-xl mb-10"
-        />
-        <h2 className="text-4xl font-black tracking-tight sm:text-5xl">
-          Build it once. Brick by brick.
-        </h2>
-        <p className="mt-4 text-lg text-muted">Free. No sales call. No catch.</p>
-        <CourseButton className="mt-10" />
-      </section>
+      </Section>
 
       <SiteFooter />
-    </div>
-  );
-}
-
-const AREAS = [
-  "Documentation",
-  "Data",
-  "Capture",
-  "Obtain",
-  "Deliver",
-  "Extend",
-  "Brand",
-];
-
-const FAQS = [
-  {
-    q: "Is it really free?",
-    a: "Yes. There's nothing to buy to get started, and no call to book.",
-  },
-  {
-    q: "Do I need to be good with tech?",
-    a: "No. If you can send a text, you can do this. An early lesson walks you through setting up Claude.",
-  },
-  {
-    q: "How much time does it take?",
-    a: "Each lesson is short and has one Action. Do one when you have a gap in your day.",
-  },
-  {
-    q: "Is this a pitch for coaching?",
-    a: "No. The course stands on its own.",
-  },
-];
-
-function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-magenta-text text-sm font-extrabold tracking-widest uppercase mb-4">
-      {children}
-    </p>
-  );
-}
-
-function CourseButton({ className = "" }: { className?: string }) {
-  return (
-    <a
-      href={COURSE_URL}
-      className={`inline-flex items-center gap-3 px-9 py-4 rounded-full bg-cyan text-foreground text-lg font-extrabold hover:brightness-95 transition ${className}`}
-    >
-      Free Course <span aria-hidden="true">&rarr;</span>
-    </a>
-  );
-}
-
-function FeatureRow({
-  eyebrow,
-  title,
-  subtitle,
-  body,
-  visual,
-  children,
-  below,
-  reverse = false,
-  tinted = false,
-}: {
-  eyebrow?: string;
-  title: string;
-  subtitle?: string;
-  body: string;
-  visual: React.ReactNode;
-  children?: React.ReactNode;
-  below?: React.ReactNode;
-  reverse?: boolean;
-  tinted?: boolean;
-}) {
-  return (
-    <section className={`px-4 py-20 sm:px-8 sm:py-28 ${tinted ? "bg-card" : ""}`}>
-      <div className="max-w-6xl mx-auto grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className={reverse ? "lg:order-2" : ""}>
-          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-          <h2 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">{title}</h2>
-          {subtitle && (
-            <p className="mt-4 text-2xl font-extrabold text-magenta-text sm:text-3xl">{subtitle}</p>
-          )}
-          <p className="mt-5 text-lg text-muted leading-relaxed sm:text-xl">{body}</p>
-          {children}
-        </div>
-        <div className={reverse ? "lg:order-1" : ""}>{visual}</div>
-      </div>
-      {below && <div className="max-w-6xl mx-auto mt-14">{below}</div>}
-    </section>
-  );
-}
-
-function Illustration({
-  src,
-  alt,
-  width,
-  height,
-  className = "",
-}: {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  className?: string;
-}) {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={`w-full h-auto mx-auto ${className}`}
-    />
-  );
-}
-
-function StepCard({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="flex gap-5 p-6 rounded-3xl bg-background border border-line">
-      <div className="shrink-0 w-11 h-11 rounded-full bg-magenta flex items-center justify-center text-lg font-black">
-        {number}
-      </div>
-      <div>
-        <h3 className="text-xl font-extrabold">{title}</h3>
-        <p className="mt-1 text-muted leading-relaxed">{description}</p>
-      </div>
-    </div>
-  );
-}
-
-function ListCard({
-  title,
-  items,
-  highlight = false,
-}: {
-  title: string;
-  items: string[];
-  highlight?: boolean;
-}) {
-  return (
-    <div
-      className={`p-7 rounded-3xl border ${
-        highlight ? "bg-highlight border-cyan" : "bg-background border-line"
-      }`}
-    >
-      <h3 className="text-xl font-extrabold">{title}</h3>
-      <ul className="mt-4 flex flex-col gap-3">
-        {items.map((item) => (
-          <li key={item} className="flex gap-3 text-lg leading-snug">
-            <span
-              className={`mt-2 shrink-0 w-2.5 h-2.5 rounded-sm ${highlight ? "bg-cyan" : "bg-line"}`}
-              aria-hidden="true"
-            />
-            {item}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

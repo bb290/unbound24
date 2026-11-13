@@ -173,7 +173,7 @@ function LessonPage({ lesson }: { lesson: Lesson }) {
           <span />
         )}
         {next && (
-          <Link href={`/course/${next.slug}`} className="p-5 rounded-3xl bg-cyan hover:brightness-95 transition sm:text-right">
+          <Link href={`/course/${next.slug}`} className="p-5 rounded-3xl bg-cyan text-ink hover:brightness-95 transition sm:text-right">
             <p className="text-sm font-bold">Next lesson &rarr;</p>
             <p className="mt-1 font-extrabold">{next.num} {next.title}</p>
           </Link>
@@ -221,7 +221,7 @@ function ActionBox({ lesson }: { lesson: Lesson }) {
         <a
           href={action.skill.href}
           download
-          className="inline-flex items-center gap-3 mt-6 px-7 py-3.5 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
+          className="inline-flex items-center gap-3 mt-6 px-7 py-3.5 rounded-full bg-cyan text-ink text-lg font-extrabold hover:brightness-95 transition"
         >
           {action.skill.label} <span aria-hidden="true">&darr;</span>
         </a>

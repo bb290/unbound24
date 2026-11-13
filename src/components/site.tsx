@@ -1,39 +1,50 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 import { COURSES, lessonsInCourse } from "@/content/course";
 
 export const COURSE_URL = "/course";
 
-// TODO: the Mission page doesn't exist yet. Courses is its own dropdown, after these.
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Mission", href: "#" },
+  { label: "Local + Loud", href: "/local-loud" },
+  { label: "About", href: "/#about" },
 ];
 
 export function Wordmark({ small = false }: { small?: boolean }) {
   return (
-    <Link href="/" className={`font-black tracking-tight ${small ? "text-base" : "text-2xl"}`}>
-      <span>Unbound</span>
-      <span className="text-cyan-text">24</span>
+    <Link href="/" aria-label="Unbound24 home" className="logo-chip shrink-0">
+      <Image
+        src="/unbound-logo.png"
+        alt="Unbound"
+        width={500}
+        height={150}
+        priority={!small}
+        className={small ? "h-7 w-auto" : "h-9 w-auto sm:h-10"}
+      />
     </Link>
   );
 }
 
 export function SiteNav({ active }: { active: string }) {
   return (
-    <nav className="flex items-center justify-between gap-4 px-4 py-5 max-w-6xl mx-auto sm:px-8">
-      <div className="flex items-center gap-8 sm:gap-12">
-        <Wordmark />
-        <div className="hidden items-center gap-8 text-base font-bold sm:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={link.href === active ? "text-foreground" : "text-muted hover:text-foreground transition"}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <CoursesMenu active={active === COURSE_URL} />
+    <nav className="sticky top-0 z-30 bg-background/95 backdrop-blur-[2px] border-b-2 border-border">
+      <div className="flex items-center justify-between gap-4 px-4 py-3 max-w-[1200px] mx-auto sm:px-8">
+        <div className="flex items-center gap-8 lg:gap-10">
+          <Wordmark />
+          <div className="hidden items-center gap-7 text-[15px] font-bold lg:flex">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className={link.href === active ? "text-foreground" : "text-muted hover:text-foreground transition"}>
+                {link.label}
+              </Link>
+            ))}
+            <CoursesMenu active={active === COURSE_URL} />
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <Link href="/local-loud" className="text-[15px] font-bold text-muted hover:text-foreground transition lg:hidden">
+            Local + Loud
+          </Link>
+          <ThemeToggle />
         </div>
       </div>
     </nav>
@@ -42,12 +53,12 @@ export function SiteNav({ active }: { active: string }) {
 
 export function SiteFooter() {
   return (
-    <footer className="px-4 py-8 border-t border-line sm:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-between gap-4 sm:flex-row">
+    <footer className="py-10 border-t-2 border-border">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex flex-col items-center justify-between gap-5 sm:flex-row">
         <Wordmark small />
-        <p className="text-sm text-muted">
-          Questions?{" "}
-          <a href="mailto:brittany@unbound24.com" className="text-cyan-text font-bold hover:underline">
+        <p className="text-sm text-muted text-center">
+          Questions? Hi, this is B:{" "}
+          <a href="mailto:brittany@unbound24.com" className="font-bold text-foreground underline decoration-2 decoration-cyan underline-offset-4">
             brittany@unbound24.com
           </a>
         </p>
@@ -74,7 +85,7 @@ function CoursesMenu({ active }: { active: boolean }) {
         </svg>
       </Link>
       <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition absolute left-1/2 -translate-x-1/2 top-full z-20 pt-3">
-        <ul className="w-80 p-2 rounded-2xl bg-background border border-line shadow-lg">
+        <ul className="w-80 p-2 rounded-2xl bg-surface sticker">
           {COURSES.map((course) => {
             const live = lessonsInCourse(course.slug).some((lesson) => lesson.status === "ready");
             return (

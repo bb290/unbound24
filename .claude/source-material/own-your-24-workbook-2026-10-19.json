@@ -1,0 +1,205 @@
+{
+  "offer": {
+    "name": "Own Your 24",
+    "helps": "Reclaim time\nIncrease focus. Make progress.\nSimplify business + life",
+    "result": "business & personal growth",
+    "who": "1-3 person IRL service business owners",
+    "diff": "building their systems, together. \nI don't say - \"buy my system\" \nI say -- show me what you've built so far. \nI roll up my sleeves + get to work systematically improving from the bottom up. "
+  },
+  "ica": {
+    "who": "A busy business owner up to their eyeballs in service delivery.",
+    "stage": "Overwhelmed; Anxious\nInformation overload\nTask overload",
+    "want": "Time, without sacrificing success. ",
+    "tired": " MORE Information / Options\n MORE To Do / Should Do",
+    "think": "Depends on the day, swings between 2 extremes:\nEverything! we should revamp our sales process TODAY!  We need this widget on our website, NOW!\nNothing! we should go off grid",
+    "objection": "I don't have time to work on the business. I can barely keep up as is.\nI've paid for courses, templates and software I never used -- I'm not repeating that again. \nNobody understands my business the way I do."
+  },
+  "us": [
+    "I have no time.",
+    "I feel pulled in 15 directions. Im so far behind",
+    "Everything goes through me",
+    "We need an overhaul"
+  ],
+  "ud": [
+    "Regular, scheduled time off.",
+    "Feel caught up & confident",
+    "Hand things off to someone and life get easier"
+  ],
+  "ms": [
+    [
+      "whats a day off?  yes, I can take a vacation -- but I have to work 1-2 hours each day. its literally easier for me to work a little everyday than take a full day off. ",
+      "cancelled plans with family / friend, again. \ndistracted while spending time with family / friend, again.\ninvitation frequency gradually decrease"
+    ],
+    [
+      "Website refresh, SOPs, a real CRM, a review system. I need to network! ",
+      "spent 6 hours developing a claude skill.. and I forget I had it for 2 months, and now its outdated, so I'll spend another 3 hours updating it.  ",
+      "100s of bookmarked videos, posts, forwarded emails to myself, screenshots... what was that video editing thing I wanted to look at -- I know its here somewhere (20 minutes later...)",
+      "takes a course / webinar---> spends the weekend implenting --> 5 unintended downstream effects, breaks the systems by Tuesday"
+    ],
+    [
+      "i keep passwords in a google sheet, but some are just saved to my password app thing on my phone. ",
+      "i update the crm at least 1x week; It's mostly correct",
+      "I'm so busy! I need to hire an assistant but I need sop's so they know what to do, so i need to write my sop's, but i'm so busy ",
+      "I swear to god, if some asks me one more question, it may end me. "
+    ],
+    [
+      "I tried a new system, but now I have 4 new apps & even less time"
+    ]
+  ],
+  "md": [
+    [
+      "A Saturday where nobody needs you."
+    ],
+    [
+      "I made progress on the most important work today. ",
+      "i am on track",
+      "We fell short last month; I know why & know how we're fixing it"
+    ],
+    [
+      "team follows a checklist instead of calling or asking",
+      "able to hire & onboard quickly"
+    ]
+  ],
+  "oUS": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "oUD": [
+    false,
+    false,
+    true
+  ],
+  "stories": [
+    {
+      "rel": "",
+      "moment": "",
+      "thought": "",
+      "shift": "",
+      "bridge": ""
+    },
+    {
+      "rel": "",
+      "moment": "",
+      "thought": "",
+      "shift": "",
+      "bridge": ""
+    },
+    {
+      "rel": "",
+      "moment": "",
+      "thought": "",
+      "shift": "",
+      "bridge": ""
+    }
+  ],
+  "stb": {
+    "moment": "",
+    "thought": "",
+    "shift": "",
+    "bridge": ""
+  },
+  "bp": [
+    "Too many priorities, no order",
+    "Owner does everything",
+    "Nothing is written down; Or it's outdated",
+    "Numbers are a guess",
+    "Marketing is random"
+  ],
+  "bs_": [
+    "Bounces between projects and finishes none",
+    "Works nights and weekends",
+    "Team calls with every question",
+    "Doesn't know which jobs make money",
+    "Posts when there's time, which is never"
+  ],
+  "bsol": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "bc": [
+    "Fuck your feelings, just work harder",
+    "Fuck your feelings, no one cares",
+    "They laugh now, but won't when I'm rich",
+    "Grind, baby, GRIND!",
+    ""
+  ],
+  "bsh": [
+    "From \"I need to fix everything\" to \"I'm focused on {this} from 9am-10am M/W/F",
+    "From \"it's in my head\" to \"it's in the system\"",
+    "From \"time off is a waste of time\" to \"rest & relationships improve the quality of my work\"",
+    "",
+    ""
+  ],
+  "bsbs": [
+    {
+      "belief": "I need a complete overhaul before things get better.",
+      "whyTrue": "Everything is broken and every course says to rebuild your whole system.",
+      "burned": "Complete overhauls stall, and leave more chaos in its wake. ",
+      "real": "Systems & processes iterate over time. ",
+      "newBelief": "Change is constant; Time is the most important resource. ",
+      "bridge": "Reclaim your calendar & life"
+    }
+  ],
+  "bsds": [
+    "You don't need a new system. You need to document the one you have. \n\n"
+  ],
+  "ro": {
+    "clarity": "",
+    "confidence": "",
+    "emotional": "",
+    "lifestyle": "",
+    "mindset": ""
+  },
+  "rp": {
+    "before": "",
+    "stuck": "",
+    "shift": "",
+    "after": "",
+    "lesson": "",
+    "bridge": ""
+  },
+  "ra": [
+    ""
+  ],
+  "wm": {
+    "effortless": "Seeing how a business really runs and turning it into a clear, simple process.",
+    "othersNotice": "I make the overwhelming feel doable. \n",
+    "excel": "Documentation, workflows, and breaking big projects into steps a small team can actually finish. \nCreating systems around the founders strengths",
+    "believe": "Solid documentation + data integrity make everything else easier\nPre-qualifying leads & ungated pricing increase sales conversions; Less Leads, higher close rate.\nEverything works, even the thing thats not working.",
+    "different": "I take work off your plate, iterating & building on what's already working.",
+    "values": "Freedom Through Discipline. \nSimple Wins. ",
+    "toning": ""
+  },
+  "wmb": {
+    "worldview": "",
+    "standards": "",
+    "methods": "",
+    "edge": "",
+    "different": "",
+    "thisIsFor": "1-3 person service business owners in the field or booked by appointment",
+    "notFor": "People who want a done-for-you system \nPeople who want an admin assistant - I'm not sending your invoices.\nAnother course to bookmark",
+    "bridge": "If you're tired of more information and more to-dos, reclaim your calendar & Own Your 24."
+  },
+  "sym": [],
+  "ht": "Your \"one day\" projects, finished one day at a time.",
+  "hr": "Get your time back by building your business brick by brick, with someone in it with you.",
+  "pr": {
+    "sm": "",
+    "sh": "",
+    "sc": "",
+    "pb": "",
+    "ph": "",
+    "pc": "",
+    "rr": "",
+    "rh": "",
+    "rc": "",
+    "wd": "I don't sell you my system. I help you build yours.",
+    "wh": "",
+    "wc": ""
+  }
+}

@@ -14,7 +14,7 @@ export function CompleteButton({ slug }: { slug: string }) {
       onClick={() => progress.toggle(slug)}
       aria-pressed={done}
       className={`inline-flex items-center gap-3 px-7 py-3.5 rounded-full text-lg font-extrabold transition ${
-        done ? "bg-highlight border border-cyan hover:bg-card" : "bg-foreground text-background hover:bg-[#16304f]"
+        done ? "bg-highlight border border-cyan hover:bg-card" : "bg-foreground text-background hover:opacity-90"
       }`}
     >
       {done ? (

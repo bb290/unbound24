@@ -47,7 +47,7 @@ export default function CoursePage({ course }: { course: Course }) {
           {first ? (
             <Link
               href={`/course/${first.slug}`}
-              className="inline-flex items-center gap-3 mt-8 px-8 py-4 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
+              className="inline-flex items-center gap-3 mt-8 px-8 py-4 rounded-full bg-cyan text-ink text-lg font-extrabold hover:brightness-95 transition"
             >
               Start with {first.title} <span aria-hidden="true">&rarr;</span>
             </Link>

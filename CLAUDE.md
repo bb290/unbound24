@@ -1,1 +1,68 @@
 @AGENTS.md
+
+# Unbound24 site
+
+One-page Next.js 16 marketing site for Unbound Consulting (unbound24.com). Deployed on Vercel (project: `unbound24`).
+
+## Shared Notion hub (required)
+
+The Unbound24 Notion workspace is the agency's own client hub and the first test of the client hub template (built 2026-10-19). Brittany plays the client. The page **"CLAUDE.md: Read First"** under the Dashboard is the shared truth for project state, read by Claude Code ("Claudette") and Brittany's claude.ai Claude.
+
+**Connect through Composio, Unbound24 account only:** `composio proxy https://api.notion.com/v1/... -t notion --account Unbound24` (alias set 2026-10-19 on connection `notion_rebait-balter`). Other Composio Notion accounts are client workspaces (D2, Malorie Moon, Rise Counseling): never write Unbound24 content through them. Before any write, check `users/me` returns `workspace_name: "Unbound24"`. The claude.ai Notion connector in this session points at Malorie Moon, not here. Set stdin to /dev/null when scripting `composio proxy`.
+
+**At session START:** read Read First (rules, Current state, newest session-log entries) and check Project Tasks for open Claudette rows; offer to work them in Order. **At session END:** add a session-log entry at the TOP (date, "Claudette", what changed, what's open), rewrite Current state if it changed, keep Project Tasks true. Notes and answers go in row comments starting "Update by Claude, per Brittany's request:".
+
+**Rules:** one Current Project at a time (now: **3 Clients at $4,000 a month** for the full package, since 2026-11-12 (Brittany): clients first, course after; the course and the rest of the Unbound24 Launch plan are parked in the Idea Bank). The offer is **Local + Loud**, one package at $4,000 a month (Notion page "Local + Loud: $4,000 a month (draft)"), and Unbound24 is being rebranded from scratch around it: the current site, brand and Own Your 24 are sources to pull from, not the plan (Brittany, 2026-11-12). **Proof exception (Brittany, 2026-11-12):** French Roofing and Sagareus may be named and shown as proof in Unbound24 sales material, without their customers' or owners' details; their copy, colors and imagery still never become Unbound24's brand; everything else goes in the Idea Bank. Write as "we" (Brittany, 2026-10-19). No passwords or tokens in Notion; SOPs record where credentials are stored. Customer details can live in Notion (Brittany, 2026-11-05): the CRM is their home, so keep them there rather than scattered across pages, and never in anything published. Never email anyone in it (drafts only). Clients with no CRM start with one in Notion as part of their hub. The workbook draft is in `.claude/source-material/own-your-24-workbook-2026-10-19.json`.
+
+| Notion object | id |
+|---|---|
+| Dashboard | `3fe9f6e8-8800-806e-b116-d12870fe7ec9` |
+| Project Tasks db (Item, Order, Type, Owner: Brittany/Claudette, Status) | `3fe9f6e8-8800-8171-97c2-fd1f74a239da` |
+| Idea Bank db (Idea, Status, Area, Suggested by, Why, Added) | `3fe9f6e8-8800-81b5-a5af-c98a67d334d4` |
+| CLAUDE.md: Read First | `3fe9f6e8-8800-8180-bf9f-d0e791b74b46` |
+| SOPs / Brand Guide / How We Work Together | `3fe9f6e8-8800-8142-87be-fd3f83da90d7` / `3fe9f6e8-8800-8111-b840-e62babaed63f` / `3fe9f6e8-8800-81e5-a64e-d09f8cebb9ce` |
+| CRM db (Name, Email, Phone; columns added as the pipeline takes shape) | `3fe9f6e8-8800-810b-ab70-c3a2fd0cb279` |
+| Course feedback db (from the "Love it or hate it?" form on every lesson page; under Course Outline) | `40e9f6e8-8800-8130-be36-c5d93f5b60c7` |
+
+**Lesson feedback form (2026-11-03):** `src/app/course/Feedback.tsx` + `/api/course/feedback`, questions in `src/content/feedback.ts` (options must match the Notion select options). The button only renders when `NOTION_TOKEN` and `NOTION_FEEDBACK_DATABASE_ID` are set on Vercel; the database id is set, the token is Brittany's Notion integration secret (not set yet, same one the course accounts need).
+
+**Course content stays in sync (Brittany, 2026-10-31):** the website (`src/content/course-lessons.json`) is the source of truth for live lesson text. Whenever a lesson changes on the site, re-run the sync in the same session so Notion matches: each live lesson's page in the Lessons database (`4049f6e8-8800-81c2-b9c2-dc03ccdbe25e`, matched on the `#` column) has a toggle heading "Live on the website" that the sync replaces; it also syncs titles and sets Status to "Live on site". Never touch the rest of the lesson page (Brittany's own words and slide scripts). Also keep the Course Outline page (`4049f6e8-8800-8111-849b-df374d92fea8`) lesson list and "Lesson format" section matching the site. Run it with `python3 scripts/sync-notion-lessons.py src/content/course-lessons.json <today>`.
+
+**One course changelog (Brittany, 2026-11-08):** every course or lesson change gets one dated line at the top of the Changelog on the Course Outline page, and nowhere else. Lesson pages show only the current version: edit in place. No dated status callouts, no "copied from" or "old notes" sections, no "Draft (Claudette, date)" labels, no per-page change notes. Lesson status lives in the Lessons database Status column.
+
+**Lesson videos to YouTube (Brittany, 2026-11-03):** finals go to the Unbound24 Drive (Composio `googledrive_love-saify`, brittany@unbound24.com), then into Metricool brand "Unbound" (blogId 7857408). Once Brittany has approved the review cut, the Metricool post publishes immediately (draft: false, publication time a few minutes out; Brittany, 2026-11-03). After it's live, put the YouTube id in that lesson's `video` field in `course-lessons.json` and deploy, so the video shows on the lesson page. Lesson 1.1 is `-qifW7rl4Tw`, 1.2 is `FDU0B1qD0Cg`, 1.3 is `WJ4qvksL9CE` (redo 2026-11-04; the old `8ivkZ-Pu3CY` is no longer public), 1.4 is `gWnIUUgm-uw`. Metricool only fetches public Drive files: standing OK to set each lesson video to "anyone with the link" for the push, then set it back to private once Metricool has copied it. Never use the French Roofing or Sagareus Metricool brands for Unbound24. YouTube description format (Brittany, 2026-11-03): "Get the full course at www.unbound24.com/course", then "COPY AND PASTE THIS PROMPT INTO CLAUDE:" and the lesson's prompt from `course-lessons.json`. Nothing else (no chapters, no summary). YouTube titles end in " v1" from Lesson 1.2 on (Brittany, 2026-11-03). Never use Composio YouTube `youtube_arock-token`: it is the Sagareus channel (alias "Sagareus"). Unbound24 YouTube edits (thumbnails, titles) need their own Composio connection, and custom thumbnails need the channel verified at youtube.com/verify (found 2026-11-04).
+
+**Video quality check (Brittany, 2026-11-04):** before building graphics on any new recording, review the transcript for rambling, repeats, or unclear explanations. Push back: list the weak spots with timestamps and recommend a re-record or a scripted voiceover when cutting can't fix it. Don't just cut around it to ship faster. Job Site Prep v1 shipped with a rambling structured-data/Markdown section and is being redone.
+
+**Sample company (Brittany, 2026-11-04):** Shift Garage Co. is the pretend company used as the worked example in every course. Brittany plays the owner, runs the prompts herself, and records helper videos. Don't build Shift Garage Co. content unless asked. A real nonprofit called SHIFT Garage (shiftgarage.org, South Dakota car repair) exists, so keep it reading as fictional.
+
+**Course framework (Brittany, 2026-11-08):** the house is a foundation (Documentation and data), four pillars built to CODE, in order: Capture (get attention, bring in leads), Obtain (turn leads into paying customers), Deliver (great work, great experience), Extend (the four Rs: Refine, Review, Refer, Repeat), and Brand as the roof. Old names (Attract, Convert, Retain, Delivery as foundation, Reputation) are retired. The library is 5 courses: 1 Hands-On AI, 2 Get It Out of Your Head, 3 Book the Right Customers (Capture, Obtain & Brand), 4 Same Great Job (Deliver), 5 Customers for Life (Extend; Earn the 5 Stars folded in). When lessons are renumbered, fix the Notion Lessons rows (`#`) BEFORE running the sync: it matches on `#` and will retitle the wrong rows.
+
+**Helper videos (Brittany, 2026-11-04):** screen-recorded walkthroughs of a lesson action, published public on YouTube via Metricool like the lessons (title "Helper Video: ... | Hands-On AI, Lesson X.Y v1", same description format) and shown in the action box through `action.helper` {label, video}. Before publishing, scan the recording for other clients on screen (Claude sidebar Recents, Projects list, other Notion workspaces like D2) and blur them. 1.2 `5XFWLD0tWFE`, 1.3 `vuhLIP5Vupg` (tightened 2026-11-04; old `NRrd1bJNzdA` private, old `wumjVeFtH8o` no longer public), 1.4 `HkqYCCCJK3Q` (re-cut 2026-11-05; old `fZMl5kH8csk` no longer public). Actions with more than one step use `action.steps`.
+
+**Thumbnails (Brittany, 2026-11-05):** no photo of Brittany for now (until better lighting). Lessons and helpers use the same flat style: light bg, cyan or magenta top bar, navy pill ("LESSON 1.x" or "HELPER VIDEO"), big Nunito headline with the last line magenta, a tilted site illustration card on the right. Lesson set is in scratchpad `yt/thumbs3/` (Drive copies in the Unbound24 videos folder).
+
+**Lesson video layout (Brittany, 2026-11-03):** keep every graphic and on-screen text in the top two-thirds of the frame (nothing below y = 720 at 1080p), so YouTube closed captions never cover them. Lesson 1.1 (Business Breakdown) stays as published; this applies from 1.2 on.
+
+**Feature images (Brittany, 2026-11-03):** every page needs a feature image (link previews now, SEO later). Cards live in `public/og/` (1200x630), made by `node scripts/og-cards.mjs` from `scripts/og-cards.json`; add a row there for every new page, lesson, or course. The site-wide fallback is `/og/home.png` (layout.tsx).
+
+**Lesson prompts:** before writing or editing any copy/paste Claude prompt for a lesson action, read the Notion page "Prompt Guide: how we write lesson prompts" (`40d9f6e8-8800-8114-b260-eb2d1ed50c7e`, under Course Outline). Course writing lives in Notion, not local files (Brittany, 2026-11-03).
+
+The Notion API cannot nest a database inside a toggle heading, create filtered views, or reorder blocks; those are done by hand.
+
+## Commands
+
+- `npm run dev` / `build` / `start` / `lint` (no tests)
+
+## Gotchas
+
+- Tailwind v4: there is no `tailwind.config.js`. Theme tokens live in `src/app/globals.css` (`@theme inline`). Brand (light redesign, live 2026-10-30): bg `#FFFFFF`, navy text `#0A1C33`, muted `#5B6B80`, cards `#F3F6FA` / line `#DCE3EC`, highlight `#E6F9FC`, cyan `#2ED4E8` (cyan text `#0B9CB0`); magenta `#E8399B` (magenta text `#C01F7A`, soft `#FDEAF4`) as the secondary accent for labels and emphasis, cyan for buttons and progress; Nunito via `next/font`. **New brand decided 2026-11-12 (Brittany), not yet on the site:** name stays Unbound24; neutrals `#c4c4c4`, `#f8f0e3`; accents `#03c0e8`, `#40e0d0`, `#d3d3ff`; text is black (Brittany, 2026-11-12); the five colors are fills and highlights, never text. Site is course only (Own Your 24) and written as "I". The course lives at `/course` (content in `src/content/`, built from the Notion lesson scripts).
+- **Redesign (2026-11-13, branch `redesign-2026-11`, not committed or deployed):** the Unbound design system (`DESIGN.md`: Rubik/Figtree/DM Mono, sticker shapes, light + dark via the top-bar toggle, `data-theme` on `<html>`, saved as `ub-theme`). Tokens in `globals.css`; old token names map onto the new ones so the course pages keep working. **Home is fun things to play with** (Brittany, 2026-11-13): hero "Doing 10 things at 50% is still an F." with Found / Qualified / Booked, the Chaos Spinner (`src/components/ChaosSpinner.tsx`, items in `src/content/spinner.ts`), the Halfpipe Skater ("Click Dude", no copy around it), then "Hi, this is B." with an intro-video placeholder. **All services live on `/local-loud`** (three things, what you get, price, who it's for, proof). No CTA buttons anywhere until the fit assessment is built (parked by Brittany 2026-11-13). The stances are not on the site: they're for social posts and content. We don't put slogans like "Fisher-Price simple", "Give 10 to get 1" or "Unbound by rules" on the site: "we don't say these things, we just do them."
+- Source is `src/app/*` (README's "app/page.tsx" is stale create-next-app boilerplate).
+- `.vercel/` is untracked; run `vercel link` on a fresh clone before deploying.
+- Site contact email: brittany@unbound24.com.
+
+## Lessons learned
+
+- 2026-07-06: `npm run lint` fails with "Cannot find module .../prelude-ls/lib" — local node_modules is corrupted; re-run `npm install` before linting.
+- 2026-10-30: After adding new color tokens to `globals.css`, `next dev` kept serving stale CSS (new classes missing) even after a restart, while `next build` was correct. Check visual changes with `npm run build && npx next start` instead.

@@ -60,7 +60,7 @@ export default function Feedback({ slug }: { slug: string }) {
         <button
           type="button"
           onClick={open}
-          className="px-7 py-3.5 rounded-full bg-magenta text-white text-lg font-extrabold hover:brightness-95 transition"
+          className="px-7 py-3.5 rounded-full bg-magenta text-ink text-lg font-extrabold hover:brightness-95 transition"
         >
           Tell me!
         </button>
@@ -92,7 +92,7 @@ export default function Feedback({ slug }: { slug: string }) {
               <button
                 type="button"
                 onClick={() => dialog.current?.close()}
-                className="mt-6 px-7 py-3 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition"
+                className="mt-6 px-7 py-3 rounded-full bg-cyan text-ink text-lg font-extrabold hover:brightness-95 transition"
               >
                 Back to the lesson
               </button>
@@ -149,7 +149,7 @@ export default function Feedback({ slug }: { slug: string }) {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="mt-7 w-full px-7 py-3.5 rounded-full bg-cyan text-lg font-extrabold hover:brightness-95 transition disabled:opacity-60"
+                className="mt-7 w-full px-7 py-3.5 rounded-full bg-cyan text-ink text-lg font-extrabold hover:brightness-95 transition disabled:opacity-60"
               >
                 {status === "sending" ? "Sending..." : "Send"}
               </button>
