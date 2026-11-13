@@ -109,7 +109,7 @@ export default function Home() {
       {/* Skater: at the very bottom (user feedback 2026-11-13) */}
       <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
         <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
-          <Label fill="bg-lilac">Click Dude</Label>
+          <Label fill="bg-lilac">Skate break</Label>
           <div className="w-full">
             <HalfpipeSkater />
           </div>
