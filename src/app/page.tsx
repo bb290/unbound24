@@ -84,10 +84,10 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 text-lg leading-relaxed max-w-[60ch]">
               <p>
-                Brittany started as a social worker who answered a Craigslist ad for a free-rent site manager job. Over coffee, she talked the owner into letting her run all 55 of his units. She did plenty wrong, figured it out anyway, and earned a PhD from YouTube University along the way.
+                I started as a social worker who answered a Craigslist ad for a free-rent site manager job. Over coffee, I talked the owner into letting me run all 55 of his units. I did plenty wrong, figured it out anyway, and earned a PhD from YouTube University along the way.
               </p>
               <p>
-                That became Sagareus Property Management, now 800+ units, which she still owns. After years of quietly helping friends and family grow their service businesses, Unbound makes it official, with a handful of owner-operators we pick on purpose.
+                That became Sagareus Property Management, now 800+ units, which I still own. After years of quietly helping friends and family grow their service businesses, Unbound makes it official, with a handful of owner-operators I pick on purpose.
               </p>
               <p>
                 A few simple moves, done consistently, make your business worth more and easier to hand down to someone in your own town.
@@ -96,7 +96,6 @@ export default function Home() {
 
             <blockquote className="sticker rounded-[20px] bg-surface p-6 max-w-[52ch] -rotate-1">
               <p className="font-display font-bold text-[24px] leading-snug">&ldquo;Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species.&rdquo;</p>
-              <footer className="mt-2 label text-muted">B</footer>
             </blockquote>
           </div>
 
