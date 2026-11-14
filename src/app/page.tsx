@@ -1,3 +1,4 @@
+import { BeastModeTimer } from "@/components/BeastModeTimer";
 import { ChaosSpinner } from "@/components/ChaosSpinner";
 import { HalfpipeSkater } from "@/components/HalfpipeSkater";
 import { SiteFooter, SiteNav } from "@/components/site";
@@ -72,6 +73,13 @@ export default function Home() {
           <div className="w-full">
             <HalfpipeSkater />
           </div>
+        </div>
+      </section>
+
+      {/* Beast Mode Timer: 25 on, 5 off (Brittany, 2026-11-14) */}
+      <section id="beast" className="scroll-mt-20 border-t-2 border-border">
+        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24">
+          <BeastModeTimer />
         </div>
       </section>
 
