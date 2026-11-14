@@ -26,13 +26,13 @@ export default function Resources() {
           Stuff we <span className="torn bg-cyan">like.</span>
         </h1>
         <p className="text-[20px] leading-relaxed max-w-[58ch]">Books, podcasts, videos and services worth your time.</p>
-      </header>
-
-      <main className="max-w-[1200px] mx-auto px-4 pb-16 sm:px-8 sm:pb-24 flex flex-col gap-8">
-        <ResourceSections sections={LIVE_SECTIONS} />
-        <p className="text-sm text-muted max-w-[70ch]">
+        <p className="-mt-3 text-sm text-muted max-w-[70ch]">
           Some of these are affiliate links. If you buy through one, we may earn a small commission at no cost to you. As an Amazon Associate, we earn from qualifying purchases.
         </p>
+      </header>
+
+      <main className="max-w-[1200px] mx-auto px-4 pb-16 sm:px-8 sm:pb-24">
+        <ResourceSections sections={LIVE_SECTIONS} />
       </main>
 
       <SiteFooter />
