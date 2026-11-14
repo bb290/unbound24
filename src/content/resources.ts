@@ -55,7 +55,8 @@ export const RESOURCE_SECTIONS: ResourceSection[] = [
     items: [
       { title: "Housecall Pro", by: "Field service software", short: "Scheduling, invoices and payments in one place.", more: "What we run our own service businesses on. We build marketing into it instead of asking anyone to switch.", href: "https://www.housecallpro.com", linkLabel: "Visit Housecall Pro", affiliate: true },
       { title: "Wispr Flow", by: "Voice dictation", short: "Talk instead of type, anywhere on your computer.", more: "I talk, it types, and it cleans up the ums. Most of what I write starts here.", href: "https://wisprflow.ai", linkLabel: "Visit Wispr Flow", affiliate: true },
-      { title: "Paige", by: "Service", short: "What I like about it, in one line.", more: "A few lines on why it's worth it.", href: "https://example.com", linkLabel: "Visit Paige", affiliate: true, placeholder: true },
+      // TODO: swap href for Brittany's Paige affiliate link (she has one; 2026-11-14).
+      { title: "Paige", by: "Merchynt", short: "Keeps your Google Business Profile busy for you.", more: "AI that works on your Google profile: posts, photos, review replies and review requests, plus a map of where you rank around town. Good for owners who know the profile matters and never get to it.", href: "https://www.merchynt.com/paige", linkLabel: "Visit Paige", affiliate: true },
     ],
   },
 ];
