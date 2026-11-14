@@ -25,11 +25,13 @@ export type ResourceSection = {
 export const RESOURCE_SECTIONS: ResourceSection[] = [
   {
     key: "books",
-    title: "Books",
+    title: "Essential Reading",
     fill: "cyan",
+    // TODO: swap the Amazon search links for Brittany's Amazon Associates links once she has them.
     items: [
-      { title: "Book title", by: "Author", short: "What I like about it, in one line.", more: "A few lines on why it's worth reading.", href: "https://www.amazon.com", linkLabel: "See it on Amazon", affiliate: true, placeholder: true },
-      { title: "Book title", by: "Author", short: "What I like about it, in one line.", more: "A few lines on why it's worth reading.", href: "https://www.amazon.com", linkLabel: "See it on Amazon", affiliate: true, placeholder: true },
+      { title: "It's Not Luck", by: "Eliyahu M. Goldratt", short: "Find the one thing holding the business back.", more: "The sequel to The Goal, told as a story. A manager uses the Theory of Constraints to fix sales, pricing and the rest. The lesson: stop fixing everything at once and find the one thing that's actually in the way.", href: "https://www.amazon.com/s?k=It%27s+Not+Luck+Goldratt", linkLabel: "See it on Amazon", affiliate: true },
+      { title: "The Millionaire Fastlane", by: "MJ DeMarco", short: "Build something that doesn't trade every hour for money.", more: "Why a paycheck and slow saving is the long way around, and what to build instead: a business that keeps growing without you there for every hour of it.", href: "https://www.amazon.com/s?k=The+Millionaire+Fastlane+DeMarco", linkLabel: "See it on Amazon", affiliate: true },
+      { title: "The $100M Series", by: "Alex Hormozi", short: "Offers, leads and pricing, in plain language.", more: "$100M Offers, $100M Leads and $100M Money Models. How to make an offer people feel silly saying no to, how to get it in front of more people, and how to price it.", href: "https://www.amazon.com/s?k=Alex+Hormozi+%24100M", linkLabel: "See them on Amazon", affiliate: true },
     ],
   },
   {
