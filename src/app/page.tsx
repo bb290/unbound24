@@ -1,4 +1,5 @@
 import { ChaosSpinner } from "@/components/ChaosSpinner";
+import { BrandGuideWidget } from "@/components/brand-guide/BrandGuideWidget";
 import { FocusOrBreak } from "@/components/FocusOrBreak";
 import { SiteFooter, SiteNav } from "@/components/site";
 import { VendingMachine } from "@/components/VendingMachine";
@@ -84,17 +85,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Left: the primary CTA, the free brand guide (placeholder until the widget is built). Right: the Value Vending Machine. */}
+      {/* Left: the primary CTA, the free brand guide widget. Right: the Value Vending Machine. */}
       <Section id="brand-guide">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_minmax(0,440px)] items-start">
           <div className="flex flex-col gap-6 min-w-0">
-            {/* PLACEHOLDER (2026-11-14): the Brand Guide widget goes here. 7 questions, no email, instant download with 3-5 prompts. */}
-            <div className="sticker rounded-[28px] bg-cyan text-ink p-7 sm:p-10 flex flex-col gap-5">
-              <span className="label inline-block self-start rounded-full bg-surface text-foreground px-3 py-[7px]">Free brand guide</span>
-              <h2 className="font-display font-extrabold text-[36px] leading-[1.02] tracking-[-0.02em] sm:text-[52px]">Your brand guide in 7 questions.</h2>
-              <p className="text-[19px] leading-relaxed max-w-[44ch]">No email needed. Answer 7 questions and download your brand guide on the spot.</p>
-              <span className="btn btn-secondary self-start opacity-80 cursor-default" aria-disabled="true">Coming soon</span>
-            </div>
+            {/* Primary CTA: the free brand guide (Brittany, 2026-11-14). */}
+            <BrandGuideWidget />
 
             <blockquote className="sticker rounded-[20px] bg-surface p-6 max-w-[52ch] -rotate-1">
               <p className="font-display font-bold text-[24px] leading-snug">&ldquo;Local businesses are the backbone of the economy, and they&apos;re becoming an endangered species.&rdquo;</p>
