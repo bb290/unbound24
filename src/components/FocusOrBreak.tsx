@@ -31,7 +31,7 @@ export function FocusOrBreak() {
   return (
     <>
       <div className="grid gap-6 sm:grid-cols-2">
-        <CardButton fill="bg-cyan" title="Get sh*t done" onClick={() => show("work")} />
+        <CardButton fill="bg-teal" title="Get sh*t done" onClick={() => show("work")} />
         <CardButton fill="bg-lilac" title="Take a break" onClick={() => show("break")} />
       </div>
 
