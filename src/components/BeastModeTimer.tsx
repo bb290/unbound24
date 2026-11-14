@@ -146,28 +146,18 @@ export function BeastModeTimer() {
   const breakIdea = phase && !isOn ? BREAKS[(phase.n - 1) % BREAKS.length] : "";
 
   return (
-    <div className="grid gap-10 items-center lg:grid-cols-[1fr_1.05fr]">
-      <div className="flex flex-col gap-5 min-w-0">
+    <div className="flex flex-col gap-6 w-full max-w-[440px] mx-auto">
+      <div className="flex flex-col gap-4 min-w-0">
         <span className="label self-start rounded-full bg-cyan px-3 py-[7px] text-ink">Beast Mode Timer</span>
-        <h2 className="font-display font-extrabold text-[38px] leading-none tracking-[-0.02em] sm:text-[56px]">
+        <h2 className="font-display font-extrabold text-[38px] leading-none tracking-[-0.02em] sm:text-[48px]">
           25 on. <span className="torn bg-cyan">5 off.</span>
         </h2>
-        <p className="text-lg leading-relaxed max-w-[44ch]">
+        <p className="text-[17px] leading-relaxed">
           Pick one thing. Phone away, email closed, butt in seat for 25 minutes. Then a 5-minute break, and go again.
         </p>
-        <div className="grid gap-4 grid-cols-2 max-w-[520px]">
-          <div className="flex flex-col gap-2">
-            <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">On</span>
-            <ul className="flex flex-col gap-1.5 text-[15px]">{RULES.map((r) => <li key={r}>{r}</li>)}</ul>
-          </div>
-          <div className="flex flex-col gap-2">
-            <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">Off</span>
-            <ul className="flex flex-col gap-1.5 text-[15px]">{BREAKS.slice(0, 4).map((r) => <li key={r}>{r}</li>)}</ul>
-          </div>
-        </div>
       </div>
 
-      <div className="sticker rounded-[28px] bg-surface p-5 sm:p-7 flex flex-col gap-5 min-w-0">
+      <div className="sticker rounded-[28px] bg-surface p-5 sm:p-6 flex flex-col gap-5 min-w-0">
         {!run ? (
           <>
             <fieldset className="flex flex-col gap-2.5">
@@ -223,7 +213,7 @@ export function BeastModeTimer() {
             </div>
 
             <div className="flex flex-col items-center gap-2 py-2">
-              <span className="font-mono font-medium text-[72px] leading-none tracking-[-0.03em] tabular-nums sm:text-[104px]" role="timer" aria-label={`${mmss(left)} left`}>
+              <span className="font-mono font-medium text-[72px] leading-none tracking-[-0.03em] tabular-nums sm:text-[88px]" role="timer" aria-label={`${mmss(left)} left`}>
                 {mmss(left)}
               </span>
               <p className="font-display font-bold text-[20px] text-center">
@@ -256,6 +246,17 @@ export function BeastModeTimer() {
             </div>
           </div>
         )}
+      </div>
+
+      <div className="grid gap-4 grid-cols-2 px-1">
+        <div className="flex flex-col gap-2">
+          <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">On</span>
+          <ul className="flex flex-col gap-1.5 text-[15px]">{RULES.map((r) => <li key={r}>{r}</li>)}</ul>
+        </div>
+        <div className="flex flex-col gap-2">
+          <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">Off</span>
+          <ul className="flex flex-col gap-1.5 text-[15px]">{BREAKS.slice(0, 4).map((r) => <li key={r}>{r}</li>)}</ul>
+        </div>
       </div>
     </div>
   );

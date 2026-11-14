@@ -13,7 +13,7 @@ const MARQUEE = ["A website that books jobs", "Show up every week", "Reviews on 
 
 const FQB = [
   ["Found.", "People search for you and find you.", "bg-cyan", "-rotate-2"],
-  ["Qualified.", "Quizzes, instant estimates and tools sort the right customers in.", "bg-teal", "rotate-1 lg:translate-x-8"],
+  ["Qualified.", "Quizzes, instant estimates and tools sort the right customers in.", "bg-teal", "rotate-1 xl:translate-x-8"],
   ["Booked.", "They read your reviews and book online.", "bg-lilac", "-rotate-1"],
 ];
 
@@ -66,20 +66,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skater: between the spinner and About (Brittany, 2026-11-13) */}
+      {/* Beast Mode Timer (left) and Skater (right), between the spinner and About (Brittany, 2026-11-14) */}
       <section id="dude" className="scroll-mt-20 border-t-2 border-border bg-surface-2">
-        <div className="max-w-[960px] mx-auto px-4 py-16 sm:px-8 sm:py-24 flex flex-col items-center gap-6">
-          <Label fill="bg-lilac">Skate break</Label>
-          <div className="w-full">
-            <HalfpipeSkater />
+        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24 grid gap-14 items-start lg:grid-cols-[minmax(0,400px)_1fr] lg:gap-16">
+          <div id="beast" className="scroll-mt-20 min-w-0">
+            <BeastModeTimer />
           </div>
-        </div>
-      </section>
-
-      {/* Beast Mode Timer: 25 on, 5 off (Brittany, 2026-11-14) */}
-      <section id="beast" className="scroll-mt-20 border-t-2 border-border">
-        <div className="max-w-[1200px] mx-auto px-4 py-16 sm:px-8 sm:py-24">
-          <BeastModeTimer />
+          <div className="flex flex-col items-center gap-6 min-w-0 lg:sticky lg:top-24">
+            <Label fill="bg-lilac">Skate break</Label>
+            <div className="w-full">
+              <HalfpipeSkater />
+            </div>
+          </div>
         </div>
       </section>
 
