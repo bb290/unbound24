@@ -6,7 +6,7 @@ import { COURSES, lessonsInCourse } from "@/content/course";
 export const COURSE_URL = "/course";
 
 const NAV_LINKS = [
-  { label: "Local + Loud", href: "/local-loud" },
+  { label: "Services", href: "/local-loud" },
   { label: "Resources", href: "/resources" },
 ];
 
