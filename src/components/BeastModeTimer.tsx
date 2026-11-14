@@ -138,7 +138,6 @@ export function BeastModeTimer() {
     });
   }
 
-  const total = sessions * ON;
   const isOn = phase?.kind === "on";
   const frac = phase && run ? 1 - Math.max(0, left) / len(phase) : 0;
   const breakIdea = phase && !isOn ? BREAKS[(phase.n - 1) % BREAKS.length] : "";
@@ -147,7 +146,7 @@ export function BeastModeTimer() {
     <div className="flex flex-col gap-6 w-full max-w-[440px] mx-auto">
       <div className="flex flex-col items-center gap-6 min-w-0">
         <h2 className="font-display font-extrabold text-[40px] leading-none tracking-[-0.02em] text-center sm:text-[52px]">
-          Beast Mode <span className="torn bg-teal">timer.</span>
+          <span className="torn bg-teal">Beast Mode</span>
         </h2>
         <ol className="flex flex-col gap-3 w-fit">
           {STEPS.map((step, i) => (
@@ -172,9 +171,6 @@ export function BeastModeTimer() {
                   </button>
                 ))}
               </div>
-              <p className="text-sm text-muted">
-                {sessions} {sessions === 1 ? "session" : "sessions"} of {ON} on{sessions > 1 ? `, ${OFF} off between` : ""}. {total} minutes of focus.
-              </p>
             </fieldset>
 
             <button type="button" onClick={start} className="btn btn-primary bg-teal w-full">Start</button>
