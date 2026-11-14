@@ -31,8 +31,8 @@ export function FocusOrBreak() {
   return (
     <>
       <div className="grid gap-6 sm:grid-cols-2">
-        <CardButton fill="bg-cyan" title="Get sh*t done" sub="Beast Mode Timer: 25 on, 5 off." onClick={() => show("work")} />
-        <CardButton fill="bg-lilac" title="Take a break" sub="Skate break." onClick={() => show("break")} />
+        <CardButton fill="bg-cyan" title="Get sh*t done" onClick={() => show("work")} />
+        <CardButton fill="bg-lilac" title="Take a break" onClick={() => show("break")} />
       </div>
 
       {timerMounted && createPortal(
@@ -51,15 +51,14 @@ export function FocusOrBreak() {
   );
 }
 
-function CardButton({ fill, title, sub, onClick }: { fill: string; title: string; sub: string; onClick: () => void }) {
+function CardButton({ fill, title, onClick }: { fill: string; title: string; onClick: () => void }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`lift sticker rounded-[28px] ${fill} text-ink text-left px-7 py-9 sm:px-9 sm:py-12 flex flex-col gap-3 min-h-[180px] sm:min-h-[240px] justify-end`}
+      className={`lift sticker rounded-[28px] ${fill} text-ink text-center px-7 py-9 sm:px-9 sm:py-12 flex flex-col items-center justify-center min-h-[180px] sm:min-h-[240px]`}
     >
       <span className="font-display font-extrabold text-[40px] leading-[0.95] tracking-[-0.02em] sm:text-[56px]">{title}</span>
-      <span className="text-[17px] font-semibold">{sub}</span>
     </button>
   );
 }
