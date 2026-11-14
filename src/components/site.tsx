@@ -7,6 +7,7 @@ export const COURSE_URL = "/course";
 
 const NAV_LINKS = [
   { label: "Local + Loud", href: "/local-loud" },
+  { label: "Resources", href: "/resources" },
 ];
 
 export function Wordmark({ small = false }: { small?: boolean }) {
@@ -18,7 +19,7 @@ export function Wordmark({ small = false }: { small?: boolean }) {
         width={500}
         height={150}
         priority={!small}
-        className={small ? "h-7 w-auto" : "h-9 w-auto sm:h-10"}
+        className={small ? "h-7 w-auto" : "h-7 w-auto sm:h-10"}
       />
     </Link>
   );
@@ -39,10 +40,12 @@ export function SiteNav({ active }: { active: string }) {
             <CoursesMenu active={active === COURSE_URL} />
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <Link href="/local-loud" className="text-[15px] font-bold text-muted hover:text-foreground transition lg:hidden">
-            Local + Loud
-          </Link>
+        <div className="flex items-center gap-2 min-[400px]:gap-2.5 sm:gap-4">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} className={`whitespace-nowrap text-[13px] min-[400px]:text-[14px] sm:text-[15px] font-bold transition lg:hidden ${link.href === active ? "text-foreground" : "text-muted hover:text-foreground"}`}>
+              {link.label}
+            </Link>
+          ))}
           <ThemeToggle />
         </div>
       </div>

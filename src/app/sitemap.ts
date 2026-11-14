@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: BASE, changeFrequency: "monthly", priority: 1 },
     { url: `${BASE}/local-loud`, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${BASE}/resources`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/course`, changeFrequency: "weekly", priority: 0.9 },
     ...COURSES.map((course) => ({
       url: `${BASE}/course/${course.slug}`,

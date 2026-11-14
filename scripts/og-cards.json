@@ -117,5 +117,12 @@
   "title": "Get found. Get booked.",
   "sub": "Reviews, local search and a website that books",
   "art": "/brick-house.webp"
+ },
+ {
+  "file": "resources",
+  "eyebrow": "Resources by Unbound24",
+  "title": "Stuff we like.",
+  "sub": "Books, podcasts, videos and services",
+  "art": "/brick-house.webp"
  }
 ]
