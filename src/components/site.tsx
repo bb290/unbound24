@@ -28,7 +28,7 @@ export function Wordmark({ small = false }: { small?: boolean }) {
 export function SiteNav({ active }: { active: string }) {
   return (
     <nav className="sticky top-0 z-30 bg-background/95 backdrop-blur-[2px] border-b-2 border-border">
-      <div className="flex items-center justify-between gap-4 px-4 py-3 max-w-[1200px] mx-auto sm:px-8">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 max-w-[1200px] mx-auto sm:flex-nowrap sm:px-8">
         <div className="flex items-center gap-8 lg:gap-10">
           <Wordmark />
           <div className="hidden items-center gap-7 text-[15px] font-bold lg:flex">
@@ -40,14 +40,15 @@ export function SiteNav({ active }: { active: string }) {
             <CoursesMenu active={active === COURSE_URL} />
           </div>
         </div>
-        <div className="flex items-center gap-2 min-[400px]:gap-2.5 sm:gap-4">
-          {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className={`whitespace-nowrap text-[13px] min-[400px]:text-[14px] sm:text-[15px] font-bold transition lg:hidden ${link.href === active ? "text-foreground" : "text-muted hover:text-foreground"}`}>
+        {/* Below lg: plain links. On phones they get their own row under the logo so nothing overlaps. */}
+        <div className="order-last w-full flex items-center justify-center gap-6 pb-0.5 sm:order-none sm:w-auto sm:ml-auto sm:justify-end sm:pb-0 lg:hidden">
+          {[...NAV_LINKS, { label: "Courses", href: COURSE_URL }].map((link) => (
+            <Link key={link.href} href={link.href} className={`whitespace-nowrap text-[15px] font-bold transition ${link.href === active ? "text-foreground" : "text-muted hover:text-foreground"}`}>
               {link.label}
             </Link>
           ))}
-          <ThemeToggle />
         </div>
+        <ThemeToggle />
       </div>
     </nav>
   );
