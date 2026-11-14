@@ -15,12 +15,11 @@ const LENGTHS = [
   { label: "3 hr", sessions: 6 },
   { label: "4 hr", sessions: 8 },
 ];
-const TASKS = ["Emails", "Sales board", "Website", "Research", "Freestyle"];
-const RULES = ["One thing only", "Phone away", "Email closed", "Butt in seat"];
+const STEPS = ["Pick one task or project.", "Start timer.", "Butt in seat for 25 minutes.", "Take break, repeat."];
 const BREAKS = ["Stand up and stretch", "Look at something far away", "Bathroom and water", "20 jumping jacks", "Walk around the room", "Roll your shoulders and neck"];
 
 type Phase = { kind: "on" | "off"; n: number };
-type Run = { phases: Phase[]; idx: number; endAt: number; pausedLeft: number | null; task: string; done: boolean };
+type Run = { phases: Phase[]; idx: number; endAt: number; pausedLeft: number | null; done: boolean };
 
 function plan(sessions: number): Phase[] {
   const out: Phase[] = [];
@@ -38,7 +37,6 @@ function mmss(ms: number) {
 
 export function BeastModeTimer() {
   const [sessions, setSessions] = useState(4);
-  const [task, setTask] = useState("");
   const [run, setRun] = useState<Run | null>(null);
   const [now, setNow] = useState(0);
   const [sound, setSound] = useState(true);
@@ -117,7 +115,7 @@ export function BeastModeTimer() {
     const phases = plan(sessions);
     const t = Date.now();
     setNow(t);
-    setRun({ phases, idx: 0, endAt: t + len(phases[0]), pausedLeft: null, task: task.trim() || "Freestyle", done: false });
+    setRun({ phases, idx: 0, endAt: t + len(phases[0]), pausedLeft: null, done: false });
     beep(1);
   }
 
@@ -147,13 +145,18 @@ export function BeastModeTimer() {
 
   return (
     <div className="flex flex-col gap-6 w-full max-w-[440px] mx-auto">
-      <div className="flex flex-col gap-4 min-w-0">
-        <h2 className="font-display font-extrabold text-[38px] leading-none tracking-[-0.02em] sm:text-[48px]">
+      <div className="flex flex-col items-center gap-6 min-w-0">
+        <h2 className="font-display font-extrabold text-[40px] leading-none tracking-[-0.02em] text-center sm:text-[52px]">
           Beast Mode <span className="torn bg-teal">timer.</span>
         </h2>
-        <p className="text-[17px] leading-relaxed">
-          Pick one thing. Phone away, email closed, butt in seat for 25 minutes. Then a 5-minute break, and go again.
-        </p>
+        <ol className="flex flex-col gap-3 w-fit">
+          {STEPS.map((step, i) => (
+            <li key={step} className="flex items-center gap-4">
+              <span className="font-display font-extrabold text-[44px] leading-none w-8 text-center shrink-0 sm:text-[52px]" aria-hidden="true">{i + 1}</span>
+              <span className="text-[20px] font-bold leading-snug sm:text-[22px]">{step}</span>
+            </li>
+          ))}
+        </ol>
       </div>
 
       <div className="sticker rounded-[28px] bg-surface p-5 sm:p-6 flex flex-col gap-5 min-w-0">
@@ -174,21 +177,6 @@ export function BeastModeTimer() {
               </p>
             </fieldset>
 
-            <fieldset className="flex flex-col gap-2.5">
-              <legend className="font-display font-bold text-[20px] mb-2.5">On what?</legend>
-              <div className="flex flex-wrap gap-2">
-                {TASKS.map((t) => (
-                  <button key={t} type="button" onClick={() => setTask(task === t ? "" : t)} aria-pressed={task === t}
-                    className={`rounded-full border-2 border-border px-4 py-2 font-bold text-[15px] transition ${task === t ? "bg-teal text-ink" : "bg-surface hover:bg-surface-2"}`}>
-                    {t}
-                  </button>
-                ))}
-              </div>
-              <label htmlFor="beast-task" className="sr-only">Or type your one thing</label>
-              <input id="beast-task" value={TASKS.includes(task) ? "" : task} onChange={(e) => setTask(e.target.value)} placeholder="Or type your one thing" maxLength={60}
-                className="h-12 w-full rounded-xl border-2 border-border bg-surface px-3.5 text-[16px] text-foreground placeholder:text-muted focus:outline-none focus:shadow-[0_0_0_4px_var(--focus)]" />
-            </fieldset>
-
             <button type="button" onClick={start} className="btn btn-primary bg-teal w-full">Start</button>
           </>
         ) : run.done ? (
@@ -197,7 +185,7 @@ export function BeastModeTimer() {
             <p className="font-display font-extrabold text-[40px] leading-none sm:text-[52px]">
               {run.phases.filter((p) => p.kind === "on").length * ON} minutes.
             </p>
-            <p className="text-lg">{run.phases.filter((p) => p.kind === "on").length} {run.phases.length > 1 ? "sessions" : "session"} on {run.task === "Freestyle" ? "whatever was on your plate" : run.task}. Take a real break.</p>
+            <p className="text-lg">{run.phases.filter((p) => p.kind === "on").length} {run.phases.length > 1 ? "sessions" : "session"} done. Take a real break.</p>
             <button type="button" onClick={() => setRun(null)} className="btn btn-secondary">Again</button>
           </div>
         ) : (
@@ -216,7 +204,7 @@ export function BeastModeTimer() {
                 {mmss(left)}
               </span>
               <p className="font-display font-bold text-[20px] text-center">
-                {isOn ? (run.task === "Freestyle" ? "Knock as much off your plate as you can." : run.task) : breakIdea}
+                {isOn ? "Butt in seat." : breakIdea}
               </p>
               {run.pausedLeft !== null && <p className="text-sm font-bold text-muted">Paused</p>}
             </div>
@@ -247,16 +235,6 @@ export function BeastModeTimer() {
         )}
       </div>
 
-      <div className="grid gap-4 grid-cols-2 px-1">
-        <div className="flex flex-col gap-2">
-          <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">On</span>
-          <ul className="flex flex-col gap-1.5 text-[15px]">{RULES.map((r) => <li key={r}>{r}</li>)}</ul>
-        </div>
-        <div className="flex flex-col gap-2">
-          <span className="font-mono text-[12px] tracking-[.1em] uppercase text-muted">Off</span>
-          <ul className="flex flex-col gap-1.5 text-[15px]">{BREAKS.slice(0, 4).map((r) => <li key={r}>{r}</li>)}</ul>
-        </div>
-      </div>
     </div>
   );
 }
