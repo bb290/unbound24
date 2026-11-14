@@ -5,12 +5,12 @@ import { createPortal } from "react-dom";
 import { VENDING, VENDING_COLS, VENDING_ROWS, type VendingItem } from "@/content/vending";
 
 // The Value Vending Machine (2026-11-13): 12 free one-pagers on spiral coils, 3 across and 4 down.
-// Punch a code (A1..D3) or double-click an item, the coil turns, the item drops into the tray, and a pop-up asks for an email to send it.
+// Punch a code (A1..D3) or double-click an item, the coil turns, the item drops into the tray, and a pop-up hands over the PDF.
+// Free, no email gate (Brittany, 2026-11-14).
 // Hover an item to see what it is and why you'd want it.
 
 const FILL: Record<VendingItem["fill"], string> = { cyan: "#03C0E8", teal: "#40E0D0", lilac: "#D3D3FF", gray: "#C4C4C4" };
 type Phase = "idle" | "spin" | "fall" | "tray";
-type Stage = "email" | "sending" | "done";
 
 function Coil({ spinning }: { spinning: boolean }) {
   // A side view of the spiral: loops drawn as one path; the dash moves when it turns.
@@ -57,16 +57,13 @@ export function VendingMachine() {
   const [phase, setPhase] = useState<Phase>("idle");
   const [drop, setDrop] = useState(0);
   const [open, setOpen] = useState(false);
-  const [stage, setStage] = useState<Stage>("email");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
   const itemRefs = useRef<Record<string, HTMLSpanElement | null>>({});
   const tray = useRef<HTMLDivElement>(null);
-  const emailInput = useRef<HTMLInputElement>(null);
+  const getIt = useRef<HTMLAnchorElement>(null);
   const busy = phase !== "idle";
 
   useEffect(() => {
-    if (open) setTimeout(() => emailInput.current?.focus(), 50);
+    if (open) setTimeout(() => getIt.current?.focus(), 50);
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape" && open) close(); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -86,7 +83,7 @@ export function VendingMachine() {
     setPhase("spin");
     setTimeout(() => setPhase("fall"), reduce ? 100 : 1300);
     setTimeout(() => { setPhase("tray"); setMsg("ENJOY"); }, reduce ? 300 : 2000);
-    setTimeout(() => { setStage("email"); setError(""); setOpen(true); }, reduce ? 500 : 2500);
+    setTimeout(() => { setOpen(true); }, reduce ? 500 : 2500);
   }
 
   function press(key: string) {
@@ -121,19 +118,6 @@ export function VendingMachine() {
     setActive(null);
     setEntry("");
     setMsg("PICK ONE");
-  }
-
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    if (!active) return;
-    setError("");
-    setStage("sending");
-    try {
-      const res = await fetch("/api/vending", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, code: active.code }) });
-      if (res.status === 400) { setError((await res.json()).error ?? "Check your email address."); setStage("email"); return; }
-    } catch {}
-    // Saved or not, the visitor paid with their email: hand over the PDF.
-    setStage("done");
   }
 
   const itemStyle = (code: string): React.CSSProperties => {
@@ -172,7 +156,7 @@ export function VendingMachine() {
                         </span>
                       </button>
                       <Coil spinning={spinning} />
-                      <span className="mt-0.5 rounded bg-ink px-1 font-mono text-[9px] text-cream whitespace-nowrap">{item.code}<span className="hidden sm:inline"> · 1 email</span></span>
+                      <span className="mt-0.5 rounded bg-ink px-1 font-mono text-[9px] text-cream whitespace-nowrap">{item.code}<span className="hidden sm:inline"> · free</span></span>
                       {/* hover card */}
                       <div className={`pointer-events-none invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition absolute ${tipPos} ${tipV} z-30 w-[220px] rounded-[14px] bg-surface text-foreground sticker-sm p-3 text-left`}>
                         <p className="font-display font-bold text-[15px] leading-tight">{item.headline}</p>
@@ -226,32 +210,15 @@ export function VendingMachine() {
             <p>{active.what}</p>
             <p className="text-muted">{active.why}</p>
 
-            {stage !== "done" ? (
-              <form onSubmit={submit} className="flex flex-col gap-3">
-                <label htmlFor="vend-email" className="text-sm font-semibold">Your email</label>
-                <input
-                  id="vend-email"
-                  ref={emailInput}
-                  type="email"
-                  required
-                  autoComplete="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="h-12 w-full rounded-xl border-2 border-border bg-surface px-3.5 text-[16px] text-foreground focus:outline-none focus:shadow-[0_0_0_4px_var(--focus)]"
-                />
-                {error && <p className="self-start rounded-xl bg-alert text-ink px-3 py-2 text-sm font-semibold">{error}</p>}
-                <button type="submit" disabled={stage === "sending"} className="btn btn-primary !h-auto min-h-[52px] py-3 text-center leading-tight disabled:opacity-70">
-                  {stage === "sending" ? "Sending..." : active.headline}
-                </button>
-              </form>
-            ) : (
-              <div className="flex flex-col gap-3">
-                <p className="font-display font-bold text-[18px]">It&apos;s yours.</p>
-                <a href={`/vending/${active.code.toLowerCase()}.pdf`} target="_blank" rel="noopener" className="btn btn-primary !h-auto min-h-[52px] py-3 text-center leading-tight">
-                  {active.headline}
-                </a>
-              </div>
-            )}
+            <a
+              ref={getIt}
+              href={`/vending/${active.code.toLowerCase()}.pdf`}
+              target="_blank"
+              rel="noopener"
+              className="btn btn-primary !h-auto min-h-[52px] py-3 text-center leading-tight"
+            >
+              {active.headline}
+            </a>
           </div>
         </div>,
         document.body,

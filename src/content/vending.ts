@@ -1,4 +1,4 @@
-// The Value Vending Machine (2026-11-13). 12 free one-pagers, pay with an email.
+// The Value Vending Machine (2026-11-13). 12 free one-pagers, no email needed (gate removed 2026-11-14).
 // PLACEHOLDERS: titles and copy are drafts until Brittany's 12 PDFs exist. Drop each PDF at public/vending/<code>.pdf
 // (a1.pdf ... d3.pdf). No "Download the free report" buttons: the button is the headline (Brittany, 2026-11-13).
 
