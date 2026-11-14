@@ -76,9 +76,6 @@ export default function Home() {
       <Section id="about">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_minmax(0,440px)] items-start">
           <div className="flex flex-col gap-6 min-w-0">
-            <Label>About</Label>
-            <H2>Hi, this is B.</H2>
-
             {/* Intro video placeholder: swap for the YouTube embed when it's recorded. */}
             <div className="sticker rounded-[28px] bg-surface-2 aspect-video w-full grid place-items-center">
               <div className="flex flex-col items-center gap-3 text-center px-6">
