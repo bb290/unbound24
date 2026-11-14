@@ -148,9 +148,8 @@ export function BeastModeTimer() {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[440px] mx-auto">
       <div className="flex flex-col gap-4 min-w-0">
-        <span className="label self-start rounded-full bg-cyan px-3 py-[7px] text-ink">Beast Mode Timer</span>
         <h2 className="font-display font-extrabold text-[38px] leading-none tracking-[-0.02em] sm:text-[48px]">
-          25 on. <span className="torn bg-cyan">5 off.</span>
+          Beast Mode <span className="torn bg-teal">timer.</span>
         </h2>
         <p className="text-[17px] leading-relaxed">
           Pick one thing. Phone away, email closed, butt in seat for 25 minutes. Then a 5-minute break, and go again.
@@ -165,7 +164,7 @@ export function BeastModeTimer() {
               <div className="flex flex-wrap gap-2">
                 {LENGTHS.map((l) => (
                   <button key={l.label} type="button" onClick={() => setSessions(l.sessions)} aria-pressed={sessions === l.sessions}
-                    className={`rounded-full border-2 border-border px-4 py-2 font-bold text-[15px] transition ${sessions === l.sessions ? "bg-cyan text-ink" : "bg-surface hover:bg-surface-2"}`}>
+                    className={`rounded-full border-2 border-border px-4 py-2 font-bold text-[15px] transition ${sessions === l.sessions ? "bg-teal text-ink" : "bg-surface hover:bg-surface-2"}`}>
                     {l.label}
                   </button>
                 ))}
@@ -190,7 +189,7 @@ export function BeastModeTimer() {
                 className="h-12 w-full rounded-xl border-2 border-border bg-surface px-3.5 text-[16px] text-foreground placeholder:text-muted focus:outline-none focus:shadow-[0_0_0_4px_var(--focus)]" />
             </fieldset>
 
-            <button type="button" onClick={start} className="btn btn-primary w-full">Start</button>
+            <button type="button" onClick={start} className="btn btn-primary bg-teal w-full">Start</button>
           </>
         ) : run.done ? (
           <div className="flex flex-col items-center text-center gap-4 py-6" aria-live="polite">
@@ -204,7 +203,7 @@ export function BeastModeTimer() {
         ) : (
           <div className="flex flex-col gap-5">
             <div className="flex items-center justify-between gap-3">
-              <span className={`label rounded-full px-3 py-[7px] text-ink ${isOn ? "bg-cyan" : "bg-teal"}`} aria-live="polite">
+              <span className={`label rounded-full px-3 py-[7px] text-ink ${isOn ? "bg-teal" : "bg-lilac"}`} aria-live="polite">
                 {isOn ? `Beast mode · ${phase!.n} of ${sessions}` : "Break"}
               </span>
               <button type="button" onClick={() => setSound(!sound)} aria-pressed={sound} className="text-sm font-bold text-muted hover:text-foreground transition">
@@ -223,7 +222,7 @@ export function BeastModeTimer() {
             </div>
 
             <div className="h-4 rounded-full border-2 border-border bg-surface overflow-hidden" aria-hidden="true">
-              <span className={`block h-full transition-[width] duration-300 ${isOn ? "bg-cyan" : "bg-teal"}`} style={{ width: `${Math.min(100, frac * 100)}%` }} />
+              <span className={`block h-full transition-[width] duration-300 ${isOn ? "bg-teal" : "bg-lilac"}`} style={{ width: `${Math.min(100, frac * 100)}%` }} />
             </div>
 
             <div className="flex justify-center gap-2" aria-label={`Session ${phase!.n} of ${sessions}`}>
@@ -231,15 +230,15 @@ export function BeastModeTimer() {
                 const n = i + 1;
                 const doneN = isOn ? n < phase!.n : n <= phase!.n;
                 const current = isOn && n === phase!.n;
-                return <span key={n} className={`w-3.5 h-3.5 rounded-full border-2 border-border ${doneN ? "bg-foreground" : current ? "bg-cyan" : "bg-surface"}`} />;
+                return <span key={n} className={`w-3.5 h-3.5 rounded-full border-2 border-border ${doneN ? "bg-foreground" : current ? "bg-teal" : "bg-surface"}`} />;
               })}
             </div>
 
             <div className="grid grid-cols-3 gap-2">
               {run.pausedLeft === null ? (
-                <button type="button" onClick={pause} className="btn btn-primary !px-2">Pause</button>
+                <button type="button" onClick={pause} className="btn btn-primary bg-teal !px-2">Pause</button>
               ) : (
-                <button type="button" onClick={resume} className="btn btn-primary !px-2">Resume</button>
+                <button type="button" onClick={resume} className="btn btn-primary bg-teal !px-2">Resume</button>
               )}
               <button type="button" onClick={skip} className="btn btn-secondary !px-2">Skip</button>
               <button type="button" onClick={() => setRun(null)} className="btn btn-secondary !px-2">End</button>
