@@ -40,9 +40,9 @@ function StepIcon({ name }: { name: string }) {
 }
 
 const DELIVERABLES = [
-  { when: "Onboarding", fill: "bg-cyan", items: ["Comprehensive brand guide", "4 marketing campaigns", "10 Canva custom templates", "Custom website, built to book online", "Close out procedures", "Automated asset flow structure", "SEO/AEO strategy", "Notion SOPs for everything"] },
-  { when: "Monthly", fill: "bg-teal", items: ["12 to 16 branded posts x 4 channels", "4-6 reels / shorts 5 channels", "Reply to every review", "Google My Business audit", "8 website updates: FAQs, SEO/AEO, Gallery", "4 blog posts"] },
-  { when: "Quarterly", fill: "bg-lilac", items: ["1-2 new site widgets", "Social audit", "Free download asset added"] },
+  { when: "Onboarding", fill: "bg-cyan", items: ["Comprehensive brand guide", "x marketing campaigns", "x Canva custom templates", "Custom website, built to book online", "Close out procedures", "Automated asset flow structure", "SEO/AEO strategy", "Notion SOPs for everything"] },
+  { when: "Monthly", fill: "bg-teal", items: ["x branded posts across x channels", "x reels / shorts across x channels", "Reply to every review", "Google My Business audit", "x website updates: FAQs, SEO/AEO, Gallery", "x blog posts"] },
+  { when: "Quarterly", fill: "bg-lilac", items: ["x new site widgets", "Social audit", "Free download asset added"] },
 ];
 
 export default function LocalLoud() {
@@ -138,7 +138,7 @@ export default function LocalLoud() {
 
 
       {/* Deliverables (Brittany, 2026-11-17), just above the closer. Her wording. */}
-      {/* The $4,000 card floats over the Deliverables box's bottom-right corner (Brittany, 2026-11-18: purple). */}
+      {/* The price card floats over the Deliverables box's bottom-right corner (Brittany, 2026-11-18: purple). */}
       <Section id="deliverables">
         <div className="relative lg:mb-14">
         <div className="rounded-[24px] bg-surface border-2 border-border p-6 pb-12 sm:p-10 sm:pb-14 lg:pb-16 flex flex-col gap-8">
@@ -155,9 +155,10 @@ export default function LocalLoud() {
           </div>
         </div>
         <div id="package" className="sticker rounded-[28px] bg-lilac text-ink p-7 sm:p-8 flex flex-col items-center text-center gap-5 max-w-[360px] mx-auto -mt-6 relative rotate-1 lg:absolute lg:mt-0 lg:-right-6 lg:-bottom-16 lg:w-[340px] lg:rotate-2">
-          <span className="label">Monthly Flat Fee</span>
+          {/* Starting at $2,500/mo and deliverable counts shown as "x" (Brittany, 2026-11-23; was a $4,000 flat fee). */}
+          <span className="label">Starting at</span>
           <p className="font-display font-extrabold text-[64px] leading-none tracking-[-0.02em]">
-            $4,000
+            $2,500<span className="text-[28px] tracking-normal">/mo</span>
           </p>
           <StartGuideLink className="btn btn-cta">See a free mock up first</StartGuideLink>
         </div>
