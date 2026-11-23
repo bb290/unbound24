@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteNav } from "@/components/site";
-import { Label } from "@/components/ui";
 import { SITES_BUILT } from "@/content/sites-built";
 
 // Projects (Brittany, 2026-11-23): a menu tab that shows her projects. Same sites and details as the
@@ -8,9 +7,9 @@ import { SITES_BUILT } from "@/content/sites-built";
 
 export const metadata: Metadata = {
   title: "Projects | Unbound24",
-  description: "Websites we've built for local service businesses: roofing, property management, software, sleep consulting and counselling.",
+  description: "Websites we've built for local service businesses: roofing, property management, software, sleep consulting, counselling and real estate photography.",
   alternates: { canonical: "/projects" },
-  openGraph: { url: "/projects", images: [{ url: "/og/projects.png?v=1", width: 1200, height: 630, alt: "Projects" }] },
+  openGraph: { url: "/projects", images: [{ url: "/og/projects.png?v=2", width: 1200, height: 630, alt: "Projects" }] },
 };
 
 export default function Projects() {
@@ -19,9 +18,9 @@ export default function Projects() {
       <SiteNav active="/projects" />
 
       <header className="max-w-[1200px] mx-auto px-4 pt-12 pb-10 sm:px-8 sm:pt-20 sm:pb-12 flex flex-col gap-6">
-        <Label fill="bg-lilac">Projects</Label>
+        {/* Heading "Current & Past Projects" (Brittany, 2026-11-23; was "Sites I've built."). */}
         <h1 className="font-display font-extrabold text-[44px] leading-[0.95] tracking-[-0.02em] sm:text-[72px] max-w-[16ch]">
-          Sites I&apos;ve <span className="torn bg-lilac">built.</span>
+          Current &amp; Past <span className="torn bg-lilac">Projects</span>
         </h1>
       </header>
 

@@ -1,7 +1,7 @@
 // "Sites I've Built" pop-up on /websites (Brittany, 2026-11-17). Proof: Brittany OK'd showing all five sites
 // (2026-11-17), but never their customers' or owners' details: previews are cropped above any reviews.
 // Service / Vibe / Components are Claude's drafts from each live site, for Brittany to edit. No status pills
-// (Brittany, 2026-11-17). D2 added 2026-11-17.
+// (Brittany, 2026-11-17). D2 added 2026-11-17; Double Take 2026-11-23.
 // Previews: public/sites/<slug>.jpg (1280x530, top of the homepage).
 
 export type SiteBuilt = {
@@ -53,6 +53,15 @@ export const SITES_BUILT: SiteBuilt[] = [
     service: "Trauma-focused counselling and EMDR, online across Australia",
     vibe: "Calm, grounded, unhurried",
     components: ["2-minute reflection", "Online booking", "Services pages", "Questions page"],
+  },
+  {
+    // Added 2026-11-23 (Brittany). Links to the Vercel preview until doubletake.photos is live after handoff.
+    slug: "double-take",
+    name: "Double Take Real Estate Photos",
+    url: "https://double-take-five.vercel.app",
+    service: "Real estate photography, King and Snohomish County, Washington",
+    vibe: "Polished, bright, easygoing",
+    components: ["Online booking", "Before/after slider", "Portfolio galleries", "Pricing packages", "Video walkthroughs", "Reviews page"],
   },
   {
     slug: "unbound24",
