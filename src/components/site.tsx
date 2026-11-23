@@ -9,7 +9,8 @@ export const SERVICES = [
   { label: "Website Dev", sub: "A branded website from $1,000", href: "/websites" },
 ];
 
-const NAV_LINKS = [{ label: "Resources", href: "/resources" }];
+// Resources moved from the top nav to the footer (Brittany, 2026-11-23).
+const NAV_LINKS: { label: string; href: string }[] = [];
 
 export function Wordmark({ small = false }: { small?: boolean }) {
   return (
@@ -60,6 +61,9 @@ export function SiteFooter() {
     <footer className="py-10 border-t-2 border-border">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8 flex flex-col items-center justify-between gap-5 sm:flex-row">
         <Wordmark small />
+        <Link href="/resources" className="text-sm font-bold text-muted hover:text-foreground transition">
+          Resources
+        </Link>
         <p className="text-sm text-muted">
           &copy; {new Date().getFullYear()} Unbound Consulting LLC
         </p>
