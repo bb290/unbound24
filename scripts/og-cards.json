@@ -45,5 +45,15 @@
     "pill": "Free mock up",
     "highlight": "books jobs",
     "color": "teal"
+  },
+  {
+    "file": "projects",
+    "eyebrow": "Projects by Unbound24",
+    "title": "Sites I've built.",
+    "sub": "Websites for local service businesses",
+    "art": "/connectors-laptop.webp",
+    "pill": "Real sites",
+    "highlight": "built.",
+    "color": "lilac"
   }
 ]

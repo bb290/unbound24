@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, changeFrequency: "monthly", priority: 1 },
     { url: `${BASE}/local-loud`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${BASE}/websites`, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${BASE}/projects`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/resources`, changeFrequency: "weekly", priority: 0.7 },
   ];
 }

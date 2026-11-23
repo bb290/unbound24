@@ -9,8 +9,8 @@ export const SERVICES = [
   { label: "Website Dev", sub: "A branded website from $1,000", href: "/websites" },
 ];
 
-// Resources moved from the top nav to the footer (Brittany, 2026-11-23).
-const NAV_LINKS: { label: string; href: string }[] = [];
+// Resources moved from the top nav to the footer; Projects added (Brittany, 2026-11-23).
+const NAV_LINKS: { label: string; href: string }[] = [{ label: "Projects", href: "/projects" }];
 
 export function Wordmark({ small = false }: { small?: boolean }) {
   return (
