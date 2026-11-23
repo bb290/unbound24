@@ -29,7 +29,7 @@ export default function Home() {
           <h1 className="font-display font-extrabold text-[44px] leading-[0.95] tracking-[-0.02em] sm:text-[72px] max-w-[15ch]">
             Doing 10 things at 50% is still <span className="torn bg-teal">an F.</span>
           </h1>
-          <p className="text-[20px] leading-relaxed max-w-[52ch]">
+          <p className="text-[24px] leading-snug max-w-[40ch] sm:text-[30px]">
             We help local businesses find the people they can help.
           </p>
         </div>
