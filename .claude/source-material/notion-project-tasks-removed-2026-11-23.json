@@ -1,0 +1,417 @@
+[
+ {
+  "object": "page",
+  "id": "4169f6e8-8800-81d4-bb4d-c350c8dffcdd",
+  "created_time": "2026-11-12T22:42:00.000Z",
+  "last_edited_time": "2026-11-12T22:42:00.000Z",
+  "created_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "last_edited_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+   "type": "database_id",
+   "database_id": "3fe9f6e8-8800-8171-97c2-fd1f74a239da"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+   "Owner": {
+    "id": "V%3DLA",
+    "type": "select",
+    "select": {
+     "id": "ff240ee9-9f71-41bc-ba35-b8863cdf1bb7",
+     "name": "Brittany",
+     "color": "default"
+    }
+   },
+   "Status": {
+    "id": "YnnN",
+    "type": "select",
+    "select": {
+     "id": "30ec7006-ad36-495e-a30c-3ee1d140b9f7",
+     "name": "Open",
+     "color": "default"
+    }
+   },
+   "Order": {
+    "id": "hJh%3B",
+    "type": "number",
+    "number": 3
+   },
+   "Type": {
+    "id": "ia%60q",
+    "type": "select",
+    "select": {
+     "id": "60203553-4725-4a9a-a317-32f0d5ea68ce",
+     "name": "To-do",
+     "color": "default"
+    }
+   },
+   "Item": {
+    "id": "title",
+    "type": "title",
+    "title": [
+     {
+      "type": "text",
+      "text": {
+       "content": "List 20 warm leads in the CRM (people you know, referrals, past conversations), each with a next step",
+       "link": null
+      },
+      "annotations": {
+       "bold": false,
+       "italic": false,
+       "strikethrough": false,
+       "underline": false,
+       "code": false,
+       "color": "default"
+      },
+      "plain_text": "List 20 warm leads in the CRM (people you know, referrals, past conversations), each with a next step",
+      "href": null
+     }
+    ]
+   }
+  },
+  "url": "https://app.notion.com/p/List-20-warm-leads-in-the-CRM-people-you-know-referrals-past-conversations-each-with-a-next-ste-4169f6e8880081d4bb4dc350c8dffcdd",
+  "public_url": null,
+  "archived": false
+ },
+ {
+  "object": "page",
+  "id": "4169f6e8-8800-8178-9c84-dd78d731ceb0",
+  "created_time": "2026-11-12T22:55:00.000Z",
+  "last_edited_time": "2026-11-12T22:55:00.000Z",
+  "created_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "last_edited_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+   "type": "database_id",
+   "database_id": "3fe9f6e8-8800-8171-97c2-fd1f74a239da"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+   "Owner": {
+    "id": "V%3DLA",
+    "type": "select",
+    "select": {
+     "id": "5938893d-3eee-43ad-9f7d-012375dd0a18",
+     "name": "Claudette",
+     "color": "default"
+    }
+   },
+   "Status": {
+    "id": "YnnN",
+    "type": "select",
+    "select": {
+     "id": "30ec7006-ad36-495e-a30c-3ee1d140b9f7",
+     "name": "Open",
+     "color": "default"
+    }
+   },
+   "Order": {
+    "id": "hJh%3B",
+    "type": "number",
+    "number": 4
+   },
+   "Type": {
+    "id": "ia%60q",
+    "type": "select",
+    "select": {
+     "id": "60203553-4725-4a9a-a317-32f0d5ea68ce",
+     "name": "To-do",
+     "color": "default"
+    }
+   },
+   "Item": {
+    "id": "title",
+    "type": "title",
+    "title": [
+     {
+      "type": "text",
+      "text": {
+       "content": "Write up French Roofing and Sagareus as proof for Local + Loud (what we built, results), without customer or owner details",
+       "link": null
+      },
+      "annotations": {
+       "bold": false,
+       "italic": false,
+       "strikethrough": false,
+       "underline": false,
+       "code": false,
+       "color": "default"
+      },
+      "plain_text": "Write up French Roofing and Sagareus as proof for Local + Loud (what we built, results), without customer or owner details",
+      "href": null
+     }
+    ]
+   }
+  },
+  "url": "https://app.notion.com/p/Write-up-French-Roofing-and-Sagareus-as-proof-for-Local-Loud-what-we-built-results-without-cus-4169f6e8880081789c84dd78d731ceb0",
+  "public_url": null,
+  "archived": false
+ },
+ {
+  "object": "page",
+  "id": "4169f6e8-8800-810a-b3b1-d79a4ef08853",
+  "created_time": "2026-11-12T22:42:00.000Z",
+  "last_edited_time": "2026-11-12T22:42:00.000Z",
+  "created_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "last_edited_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+   "type": "database_id",
+   "database_id": "3fe9f6e8-8800-8171-97c2-fd1f74a239da"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+   "Owner": {
+    "id": "V%3DLA",
+    "type": "select",
+    "select": {
+     "id": "5938893d-3eee-43ad-9f7d-012375dd0a18",
+     "name": "Claudette",
+     "color": "default"
+    }
+   },
+   "Status": {
+    "id": "YnnN",
+    "type": "select",
+    "select": {
+     "id": "30ec7006-ad36-495e-a30c-3ee1d140b9f7",
+     "name": "Open",
+     "color": "default"
+    }
+   },
+   "Order": {
+    "id": "hJh%3B",
+    "type": "number",
+    "number": 5
+   },
+   "Type": {
+    "id": "ia%60q",
+    "type": "select",
+    "select": {
+     "id": "60203553-4725-4a9a-a317-32f0d5ea68ce",
+     "name": "To-do",
+     "color": "default"
+    }
+   },
+   "Item": {
+    "id": "title",
+    "type": "title",
+    "title": [
+     {
+      "type": "text",
+      "text": {
+       "content": "Draft outreach messages and a proposal plus agreement from the MSA + SOW template (drafts only; Brittany sends)",
+       "link": null
+      },
+      "annotations": {
+       "bold": false,
+       "italic": false,
+       "strikethrough": false,
+       "underline": false,
+       "code": false,
+       "color": "default"
+      },
+      "plain_text": "Draft outreach messages and a proposal plus agreement from the MSA + SOW template (drafts only; Brittany sends)",
+      "href": null
+     }
+    ]
+   }
+  },
+  "url": "https://app.notion.com/p/Draft-outreach-messages-and-a-proposal-plus-agreement-from-the-MSA-SOW-template-drafts-only-Brit-4169f6e88800810ab3b1d79a4ef08853",
+  "public_url": null,
+  "archived": false
+ },
+ {
+  "object": "page",
+  "id": "40b9f6e8-8800-814a-b356-cc5fc06bf35e",
+  "created_time": "2026-11-01T03:09:00.000Z",
+  "last_edited_time": "2026-11-12T22:42:00.000Z",
+  "created_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "last_edited_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+   "type": "database_id",
+   "database_id": "3fe9f6e8-8800-8171-97c2-fd1f74a239da"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+   "Owner": {
+    "id": "V%3DLA",
+    "type": "select",
+    "select": {
+     "id": "ff240ee9-9f71-41bc-ba35-b8863cdf1bb7",
+     "name": "Brittany",
+     "color": "default"
+    }
+   },
+   "Status": {
+    "id": "YnnN",
+    "type": "select",
+    "select": {
+     "id": "30ec7006-ad36-495e-a30c-3ee1d140b9f7",
+     "name": "Open",
+     "color": "default"
+    }
+   },
+   "Order": {
+    "id": "hJh%3B",
+    "type": "number",
+    "number": 7
+   },
+   "Type": {
+    "id": "ia%60q",
+    "type": "select",
+    "select": {
+     "id": "60203553-4725-4a9a-a317-32f0d5ea68ce",
+     "name": "To-do",
+     "color": "default"
+    }
+   },
+   "Item": {
+    "id": "title",
+    "type": "title",
+    "title": [
+     {
+      "type": "text",
+      "text": {
+       "content": "Finish my story",
+       "link": null
+      },
+      "annotations": {
+       "bold": false,
+       "italic": false,
+       "strikethrough": false,
+       "underline": false,
+       "code": false,
+       "color": "default"
+      },
+      "plain_text": "Finish my story",
+      "href": null
+     }
+    ]
+   }
+  },
+  "url": "https://app.notion.com/p/Finish-my-story-40b9f6e88800814ab356cc5fc06bf35e",
+  "public_url": null,
+  "archived": false
+ },
+ {
+  "object": "page",
+  "id": "4169f6e8-8800-8165-97c2-f4057b967697",
+  "created_time": "2026-11-12T11:44:00.000Z",
+  "last_edited_time": "2026-11-12T22:42:00.000Z",
+  "created_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "last_edited_by": {
+   "object": "user",
+   "id": "3fe9f6e8-8800-81d4-9256-002773e32cea"
+  },
+  "cover": null,
+  "icon": null,
+  "parent": {
+   "type": "database_id",
+   "database_id": "3fe9f6e8-8800-8171-97c2-fd1f74a239da"
+  },
+  "in_trash": false,
+  "is_archived": false,
+  "is_locked": false,
+  "properties": {
+   "Owner": {
+    "id": "V%3DLA",
+    "type": "select",
+    "select": {
+     "id": "ff240ee9-9f71-41bc-ba35-b8863cdf1bb7",
+     "name": "Brittany",
+     "color": "default"
+    }
+   },
+   "Status": {
+    "id": "YnnN",
+    "type": "select",
+    "select": {
+     "id": "30ec7006-ad36-495e-a30c-3ee1d140b9f7",
+     "name": "Open",
+     "color": "default"
+    }
+   },
+   "Order": {
+    "id": "hJh%3B",
+    "type": "number",
+    "number": 9
+   },
+   "Type": {
+    "id": "ia%60q",
+    "type": "select",
+    "select": {
+     "id": "60203553-4725-4a9a-a317-32f0d5ea68ce",
+     "name": "To-do",
+     "color": "default"
+    }
+   },
+   "Item": {
+    "id": "title",
+    "type": "title",
+    "title": [
+     {
+      "type": "text",
+      "text": {
+       "content": "Claude accounts: marketing work for every client moves to brittany@unbound24.com (dashboard done); bb@sagareus.com stays for Sagareus operations. Next: Brittany uploads 3 skill zips and signs in the desktop app + Chrome; the 2 indexing routines move when automations come back on; non-Sagareus artifacts republished",
+       "link": null
+      },
+      "annotations": {
+       "bold": false,
+       "italic": false,
+       "strikethrough": false,
+       "underline": false,
+       "code": false,
+       "color": "default"
+      },
+      "plain_text": "Claude accounts: marketing work for every client moves to brittany@unbound24.com (dashboard done); bb@sagareus.com stays for Sagareus operations. Next: Brittany uploads 3 skill zips and signs in the desktop app + Chrome; the 2 indexing routines move when automations come back on; non-Sagareus artifacts republished",
+      "href": null
+     }
+    ]
+   }
+  },
+  "url": "https://app.notion.com/p/Claude-accounts-marketing-work-for-every-client-moves-to-brittany-unbound24-com-dashboard-done-b-4169f6e88800816597c2f4057b967697",
+  "public_url": null,
+  "archived": false
+ }
+]

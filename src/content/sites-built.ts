@@ -60,6 +60,6 @@ export const SITES_BUILT: SiteBuilt[] = [
     url: "https://www.unbound24.com",
     service: "Marketing for local service businesses",
     vibe: "Playful, bold, no fluff",
-    components: ["Free brand guide", "Chaos Spinner", "Value Vending Machine", "Beast Mode timer", "Free courses"],
+    components: ["Free brand guide", "Chaos Spinner", "Value Vending Machine", "Beast Mode timer"],
   },
 ];

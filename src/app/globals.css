@@ -52,7 +52,7 @@
   color-scheme: dark;
 }
 
-/* The course pages still use the old token names; they map onto the new system. */
+/* Older token names, still used across the site; they map onto the new system. */
 :root {
   --background: var(--bg);
   --foreground: var(--text);

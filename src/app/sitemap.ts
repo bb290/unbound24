@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { COURSES, READY_LESSONS } from "@/content/course";
 
 const BASE = "https://www.unbound24.com";
 
@@ -9,16 +8,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/local-loud`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${BASE}/websites`, changeFrequency: "monthly", priority: 0.95 },
     { url: `${BASE}/resources`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE}/course`, changeFrequency: "weekly", priority: 0.9 },
-    ...COURSES.map((course) => ({
-      url: `${BASE}/course/${course.slug}`,
-      changeFrequency: "weekly" as const,
-      priority: 0.85,
-    })),
-    ...READY_LESSONS.map((lesson) => ({
-      url: `${BASE}/course/${lesson.slug}`,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
   ];
 }

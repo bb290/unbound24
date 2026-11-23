@@ -5,14 +5,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 // Phones and tablets (below lg): one slim bar with a Menu button that opens a panel of big tap targets
-// (Brittany, 2026-11-17: "mobile optimize the menu"). Desktop keeps the inline links and the Courses hover menu.
+// (Brittany, 2026-11-17: "mobile optimize the menu"). Desktop keeps the inline links and the Services hover menu.
 // Closes on a link tap, Escape, a tap outside, or a page change.
 
 type Item = { label: string; href: string };
 type Service = { label: string; sub: string; href: string };
-type Course = { title: string; href: string; soon: boolean };
 
-export function MobileMenu({ services, links, courses, active }: { services: Service[]; links: Item[]; courses: Course[]; active: string }) {
+export function MobileMenu({ services, links, active }: { services: Service[]; links: Item[]; active: string }) {
   const [open, setOpen] = useState(false);
   const wrap = useRef<HTMLDivElement>(null);
   const button = useRef<HTMLButtonElement>(null);
@@ -87,28 +86,6 @@ export function MobileMenu({ services, links, courses, active }: { services: Ser
               </Link>
             </li>
           ))}
-          <li>
-            <Link href="/course" onClick={() => setOpen(false)} aria-current={active === "/course" ? "page" : undefined} className={row("/course")}>
-              Courses
-              <span aria-hidden="true" className="text-muted text-[18px]">&rarr;</span>
-            </Link>
-            <ul className="flex flex-col gap-1 pb-1">
-              {courses.map((course) => (
-                <li key={course.href}>
-                  <Link
-                    href={course.href}
-                    onClick={() => setOpen(false)}
-                    className="flex items-center justify-between gap-3 min-h-[48px] px-3 py-2 rounded-xl bg-card text-[16px] font-bold text-foreground"
-                  >
-                    {course.title}
-                    {course.soon && (
-                      <span className="shrink-0 rounded-full bg-surface border border-line px-2 py-0.5 text-[11px] font-bold text-muted">Soon</span>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </li>
         </ul>
       </div>
     </div>
