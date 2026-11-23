@@ -1,0 +1,54 @@
+<template>
+  <style>
+@font-face{font-family:"Rubik";src:url('assets/fonts/rubik.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"Figtree";src:url('assets/fonts/figtree.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-500.woff2') format('woff2');font-weight:500}
+#root{position:absolute;inset:0;background:transparent}
+/* the blank wall right of Brittany, above the caption third (nothing below y=670) */
+.zone{position:absolute;left:1210px;top:54px;width:653px;height:616px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#121318}
+.st{background:#FFFBF4;border:5px solid #121318;border-radius:28px;box-shadow:10px 10px 0 #121318;padding:24px 32px;display:flex;flex-direction:column;gap:12px}
+.sm{padding:18px 24px}
+.cy{background:#03C0E8}.te{background:#40E0D0}.li{background:#D3D3FF}.gr{background:#C4C4C4}
+.h{font:800 68px/1 "Rubik";letter-spacing:-.02em}
+.h.big{font-size:88px}.h.md{font-size:52px}
+.b{font:500 34px/1.25 "Figtree"}
+.l{font:500 28px/1.2 "DM Mono";letter-spacing:.06em;text-transform:uppercase}
+.pill{align-self:flex-start;font:500 28px/1 "DM Mono";letter-spacing:.08em;text-transform:uppercase;background:#121318;color:#F8F0E3;border-radius:999px;padding:12px 22px}
+.tag{display:inline-block;white-space:nowrap;border:5px solid #121318;border-radius:999px;padding:10px 26px;font:700 34px/1.1 "Figtree";box-shadow:7px 7px 0 #121318;color:#121318}
+.num{font:800 120px/1 "Rubik";font-variant-numeric:tabular-nums}
+.row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:18px}
+.list li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;align-items:baseline}
+.list .n{font:800 40px/1 "Rubik"}
+.list b{font:800 42px/1.05 "Rubik"}
+.list span:not(.n){grid-column:2;font:500 28px/1.2 "Figtree"}
+.under{background:#FFFBF4;border:4px solid #121318;border-radius:12px;padding:8px 16px}
+
+.list.tight{gap:8px}.list.tight li{grid-template-columns:44px 1fr;gap:0 10px}.list.tight b{font-size:36px}.list.tight span:not(.n){font-size:28px}.list.tight .n{font-size:34px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:6px}
+.down{font:500 28px/1 "DM Mono";letter-spacing:.06em;text-transform:uppercase;background:#FFFBF4;border:3px solid #121318;border-radius:999px;padding:6px 14px}
+.cube{display:grid;grid-template-columns:repeat(3,92px);gap:8px;padding:12px;background:#121318;border-radius:20px;box-shadow:10px 10px 0 rgba(18,19,24,.35)}
+.cube span{height:92px;border-radius:10px}
+</style>
+  <div id="root" data-composition-id="s07" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div class="zone">
+    <div id="s07c" class="cube" style="rotate:-8deg"><span id="q0" class="cy"></span><span id="q1" class="te"></span><span id="q2" class="li"></span><span id="q3" class="gr"></span><span id="q4" class="cy"></span><span id="q5" class="te"></span><span id="q6" class="li"></span><span id="q7" class="gr"></span><span id="q8" class="cy"></span></div>
+    <div class="row"><span id="s07a" class="tag te" style="rotate:-3deg">Fix the price sheet</span><span id="s07b" class="tag li" style="rotate:3deg">Break the books</span></div>
+    <div id="s07t" class="st sm" style="rotate:-2deg"><div class="b">That's what you traded your job for.</div></div>
+  </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s07c", {"opacity":0,"scale":0.86,"filter":"blur(8px)","rotation":-40}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 0.4);
+    tl.to("#s07c", {"rotation":82,"duration":0.6,"ease":"back.out(1.6)"}, 2.48);
+    tl.to("#q0, #q4, #q8", {"backgroundColor":"#D3D3FF","duration":0.2}, 5.68);
+    tl.to("#q2, #q6", {"backgroundColor":"#03C0E8","duration":0.2}, 5.68);
+    tl.fromTo("#s07a", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":30}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 8.72);
+    tl.fromTo("#s07b", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":30}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 18.27);
+    tl.to("#s07a, #s07b", {"opacity":0,"filter":"blur(6px)","duration":0.28,"ease":"power2.in","stagger":0}, 44.744);
+    tl.fromTo("#s07t", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":30}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 45.044);
+    tl.to("#s07c, #s07t", {"opacity":0,"filter":"blur(6px)","duration":0.28,"ease":"power2.in","stagger":0.03}, 46.94400000000001);
+    window.__timelines["s07"] = tl;
+  </script>
+</template>

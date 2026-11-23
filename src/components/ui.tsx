@@ -16,20 +16,30 @@ export function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="font-display font-extrabold text-[32px] leading-[1.05] tracking-[-0.01em] sm:text-[48px]">{children}</h2>;
 }
 
-export function Check() {
+export function Check({ fill = "var(--teal)", className = "w-5 h-5 mt-[2px]" }: { fill?: string; className?: string }) {
   return (
-    <svg viewBox="0 0 20 20" aria-hidden="true" className="w-5 h-5 shrink-0 mt-[2px]">
-      <circle cx="10" cy="10" r="9" fill="var(--teal)" stroke="var(--border)" strokeWidth="1.5" />
+    <svg viewBox="0 0 20 20" aria-hidden="true" className={`shrink-0 ${className}`}>
+      <circle cx="10" cy="10" r="9" fill={fill} stroke="var(--border)" strokeWidth="1.5" />
       <path d="M6 10.5l2.6 2.6L14 7.6" fill="none" stroke="#121318" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
-export function CheckList({ items, className = "" }: { items: string[]; className?: string }) {
+// A "no" mark to pair with Check (Website Dev hero, 2026-11-17).
+export function Cross({ className = "w-5 h-5 mt-[2px]" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true" className={`shrink-0 ${className}`}>
+      <circle cx="10" cy="10" r="9" fill="#c4c4c4" stroke="var(--border)" strokeWidth="1.5" />
+      <path d="M7 7l6 6M13 7l-6 6" fill="none" stroke="#121318" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function CheckList({ items, className = "", itemClass = "text-[15px]", fill }: { items: string[]; className?: string; itemClass?: string; fill?: string }) {
   return (
     <ul className={`flex flex-col gap-2.5 ${className}`}>
       {items.map((i) => (
-        <li key={i} className="flex gap-2.5 text-[15px] leading-snug"><Check />{i}</li>
+        <li key={i} className={`flex gap-2.5 leading-snug ${itemClass}`}><Check fill={fill} />{i}</li>
       ))}
     </ul>
   );

@@ -82,8 +82,10 @@ export function ChaosSpinner({ ctaHref }: { ctaHref: string }) {
   const verdict = SPINNER_VERDICTS.filter((v) => spins >= v[0]).pop()?.[1] ?? "";
 
   return (
-    <div className="grid gap-10 items-center lg:grid-cols-[1fr_1.05fr]">
-      <div className="flex flex-col gap-5 min-w-0">
+    // Phones: heading, then the wheel, then the result and chaos meter (Brittany, 2026-11-17). Desktop: text left
+    // (heading on top, result below), wheel right spanning both rows.
+    <div className="grid gap-8 lg:grid-cols-[1fr_1.05fr] lg:gap-x-10 lg:gap-y-5">
+      <div className="flex flex-col gap-5 min-w-0 lg:col-start-1 lg:row-start-1 lg:self-end">
         <span className="label self-start rounded-full bg-lilac px-3 py-[7px] text-ink">Try it</span>
         <h2 className="font-display font-extrabold text-[38px] leading-none tracking-[-0.02em] sm:text-[56px]">
           Are you running your business{" "}
@@ -92,7 +94,35 @@ export function ChaosSpinner({ ctaHref }: { ctaHref: string }) {
         <p className="text-lg leading-relaxed max-w-[44ch]">
           Spin the wheel. Do whatever it says. Repeat until the business runs itself.
         </p>
+      </div>
 
+      <div className="flex justify-center items-center min-w-0 overflow-x-clip lg:col-start-2 lg:row-start-1 lg:row-span-2">
+        <div className="relative w-full max-w-[480px] aspect-square">
+          <span
+            aria-hidden="true"
+            className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-[2] w-0 h-0 border-x-[16px] border-x-transparent border-t-[30px]"
+            style={{ borderTopColor: "var(--text)" }}
+          />
+          <canvas
+            ref={canvas}
+            width={960}
+            height={960}
+            role="img"
+            aria-label={`A spinning wheel with ${N} slices, one for each thing a business owner could do`}
+            className="w-full h-full block rounded-full border-[3px] border-border will-change-transform transition-transform duration-[4200ms] ease-[cubic-bezier(.12,.72,.08,1)] motion-reduce:duration-[600ms]"
+          />
+          <button
+            type="button"
+            onClick={spin}
+            disabled={busy}
+            className="absolute inset-0 m-auto w-[30%] h-[30%] rounded-full border-[3px] border-ink bg-cyan text-ink font-display font-extrabold text-[clamp(22px,4vw,34px)] tracking-[.04em] z-[3] shadow-[0_5px_0_#121318] hover:bg-teal active:translate-y-1 active:shadow-[0_1px_0_#121318] disabled:bg-lilac disabled:cursor-progress"
+          >
+            SPIN
+          </button>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-5 min-w-0 lg:col-start-1 lg:row-start-2 lg:self-start">
         <div
           key={pop}
           aria-live="polite"
@@ -123,31 +153,6 @@ export function ChaosSpinner({ ctaHref }: { ctaHref: string }) {
         )}
       </div>
 
-      <div className="flex justify-center min-w-0">
-        <div className="relative w-full max-w-[480px] aspect-square">
-          <span
-            aria-hidden="true"
-            className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-[2] w-0 h-0 border-x-[16px] border-x-transparent border-t-[30px]"
-            style={{ borderTopColor: "var(--text)" }}
-          />
-          <canvas
-            ref={canvas}
-            width={960}
-            height={960}
-            role="img"
-            aria-label={`A spinning wheel with ${N} slices, one for each thing a business owner could do`}
-            className="w-full h-full block rounded-full border-[3px] border-border will-change-transform transition-transform duration-[4200ms] ease-[cubic-bezier(.12,.72,.08,1)] motion-reduce:duration-[600ms]"
-          />
-          <button
-            type="button"
-            onClick={spin}
-            disabled={busy}
-            className="absolute inset-0 m-auto w-[30%] h-[30%] rounded-full border-[3px] border-ink bg-cyan text-ink font-display font-extrabold text-[clamp(22px,4vw,34px)] tracking-[.04em] z-[3] shadow-[0_5px_0_#121318] hover:bg-teal active:translate-y-1 active:shadow-[0_1px_0_#121318] disabled:bg-lilac disabled:cursor-progress"
-          >
-            SPIN
-          </button>
-        </div>
-      </div>
     </div>
   );
 }

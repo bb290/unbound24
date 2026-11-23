@@ -12,7 +12,7 @@ const LIVE_SECTIONS = RESOURCE_SECTIONS.map((s) => ({ ...s, items: s.items.filte
 export const metadata: Metadata = {
   title: "Resources | Unbound24",
   description: "Books, podcasts, YouTube videos and services we like for running a local service business.",
-  openGraph: { url: "/resources", images: [{ url: "/og/resources.png", width: 1200, height: 630, alt: "Resources" }] },
+  openGraph: { url: "/resources", images: [{ url: "/og/resources.png?v=2", width: 1200, height: 630, alt: "Resources" }] },
 };
 
 export default function Resources() {

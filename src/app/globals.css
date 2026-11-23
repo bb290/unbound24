@@ -177,3 +177,27 @@ body {
 :root[data-theme="dark"] .logo-chip { background: var(--cream); border: 2px solid var(--border); }
 @keyframes ub-pop { 0% { transform: scale(.85) rotate(-2deg); } 100% { transform: none; } }
 @keyframes ub-coil { to { stroke-dashoffset: -14; } }
+
+/* Gentle float for the Website Dev closing box (Brittany, 2026-11-17: "this whole box should have a gentle motion"). */
+@keyframes float-gentle { 0%, 100% { transform: translateY(0) rotate(-0.4deg); } 50% { transform: translateY(-8px) rotate(0.4deg); } }
+.float-gentle { animation: float-gentle 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .float-gentle { animation: none; } }
+
+/* Orange call-to-action buttons on the Website Dev page (Brittany, 2026-11-17: "make CTA button orangish color on all boxes"). */
+.btn-cta { background: #FFB27A; color: #121318; }
+
+/* Local + Loud flywheel (2026-11-17). */
+@keyframes ub-flywheel-spin { to { transform: rotate(360deg); } }
+@keyframes ub-fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ub-fade-in { animation: ub-fade-in 450ms ease both; }
+@media (prefers-reduced-motion: reduce) { .ub-fade-in { animation: none; } }
+
+/* Growth chart lines on /local-loud (validated with the dataviz checker, 2026-11-17: light vs #FFFBF4, dark vs #1B1C23). */
+:root { --line-1: #0B9CB0; --line-2: #CC6A1F; --line-3: #6D5BD0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --line-1: #14A3B8; --line-2: #D7782F; --line-3: #8A7CE8; } }
+:root[data-theme="dark"] { --line-1: #14A3B8; --line-2: #D7782F; --line-3: #8A7CE8; }
+
+/* Flywheel step pop-up: appears as the dot reaches the step (2026-11-17). */
+@keyframes ub-pop-in { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
+.ub-pop-in { animation: ub-pop-in 380ms cubic-bezier(.2,1.4,.4,1) both; transform-origin: center; }
+@media (prefers-reduced-motion: reduce) { .ub-pop-in { animation: none; } }

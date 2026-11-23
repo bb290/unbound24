@@ -26,7 +26,7 @@ function clean(raw: unknown): { answers: Answers; missing: string[] } {
     for (const f of step.fields) {
       const v = src[f.id];
       if (f.kind === "chips") {
-        const list = (Array.isArray(v) ? v : []).map((x) => String(x).trim().slice(0, 60)).filter(Boolean).slice(0, f.pick + 1);
+        const list = (Array.isArray(v) ? v : []).map((x) => String(x).trim().slice(0, 60)).filter(Boolean).slice(0, (f.pick ?? f.options.length) + 1);
         if (list.length) answers[f.id] = list;
         else if (!f.optional) missing.push(f.id);
       } else {
@@ -40,7 +40,7 @@ function clean(raw: unknown): { answers: Answers; missing: string[] } {
   return { answers, missing };
 }
 
-const SYSTEM = `You are a brand strategist at Unbound, a marketing agency for local service businesses. A business owner answered 7 short questions. Write their brand guide from those answers.
+const SYSTEM = `You are a brand strategist at Unbound, a marketing agency for local service businesses. A business owner answered a short set of questions. Write their brand guide from those answers.
 
 RULES
 - Use only what they told you. Never invent facts: no years in business, numbers, awards, team size, prices, guarantees or stories they did not give. If something is missing, leave it out and list it under "Gaps to fill".
@@ -51,7 +51,7 @@ RULES
 - Stances are drafts built from their answers. Each is one bold line they could say in public, plus one line on what it means in practice.
 - Under 900 words total.
 
-FORMAT: Markdown only, using just these elements: "# " for the title, "## " for sections, "- " for bullets, **bold**, and plain paragraphs. No tables, no links, no code blocks, no horizontal rules.
+FORMAT: Markdown only, using just these elements: "# " for the title, "## " for sections, "- " for bullets, **bold**, and plain paragraphs. No tables, no links, no code blocks, no horizontal rules, no nested bullets.
 
 # {Business name} Brand Guide
 ## At a glance
@@ -60,8 +60,8 @@ FORMAT: Markdown only, using just these elements: "# " for the title, "## " for 
 A short paragraph.
 ## Who we serve
 "Best fit" bullets, then "Not a fit" bullets (only if they told you).
-## Values
-Each of their values as a bullet: **Value**: what it looks like on a real job, from their answers. If an answer doesn't support it, keep it to a short, plain line.
+## Vibe
+Each word they picked for their vibe as a bullet: **Word**: what it looks like on a real job, from their answers. If an answer doesn't support it, keep it to a short, plain line.
 ## Where we stand
 2 to 4 stances (draft, for the owner to confirm).
 ## Our promise
@@ -70,7 +70,7 @@ One or two sentences.
 Bullets: 3 voice traits with a "do this, not that" for each; words we use; words we never use (include anything they said makes them cringe).
 Then 3 sample lines in their voice: a phone greeting, the first line of a Google post, and a 2-sentence reply to a 5-star review.
 ## Look and feel
-Colors (only what they gave), photo style, and how the website should feel in the first 5 seconds.
+Colors (only what they gave) and visual style (only what they picked; skip anything they did not answer). If they named websites they love, add "Ideas to borrow": one bullet per site, the site name and what to take from it, based only on what they said they like (you can't see the sites; never describe them beyond that, and never copy their wording, logos or branding).
 ## Gaps to fill
 Bullets addressed to the owner: what's missing that would make this guide stronger. Skip the section if nothing important is missing.`;
 
@@ -87,18 +87,18 @@ function userMessage(a: Answers) {
     `Why they started / what they did before: ${get("story")}`,
     `Best customer ever: ${get("best")}`,
     `Would never take on again: ${get("never")}`,
-    `Values (picked): ${get("values")}`,
+    `Vibe (picked): ${get("values")}`,
     `What makes them mad about the industry / what customers get wrong: ${get("mad")}`,
     `Promise to every customer: ${get("promise")}`,
     `Voice (picked): ${get("voice")}`,
     `Marketing words that make them cringe: ${get("cringe")}`,
     `Colors already in use: ${get("colors")}`,
-    `First 5 seconds on the website should feel: ${get("feel")}`,
-    `Photos: ${get("photos")}`,
+    `Visual style: ${get("visual")}`,
+    `Websites they love and what they like about each: ${get("inspo")}`,
   ].join("\n");
 }
 
-// The widget asks this first, so visitors never answer 7 questions for a writer that isn't switched on.
+// The widget asks this first, so visitors never answer the questions for a writer that isn't switched on.
 export function GET() {
   return Response.json(
     { ready: Boolean(process.env.OPENROUTER_API_KEY), leads: Boolean(process.env.NOTION_TOKEN && process.env.NOTION_CRM_DATABASE_ID) },
@@ -126,7 +126,8 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       model: MODEL,
       stream: true,
-      max_tokens: 2500,
+      // Room for the whole guide (about 1,200 tokens) plus any reasoning the model does first.
+      max_tokens: 8000,
       temperature: 0.6,
       messages: [
         { role: "system", content: SYSTEM },
@@ -155,8 +156,10 @@ export async function POST(request: Request) {
           const data = line.slice(5).trim();
           if (!data || data === "[DONE]") continue;
           try {
-            const delta = JSON.parse(data)?.choices?.[0]?.delta?.content;
+            const choice = JSON.parse(data)?.choices?.[0];
+            const delta = choice?.delta?.content;
             if (delta) controller.enqueue(encoder.encode(delta.replace(/\s*—\s*/g, ", ")));
+            if (choice?.finish_reason && choice.finish_reason !== "stop") console.error("brand guide stopped early:", choice.finish_reason);
           } catch {}
         }
       },

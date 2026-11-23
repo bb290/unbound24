@@ -1,0 +1,897 @@
+<template>
+  <style>
+    @font-face{font-family:"Figtree";src:url('assets/fonts/figtree.woff2') format('woff2');font-weight:300 900}
+    #root{position:absolute;inset:0;background:transparent}
+    .cg{position:absolute;left:0;right:0;bottom:84px;text-align:center;opacity:0;visibility:hidden;overflow:visible}
+    .cg .pill{display:inline-block;max-width:1500px;background:#FFFBF4;color:#121318;border:4px solid #121318;border-radius:22px;box-shadow:6px 6px 0 #121318;padding:10px 24px 12px;font:700 50px/1.2 "Figtree";letter-spacing:-.005em}
+    .cw{border-radius:10px;padding:0 4px;margin:0 -4px;background:rgba(64,224,208,0)}
+  </style>
+  <div id="root" data-composition-id="cap" data-width="1920" data-height="1080" data-layout-allow-caption-zone>
+    <div id="cg0" class="cg"><span class="pill"><span id="cw0_0" class="cw">All</span> <span id="cw0_1" class="cw">right.</span></span></div>
+    <div id="cg1" class="cg"><span class="pill"><span id="cw1_0" class="cw">So</span> <span id="cw1_1" class="cw">this</span> <span id="cw1_2" class="cw">lesson</span> <span id="cw1_3" class="cw">is</span> <span id="cw1_4" class="cw">called</span></span></div>
+    <div id="cg2" class="cg"><span class="pill"><span id="cw2_0" class="cw">Lay</span> <span id="cw2_1" class="cw">the</span> <span id="cw2_2" class="cw">foundation.</span></span></div>
+    <div id="cg3" class="cg"><span class="pill"><span id="cw3_0" class="cw">So</span> <span id="cw3_1" class="cw">before</span> <span id="cw3_2" class="cw">we</span> <span id="cw3_3" class="cw">can</span> <span id="cw3_4" class="cw">like</span></span></div>
+    <div id="cg4" class="cg"><span class="pill"><span id="cw4_0" class="cw">get</span> <span id="cw4_1" class="cw">into</span> <span id="cw4_2" class="cw">your</span> <span id="cw4_3" class="cw">business</span> <span id="cw4_4" class="cw">and</span></span></div>
+    <div id="cg5" class="cg"><span class="pill"><span id="cw5_0" class="cw">like</span> <span id="cw5_1" class="cw">fix</span> <span id="cw5_2" class="cw">anything</span> <span id="cw5_3" class="cw">that</span> <span id="cw5_4" class="cw">we</span></span></div>
+    <div id="cg6" class="cg"><span class="pill"><span id="cw6_0" class="cw">that</span> <span id="cw6_1" class="cw">that</span> <span id="cw6_2" class="cw">is</span> <span id="cw6_3" class="cw">going</span> <span id="cw6_4" class="cw">on,</span></span></div>
+    <div id="cg7" class="cg"><span class="pill"><span id="cw7_0" class="cw">we</span> <span id="cw7_1" class="cw">need</span> <span id="cw7_2" class="cw">to</span> <span id="cw7_3" class="cw">get</span> <span id="cw7_4" class="cw">an</span></span></div>
+    <div id="cg8" class="cg"><span class="pill"><span id="cw8_0" class="cw">honest</span> <span id="cw8_1" class="cw">picture</span> <span id="cw8_2" class="cw">of</span> <span id="cw8_3" class="cw">like</span> <span id="cw8_4" class="cw">how</span></span></div>
+    <div id="cg9" class="cg"><span class="pill"><span id="cw9_0" class="cw">your</span> <span id="cw9_1" class="cw">business</span> <span id="cw9_2" class="cw">is</span> <span id="cw9_3" class="cw">currently</span> <span id="cw9_4" class="cw">running</span></span></div>
+    <div id="cg10" class="cg"><span class="pill"><span id="cw10_0" class="cw">today.</span></span></div>
+    <div id="cg11" class="cg"><span class="pill"><span id="cw11_0" class="cw">So</span> <span id="cw11_1" class="cw">this</span> <span id="cw11_2" class="cw">lesson</span> <span id="cw11_3" class="cw">is</span> <span id="cw11_4" class="cw">going</span></span></div>
+    <div id="cg12" class="cg"><span class="pill"><span id="cw12_0" class="cw">to</span> <span id="cw12_1" class="cw">be</span> <span id="cw12_2" class="cw">like</span> <span id="cw12_3" class="cw">not</span> <span id="cw12_4" class="cw">a</span></span></div>
+    <div id="cg13" class="cg"><span class="pill"><span id="cw13_0" class="cw">lot</span> <span id="cw13_1" class="cw">of</span> <span id="cw13_2" class="cw">talking</span> <span id="cw13_3" class="cw">and</span> <span id="cw13_4" class="cw">a</span></span></div>
+    <div id="cg14" class="cg"><span class="pill"><span id="cw14_0" class="cw">lot</span> <span id="cw14_1" class="cw">more</span> <span id="cw14_2" class="cw">doing.</span></span></div>
+    <div id="cg15" class="cg"><span class="pill"><span id="cw15_0" class="cw">So</span> <span id="cw15_1" class="cw">the</span> <span id="cw15_2" class="cw">prompt</span> <span id="cw15_3" class="cw">is</span> <span id="cw15_4" class="cw">going</span></span></div>
+    <div id="cg16" class="cg"><span class="pill"><span id="cw16_0" class="cw">to</span> <span id="cw16_1" class="cw">be</span> <span id="cw16_2" class="cw">mostly</span> <span id="cw16_3" class="cw">action,</span> <span id="cw16_4" class="cw">getting</span></span></div>
+    <div id="cg17" class="cg"><span class="pill"><span id="cw17_0" class="cw">things</span> <span id="cw17_1" class="cw">documented,</span> <span id="cw17_2" class="cw">okay?</span></span></div>
+    <div id="cg18" class="cg"><span class="pill"><span id="cw18_0" class="cw">All</span> <span id="cw18_1" class="cw">I'm</span> <span id="cw18_2" class="cw">going</span> <span id="cw18_3" class="cw">to</span> <span id="cw18_4" class="cw">say</span></span></div>
+    <div id="cg19" class="cg"><span class="pill"><span id="cw19_0" class="cw">is</span> <span id="cw19_1" class="cw">that</span> <span id="cw19_2" class="cw">you're</span> <span id="cw19_3" class="cw">going</span> <span id="cw19_4" class="cw">to</span></span></div>
+    <div id="cg20" class="cg"><span class="pill"><span id="cw20_0" class="cw">backfill</span> <span id="cw20_1" class="cw">your</span> <span id="cw20_2" class="cw">SOPs.</span></span></div>
+    <div id="cg21" class="cg"><span class="pill"><span id="cw21_0" class="cw">Basically,</span> <span id="cw21_1" class="cw">it's</span> <span id="cw21_2" class="cw">going</span> <span id="cw21_3" class="cw">to</span> <span id="cw21_4" class="cw">happen.</span></span></div>
+    <div id="cg22" class="cg"><span class="pill"><span id="cw22_0" class="cw">So</span> <span id="cw22_1" class="cw">Claude's</span> <span id="cw22_2" class="cw">going</span> <span id="cw22_3" class="cw">to</span> <span id="cw22_4" class="cw">interview</span></span></div>
+    <div id="cg23" class="cg"><span class="pill"><span id="cw23_0" class="cw">you.</span></span></div>
+    <div id="cg24" class="cg"><span class="pill"><span id="cw24_0" class="cw">You're</span> <span id="cw24_1" class="cw">going</span> <span id="cw24_2" class="cw">to</span> <span id="cw24_3" class="cw">answer</span> <span id="cw24_4" class="cw">the</span></span></div>
+    <div id="cg25" class="cg"><span class="pill"><span id="cw25_0" class="cw">questions</span> <span id="cw25_1" class="cw">and</span> <span id="cw25_2" class="cw">it's</span> <span id="cw25_3" class="cw">going</span> <span id="cw25_4" class="cw">to</span></span></div>
+    <div id="cg26" class="cg"><span class="pill"><span id="cw26_0" class="cw">write</span> <span id="cw26_1" class="cw">shit</span> <span id="cw26_2" class="cw">into</span> <span id="cw26_3" class="cw">your</span> <span id="cw26_4" class="cw">Notion</span></span></div>
+    <div id="cg27" class="cg"><span class="pill"><span id="cw27_0" class="cw">so</span> <span id="cw27_1" class="cw">that</span> <span id="cw27_2" class="cw">we</span> <span id="cw27_3" class="cw">can</span> <span id="cw27_4" class="cw">see</span></span></div>
+    <div id="cg28" class="cg"><span class="pill"><span id="cw28_0" class="cw">or</span> <span id="cw28_1" class="cw">you</span> <span id="cw28_2" class="cw">can</span> <span id="cw28_3" class="cw">see</span> <span id="cw28_4" class="cw">exactly</span></span></div>
+    <div id="cg29" class="cg"><span class="pill"><span id="cw29_0" class="cw">what</span> <span id="cw29_1" class="cw">might</span> <span id="cw29_2" class="cw">be</span> <span id="cw29_3" class="cw">broken</span> <span id="cw29_4" class="cw">and</span></span></div>
+    <div id="cg30" class="cg"><span class="pill"><span id="cw30_0" class="cw">where</span> <span id="cw30_1" class="cw">things</span> <span id="cw30_2" class="cw">are</span> <span id="cw30_3" class="cw">like</span> <span id="cw30_4" class="cw">lacking</span></span></div>
+    <div id="cg31" class="cg"><span class="pill"><span id="cw31_0" class="cw">on</span> <span id="cw31_1" class="cw">your</span> <span id="cw31_2" class="cw">pillars</span> <span id="cw31_3" class="cw">and</span> <span id="cw31_4" class="cw">foundation,</span></span></div>
+    <div id="cg32" class="cg"><span class="pill"><span id="cw32_0" class="cw">okay?</span></span></div>
+    <div id="cg33" class="cg"><span class="pill"><span id="cw33_0" class="cw">And</span> <span id="cw33_1" class="cw">my</span> <span id="cw33_2" class="cw">only</span> <span id="cw33_3" class="cw">thing</span> <span id="cw33_4" class="cw">that</span></span></div>
+    <div id="cg34" class="cg"><span class="pill"><span id="cw34_0" class="cw">I</span> <span id="cw34_1" class="cw">want</span> <span id="cw34_2" class="cw">to</span> <span id="cw34_3" class="cw">say</span> <span id="cw34_4" class="cw">on</span></span></div>
+    <div id="cg35" class="cg"><span class="pill"><span id="cw35_0" class="cw">this</span> <span id="cw35_1" class="cw">is</span> <span id="cw35_2" class="cw">that</span> <span id="cw35_3" class="cw">if</span> <span id="cw35_4" class="cw">you</span></span></div>
+    <div id="cg36" class="cg"><span class="pill"><span id="cw36_0" class="cw">lie,</span> <span id="cw36_1" class="cw">whether</span> <span id="cw36_2" class="cw">you</span> <span id="cw36_3" class="cw">mean</span> <span id="cw36_4" class="cw">it</span></span></div>
+    <div id="cg37" class="cg"><span class="pill"><span id="cw37_0" class="cw">or</span> <span id="cw37_1" class="cw">don't,</span> <span id="cw37_2" class="cw">like</span> <span id="cw37_3" class="cw">if</span> <span id="cw37_4" class="cw">you're</span></span></div>
+    <div id="cg38" class="cg"><span class="pill"><span id="cw38_0" class="cw">sugarcoating</span> <span id="cw38_1" class="cw">to</span> <span id="cw38_2" class="cw">yourself,</span> <span id="cw38_3" class="cw">like</span> <span id="cw38_4" class="cw">why</span></span></div>
+    <div id="cg39" class="cg"><span class="pill"><span id="cw39_0" class="cw">are</span> <span id="cw39_1" class="cw">you</span> <span id="cw39_2" class="cw">lying</span> <span id="cw39_3" class="cw">to</span> <span id="cw39_4" class="cw">yourself?</span></span></div>
+    <div id="cg40" class="cg"><span class="pill"><span id="cw40_0" class="cw">And</span> <span id="cw40_1" class="cw">I've</span> <span id="cw40_2" class="cw">worked</span> <span id="cw40_3" class="cw">with</span> <span id="cw40_4" class="cw">a</span></span></div>
+    <div id="cg41" class="cg"><span class="pill"><span id="cw41_0" class="cw">bunch</span> <span id="cw41_1" class="cw">of</span> <span id="cw41_2" class="cw">business</span> <span id="cw41_3" class="cw">owners</span> <span id="cw41_4" class="cw">that</span></span></div>
+    <div id="cg42" class="cg"><span class="pill"><span id="cw42_0" class="cw">we</span> <span id="cw42_1" class="cw">try</span> <span id="cw42_2" class="cw">and</span> <span id="cw42_3" class="cw">document</span> <span id="cw42_4" class="cw">their</span></span></div>
+    <div id="cg43" class="cg"><span class="pill"><span id="cw43_0" class="cw">processes</span> <span id="cw43_1" class="cw">and</span> <span id="cw43_2" class="cw">they</span> <span id="cw43_3" class="cw">have</span> <span id="cw43_4" class="cw">in</span></span></div>
+    <div id="cg44" class="cg"><span class="pill"><span id="cw44_0" class="cw">their</span> <span id="cw44_1" class="cw">mind</span> <span id="cw44_2" class="cw">like</span> <span id="cw44_3" class="cw">the</span> <span id="cw44_4" class="cw">way</span></span></div>
+    <div id="cg45" class="cg"><span class="pill"><span id="cw45_0" class="cw">it's</span> <span id="cw45_1" class="cw">working</span> <span id="cw45_2" class="cw">or</span> <span id="cw45_3" class="cw">the</span> <span id="cw45_4" class="cw">way</span></span></div>
+    <div id="cg46" class="cg"><span class="pill"><span id="cw46_0" class="cw">they</span> <span id="cw46_1" class="cw">know</span> <span id="cw46_2" class="cw">it</span> <span id="cw46_3" class="cw">should</span> <span id="cw46_4" class="cw">be</span></span></div>
+    <div id="cg47" class="cg"><span class="pill"><span id="cw47_0" class="cw">working.</span></span></div>
+    <div id="cg48" class="cg"><span class="pill"><span id="cw48_0" class="cw">But</span> <span id="cw48_1" class="cw">if</span> <span id="cw48_2" class="cw">we're</span> <span id="cw48_3" class="cw">being</span> <span id="cw48_4" class="cw">honest,</span></span></div>
+    <div id="cg49" class="cg"><span class="pill"><span id="cw49_0" class="cw">like</span> <span id="cw49_1" class="cw">this</span> <span id="cw49_2" class="cw">isn't</span> <span id="cw49_3" class="cw">how</span> <span id="cw49_4" class="cw">it</span></span></div>
+    <div id="cg50" class="cg"><span class="pill"><span id="cw50_0" class="cw">works.</span></span></div>
+    <div id="cg51" class="cg"><span class="pill"><span id="cw51_0" class="cw">Like</span> <span id="cw51_1" class="cw">this</span> <span id="cw51_2" class="cw">is</span> <span id="cw51_3" class="cw">how</span> <span id="cw51_4" class="cw">we</span></span></div>
+    <div id="cg52" class="cg"><span class="pill"><span id="cw52_0" class="cw">want</span> <span id="cw52_1" class="cw">it</span> <span id="cw52_2" class="cw">to</span> <span id="cw52_3" class="cw">be</span> <span id="cw52_4" class="cw">working</span></span></div>
+    <div id="cg53" class="cg"><span class="pill"><span id="cw53_0" class="cw">but</span> <span id="cw53_1" class="cw">it's</span> <span id="cw53_2" class="cw">not</span> <span id="cw53_3" class="cw">actually</span> <span id="cw53_4" class="cw">currently</span></span></div>
+    <div id="cg54" class="cg"><span class="pill"><span id="cw54_0" class="cw">working</span> <span id="cw54_1" class="cw">like</span> <span id="cw54_2" class="cw">this.</span></span></div>
+    <div id="cg55" class="cg"><span class="pill"><span id="cw55_0" class="cw">So</span> <span id="cw55_1" class="cw">when</span> <span id="cw55_2" class="cw">a</span> <span id="cw55_3" class="cw">lead</span> <span id="cw55_4" class="cw">comes</span></span></div>
+    <div id="cg56" class="cg"><span class="pill"><span id="cw56_0" class="cw">in,</span> <span id="cw56_1" class="cw">where</span> <span id="cw56_2" class="cw">does</span> <span id="cw56_3" class="cw">it</span> <span id="cw56_4" class="cw">go?</span></span></div>
+    <div id="cg57" class="cg"><span class="pill"><span id="cw57_0" class="cw">Who</span> <span id="cw57_1" class="cw">receives</span> <span id="cw57_2" class="cw">it?</span></span></div>
+    <div id="cg58" class="cg"><span class="pill"><span id="cw58_0" class="cw">Really?</span></span></div>
+    <div id="cg59" class="cg"><span class="pill"><span id="cw59_0" class="cw">Like</span> <span id="cw59_1" class="cw">is</span> <span id="cw59_2" class="cw">every</span> <span id="cw59_3" class="cw">single</span> <span id="cw59_4" class="cw">lead</span></span></div>
+    <div id="cg60" class="cg"><span class="pill"><span id="cw60_0" class="cw">coming</span> <span id="cw60_1" class="cw">in</span> <span id="cw60_2" class="cw">through</span> <span id="cw60_3" class="cw">your</span> <span id="cw60_4" class="cw">website</span></span></div>
+    <div id="cg61" class="cg"><span class="pill"><span id="cw61_0" class="cw">and</span> <span id="cw61_1" class="cw">is</span> <span id="cw61_2" class="cw">every</span> <span id="cw61_3" class="cw">single</span> <span id="cw61_4" class="cw">lead</span></span></div>
+    <div id="cg62" class="cg"><span class="pill"><span id="cw62_0" class="cw">that</span> <span id="cw62_1" class="cw">you</span> <span id="cw62_2" class="cw">get</span> <span id="cw62_3" class="cw">through</span> <span id="cw62_4" class="cw">your</span></span></div>
+    <div id="cg63" class="cg"><span class="pill"><span id="cw63_0" class="cw">website</span> <span id="cw63_1" class="cw">being</span> <span id="cw63_2" class="cw">entered</span> <span id="cw63_3" class="cw">into</span> <span id="cw63_4" class="cw">your</span></span></div>
+    <div id="cg64" class="cg"><span class="pill"><span id="cw64_0" class="cw">CRM</span> <span id="cw64_1" class="cw">or</span> <span id="cw64_2" class="cw">entered</span> <span id="cw64_3" class="cw">into</span> <span id="cw64_4" class="cw">wherever</span></span></div>
+    <div id="cg65" class="cg"><span class="pill"><span id="cw65_0" class="cw">it's</span> <span id="cw65_1" class="cw">supposed</span> <span id="cw65_2" class="cw">to</span> <span id="cw65_3" class="cw">be</span> <span id="cw65_4" class="cw">entered</span></span></div>
+    <div id="cg66" class="cg"><span class="pill"><span id="cw66_0" class="cw">into</span> <span id="cw66_1" class="cw">and</span> <span id="cw66_2" class="cw">then</span> <span id="cw66_3" class="cw">you</span> <span id="cw66_4" class="cw">follow</span></span></div>
+    <div id="cg67" class="cg"><span class="pill"><span id="cw67_0" class="cw">up</span> <span id="cw67_1" class="cw">like</span> <span id="cw67_2" class="cw">this</span> <span id="cw67_3" class="cw">or</span> <span id="cw67_4" class="cw">like</span></span></div>
+    <div id="cg68" class="cg"><span class="pill"><span id="cw68_0" class="cw">this</span> <span id="cw68_1" class="cw">or</span> <span id="cw68_2" class="cw">are</span> <span id="cw68_3" class="cw">like</span> <span id="cw68_4" class="cw">some</span></span></div>
+    <div id="cg69" class="cg"><span class="pill"><span id="cw69_0" class="cw">of</span> <span id="cw69_1" class="cw">your</span> <span id="cw69_2" class="cw">leads</span> <span id="cw69_3" class="cw">coming</span> <span id="cw69_4" class="cw">in</span></span></div>
+    <div id="cg70" class="cg"><span class="pill"><span id="cw70_0" class="cw">through</span> <span id="cw70_1" class="cw">your</span> <span id="cw70_2" class="cw">website.</span></span></div>
+    <div id="cg71" class="cg"><span class="pill"><span id="cw71_0" class="cw">Some</span> <span id="cw71_1" class="cw">of</span> <span id="cw71_2" class="cw">them</span> <span id="cw71_3" class="cw">are</span> <span id="cw71_4" class="cw">phone</span></span></div>
+    <div id="cg72" class="cg"><span class="pill"><span id="cw72_0" class="cw">calls.</span></span></div>
+    <div id="cg73" class="cg"><span class="pill"><span id="cw73_0" class="cw">Some</span> <span id="cw73_1" class="cw">of</span> <span id="cw73_2" class="cw">them</span> <span id="cw73_3" class="cw">are</span> <span id="cw73_4" class="cw">emails.</span></span></div>
+    <div id="cg74" class="cg"><span class="pill"><span id="cw74_0" class="cw">Some</span> <span id="cw74_1" class="cw">of</span> <span id="cw74_2" class="cw">them</span> <span id="cw74_3" class="cw">are</span> <span id="cw74_4" class="cw">text</span></span></div>
+    <div id="cg75" class="cg"><span class="pill"><span id="cw75_0" class="cw">messages.</span></span></div>
+    <div id="cg76" class="cg"><span class="pill"><span id="cw76_0" class="cw">Some</span> <span id="cw76_1" class="cw">of</span> <span id="cw76_2" class="cw">them</span> <span id="cw76_3" class="cw">are</span> <span id="cw76_4" class="cw">like</span></span></div>
+    <div id="cg77" class="cg"><span class="pill"><span id="cw77_0" class="cw">little</span> <span id="cw77_1" class="cw">bits</span> <span id="cw77_2" class="cw">of</span> <span id="cw77_3" class="cw">paper</span> <span id="cw77_4" class="cw">that</span></span></div>
+    <div id="cg78" class="cg"><span class="pill"><span id="cw78_0" class="cw">are</span> <span id="cw78_1" class="cw">handed</span> <span id="cw78_2" class="cw">to</span> <span id="cw78_3" class="cw">you</span> <span id="cw78_4" class="cw">at</span></span></div>
+    <div id="cg79" class="cg"><span class="pill"><span id="cw79_0" class="cw">a</span> <span id="cw79_1" class="cw">networking</span> <span id="cw79_2" class="cw">event</span> <span id="cw79_3" class="cw">that</span> <span id="cw79_4" class="cw">like</span></span></div>
+    <div id="cg80" class="cg"><span class="pill"><span id="cw80_0" class="cw">be</span> <span id="cw80_1" class="cw">honest</span> <span id="cw80_2" class="cw">so</span> <span id="cw80_3" class="cw">you</span> <span id="cw80_4" class="cw">can</span></span></div>
+    <div id="cg81" class="cg"><span class="pill"><span id="cw81_0" class="cw">figure</span> <span id="cw81_1" class="cw">out</span> <span id="cw81_2" class="cw">where</span> <span id="cw81_3" class="cw">things</span> <span id="cw81_4" class="cw">are</span></span></div>
+    <div id="cg82" class="cg"><span class="pill"><span id="cw82_0" class="cw">leaking.</span></span></div>
+    <div id="cg83" class="cg"><span class="pill"><span id="cw83_0" class="cw">And</span> <span id="cw83_1" class="cw">if</span> <span id="cw83_2" class="cw">it's</span> <span id="cw83_3" class="cw">working,</span> <span id="cw83_4" class="cw">it's</span></span></div>
+    <div id="cg84" class="cg"><span class="pill"><span id="cw84_0" class="cw">fine.</span></span></div>
+    <div id="cg85" class="cg"><span class="pill"><span id="cw85_0" class="cw">Like</span> <span id="cw85_1" class="cw">I</span> <span id="cw85_2" class="cw">said,</span> <span id="cw85_3" class="cw">you</span> <span id="cw85_4" class="cw">can't</span></span></div>
+    <div id="cg86" class="cg"><span class="pill"><span id="cw86_0" class="cw">fix</span> <span id="cw86_1" class="cw">everything</span> <span id="cw86_2" class="cw">all</span> <span id="cw86_3" class="cw">at</span> <span id="cw86_4" class="cw">once.</span></span></div>
+    <div id="cg87" class="cg"><span class="pill"><span id="cw87_0" class="cw">You</span> <span id="cw87_1" class="cw">just</span> <span id="cw87_2" class="cw">have</span> <span id="cw87_3" class="cw">to</span> <span id="cw87_4" class="cw">like</span></span></div>
+    <div id="cg88" class="cg"><span class="pill"><span id="cw88_0" class="cw">this</span> <span id="cw88_1" class="cw">is</span> <span id="cw88_2" class="cw">how</span> <span id="cw88_3" class="cw">it</span></span></div>
+    <div id="cg89" class="cg"><span class="pill"><span id="cw89_0" class="cw">works.</span></span></div>
+    <div id="cg90" class="cg"><span class="pill"><span id="cw90_0" class="cw">Once</span> <span id="cw90_1" class="cw">it's</span> <span id="cw90_2" class="cw">all</span> <span id="cw90_3" class="cw">laid</span> <span id="cw90_4" class="cw">out</span></span></div>
+    <div id="cg91" class="cg"><span class="pill"><span id="cw91_0" class="cw">on</span> <span id="cw91_1" class="cw">paper,</span> <span id="cw91_2" class="cw">we</span> <span id="cw91_3" class="cw">can</span> <span id="cw91_4" class="cw">be</span></span></div>
+    <div id="cg92" class="cg"><span class="pill"><span id="cw92_0" class="cw">like,</span> <span id="cw92_1" class="cw">okay,</span> <span id="cw92_2" class="cw">let's</span> <span id="cw92_3" class="cw">fix</span> <span id="cw92_4" class="cw">this.</span></span></div>
+    <div id="cg93" class="cg"><span class="pill"><span id="cw93_0" class="cw">Like</span> <span id="cw93_1" class="cw">probably</span> <span id="cw93_2" class="cw">if</span> <span id="cw93_3" class="cw">that's</span> <span id="cw93_4" class="cw">the</span></span></div>
+    <div id="cg94" class="cg"><span class="pill"><span id="cw94_0" class="cw">situation,</span> <span id="cw94_1" class="cw">like</span> <span id="cw94_2" class="cw">one</span> <span id="cw94_3" class="cw">of</span> <span id="cw94_4" class="cw">the</span></span></div>
+    <div id="cg95" class="cg"><span class="pill"><span id="cw95_0" class="cw">first</span> <span id="cw95_1" class="cw">things</span> <span id="cw95_2" class="cw">we</span> <span id="cw95_3" class="cw">need</span> <span id="cw95_4" class="cw">to</span></span></div>
+    <div id="cg96" class="cg"><span class="pill"><span id="cw96_0" class="cw">do</span> <span id="cw96_1" class="cw">is</span> <span id="cw96_2" class="cw">like,</span> <span id="cw96_3" class="cw">okay,</span> <span id="cw96_4" class="cw">we</span></span></div>
+    <div id="cg97" class="cg"><span class="pill"><span id="cw97_0" class="cw">need</span> <span id="cw97_1" class="cw">to</span> <span id="cw97_2" class="cw">enter</span> <span id="cw97_3" class="cw">everything</span> <span id="cw97_4" class="cw">into</span></span></div>
+    <div id="cg98" class="cg"><span class="pill"><span id="cw98_0" class="cw">the</span> <span id="cw98_1" class="cw">system</span> <span id="cw98_2" class="cw">at</span> <span id="cw98_3" class="cw">least.</span></span></div>
+    <div id="cg99" class="cg"><span class="pill"><span id="cw99_0" class="cw">Okay.</span></span></div>
+    <div id="cg100" class="cg"><span class="pill"><span id="cw100_0" class="cw">Start</span> <span id="cw100_1" class="cw">there.</span></span></div>
+    <div id="cg101" class="cg"><span class="pill"><span id="cw101_0" class="cw">Or</span> <span id="cw101_1" class="cw">maybe</span> <span id="cw101_2" class="cw">it's,</span> <span id="cw101_3" class="cw">we</span> <span id="cw101_4" class="cw">forget</span></span></div>
+    <div id="cg102" class="cg"><span class="pill"><span id="cw102_0" class="cw">like</span> <span id="cw102_1" class="cw">I've</span> <span id="cw102_2" class="cw">met,</span> <span id="cw102_3" class="cw">I've</span> <span id="cw102_4" class="cw">worked</span></span></div>
+    <div id="cg103" class="cg"><span class="pill"><span id="cw103_0" class="cw">with</span> <span id="cw103_1" class="cw">businesses</span> <span id="cw103_2" class="cw">where</span> <span id="cw103_3" class="cw">everything</span> <span id="cw103_4" class="cw">works</span></span></div>
+    <div id="cg104" class="cg"><span class="pill"><span id="cw104_0" class="cw">pretty</span> <span id="cw104_1" class="cw">well</span> <span id="cw104_2" class="cw">but</span> <span id="cw104_3" class="cw">they,</span> <span id="cw104_4" class="cw">you</span></span></div>
+    <div id="cg105" class="cg"><span class="pill"><span id="cw105_0" class="cw">know,</span> <span id="cw105_1" class="cw">they</span> <span id="cw105_2" class="cw">forget</span> <span id="cw105_3" class="cw">to</span></span></div>
+    <div id="cg106" class="cg"><span class="pill"><span id="cw106_0" class="cw">invoice</span> <span id="cw106_1" class="cw">like</span> <span id="cw106_2" class="cw">30%</span> <span id="cw106_3" class="cw">of</span> <span id="cw106_4" class="cw">their</span></span></div>
+    <div id="cg107" class="cg"><span class="pill"><span id="cw107_0" class="cw">customers.</span></span></div>
+    <div id="cg108" class="cg"><span class="pill"><span id="cw108_0" class="cw">They're</span> <span id="cw108_1" class="cw">like,</span> <span id="cw108_2" class="cw">well,</span> <span id="cw108_3" class="cw">we</span> <span id="cw108_4" class="cw">just,</span></span></div>
+    <div id="cg109" class="cg"><span class="pill"><span id="cw109_0" class="cw">you</span> <span id="cw109_1" class="cw">know,</span> <span id="cw109_2" class="cw">it</span> <span id="cw109_3" class="cw">didn't</span> <span id="cw109_4" class="cw">take</span></span></div>
+    <div id="cg110" class="cg"><span class="pill"><span id="cw110_0" class="cw">very</span> <span id="cw110_1" class="cw">long.</span></span></div>
+    <div id="cg111" class="cg"><span class="pill"><span id="cw111_0" class="cw">We</span> <span id="cw111_1" class="cw">just</span> <span id="cw111_2" class="cw">like</span> <span id="cw111_3" class="cw">banged</span> <span id="cw111_4" class="cw">it</span></span></div>
+    <div id="cg112" class="cg"><span class="pill"><span id="cw112_0" class="cw">out.</span></span></div>
+    <div id="cg113" class="cg"><span class="pill"><span id="cw113_0" class="cw">Like,</span> <span id="cw113_1" class="cw">okay,</span> <span id="cw113_2" class="cw">well,</span> <span id="cw113_3" class="cw">that's</span> <span id="cw113_4" class="cw">literally</span></span></div>
+    <div id="cg114" class="cg"><span class="pill"><span id="cw114_0" class="cw">like</span> <span id="cw114_1" class="cw">20</span> <span id="cw114_2" class="cw">jobs</span> <span id="cw114_3" class="cw">this</span> <span id="cw114_4" class="cw">week</span></span></div>
+    <div id="cg115" class="cg"><span class="pill"><span id="cw115_0" class="cw">but</span> <span id="cw115_1" class="cw">they're</span> <span id="cw115_2" class="cw">only</span> <span id="cw115_3" class="cw">like</span> <span id="cw115_4" class="cw">$500</span></span></div>
+    <div id="cg116" class="cg"><span class="pill"><span id="cw116_0" class="cw">each.</span></span></div>
+    <div id="cg117" class="cg"><span class="pill"><span id="cw117_0" class="cw">Well,</span> <span id="cw117_1" class="cw">20</span> <span id="cw117_2" class="cw">times</span> <span id="cw117_3" class="cw">500</span> <span id="cw117_4" class="cw">like</span></span></div>
+    <div id="cg118" class="cg"><span class="pill"><span id="cw118_0" class="cw">it's</span> <span id="cw118_1" class="cw">up,</span> <span id="cw118_2" class="cw">doesn't</span> <span id="cw118_3" class="cw">it?</span></span></div>
+    <div id="cg119" class="cg"><span class="pill"><span id="cw119_0" class="cw">So,</span> <span id="cw119_1" class="cw">you</span> <span id="cw119_2" class="cw">know,</span> <span id="cw119_3" class="cw">be</span> <span id="cw119_4" class="cw">honest,</span></span></div>
+    <div id="cg120" class="cg"><span class="pill"><span id="cw120_0" class="cw">detail</span> <span id="cw120_1" class="cw">it</span> <span id="cw120_2" class="cw">out,</span> <span id="cw120_3" class="cw">write</span> <span id="cw120_4" class="cw">it</span></span></div>
+    <div id="cg121" class="cg"><span class="pill"><span id="cw121_0" class="cw">out.</span></span></div>
+    <div id="cg122" class="cg"><span class="pill"><span id="cw122_0" class="cw">No</span> <span id="cw122_1" class="cw">one's</span> <span id="cw122_2" class="cw">going</span> <span id="cw122_3" class="cw">to</span> <span id="cw122_4" class="cw">see</span></span></div>
+    <div id="cg123" class="cg"><span class="pill"><span id="cw123_0" class="cw">it</span> <span id="cw123_1" class="cw">but</span> <span id="cw123_2" class="cw">you.</span></span></div>
+    <div id="cg124" class="cg"><span class="pill"><span id="cw124_0" class="cw">So</span> <span id="cw124_1" class="cw">what</span> <span id="cw124_2" class="cw">difference</span> <span id="cw124_3" class="cw">does</span> <span id="cw124_4" class="cw">it</span></span></div>
+    <div id="cg125" class="cg"><span class="pill"><span id="cw125_0" class="cw">make?</span></span></div>
+    <div id="cg126" class="cg"><span class="pill"><span id="cw126_0" class="cw">And</span> <span id="cw126_1" class="cw">this</span> <span id="cw126_2" class="cw">first</span> <span id="cw126_3" class="cw">round,</span> <span id="cw126_4" class="cw">just</span></span></div>
+    <div id="cg127" class="cg"><span class="pill"><span id="cw127_0" class="cw">like</span> <span id="cw127_1" class="cw">we're</span> <span id="cw127_2" class="cw">going</span> <span id="cw127_3" class="cw">to</span> <span id="cw127_4" class="cw">get</span></span></div>
+    <div id="cg128" class="cg"><span class="pill"><span id="cw128_0" class="cw">all</span> <span id="cw128_1" class="cw">out</span> <span id="cw128_2" class="cw">there,</span> <span id="cw128_3" class="cw">documented</span> <span id="cw128_4" class="cw">and</span></span></div>
+    <div id="cg129" class="cg"><span class="pill"><span id="cw129_0" class="cw">then</span> <span id="cw129_1" class="cw">as</span> <span id="cw129_2" class="cw">we</span> <span id="cw129_3" class="cw">go</span> <span id="cw129_4" class="cw">through</span></span></div>
+    <div id="cg130" class="cg"><span class="pill"><span id="cw130_0" class="cw">the</span> <span id="cw130_1" class="cw">course</span> <span id="cw130_2" class="cw">and</span> <span id="cw130_3" class="cw">all</span> <span id="cw130_4" class="cw">the</span></span></div>
+    <div id="cg131" class="cg"><span class="pill"><span id="cw131_0" class="cw">lessons</span> <span id="cw131_1" class="cw">and</span> <span id="cw131_2" class="cw">courses</span> <span id="cw131_3" class="cw">and</span> <span id="cw131_4" class="cw">stuff,</span></span></div>
+    <div id="cg132" class="cg"><span class="pill"><span id="cw132_0" class="cw">it's</span> <span id="cw132_1" class="cw">like</span> <span id="cw132_2" class="cw">we're</span> <span id="cw132_3" class="cw">going</span> <span id="cw132_4" class="cw">to</span></span></div>
+    <div id="cg133" class="cg"><span class="pill"><span id="cw133_0" class="cw">start</span> <span id="cw133_1" class="cw">iterating</span> <span id="cw133_2" class="cw">these</span> <span id="cw133_3" class="cw">processes</span> <span id="cw133_4" class="cw">and</span></span></div>
+    <div id="cg134" class="cg"><span class="pill"><span id="cw134_0" class="cw">procedures</span> <span id="cw134_1" class="cw">to</span> <span id="cw134_2" class="cw">make</span> <span id="cw134_3" class="cw">them</span> <span id="cw134_4" class="cw">better</span></span></div>
+    <div id="cg135" class="cg"><span class="pill"><span id="cw135_0" class="cw">and</span> <span id="cw135_1" class="cw">better,</span> <span id="cw135_2" class="cw">strengthen</span> <span id="cw135_3" class="cw">your</span> <span id="cw135_4" class="cw">foundations,</span></span></div>
+    <div id="cg136" class="cg"><span class="pill"><span id="cw136_0" class="cw">strengthen</span> <span id="cw136_1" class="cw">your</span> <span id="cw136_2" class="cw">pillars,</span> <span id="cw136_3" class="cw">just</span> <span id="cw136_4" class="cw">like</span></span></div>
+    <div id="cg137" class="cg"><span class="pill"><span id="cw137_0" class="cw">I</span> <span id="cw137_1" class="cw">had</span> <span id="cw137_2" class="cw">said</span> <span id="cw137_3" class="cw">in</span> <span id="cw137_4" class="cw">the</span></span></div>
+    <div id="cg138" class="cg"><span class="pill"><span id="cw138_0" class="cw">beginning,</span> <span id="cw138_1" class="cw">which</span> <span id="cw138_2" class="cw">of</span> <span id="cw138_3" class="cw">course</span> <span id="cw138_4" class="cw">all</span></span></div>
+    <div id="cg139" class="cg"><span class="pill"><span id="cw139_0" class="cw">will</span> <span id="cw139_1" class="cw">elevate</span> <span id="cw139_2" class="cw">your</span> <span id="cw139_3" class="cw">brand.</span></span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#cg0",{visibility:"visible"},0.150);tl.fromTo("#cg0",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},0.150);tl.to("#cg0",{opacity:0,duration:0.1,ease:"power2.in"},0.980);tl.set("#cg0",{visibility:"hidden"},1.080);
+    tl.set("#cw0_0",{backgroundColor:"#40E0D0"},0.170);tl.set("#cw0_0",{backgroundColor:"rgba(64,224,208,0)"},0.270);
+    tl.set("#cw0_1",{backgroundColor:"#40E0D0"},0.270);tl.set("#cw0_1",{backgroundColor:"rgba(64,224,208,0)"},0.980);
+    tl.set("#cg1",{visibility:"visible"},1.050);tl.fromTo("#cg1",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},1.050);tl.to("#cg1",{opacity:0,duration:0.1,ease:"power2.in"},3.880);tl.set("#cg1",{visibility:"hidden"},3.980);
+    tl.set("#cw1_0",{backgroundColor:"#40E0D0"},1.100);tl.set("#cw1_0",{backgroundColor:"rgba(64,224,208,0)"},2.230);
+    tl.set("#cw1_1",{backgroundColor:"#40E0D0"},2.230);tl.set("#cw1_1",{backgroundColor:"rgba(64,224,208,0)"},2.450);
+    tl.set("#cw1_2",{backgroundColor:"#40E0D0"},2.450);tl.set("#cw1_2",{backgroundColor:"rgba(64,224,208,0)"},3.100);
+    tl.set("#cw1_3",{backgroundColor:"#40E0D0"},3.100);tl.set("#cw1_3",{backgroundColor:"rgba(64,224,208,0)"},3.320);
+    tl.set("#cw1_4",{backgroundColor:"#40E0D0"},3.320);tl.set("#cw1_4",{backgroundColor:"rgba(64,224,208,0)"},3.880);
+    tl.set("#cg2",{visibility:"visible"},3.950);tl.fromTo("#cg2",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},3.950);tl.to("#cg2",{opacity:0,duration:0.1,ease:"power2.in"},6.140);tl.set("#cg2",{visibility:"hidden"},6.240);
+    tl.set("#cw2_0",{backgroundColor:"#40E0D0"},4.000);tl.set("#cw2_0",{backgroundColor:"rgba(64,224,208,0)"},4.430);
+    tl.set("#cw2_1",{backgroundColor:"#40E0D0"},4.430);tl.set("#cw2_1",{backgroundColor:"rgba(64,224,208,0)"},4.540);
+    tl.set("#cw2_2",{backgroundColor:"#40E0D0"},4.540);tl.set("#cw2_2",{backgroundColor:"rgba(64,224,208,0)"},6.140);
+    tl.set("#cg3",{visibility:"visible"},6.250);tl.fromTo("#cg3",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},6.250);tl.to("#cg3",{opacity:0,duration:0.1,ease:"power2.in"},8.010);tl.set("#cg3",{visibility:"hidden"},8.110);
+    tl.set("#cw3_0",{backgroundColor:"#40E0D0"},6.300);tl.set("#cw3_0",{backgroundColor:"rgba(64,224,208,0)"},6.900);
+    tl.set("#cw3_1",{backgroundColor:"#40E0D0"},6.900);tl.set("#cw3_1",{backgroundColor:"rgba(64,224,208,0)"},7.230);
+    tl.set("#cw3_2",{backgroundColor:"#40E0D0"},7.230);tl.set("#cw3_2",{backgroundColor:"rgba(64,224,208,0)"},7.480);
+    tl.set("#cw3_3",{backgroundColor:"#40E0D0"},7.480);tl.set("#cw3_3",{backgroundColor:"rgba(64,224,208,0)"},7.920);
+    tl.set("#cw3_4",{backgroundColor:"#40E0D0"},7.920);tl.set("#cw3_4",{backgroundColor:"rgba(64,224,208,0)"},8.010);
+    tl.set("#cg4",{visibility:"visible"},8.080);tl.fromTo("#cg4",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},8.080);tl.to("#cg4",{opacity:0,duration:0.1,ease:"power2.in"},9.460);tl.set("#cg4",{visibility:"hidden"},9.560);
+    tl.set("#cw4_0",{backgroundColor:"#40E0D0"},8.130);tl.set("#cw4_0",{backgroundColor:"rgba(64,224,208,0)"},8.180);
+    tl.set("#cw4_1",{backgroundColor:"#40E0D0"},8.160);tl.set("#cw4_1",{backgroundColor:"rgba(64,224,208,0)"},8.320);
+    tl.set("#cw4_2",{backgroundColor:"#40E0D0"},8.320);tl.set("#cw4_2",{backgroundColor:"rgba(64,224,208,0)"},8.480);
+    tl.set("#cw4_3",{backgroundColor:"#40E0D0"},8.480);tl.set("#cw4_3",{backgroundColor:"rgba(64,224,208,0)"},9.100);
+    tl.set("#cw4_4",{backgroundColor:"#40E0D0"},9.100);tl.set("#cw4_4",{backgroundColor:"rgba(64,224,208,0)"},9.460);
+    tl.set("#cg5",{visibility:"visible"},9.530);tl.fromTo("#cg5",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},9.530);tl.to("#cg5",{opacity:0,duration:0.1,ease:"power2.in"},10.850);tl.set("#cg5",{visibility:"hidden"},10.950);
+    tl.set("#cw5_0",{backgroundColor:"#40E0D0"},9.580);tl.set("#cw5_0",{backgroundColor:"rgba(64,224,208,0)"},9.650);
+    tl.set("#cw5_1",{backgroundColor:"#40E0D0"},9.650);tl.set("#cw5_1",{backgroundColor:"rgba(64,224,208,0)"},9.880);
+    tl.set("#cw5_2",{backgroundColor:"#40E0D0"},9.880);tl.set("#cw5_2",{backgroundColor:"rgba(64,224,208,0)"},10.700);
+    tl.set("#cw5_3",{backgroundColor:"#40E0D0"},10.700);tl.set("#cw5_3",{backgroundColor:"rgba(64,224,208,0)"},10.820);
+    tl.set("#cw5_4",{backgroundColor:"#40E0D0"},10.820);tl.set("#cw5_4",{backgroundColor:"rgba(64,224,208,0)"},10.870);
+    tl.set("#cg6",{visibility:"visible"},10.920);tl.fromTo("#cg6",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},10.920);tl.to("#cg6",{opacity:0,duration:0.1,ease:"power2.in"},12.310);tl.set("#cg6",{visibility:"hidden"},12.410);
+    tl.set("#cw6_0",{backgroundColor:"#40E0D0"},10.970);tl.set("#cw6_0",{backgroundColor:"rgba(64,224,208,0)"},11.280);
+    tl.set("#cw6_1",{backgroundColor:"#40E0D0"},11.280);tl.set("#cw6_1",{backgroundColor:"rgba(64,224,208,0)"},11.590);
+    tl.set("#cw6_2",{backgroundColor:"#40E0D0"},11.590);tl.set("#cw6_2",{backgroundColor:"rgba(64,224,208,0)"},11.770);
+    tl.set("#cw6_3",{backgroundColor:"#40E0D0"},11.770);tl.set("#cw6_3",{backgroundColor:"rgba(64,224,208,0)"},12.130);
+    tl.set("#cw6_4",{backgroundColor:"#40E0D0"},12.130);tl.set("#cw6_4",{backgroundColor:"rgba(64,224,208,0)"},12.310);
+    tl.set("#cg7",{visibility:"visible"},12.380);tl.fromTo("#cg7",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},12.380);tl.to("#cg7",{opacity:0,duration:0.1,ease:"power2.in"},13.300);tl.set("#cg7",{visibility:"hidden"},13.400);
+    tl.set("#cw7_0",{backgroundColor:"#40E0D0"},12.430);tl.set("#cw7_0",{backgroundColor:"rgba(64,224,208,0)"},12.580);
+    tl.set("#cw7_1",{backgroundColor:"#40E0D0"},12.580);tl.set("#cw7_1",{backgroundColor:"rgba(64,224,208,0)"},12.920);
+    tl.set("#cw7_2",{backgroundColor:"#40E0D0"},12.920);tl.set("#cw7_2",{backgroundColor:"rgba(64,224,208,0)"},13.040);
+    tl.set("#cw7_3",{backgroundColor:"#40E0D0"},13.040);tl.set("#cw7_3",{backgroundColor:"rgba(64,224,208,0)"},13.290);
+    tl.set("#cw7_4",{backgroundColor:"#40E0D0"},13.290);tl.set("#cw7_4",{backgroundColor:"rgba(64,224,208,0)"},13.340);
+    tl.set("#cg8",{visibility:"visible"},13.370);tl.fromTo("#cg8",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},13.370);tl.to("#cg8",{opacity:0,duration:0.1,ease:"power2.in"},14.790);tl.set("#cg8",{visibility:"hidden"},14.890);
+    tl.set("#cw8_0",{backgroundColor:"#40E0D0"},13.420);tl.set("#cw8_0",{backgroundColor:"rgba(64,224,208,0)"},14.000);
+    tl.set("#cw8_1",{backgroundColor:"#40E0D0"},14.000);tl.set("#cw8_1",{backgroundColor:"rgba(64,224,208,0)"},14.240);
+    tl.set("#cw8_2",{backgroundColor:"#40E0D0"},14.240);tl.set("#cw8_2",{backgroundColor:"rgba(64,224,208,0)"},14.400);
+    tl.set("#cw8_3",{backgroundColor:"#40E0D0"},14.400);tl.set("#cw8_3",{backgroundColor:"rgba(64,224,208,0)"},14.690);
+    tl.set("#cw8_4",{backgroundColor:"#40E0D0"},14.690);tl.set("#cw8_4",{backgroundColor:"rgba(64,224,208,0)"},14.790);
+    tl.set("#cg9",{visibility:"visible"},14.860);tl.fromTo("#cg9",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},14.860);tl.to("#cg9",{opacity:0,duration:0.1,ease:"power2.in"},16.990);tl.set("#cg9",{visibility:"hidden"},17.090);
+    tl.set("#cw9_0",{backgroundColor:"#40E0D0"},14.910);tl.set("#cw9_0",{backgroundColor:"rgba(64,224,208,0)"},15.500);
+    tl.set("#cw9_1",{backgroundColor:"#40E0D0"},15.500);tl.set("#cw9_1",{backgroundColor:"rgba(64,224,208,0)"},15.790);
+    tl.set("#cw9_2",{backgroundColor:"#40E0D0"},15.790);tl.set("#cw9_2",{backgroundColor:"rgba(64,224,208,0)"},15.930);
+    tl.set("#cw9_3",{backgroundColor:"#40E0D0"},15.930);tl.set("#cw9_3",{backgroundColor:"rgba(64,224,208,0)"},16.630);
+    tl.set("#cw9_4",{backgroundColor:"#40E0D0"},16.630);tl.set("#cw9_4",{backgroundColor:"rgba(64,224,208,0)"},16.990);
+    tl.set("#cg10",{visibility:"visible"},17.060);tl.fromTo("#cg10",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},17.060);tl.to("#cg10",{opacity:0,duration:0.1,ease:"power2.in"},17.580);tl.set("#cg10",{visibility:"hidden"},17.680);
+    tl.set("#cw10_0",{backgroundColor:"#40E0D0"},17.110);tl.set("#cw10_0",{backgroundColor:"rgba(64,224,208,0)"},17.580);
+    tl.set("#cg11",{visibility:"visible"},17.650);tl.fromTo("#cg11",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},17.650);tl.to("#cg11",{opacity:0,duration:0.1,ease:"power2.in"},18.960);tl.set("#cg11",{visibility:"hidden"},19.060);
+    tl.set("#cw11_0",{backgroundColor:"#40E0D0"},17.700);tl.set("#cw11_0",{backgroundColor:"rgba(64,224,208,0)"},17.840);
+    tl.set("#cw11_1",{backgroundColor:"#40E0D0"},17.840);tl.set("#cw11_1",{backgroundColor:"rgba(64,224,208,0)"},18.130);
+    tl.set("#cw11_2",{backgroundColor:"#40E0D0"},18.130);tl.set("#cw11_2",{backgroundColor:"rgba(64,224,208,0)"},18.710);
+    tl.set("#cw11_3",{backgroundColor:"#40E0D0"},18.710);tl.set("#cw11_3",{backgroundColor:"rgba(64,224,208,0)"},18.830);
+    tl.set("#cw11_4",{backgroundColor:"#40E0D0"},18.830);tl.set("#cw11_4",{backgroundColor:"rgba(64,224,208,0)"},18.960);
+    tl.set("#cg12",{visibility:"visible"},19.030);tl.fromTo("#cg12",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},19.030);tl.to("#cg12",{opacity:0,duration:0.1,ease:"power2.in"},19.920);tl.set("#cg12",{visibility:"hidden"},20.020);
+    tl.set("#cw12_0",{backgroundColor:"#40E0D0"},19.080);tl.set("#cw12_0",{backgroundColor:"rgba(64,224,208,0)"},19.220);
+    tl.set("#cw12_1",{backgroundColor:"#40E0D0"},19.220);tl.set("#cw12_1",{backgroundColor:"rgba(64,224,208,0)"},19.360);
+    tl.set("#cw12_2",{backgroundColor:"#40E0D0"},19.360);tl.set("#cw12_2",{backgroundColor:"rgba(64,224,208,0)"},19.770);
+    tl.set("#cw12_3",{backgroundColor:"#40E0D0"},19.770);tl.set("#cw12_3",{backgroundColor:"rgba(64,224,208,0)"},20.000);
+    tl.set("#cw12_4",{backgroundColor:"#40E0D0"},20.000);tl.set("#cw12_4",{backgroundColor:"rgba(64,224,208,0)"},20.050);
+    tl.set("#cg13",{visibility:"visible"},19.990);tl.fromTo("#cg13",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},19.990);tl.to("#cg13",{opacity:0,duration:0.1,ease:"power2.in"},21.460);tl.set("#cg13",{visibility:"hidden"},21.560);
+    tl.set("#cw13_0",{backgroundColor:"#40E0D0"},20.040);tl.set("#cw13_0",{backgroundColor:"rgba(64,224,208,0)"},20.430);
+    tl.set("#cw13_1",{backgroundColor:"#40E0D0"},20.430);tl.set("#cw13_1",{backgroundColor:"rgba(64,224,208,0)"},20.480);
+    tl.set("#cw13_2",{backgroundColor:"#40E0D0"},20.480);tl.set("#cw13_2",{backgroundColor:"rgba(64,224,208,0)"},21.040);
+    tl.set("#cw13_3",{backgroundColor:"#40E0D0"},21.040);tl.set("#cw13_3",{backgroundColor:"rgba(64,224,208,0)"},21.090);
+    tl.set("#cw13_4",{backgroundColor:"#40E0D0"},21.090);tl.set("#cw13_4",{backgroundColor:"rgba(64,224,208,0)"},21.460);
+    tl.set("#cg14",{visibility:"visible"},21.530);tl.fromTo("#cg14",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},21.530);tl.to("#cg14",{opacity:0,duration:0.1,ease:"power2.in"},22.590);tl.set("#cg14",{visibility:"hidden"},22.690);
+    tl.set("#cw14_0",{backgroundColor:"#40E0D0"},21.580);tl.set("#cw14_0",{backgroundColor:"rgba(64,224,208,0)"},21.630);
+    tl.set("#cw14_1",{backgroundColor:"#40E0D0"},21.600);tl.set("#cw14_1",{backgroundColor:"rgba(64,224,208,0)"},21.920);
+    tl.set("#cw14_2",{backgroundColor:"#40E0D0"},21.920);tl.set("#cw14_2",{backgroundColor:"rgba(64,224,208,0)"},22.590);
+    tl.set("#cg15",{visibility:"visible"},22.660);tl.fromTo("#cg15",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},22.660);tl.to("#cg15",{opacity:0,duration:0.1,ease:"power2.in"},23.880);tl.set("#cg15",{visibility:"hidden"},23.980);
+    tl.set("#cw15_0",{backgroundColor:"#40E0D0"},22.710);tl.set("#cw15_0",{backgroundColor:"rgba(64,224,208,0)"},22.760);
+    tl.set("#cw15_1",{backgroundColor:"#40E0D0"},22.720);tl.set("#cw15_1",{backgroundColor:"rgba(64,224,208,0)"},22.960);
+    tl.set("#cw15_2",{backgroundColor:"#40E0D0"},22.960);tl.set("#cw15_2",{backgroundColor:"rgba(64,224,208,0)"},23.420);
+    tl.set("#cw15_3",{backgroundColor:"#40E0D0"},23.420);tl.set("#cw15_3",{backgroundColor:"rgba(64,224,208,0)"},23.770);
+    tl.set("#cw15_4",{backgroundColor:"#40E0D0"},23.770);tl.set("#cw15_4",{backgroundColor:"rgba(64,224,208,0)"},23.880);
+    tl.set("#cg16",{visibility:"visible"},23.950);tl.fromTo("#cg16",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},23.950);tl.to("#cg16",{opacity:0,duration:0.1,ease:"power2.in"},25.880);tl.set("#cg16",{visibility:"hidden"},25.980);
+    tl.set("#cw16_0",{backgroundColor:"#40E0D0"},24.000);tl.set("#cw16_0",{backgroundColor:"rgba(64,224,208,0)"},24.160);
+    tl.set("#cw16_1",{backgroundColor:"#40E0D0"},24.160);tl.set("#cw16_1",{backgroundColor:"rgba(64,224,208,0)"},24.320);
+    tl.set("#cw16_2",{backgroundColor:"#40E0D0"},24.320);tl.set("#cw16_2",{backgroundColor:"rgba(64,224,208,0)"},24.910);
+    tl.set("#cw16_3",{backgroundColor:"#40E0D0"},24.910);tl.set("#cw16_3",{backgroundColor:"rgba(64,224,208,0)"},25.440);
+    tl.set("#cw16_4",{backgroundColor:"#40E0D0"},25.440);tl.set("#cw16_4",{backgroundColor:"rgba(64,224,208,0)"},25.880);
+    tl.set("#cg17",{visibility:"visible"},25.950);tl.fromTo("#cg17",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},25.950);tl.to("#cg17",{opacity:0,duration:0.1,ease:"power2.in"},27.590);tl.set("#cg17",{visibility:"hidden"},27.690);
+    tl.set("#cw17_0",{backgroundColor:"#40E0D0"},26.000);tl.set("#cw17_0",{backgroundColor:"rgba(64,224,208,0)"},26.730);
+    tl.set("#cw17_1",{backgroundColor:"#40E0D0"},26.730);tl.set("#cw17_1",{backgroundColor:"rgba(64,224,208,0)"},27.260);
+    tl.set("#cw17_2",{backgroundColor:"#40E0D0"},27.260);tl.set("#cw17_2",{backgroundColor:"rgba(64,224,208,0)"},27.590);
+    tl.set("#cg18",{visibility:"visible"},27.660);tl.fromTo("#cg18",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},27.660);tl.to("#cg18",{opacity:0,duration:0.1,ease:"power2.in"},28.670);tl.set("#cg18",{visibility:"hidden"},28.770);
+    tl.set("#cw18_0",{backgroundColor:"#40E0D0"},27.710);tl.set("#cw18_0",{backgroundColor:"rgba(64,224,208,0)"},27.890);
+    tl.set("#cw18_1",{backgroundColor:"#40E0D0"},27.890);tl.set("#cw18_1",{backgroundColor:"rgba(64,224,208,0)"},28.070);
+    tl.set("#cw18_2",{backgroundColor:"#40E0D0"},28.070);tl.set("#cw18_2",{backgroundColor:"rgba(64,224,208,0)"},28.310);
+    tl.set("#cw18_3",{backgroundColor:"#40E0D0"},28.310);tl.set("#cw18_3",{backgroundColor:"rgba(64,224,208,0)"},28.670);
+    tl.set("#cw18_4",{backgroundColor:"#40E0D0"},28.670);tl.set("#cw18_4",{backgroundColor:"rgba(64,224,208,0)"},28.720);
+    tl.set("#cg19",{visibility:"visible"},28.740);tl.fromTo("#cg19",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},28.740);tl.to("#cg19",{opacity:0,duration:0.1,ease:"power2.in"},29.730);tl.set("#cg19",{visibility:"hidden"},29.830);
+    tl.set("#cw19_0",{backgroundColor:"#40E0D0"},28.790);tl.set("#cw19_0",{backgroundColor:"rgba(64,224,208,0)"},28.840);
+    tl.set("#cw19_1",{backgroundColor:"#40E0D0"},28.790);tl.set("#cw19_1",{backgroundColor:"rgba(64,224,208,0)"},29.030);
+    tl.set("#cw19_2",{backgroundColor:"#40E0D0"},29.030);tl.set("#cw19_2",{backgroundColor:"rgba(64,224,208,0)"},29.390);
+    tl.set("#cw19_3",{backgroundColor:"#40E0D0"},29.390);tl.set("#cw19_3",{backgroundColor:"rgba(64,224,208,0)"},29.690);
+    tl.set("#cw19_4",{backgroundColor:"#40E0D0"},29.690);tl.set("#cw19_4",{backgroundColor:"rgba(64,224,208,0)"},29.740);
+    tl.set("#cg20",{visibility:"visible"},29.800);tl.fromTo("#cg20",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},29.800);tl.to("#cg20",{opacity:0,duration:0.1,ease:"power2.in"},31.070);tl.set("#cg20",{visibility:"hidden"},31.170);
+    tl.set("#cw20_0",{backgroundColor:"#40E0D0"},29.850);tl.set("#cw20_0",{backgroundColor:"rgba(64,224,208,0)"},30.290);
+    tl.set("#cw20_1",{backgroundColor:"#40E0D0"},30.290);tl.set("#cw20_1",{backgroundColor:"rgba(64,224,208,0)"},30.640);
+    tl.set("#cw20_2",{backgroundColor:"#40E0D0"},30.640);tl.set("#cw20_2",{backgroundColor:"rgba(64,224,208,0)"},31.070);
+    tl.set("#cg21",{visibility:"visible"},31.140);tl.fromTo("#cg21",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},31.140);tl.to("#cg21",{opacity:0,duration:0.1,ease:"power2.in"},32.330);tl.set("#cg21",{visibility:"hidden"},32.430);
+    tl.set("#cw21_0",{backgroundColor:"#40E0D0"},31.190);tl.set("#cw21_0",{backgroundColor:"rgba(64,224,208,0)"},31.440);
+    tl.set("#cw21_1",{backgroundColor:"#40E0D0"},31.440);tl.set("#cw21_1",{backgroundColor:"rgba(64,224,208,0)"},31.620);
+    tl.set("#cw21_2",{backgroundColor:"#40E0D0"},31.620);tl.set("#cw21_2",{backgroundColor:"rgba(64,224,208,0)"},31.850);
+    tl.set("#cw21_3",{backgroundColor:"#40E0D0"},31.850);tl.set("#cw21_3",{backgroundColor:"rgba(64,224,208,0)"},31.940);
+    tl.set("#cw21_4",{backgroundColor:"#40E0D0"},31.940);tl.set("#cw21_4",{backgroundColor:"rgba(64,224,208,0)"},32.330);
+    tl.set("#cg22",{visibility:"visible"},32.400);tl.fromTo("#cg22",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},32.400);tl.to("#cg22",{opacity:0,duration:0.1,ease:"power2.in"},33.550);tl.set("#cg22",{visibility:"hidden"},33.650);
+    tl.set("#cw22_0",{backgroundColor:"#40E0D0"},32.450);tl.set("#cw22_0",{backgroundColor:"rgba(64,224,208,0)"},32.540);
+    tl.set("#cw22_1",{backgroundColor:"#40E0D0"},32.540);tl.set("#cw22_1",{backgroundColor:"rgba(64,224,208,0)"},32.820);
+    tl.set("#cw22_2",{backgroundColor:"#40E0D0"},32.820);tl.set("#cw22_2",{backgroundColor:"rgba(64,224,208,0)"},33.050);
+    tl.set("#cw22_3",{backgroundColor:"#40E0D0"},33.050);tl.set("#cw22_3",{backgroundColor:"rgba(64,224,208,0)"},33.140);
+    tl.set("#cw22_4",{backgroundColor:"#40E0D0"},33.140);tl.set("#cw22_4",{backgroundColor:"rgba(64,224,208,0)"},33.550);
+    tl.set("#cg23",{visibility:"visible"},33.620);tl.fromTo("#cg23",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},33.620);tl.to("#cg23",{opacity:0,duration:0.1,ease:"power2.in"},33.770);tl.set("#cg23",{visibility:"hidden"},33.870);
+    tl.set("#cw23_0",{backgroundColor:"#40E0D0"},33.670);tl.set("#cw23_0",{backgroundColor:"rgba(64,224,208,0)"},33.770);
+    tl.set("#cg24",{visibility:"visible"},33.840);tl.fromTo("#cg24",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},33.840);tl.to("#cg24",{opacity:0,duration:0.1,ease:"power2.in"},34.760);tl.set("#cg24",{visibility:"hidden"},34.860);
+    tl.set("#cw24_0",{backgroundColor:"#40E0D0"},33.890);tl.set("#cw24_0",{backgroundColor:"rgba(64,224,208,0)"},34.120);
+    tl.set("#cw24_1",{backgroundColor:"#40E0D0"},34.120);tl.set("#cw24_1",{backgroundColor:"rgba(64,224,208,0)"},34.350);
+    tl.set("#cw24_2",{backgroundColor:"#40E0D0"},34.350);tl.set("#cw24_2",{backgroundColor:"rgba(64,224,208,0)"},34.540);
+    tl.set("#cw24_3",{backgroundColor:"#40E0D0"},34.540);tl.set("#cw24_3",{backgroundColor:"rgba(64,224,208,0)"},34.800);
+    tl.set("#cw24_4",{backgroundColor:"#40E0D0"},34.800);tl.set("#cw24_4",{backgroundColor:"rgba(64,224,208,0)"},34.850);
+    tl.set("#cg25",{visibility:"visible"},34.830);tl.fromTo("#cg25",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},34.830);tl.to("#cg25",{opacity:0,duration:0.1,ease:"power2.in"},37.110);tl.set("#cg25",{visibility:"hidden"},37.210);
+    tl.set("#cw25_0",{backgroundColor:"#40E0D0"},34.880);tl.set("#cw25_0",{backgroundColor:"rgba(64,224,208,0)"},35.980);
+    tl.set("#cw25_1",{backgroundColor:"#40E0D0"},35.980);tl.set("#cw25_1",{backgroundColor:"rgba(64,224,208,0)"},36.120);
+    tl.set("#cw25_2",{backgroundColor:"#40E0D0"},36.120);tl.set("#cw25_2",{backgroundColor:"rgba(64,224,208,0)"},36.520);
+    tl.set("#cw25_3",{backgroundColor:"#40E0D0"},36.520);tl.set("#cw25_3",{backgroundColor:"rgba(64,224,208,0)"},37.110);
+    tl.set("#cw25_4",{backgroundColor:"#40E0D0"},37.110);tl.set("#cw25_4",{backgroundColor:"rgba(64,224,208,0)"},37.160);
+    tl.set("#cg26",{visibility:"visible"},37.180);tl.fromTo("#cg26",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},37.180);tl.to("#cg26",{opacity:0,duration:0.1,ease:"power2.in"},39.470);tl.set("#cg26",{visibility:"hidden"},39.570);
+    tl.set("#cw26_0",{backgroundColor:"#40E0D0"},37.230);tl.set("#cw26_0",{backgroundColor:"rgba(64,224,208,0)"},37.740);
+    tl.set("#cw26_1",{backgroundColor:"#40E0D0"},37.740);tl.set("#cw26_1",{backgroundColor:"rgba(64,224,208,0)"},38.170);
+    tl.set("#cw26_2",{backgroundColor:"#40E0D0"},38.170);tl.set("#cw26_2",{backgroundColor:"rgba(64,224,208,0)"},38.560);
+    tl.set("#cw26_3",{backgroundColor:"#40E0D0"},38.560);tl.set("#cw26_3",{backgroundColor:"rgba(64,224,208,0)"},38.960);
+    tl.set("#cw26_4",{backgroundColor:"#40E0D0"},38.960);tl.set("#cw26_4",{backgroundColor:"rgba(64,224,208,0)"},39.470);
+    tl.set("#cg27",{visibility:"visible"},39.540);tl.fromTo("#cg27",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},39.540);tl.to("#cg27",{opacity:0,duration:0.1,ease:"power2.in"},40.900);tl.set("#cg27",{visibility:"hidden"},41.000);
+    tl.set("#cw27_0",{backgroundColor:"#40E0D0"},39.590);tl.set("#cw27_0",{backgroundColor:"rgba(64,224,208,0)"},39.790);
+    tl.set("#cw27_1",{backgroundColor:"#40E0D0"},39.790);tl.set("#cw27_1",{backgroundColor:"rgba(64,224,208,0)"},40.250);
+    tl.set("#cw27_2",{backgroundColor:"#40E0D0"},40.250);tl.set("#cw27_2",{backgroundColor:"rgba(64,224,208,0)"},40.400);
+    tl.set("#cw27_3",{backgroundColor:"#40E0D0"},40.400);tl.set("#cw27_3",{backgroundColor:"rgba(64,224,208,0)"},40.910);
+    tl.set("#cw27_4",{backgroundColor:"#40E0D0"},40.910);tl.set("#cw27_4",{backgroundColor:"rgba(64,224,208,0)"},40.960);
+    tl.set("#cg28",{visibility:"visible"},40.970);tl.fromTo("#cg28",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},40.970);tl.to("#cg28",{opacity:0,duration:0.1,ease:"power2.in"},43.280);tl.set("#cg28",{visibility:"hidden"},43.380);
+    tl.set("#cw28_0",{backgroundColor:"#40E0D0"},41.020);tl.set("#cw28_0",{backgroundColor:"rgba(64,224,208,0)"},41.220);
+    tl.set("#cw28_1",{backgroundColor:"#40E0D0"},41.220);tl.set("#cw28_1",{backgroundColor:"rgba(64,224,208,0)"},41.530);
+    tl.set("#cw28_2",{backgroundColor:"#40E0D0"},41.530);tl.set("#cw28_2",{backgroundColor:"rgba(64,224,208,0)"},41.840);
+    tl.set("#cw28_3",{backgroundColor:"#40E0D0"},41.840);tl.set("#cw28_3",{backgroundColor:"rgba(64,224,208,0)"},42.240);
+    tl.set("#cw28_4",{backgroundColor:"#40E0D0"},42.240);tl.set("#cw28_4",{backgroundColor:"rgba(64,224,208,0)"},43.280);
+    tl.set("#cg29",{visibility:"visible"},43.710);tl.fromTo("#cg29",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},43.710);tl.to("#cg29",{opacity:0,duration:0.1,ease:"power2.in"},44.740);tl.set("#cg29",{visibility:"hidden"},44.840);
+    tl.set("#cw29_0",{backgroundColor:"#40E0D0"},43.760);tl.set("#cw29_0",{backgroundColor:"rgba(64,224,208,0)"},43.810);
+    tl.set("#cw29_1",{backgroundColor:"#40E0D0"},43.760);tl.set("#cw29_1",{backgroundColor:"rgba(64,224,208,0)"},43.870);
+    tl.set("#cw29_2",{backgroundColor:"#40E0D0"},43.870);tl.set("#cw29_2",{backgroundColor:"rgba(64,224,208,0)"},43.930);
+    tl.set("#cw29_3",{backgroundColor:"#40E0D0"},43.930);tl.set("#cw29_3",{backgroundColor:"rgba(64,224,208,0)"},44.330);
+    tl.set("#cw29_4",{backgroundColor:"#40E0D0"},44.330);tl.set("#cw29_4",{backgroundColor:"rgba(64,224,208,0)"},44.740);
+    tl.set("#cg30",{visibility:"visible"},44.810);tl.fromTo("#cg30",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},44.810);tl.to("#cg30",{opacity:0,duration:0.1,ease:"power2.in"},46.930);tl.set("#cg30",{visibility:"hidden"},47.030);
+    tl.set("#cw30_0",{backgroundColor:"#40E0D0"},44.860);tl.set("#cw30_0",{backgroundColor:"rgba(64,224,208,0)"},45.140);
+    tl.set("#cw30_1",{backgroundColor:"#40E0D0"},45.140);tl.set("#cw30_1",{backgroundColor:"rgba(64,224,208,0)"},45.960);
+    tl.set("#cw30_2",{backgroundColor:"#40E0D0"},45.960);tl.set("#cw30_2",{backgroundColor:"rgba(64,224,208,0)"},46.010);
+    tl.set("#cw30_3",{backgroundColor:"#40E0D0"},45.990);tl.set("#cw30_3",{backgroundColor:"rgba(64,224,208,0)"},46.320);
+    tl.set("#cw30_4",{backgroundColor:"#40E0D0"},46.320);tl.set("#cw30_4",{backgroundColor:"rgba(64,224,208,0)"},46.930);
+    tl.set("#cg31",{visibility:"visible"},47.000);tl.fromTo("#cg31",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},47.000);tl.to("#cg31",{opacity:0,duration:0.1,ease:"power2.in"},49.240);tl.set("#cg31",{visibility:"hidden"},49.340);
+    tl.set("#cw31_0",{backgroundColor:"#40E0D0"},47.050);tl.set("#cw31_0",{backgroundColor:"rgba(64,224,208,0)"},47.140);
+    tl.set("#cw31_1",{backgroundColor:"#40E0D0"},47.140);tl.set("#cw31_1",{backgroundColor:"rgba(64,224,208,0)"},47.500);
+    tl.set("#cw31_2",{backgroundColor:"#40E0D0"},47.500);tl.set("#cw31_2",{backgroundColor:"rgba(64,224,208,0)"},48.190);
+    tl.set("#cw31_3",{backgroundColor:"#40E0D0"},48.190);tl.set("#cw31_3",{backgroundColor:"rgba(64,224,208,0)"},48.480);
+    tl.set("#cw31_4",{backgroundColor:"#40E0D0"},48.480);tl.set("#cw31_4",{backgroundColor:"rgba(64,224,208,0)"},49.240);
+    tl.set("#cg32",{visibility:"visible"},49.310);tl.fromTo("#cg32",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},49.310);tl.to("#cg32",{opacity:0,duration:0.1,ease:"power2.in"},50.000);tl.set("#cg32",{visibility:"hidden"},50.100);
+    tl.set("#cw32_0",{backgroundColor:"#40E0D0"},49.360);tl.set("#cw32_0",{backgroundColor:"rgba(64,224,208,0)"},50.000);
+    tl.set("#cg33",{visibility:"visible"},51.000);tl.fromTo("#cg33",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},51.000);tl.to("#cg33",{opacity:0,duration:0.1,ease:"power2.in"},52.510);tl.set("#cg33",{visibility:"hidden"},52.610);
+    tl.set("#cw33_0",{backgroundColor:"#40E0D0"},51.050);tl.set("#cw33_0",{backgroundColor:"rgba(64,224,208,0)"},51.200);
+    tl.set("#cw33_1",{backgroundColor:"#40E0D0"},51.200);tl.set("#cw33_1",{backgroundColor:"rgba(64,224,208,0)"},51.410);
+    tl.set("#cw33_2",{backgroundColor:"#40E0D0"},51.410);tl.set("#cw33_2",{backgroundColor:"rgba(64,224,208,0)"},51.980);
+    tl.set("#cw33_3",{backgroundColor:"#40E0D0"},51.980);tl.set("#cw33_3",{backgroundColor:"rgba(64,224,208,0)"},52.360);
+    tl.set("#cw33_4",{backgroundColor:"#40E0D0"},52.360);tl.set("#cw33_4",{backgroundColor:"rgba(64,224,208,0)"},52.510);
+    tl.set("#cg34",{visibility:"visible"},52.580);tl.fromTo("#cg34",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},52.580);tl.to("#cg34",{opacity:0,duration:0.1,ease:"power2.in"},54.050);tl.set("#cg34",{visibility:"hidden"},54.150);
+    tl.set("#cw34_0",{backgroundColor:"#40E0D0"},52.630);tl.set("#cw34_0",{backgroundColor:"rgba(64,224,208,0)"},53.110);
+    tl.set("#cw34_1",{backgroundColor:"#40E0D0"},53.110);tl.set("#cw34_1",{backgroundColor:"rgba(64,224,208,0)"},53.330);
+    tl.set("#cw34_2",{backgroundColor:"#40E0D0"},53.330);tl.set("#cw34_2",{backgroundColor:"rgba(64,224,208,0)"},53.560);
+    tl.set("#cw34_3",{backgroundColor:"#40E0D0"},53.560);tl.set("#cw34_3",{backgroundColor:"rgba(64,224,208,0)"},53.820);
+    tl.set("#cw34_4",{backgroundColor:"#40E0D0"},53.820);tl.set("#cw34_4",{backgroundColor:"rgba(64,224,208,0)"},54.050);
+    tl.set("#cg35",{visibility:"visible"},54.120);tl.fromTo("#cg35",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},54.120);tl.to("#cg35",{opacity:0,duration:0.1,ease:"power2.in"},55.500);tl.set("#cg35",{visibility:"hidden"},55.600);
+    tl.set("#cw35_0",{backgroundColor:"#40E0D0"},54.170);tl.set("#cw35_0",{backgroundColor:"rgba(64,224,208,0)"},54.460);
+    tl.set("#cw35_1",{backgroundColor:"#40E0D0"},54.460);tl.set("#cw35_1",{backgroundColor:"rgba(64,224,208,0)"},54.670);
+    tl.set("#cw35_2",{backgroundColor:"#40E0D0"},54.670);tl.set("#cw35_2",{backgroundColor:"rgba(64,224,208,0)"},55.300);
+    tl.set("#cw35_3",{backgroundColor:"#40E0D0"},55.300);tl.set("#cw35_3",{backgroundColor:"rgba(64,224,208,0)"},55.350);
+    tl.set("#cw35_4",{backgroundColor:"#40E0D0"},55.320);tl.set("#cw35_4",{backgroundColor:"rgba(64,224,208,0)"},55.500);
+    tl.set("#cg36",{visibility:"visible"},55.570);tl.fromTo("#cg36",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},55.570);tl.to("#cg36",{opacity:0,duration:0.1,ease:"power2.in"},58.120);tl.set("#cg36",{visibility:"hidden"},58.220);
+    tl.set("#cw36_0",{backgroundColor:"#40E0D0"},55.620);tl.set("#cw36_0",{backgroundColor:"rgba(64,224,208,0)"},56.250);
+    tl.set("#cw36_1",{backgroundColor:"#40E0D0"},56.250);tl.set("#cw36_1",{backgroundColor:"rgba(64,224,208,0)"},57.350);
+    tl.set("#cw36_2",{backgroundColor:"#40E0D0"},57.350);tl.set("#cw36_2",{backgroundColor:"rgba(64,224,208,0)"},57.840);
+    tl.set("#cw36_3",{backgroundColor:"#40E0D0"},57.840);tl.set("#cw36_3",{backgroundColor:"rgba(64,224,208,0)"},58.110);
+    tl.set("#cw36_4",{backgroundColor:"#40E0D0"},58.110);tl.set("#cw36_4",{backgroundColor:"rgba(64,224,208,0)"},58.160);
+    tl.set("#cg37",{visibility:"visible"},58.190);tl.fromTo("#cg37",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},58.190);tl.to("#cg37",{opacity:0,duration:0.1,ease:"power2.in"},59.620);tl.set("#cg37",{visibility:"hidden"},59.720);
+    tl.set("#cw37_0",{backgroundColor:"#40E0D0"},58.240);tl.set("#cw37_0",{backgroundColor:"rgba(64,224,208,0)"},58.490);
+    tl.set("#cw37_1",{backgroundColor:"#40E0D0"},58.490);tl.set("#cw37_1",{backgroundColor:"rgba(64,224,208,0)"},58.640);
+    tl.set("#cw37_2",{backgroundColor:"#40E0D0"},58.640);tl.set("#cw37_2",{backgroundColor:"rgba(64,224,208,0)"},58.970);
+    tl.set("#cw37_3",{backgroundColor:"#40E0D0"},58.970);tl.set("#cw37_3",{backgroundColor:"rgba(64,224,208,0)"},59.130);
+    tl.set("#cw37_4",{backgroundColor:"#40E0D0"},59.130);tl.set("#cw37_4",{backgroundColor:"rgba(64,224,208,0)"},59.620);
+    tl.set("#cg38",{visibility:"visible"},59.690);tl.fromTo("#cg38",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},59.690);tl.to("#cg38",{opacity:0,duration:0.1,ease:"power2.in"},62.080);tl.set("#cg38",{visibility:"hidden"},62.180);
+    tl.set("#cw38_0",{backgroundColor:"#40E0D0"},59.740);tl.set("#cw38_0",{backgroundColor:"rgba(64,224,208,0)"},60.790);
+    tl.set("#cw38_1",{backgroundColor:"#40E0D0"},60.790);tl.set("#cw38_1",{backgroundColor:"rgba(64,224,208,0)"},60.870);
+    tl.set("#cw38_2",{backgroundColor:"#40E0D0"},60.870);tl.set("#cw38_2",{backgroundColor:"rgba(64,224,208,0)"},61.740);
+    tl.set("#cw38_3",{backgroundColor:"#40E0D0"},61.740);tl.set("#cw38_3",{backgroundColor:"rgba(64,224,208,0)"},61.950);
+    tl.set("#cw38_4",{backgroundColor:"#40E0D0"},61.950);tl.set("#cw38_4",{backgroundColor:"rgba(64,224,208,0)"},62.080);
+    tl.set("#cg39",{visibility:"visible"},62.150);tl.fromTo("#cg39",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},62.150);tl.to("#cg39",{opacity:0,duration:0.1,ease:"power2.in"},63.960);tl.set("#cg39",{visibility:"hidden"},64.060);
+    tl.set("#cw39_0",{backgroundColor:"#40E0D0"},62.200);tl.set("#cw39_0",{backgroundColor:"rgba(64,224,208,0)"},62.450);
+    tl.set("#cw39_1",{backgroundColor:"#40E0D0"},62.450);tl.set("#cw39_1",{backgroundColor:"rgba(64,224,208,0)"},62.700);
+    tl.set("#cw39_2",{backgroundColor:"#40E0D0"},62.700);tl.set("#cw39_2",{backgroundColor:"rgba(64,224,208,0)"},63.200);
+    tl.set("#cw39_3",{backgroundColor:"#40E0D0"},63.200);tl.set("#cw39_3",{backgroundColor:"rgba(64,224,208,0)"},63.330);
+    tl.set("#cw39_4",{backgroundColor:"#40E0D0"},63.330);tl.set("#cw39_4",{backgroundColor:"rgba(64,224,208,0)"},63.960);
+    tl.set("#cg40",{visibility:"visible"},64.030);tl.fromTo("#cg40",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},64.030);tl.to("#cg40",{opacity:0,duration:0.1,ease:"power2.in"},65.560);tl.set("#cg40",{visibility:"hidden"},65.660);
+    tl.set("#cw40_0",{backgroundColor:"#40E0D0"},64.080);tl.set("#cw40_0",{backgroundColor:"rgba(64,224,208,0)"},64.800);
+    tl.set("#cw40_1",{backgroundColor:"#40E0D0"},64.800);tl.set("#cw40_1",{backgroundColor:"rgba(64,224,208,0)"},64.960);
+    tl.set("#cw40_2",{backgroundColor:"#40E0D0"},64.960);tl.set("#cw40_2",{backgroundColor:"rgba(64,224,208,0)"},65.120);
+    tl.set("#cw40_3",{backgroundColor:"#40E0D0"},65.120);tl.set("#cw40_3",{backgroundColor:"rgba(64,224,208,0)"},65.360);
+    tl.set("#cw40_4",{backgroundColor:"#40E0D0"},65.360);tl.set("#cw40_4",{backgroundColor:"rgba(64,224,208,0)"},65.560);
+    tl.set("#cg41",{visibility:"visible"},65.630);tl.fromTo("#cg41",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},65.630);tl.to("#cg41",{opacity:0,duration:0.1,ease:"power2.in"},67.320);tl.set("#cg41",{visibility:"hidden"},67.420);
+    tl.set("#cw41_0",{backgroundColor:"#40E0D0"},65.680);tl.set("#cw41_0",{backgroundColor:"rgba(64,224,208,0)"},66.060);
+    tl.set("#cw41_1",{backgroundColor:"#40E0D0"},66.060);tl.set("#cw41_1",{backgroundColor:"rgba(64,224,208,0)"},66.210);
+    tl.set("#cw41_2",{backgroundColor:"#40E0D0"},66.210);tl.set("#cw41_2",{backgroundColor:"rgba(64,224,208,0)"},66.810);
+    tl.set("#cw41_3",{backgroundColor:"#40E0D0"},66.810);tl.set("#cw41_3",{backgroundColor:"rgba(64,224,208,0)"},67.260);
+    tl.set("#cw41_4",{backgroundColor:"#40E0D0"},67.260);tl.set("#cw41_4",{backgroundColor:"rgba(64,224,208,0)"},67.320);
+    tl.set("#cg42",{visibility:"visible"},67.390);tl.fromTo("#cg42",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},67.390);tl.to("#cg42",{opacity:0,duration:0.1,ease:"power2.in"},69.010);tl.set("#cg42",{visibility:"hidden"},69.110);
+    tl.set("#cw42_0",{backgroundColor:"#40E0D0"},67.440);tl.set("#cw42_0",{backgroundColor:"rgba(64,224,208,0)"},67.900);
+    tl.set("#cw42_1",{backgroundColor:"#40E0D0"},67.900);tl.set("#cw42_1",{backgroundColor:"rgba(64,224,208,0)"},67.950);
+    tl.set("#cw42_2",{backgroundColor:"#40E0D0"},67.930);tl.set("#cw42_2",{backgroundColor:"rgba(64,224,208,0)"},68.150);
+    tl.set("#cw42_3",{backgroundColor:"#40E0D0"},68.150);tl.set("#cw42_3",{backgroundColor:"rgba(64,224,208,0)"},68.970);
+    tl.set("#cw42_4",{backgroundColor:"#40E0D0"},68.970);tl.set("#cw42_4",{backgroundColor:"rgba(64,224,208,0)"},69.020);
+    tl.set("#cg43",{visibility:"visible"},69.080);tl.fromTo("#cg43",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},69.080);tl.to("#cg43",{opacity:0,duration:0.1,ease:"power2.in"},70.600);tl.set("#cg43",{visibility:"hidden"},70.700);
+    tl.set("#cw43_0",{backgroundColor:"#40E0D0"},69.130);tl.set("#cw43_0",{backgroundColor:"rgba(64,224,208,0)"},69.800);
+    tl.set("#cw43_1",{backgroundColor:"#40E0D0"},69.800);tl.set("#cw43_1",{backgroundColor:"rgba(64,224,208,0)"},70.110);
+    tl.set("#cw43_2",{backgroundColor:"#40E0D0"},70.110);tl.set("#cw43_2",{backgroundColor:"rgba(64,224,208,0)"},70.400);
+    tl.set("#cw43_3",{backgroundColor:"#40E0D0"},70.400);tl.set("#cw43_3",{backgroundColor:"rgba(64,224,208,0)"},70.610);
+    tl.set("#cw43_4",{backgroundColor:"#40E0D0"},70.610);tl.set("#cw43_4",{backgroundColor:"rgba(64,224,208,0)"},70.660);
+    tl.set("#cg44",{visibility:"visible"},70.670);tl.fromTo("#cg44",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},70.670);tl.to("#cg44",{opacity:0,duration:0.1,ease:"power2.in"},71.960);tl.set("#cg44",{visibility:"hidden"},72.060);
+    tl.set("#cw44_0",{backgroundColor:"#40E0D0"},70.720);tl.set("#cw44_0",{backgroundColor:"rgba(64,224,208,0)"},70.970);
+    tl.set("#cw44_1",{backgroundColor:"#40E0D0"},70.970);tl.set("#cw44_1",{backgroundColor:"rgba(64,224,208,0)"},71.320);
+    tl.set("#cw44_2",{backgroundColor:"#40E0D0"},71.320);tl.set("#cw44_2",{backgroundColor:"rgba(64,224,208,0)"},71.600);
+    tl.set("#cw44_3",{backgroundColor:"#40E0D0"},71.600);tl.set("#cw44_3",{backgroundColor:"rgba(64,224,208,0)"},71.840);
+    tl.set("#cw44_4",{backgroundColor:"#40E0D0"},71.840);tl.set("#cw44_4",{backgroundColor:"rgba(64,224,208,0)"},71.960);
+    tl.set("#cg45",{visibility:"visible"},72.030);tl.fromTo("#cg45",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},72.030);tl.to("#cg45",{opacity:0,duration:0.1,ease:"power2.in"},73.700);tl.set("#cg45",{visibility:"hidden"},73.800);
+    tl.set("#cw45_0",{backgroundColor:"#40E0D0"},72.080);tl.set("#cw45_0",{backgroundColor:"rgba(64,224,208,0)"},72.700);
+    tl.set("#cw45_1",{backgroundColor:"#40E0D0"},72.700);tl.set("#cw45_1",{backgroundColor:"rgba(64,224,208,0)"},72.940);
+    tl.set("#cw45_2",{backgroundColor:"#40E0D0"},72.940);tl.set("#cw45_2",{backgroundColor:"rgba(64,224,208,0)"},73.100);
+    tl.set("#cw45_3",{backgroundColor:"#40E0D0"},73.100);tl.set("#cw45_3",{backgroundColor:"rgba(64,224,208,0)"},73.340);
+    tl.set("#cw45_4",{backgroundColor:"#40E0D0"},73.340);tl.set("#cw45_4",{backgroundColor:"rgba(64,224,208,0)"},73.700);
+    tl.set("#cg46",{visibility:"visible"},73.770);tl.fromTo("#cg46",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},73.770);tl.to("#cg46",{opacity:0,duration:0.1,ease:"power2.in"},74.890);tl.set("#cg46",{visibility:"hidden"},74.990);
+    tl.set("#cw46_0",{backgroundColor:"#40E0D0"},73.820);tl.set("#cw46_0",{backgroundColor:"rgba(64,224,208,0)"},73.900);
+    tl.set("#cw46_1",{backgroundColor:"#40E0D0"},73.900);tl.set("#cw46_1",{backgroundColor:"rgba(64,224,208,0)"},74.280);
+    tl.set("#cw46_2",{backgroundColor:"#40E0D0"},74.280);tl.set("#cw46_2",{backgroundColor:"rgba(64,224,208,0)"},74.380);
+    tl.set("#cw46_3",{backgroundColor:"#40E0D0"},74.380);tl.set("#cw46_3",{backgroundColor:"rgba(64,224,208,0)"},74.890);
+    tl.set("#cw46_4",{backgroundColor:"#40E0D0"},74.890);tl.set("#cw46_4",{backgroundColor:"rgba(64,224,208,0)"},74.940);
+    tl.set("#cg47",{visibility:"visible"},74.960);tl.fromTo("#cg47",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},74.960);tl.to("#cg47",{opacity:0,duration:0.1,ease:"power2.in"},75.910);tl.set("#cg47",{visibility:"hidden"},76.010);
+    tl.set("#cw47_0",{backgroundColor:"#40E0D0"},75.010);tl.set("#cw47_0",{backgroundColor:"rgba(64,224,208,0)"},75.910);
+    tl.set("#cg48",{visibility:"visible"},75.980);tl.fromTo("#cg48",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},75.980);tl.to("#cg48",{opacity:0,duration:0.1,ease:"power2.in"},77.570);tl.set("#cg48",{visibility:"hidden"},77.670);
+    tl.set("#cw48_0",{backgroundColor:"#40E0D0"},76.030);tl.set("#cw48_0",{backgroundColor:"rgba(64,224,208,0)"},76.080);
+    tl.set("#cw48_1",{backgroundColor:"#40E0D0"},76.040);tl.set("#cw48_1",{backgroundColor:"rgba(64,224,208,0)"},76.190);
+    tl.set("#cw48_2",{backgroundColor:"#40E0D0"},76.190);tl.set("#cw48_2",{backgroundColor:"rgba(64,224,208,0)"},76.580);
+    tl.set("#cw48_3",{backgroundColor:"#40E0D0"},76.580);tl.set("#cw48_3",{backgroundColor:"rgba(64,224,208,0)"},76.970);
+    tl.set("#cw48_4",{backgroundColor:"#40E0D0"},76.970);tl.set("#cw48_4",{backgroundColor:"rgba(64,224,208,0)"},77.570);
+    tl.set("#cg49",{visibility:"visible"},77.640);tl.fromTo("#cg49",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},77.640);tl.to("#cg49",{opacity:0,duration:0.1,ease:"power2.in"},79.620);tl.set("#cg49",{visibility:"hidden"},79.720);
+    tl.set("#cw49_0",{backgroundColor:"#40E0D0"},77.690);tl.set("#cw49_0",{backgroundColor:"rgba(64,224,208,0)"},77.950);
+    tl.set("#cw49_1",{backgroundColor:"#40E0D0"},77.950);tl.set("#cw49_1",{backgroundColor:"rgba(64,224,208,0)"},78.620);
+    tl.set("#cw49_2",{backgroundColor:"#40E0D0"},78.620);tl.set("#cw49_2",{backgroundColor:"rgba(64,224,208,0)"},78.910);
+    tl.set("#cw49_3",{backgroundColor:"#40E0D0"},78.910);tl.set("#cw49_3",{backgroundColor:"rgba(64,224,208,0)"},79.170);
+    tl.set("#cw49_4",{backgroundColor:"#40E0D0"},79.170);tl.set("#cw49_4",{backgroundColor:"rgba(64,224,208,0)"},79.620);
+    tl.set("#cg50",{visibility:"visible"},79.690);tl.fromTo("#cg50",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},79.690);tl.to("#cg50",{opacity:0,duration:0.1,ease:"power2.in"},80.180);tl.set("#cg50",{visibility:"hidden"},80.280);
+    tl.set("#cw50_0",{backgroundColor:"#40E0D0"},79.740);tl.set("#cw50_0",{backgroundColor:"rgba(64,224,208,0)"},80.180);
+    tl.set("#cg51",{visibility:"visible"},80.250);tl.fromTo("#cg51",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},80.250);tl.to("#cg51",{opacity:0,duration:0.1,ease:"power2.in"},81.840);tl.set("#cg51",{visibility:"hidden"},81.940);
+    tl.set("#cw51_0",{backgroundColor:"#40E0D0"},80.300);tl.set("#cw51_0",{backgroundColor:"rgba(64,224,208,0)"},80.810);
+    tl.set("#cw51_1",{backgroundColor:"#40E0D0"},80.810);tl.set("#cw51_1",{backgroundColor:"rgba(64,224,208,0)"},81.160);
+    tl.set("#cw51_2",{backgroundColor:"#40E0D0"},81.160);tl.set("#cw51_2",{backgroundColor:"rgba(64,224,208,0)"},81.370);
+    tl.set("#cw51_3",{backgroundColor:"#40E0D0"},81.370);tl.set("#cw51_3",{backgroundColor:"rgba(64,224,208,0)"},81.900);
+    tl.set("#cw51_4",{backgroundColor:"#40E0D0"},81.900);tl.set("#cw51_4",{backgroundColor:"rgba(64,224,208,0)"},81.950);
+    tl.set("#cg52",{visibility:"visible"},81.910);tl.fromTo("#cg52",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},81.910);tl.to("#cg52",{opacity:0,duration:0.1,ease:"power2.in"},83.590);tl.set("#cg52",{visibility:"hidden"},83.690);
+    tl.set("#cw52_0",{backgroundColor:"#40E0D0"},81.960);tl.set("#cw52_0",{backgroundColor:"rgba(64,224,208,0)"},82.330);
+    tl.set("#cw52_1",{backgroundColor:"#40E0D0"},82.330);tl.set("#cw52_1",{backgroundColor:"rgba(64,224,208,0)"},82.540);
+    tl.set("#cw52_2",{backgroundColor:"#40E0D0"},82.540);tl.set("#cw52_2",{backgroundColor:"rgba(64,224,208,0)"},82.750);
+    tl.set("#cw52_3",{backgroundColor:"#40E0D0"},82.750);tl.set("#cw52_3",{backgroundColor:"rgba(64,224,208,0)"},82.960);
+    tl.set("#cw52_4",{backgroundColor:"#40E0D0"},82.960);tl.set("#cw52_4",{backgroundColor:"rgba(64,224,208,0)"},83.590);
+    tl.set("#cg53",{visibility:"visible"},83.660);tl.fromTo("#cg53",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},83.660);tl.to("#cg53",{opacity:0,duration:0.1,ease:"power2.in"},86.260);tl.set("#cg53",{visibility:"hidden"},86.360);
+    tl.set("#cw53_0",{backgroundColor:"#40E0D0"},83.710);tl.set("#cw53_0",{backgroundColor:"rgba(64,224,208,0)"},84.030);
+    tl.set("#cw53_1",{backgroundColor:"#40E0D0"},84.030);tl.set("#cw53_1",{backgroundColor:"rgba(64,224,208,0)"},84.560);
+    tl.set("#cw53_2",{backgroundColor:"#40E0D0"},84.560);tl.set("#cw53_2",{backgroundColor:"rgba(64,224,208,0)"},84.960);
+    tl.set("#cw53_3",{backgroundColor:"#40E0D0"},84.960);tl.set("#cw53_3",{backgroundColor:"rgba(64,224,208,0)"},85.280);
+    tl.set("#cw53_4",{backgroundColor:"#40E0D0"},85.280);tl.set("#cw53_4",{backgroundColor:"rgba(64,224,208,0)"},86.260);
+    tl.set("#cg54",{visibility:"visible"},86.330);tl.fromTo("#cg54",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},86.330);tl.to("#cg54",{opacity:0,duration:0.1,ease:"power2.in"},87.390);tl.set("#cg54",{visibility:"hidden"},87.490);
+    tl.set("#cw54_0",{backgroundColor:"#40E0D0"},86.380);tl.set("#cw54_0",{backgroundColor:"rgba(64,224,208,0)"},86.530);
+    tl.set("#cw54_1",{backgroundColor:"#40E0D0"},86.530);tl.set("#cw54_1",{backgroundColor:"rgba(64,224,208,0)"},86.840);
+    tl.set("#cw54_2",{backgroundColor:"#40E0D0"},86.840);tl.set("#cw54_2",{backgroundColor:"rgba(64,224,208,0)"},87.390);
+    tl.set("#cg55",{visibility:"visible"},87.460);tl.fromTo("#cg55",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},87.460);tl.to("#cg55",{opacity:0,duration:0.1,ease:"power2.in"},88.490);tl.set("#cg55",{visibility:"hidden"},88.590);
+    tl.set("#cw55_0",{backgroundColor:"#40E0D0"},87.510);tl.set("#cw55_0",{backgroundColor:"rgba(64,224,208,0)"},87.560);
+    tl.set("#cw55_1",{backgroundColor:"#40E0D0"},87.530);tl.set("#cw55_1",{backgroundColor:"rgba(64,224,208,0)"},87.910);
+    tl.set("#cw55_2",{backgroundColor:"#40E0D0"},87.910);tl.set("#cw55_2",{backgroundColor:"rgba(64,224,208,0)"},87.960);
+    tl.set("#cw55_3",{backgroundColor:"#40E0D0"},87.960);tl.set("#cw55_3",{backgroundColor:"rgba(64,224,208,0)"},88.380);
+    tl.set("#cw55_4",{backgroundColor:"#40E0D0"},88.380);tl.set("#cw55_4",{backgroundColor:"rgba(64,224,208,0)"},88.490);
+    tl.set("#cg56",{visibility:"visible"},88.560);tl.fromTo("#cg56",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},88.560);tl.to("#cg56",{opacity:0,duration:0.1,ease:"power2.in"},90.020);tl.set("#cg56",{visibility:"hidden"},90.120);
+    tl.set("#cw56_0",{backgroundColor:"#40E0D0"},88.610);tl.set("#cw56_0",{backgroundColor:"rgba(64,224,208,0)"},88.910);
+    tl.set("#cw56_1",{backgroundColor:"#40E0D0"},88.910);tl.set("#cw56_1",{backgroundColor:"rgba(64,224,208,0)"},89.280);
+    tl.set("#cw56_2",{backgroundColor:"#40E0D0"},89.280);tl.set("#cw56_2",{backgroundColor:"rgba(64,224,208,0)"},89.710);
+    tl.set("#cw56_3",{backgroundColor:"#40E0D0"},89.710);tl.set("#cw56_3",{backgroundColor:"rgba(64,224,208,0)"},89.760);
+    tl.set("#cw56_4",{backgroundColor:"#40E0D0"},89.760);tl.set("#cw56_4",{backgroundColor:"rgba(64,224,208,0)"},90.020);
+    tl.set("#cg57",{visibility:"visible"},90.090);tl.fromTo("#cg57",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},90.090);tl.to("#cg57",{opacity:0,duration:0.1,ease:"power2.in"},91.370);tl.set("#cg57",{visibility:"hidden"},91.470);
+    tl.set("#cw57_0",{backgroundColor:"#40E0D0"},90.140);tl.set("#cw57_0",{backgroundColor:"rgba(64,224,208,0)"},90.370);
+    tl.set("#cw57_1",{backgroundColor:"#40E0D0"},90.370);tl.set("#cw57_1",{backgroundColor:"rgba(64,224,208,0)"},91.280);
+    tl.set("#cw57_2",{backgroundColor:"#40E0D0"},91.280);tl.set("#cw57_2",{backgroundColor:"rgba(64,224,208,0)"},91.370);
+    tl.set("#cg58",{visibility:"visible"},91.440);tl.fromTo("#cg58",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},91.440);tl.to("#cg58",{opacity:0,duration:0.1,ease:"power2.in"},91.800);tl.set("#cg58",{visibility:"hidden"},91.900);
+    tl.set("#cw58_0",{backgroundColor:"#40E0D0"},91.490);tl.set("#cw58_0",{backgroundColor:"rgba(64,224,208,0)"},91.800);
+    tl.set("#cg59",{visibility:"visible"},91.870);tl.fromTo("#cg59",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},91.870);tl.to("#cg59",{opacity:0,duration:0.1,ease:"power2.in"},93.170);tl.set("#cg59",{visibility:"hidden"},93.270);
+    tl.set("#cw59_0",{backgroundColor:"#40E0D0"},91.920);tl.set("#cw59_0",{backgroundColor:"rgba(64,224,208,0)"},92.180);
+    tl.set("#cw59_1",{backgroundColor:"#40E0D0"},92.180);tl.set("#cw59_1",{backgroundColor:"rgba(64,224,208,0)"},92.310);
+    tl.set("#cw59_2",{backgroundColor:"#40E0D0"},92.310);tl.set("#cw59_2",{backgroundColor:"rgba(64,224,208,0)"},93.020);
+    tl.set("#cw59_3",{backgroundColor:"#40E0D0"},93.020);tl.set("#cw59_3",{backgroundColor:"rgba(64,224,208,0)"},93.070);
+    tl.set("#cw59_4",{backgroundColor:"#40E0D0"},93.030);tl.set("#cw59_4",{backgroundColor:"rgba(64,224,208,0)"},93.170);
+    tl.set("#cg60",{visibility:"visible"},93.240);tl.fromTo("#cg60",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},93.240);tl.to("#cg60",{opacity:0,duration:0.1,ease:"power2.in"},94.870);tl.set("#cg60",{visibility:"hidden"},94.970);
+    tl.set("#cw60_0",{backgroundColor:"#40E0D0"},93.290);tl.set("#cw60_0",{backgroundColor:"rgba(64,224,208,0)"},93.570);
+    tl.set("#cw60_1",{backgroundColor:"#40E0D0"},93.570);tl.set("#cw60_1",{backgroundColor:"rgba(64,224,208,0)"},93.810);
+    tl.set("#cw60_2",{backgroundColor:"#40E0D0"},93.810);tl.set("#cw60_2",{backgroundColor:"rgba(64,224,208,0)"},94.270);
+    tl.set("#cw60_3",{backgroundColor:"#40E0D0"},94.270);tl.set("#cw60_3",{backgroundColor:"rgba(64,224,208,0)"},94.600);
+    tl.set("#cw60_4",{backgroundColor:"#40E0D0"},94.600);tl.set("#cw60_4",{backgroundColor:"rgba(64,224,208,0)"},94.870);
+    tl.set("#cg61",{visibility:"visible"},94.940);tl.fromTo("#cg61",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},94.940);tl.to("#cg61",{opacity:0,duration:0.1,ease:"power2.in"},96.230);tl.set("#cg61",{visibility:"hidden"},96.330);
+    tl.set("#cw61_0",{backgroundColor:"#40E0D0"},94.990);tl.set("#cw61_0",{backgroundColor:"rgba(64,224,208,0)"},95.210);
+    tl.set("#cw61_1",{backgroundColor:"#40E0D0"},95.210);tl.set("#cw61_1",{backgroundColor:"rgba(64,224,208,0)"},95.310);
+    tl.set("#cw61_2",{backgroundColor:"#40E0D0"},95.310);tl.set("#cw61_2",{backgroundColor:"rgba(64,224,208,0)"},95.640);
+    tl.set("#cw61_3",{backgroundColor:"#40E0D0"},95.640);tl.set("#cw61_3",{backgroundColor:"rgba(64,224,208,0)"},96.030);
+    tl.set("#cw61_4",{backgroundColor:"#40E0D0"},96.030);tl.set("#cw61_4",{backgroundColor:"rgba(64,224,208,0)"},96.230);
+    tl.set("#cg62",{visibility:"visible"},96.300);tl.fromTo("#cg62",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},96.300);tl.to("#cg62",{opacity:0,duration:0.1,ease:"power2.in"},97.410);tl.set("#cg62",{visibility:"hidden"},97.510);
+    tl.set("#cw62_0",{backgroundColor:"#40E0D0"},96.350);tl.set("#cw62_0",{backgroundColor:"rgba(64,224,208,0)"},96.640);
+    tl.set("#cw62_1",{backgroundColor:"#40E0D0"},96.640);tl.set("#cw62_1",{backgroundColor:"rgba(64,224,208,0)"},96.800);
+    tl.set("#cw62_2",{backgroundColor:"#40E0D0"},96.800);tl.set("#cw62_2",{backgroundColor:"rgba(64,224,208,0)"},96.960);
+    tl.set("#cw62_3",{backgroundColor:"#40E0D0"},96.960);tl.set("#cw62_3",{backgroundColor:"rgba(64,224,208,0)"},97.330);
+    tl.set("#cw62_4",{backgroundColor:"#40E0D0"},97.330);tl.set("#cw62_4",{backgroundColor:"rgba(64,224,208,0)"},97.410);
+    tl.set("#cg63",{visibility:"visible"},97.480);tl.fromTo("#cg63",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},97.480);tl.to("#cg63",{opacity:0,duration:0.1,ease:"power2.in"},98.950);tl.set("#cg63",{visibility:"hidden"},99.050);
+    tl.set("#cw63_0",{backgroundColor:"#40E0D0"},97.530);tl.set("#cw63_0",{backgroundColor:"rgba(64,224,208,0)"},98.060);
+    tl.set("#cw63_1",{backgroundColor:"#40E0D0"},98.060);tl.set("#cw63_1",{backgroundColor:"rgba(64,224,208,0)"},98.180);
+    tl.set("#cw63_2",{backgroundColor:"#40E0D0"},98.180);tl.set("#cw63_2",{backgroundColor:"rgba(64,224,208,0)"},98.550);
+    tl.set("#cw63_3",{backgroundColor:"#40E0D0"},98.550);tl.set("#cw63_3",{backgroundColor:"rgba(64,224,208,0)"},98.720);
+    tl.set("#cw63_4",{backgroundColor:"#40E0D0"},98.720);tl.set("#cw63_4",{backgroundColor:"rgba(64,224,208,0)"},98.950);
+    tl.set("#cg64",{visibility:"visible"},99.020);tl.fromTo("#cg64",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},99.020);tl.to("#cg64",{opacity:0,duration:0.1,ease:"power2.in"},100.130);tl.set("#cg64",{visibility:"hidden"},100.230);
+    tl.set("#cw64_0",{backgroundColor:"#40E0D0"},99.070);tl.set("#cw64_0",{backgroundColor:"rgba(64,224,208,0)"},99.190);
+    tl.set("#cw64_1",{backgroundColor:"#40E0D0"},99.190);tl.set("#cw64_1",{backgroundColor:"rgba(64,224,208,0)"},99.240);
+    tl.set("#cw64_2",{backgroundColor:"#40E0D0"},99.220);tl.set("#cw64_2",{backgroundColor:"rgba(64,224,208,0)"},99.640);
+    tl.set("#cw64_3",{backgroundColor:"#40E0D0"},99.640);tl.set("#cw64_3",{backgroundColor:"rgba(64,224,208,0)"},99.800);
+    tl.set("#cw64_4",{backgroundColor:"#40E0D0"},99.800);tl.set("#cw64_4",{backgroundColor:"rgba(64,224,208,0)"},100.130);
+    tl.set("#cg65",{visibility:"visible"},100.200);tl.fromTo("#cg65",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},100.200);tl.to("#cg65",{opacity:0,duration:0.1,ease:"power2.in"},101.630);tl.set("#cg65",{visibility:"hidden"},101.730);
+    tl.set("#cw65_0",{backgroundColor:"#40E0D0"},100.250);tl.set("#cw65_0",{backgroundColor:"rgba(64,224,208,0)"},100.430);
+    tl.set("#cw65_1",{backgroundColor:"#40E0D0"},100.430);tl.set("#cw65_1",{backgroundColor:"rgba(64,224,208,0)"},100.950);
+    tl.set("#cw65_2",{backgroundColor:"#40E0D0"},100.950);tl.set("#cw65_2",{backgroundColor:"rgba(64,224,208,0)"},101.040);
+    tl.set("#cw65_3",{backgroundColor:"#40E0D0"},101.040);tl.set("#cw65_3",{backgroundColor:"rgba(64,224,208,0)"},101.200);
+    tl.set("#cw65_4",{backgroundColor:"#40E0D0"},101.200);tl.set("#cw65_4",{backgroundColor:"rgba(64,224,208,0)"},101.630);
+    tl.set("#cg66",{visibility:"visible"},101.700);tl.fromTo("#cg66",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},101.700);tl.to("#cg66",{opacity:0,duration:0.1,ease:"power2.in"},103.310);tl.set("#cg66",{visibility:"hidden"},103.410);
+    tl.set("#cw66_0",{backgroundColor:"#40E0D0"},101.750);tl.set("#cw66_0",{backgroundColor:"rgba(64,224,208,0)"},102.290);
+    tl.set("#cw66_1",{backgroundColor:"#40E0D0"},102.290);tl.set("#cw66_1",{backgroundColor:"rgba(64,224,208,0)"},102.340);
+    tl.set("#cw66_2",{backgroundColor:"#40E0D0"},102.300);tl.set("#cw66_2",{backgroundColor:"rgba(64,224,208,0)"},102.600);
+    tl.set("#cw66_3",{backgroundColor:"#40E0D0"},102.600);tl.set("#cw66_3",{backgroundColor:"rgba(64,224,208,0)"},102.830);
+    tl.set("#cw66_4",{backgroundColor:"#40E0D0"},102.830);tl.set("#cw66_4",{backgroundColor:"rgba(64,224,208,0)"},103.310);
+    tl.set("#cg67",{visibility:"visible"},103.380);tl.fromTo("#cg67",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},103.380);tl.to("#cg67",{opacity:0,duration:0.1,ease:"power2.in"},104.410);tl.set("#cg67",{visibility:"hidden"},104.510);
+    tl.set("#cw67_0",{backgroundColor:"#40E0D0"},103.430);tl.set("#cw67_0",{backgroundColor:"rgba(64,224,208,0)"},103.480);
+    tl.set("#cw67_1",{backgroundColor:"#40E0D0"},103.450);tl.set("#cw67_1",{backgroundColor:"rgba(64,224,208,0)"},103.880);
+    tl.set("#cw67_2",{backgroundColor:"#40E0D0"},103.880);tl.set("#cw67_2",{backgroundColor:"rgba(64,224,208,0)"},104.070);
+    tl.set("#cw67_3",{backgroundColor:"#40E0D0"},104.070);tl.set("#cw67_3",{backgroundColor:"rgba(64,224,208,0)"},104.300);
+    tl.set("#cw67_4",{backgroundColor:"#40E0D0"},104.300);tl.set("#cw67_4",{backgroundColor:"rgba(64,224,208,0)"},104.410);
+    tl.set("#cg68",{visibility:"visible"},104.480);tl.fromTo("#cg68",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},104.480);tl.to("#cg68",{opacity:0,duration:0.1,ease:"power2.in"},105.720);tl.set("#cg68",{visibility:"hidden"},105.820);
+    tl.set("#cw68_0",{backgroundColor:"#40E0D0"},104.530);tl.set("#cw68_0",{backgroundColor:"rgba(64,224,208,0)"},104.840);
+    tl.set("#cw68_1",{backgroundColor:"#40E0D0"},104.840);tl.set("#cw68_1",{backgroundColor:"rgba(64,224,208,0)"},104.990);
+    tl.set("#cw68_2",{backgroundColor:"#40E0D0"},104.990);tl.set("#cw68_2",{backgroundColor:"rgba(64,224,208,0)"},105.200);
+    tl.set("#cw68_3",{backgroundColor:"#40E0D0"},105.200);tl.set("#cw68_3",{backgroundColor:"rgba(64,224,208,0)"},105.630);
+    tl.set("#cw68_4",{backgroundColor:"#40E0D0"},105.630);tl.set("#cw68_4",{backgroundColor:"rgba(64,224,208,0)"},105.720);
+    tl.set("#cg69",{visibility:"visible"},105.790);tl.fromTo("#cg69",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},105.790);tl.to("#cg69",{opacity:0,duration:0.1,ease:"power2.in"},107.090);tl.set("#cg69",{visibility:"hidden"},107.190);
+    tl.set("#cw69_0",{backgroundColor:"#40E0D0"},105.840);tl.set("#cw69_0",{backgroundColor:"rgba(64,224,208,0)"},106.010);
+    tl.set("#cw69_1",{backgroundColor:"#40E0D0"},106.010);tl.set("#cw69_1",{backgroundColor:"rgba(64,224,208,0)"},106.300);
+    tl.set("#cw69_2",{backgroundColor:"#40E0D0"},106.300);tl.set("#cw69_2",{backgroundColor:"rgba(64,224,208,0)"},106.800);
+    tl.set("#cw69_3",{backgroundColor:"#40E0D0"},106.800);tl.set("#cw69_3",{backgroundColor:"rgba(64,224,208,0)"},107.120);
+    tl.set("#cw69_4",{backgroundColor:"#40E0D0"},107.120);tl.set("#cw69_4",{backgroundColor:"rgba(64,224,208,0)"},107.170);
+    tl.set("#cg70",{visibility:"visible"},107.160);tl.fromTo("#cg70",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},107.160);tl.to("#cg70",{opacity:0,duration:0.1,ease:"power2.in"},108.000);tl.set("#cg70",{visibility:"hidden"},108.100);
+    tl.set("#cw70_0",{backgroundColor:"#40E0D0"},107.210);tl.set("#cw70_0",{backgroundColor:"rgba(64,224,208,0)"},107.400);
+    tl.set("#cw70_1",{backgroundColor:"#40E0D0"},107.400);tl.set("#cw70_1",{backgroundColor:"rgba(64,224,208,0)"},107.560);
+    tl.set("#cw70_2",{backgroundColor:"#40E0D0"},107.560);tl.set("#cw70_2",{backgroundColor:"rgba(64,224,208,0)"},108.000);
+    tl.set("#cg71",{visibility:"visible"},108.070);tl.fromTo("#cg71",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},108.070);tl.to("#cg71",{opacity:0,duration:0.1,ease:"power2.in"},108.560);tl.set("#cg71",{visibility:"hidden"},108.660);
+    tl.set("#cw71_0",{backgroundColor:"#40E0D0"},108.120);tl.set("#cw71_0",{backgroundColor:"rgba(64,224,208,0)"},108.170);
+    tl.set("#cw71_1",{backgroundColor:"#40E0D0"},108.140);tl.set("#cw71_1",{backgroundColor:"rgba(64,224,208,0)"},108.200);
+    tl.set("#cw71_2",{backgroundColor:"#40E0D0"},108.200);tl.set("#cw71_2",{backgroundColor:"rgba(64,224,208,0)"},108.360);
+    tl.set("#cw71_3",{backgroundColor:"#40E0D0"},108.360);tl.set("#cw71_3",{backgroundColor:"rgba(64,224,208,0)"},108.480);
+    tl.set("#cw71_4",{backgroundColor:"#40E0D0"},108.480);tl.set("#cw71_4",{backgroundColor:"rgba(64,224,208,0)"},108.560);
+    tl.set("#cg72",{visibility:"visible"},108.630);tl.fromTo("#cg72",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},108.630);tl.to("#cg72",{opacity:0,duration:0.1,ease:"power2.in"},109.040);tl.set("#cg72",{visibility:"hidden"},109.140);
+    tl.set("#cw72_0",{backgroundColor:"#40E0D0"},108.680);tl.set("#cw72_0",{backgroundColor:"rgba(64,224,208,0)"},109.040);
+    tl.set("#cg73",{visibility:"visible"},109.110);tl.fromTo("#cg73",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},109.110);tl.to("#cg73",{opacity:0,duration:0.1,ease:"power2.in"},109.760);tl.set("#cg73",{visibility:"hidden"},109.860);
+    tl.set("#cw73_0",{backgroundColor:"#40E0D0"},109.160);tl.set("#cw73_0",{backgroundColor:"rgba(64,224,208,0)"},109.240);
+    tl.set("#cw73_1",{backgroundColor:"#40E0D0"},109.240);tl.set("#cw73_1",{backgroundColor:"rgba(64,224,208,0)"},109.290);
+    tl.set("#cw73_2",{backgroundColor:"#40E0D0"},109.270);tl.set("#cw73_2",{backgroundColor:"rgba(64,224,208,0)"},109.490);
+    tl.set("#cw73_3",{backgroundColor:"#40E0D0"},109.490);tl.set("#cw73_3",{backgroundColor:"rgba(64,224,208,0)"},109.540);
+    tl.set("#cw73_4",{backgroundColor:"#40E0D0"},109.520);tl.set("#cw73_4",{backgroundColor:"rgba(64,224,208,0)"},109.760);
+    tl.set("#cg74",{visibility:"visible"},109.830);tl.fromTo("#cg74",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},109.830);tl.to("#cg74",{opacity:0,duration:0.1,ease:"power2.in"},110.720);tl.set("#cg74",{visibility:"hidden"},110.820);
+    tl.set("#cw74_0",{backgroundColor:"#40E0D0"},109.880);tl.set("#cw74_0",{backgroundColor:"rgba(64,224,208,0)"},110.080);
+    tl.set("#cw74_1",{backgroundColor:"#40E0D0"},110.080);tl.set("#cw74_1",{backgroundColor:"rgba(64,224,208,0)"},110.330);
+    tl.set("#cw74_2",{backgroundColor:"#40E0D0"},110.330);tl.set("#cw74_2",{backgroundColor:"rgba(64,224,208,0)"},110.400);
+    tl.set("#cw74_3",{backgroundColor:"#40E0D0"},110.400);tl.set("#cw74_3",{backgroundColor:"rgba(64,224,208,0)"},110.560);
+    tl.set("#cw74_4",{backgroundColor:"#40E0D0"},110.560);tl.set("#cw74_4",{backgroundColor:"rgba(64,224,208,0)"},110.720);
+    tl.set("#cg75",{visibility:"visible"},110.790);tl.fromTo("#cg75",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},110.790);tl.to("#cg75",{opacity:0,duration:0.1,ease:"power2.in"},111.540);tl.set("#cg75",{visibility:"hidden"},111.640);
+    tl.set("#cw75_0",{backgroundColor:"#40E0D0"},110.840);tl.set("#cw75_0",{backgroundColor:"rgba(64,224,208,0)"},111.540);
+    tl.set("#cg76",{visibility:"visible"},111.610);tl.fromTo("#cg76",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},111.610);tl.to("#cg76",{opacity:0,duration:0.1,ease:"power2.in"},112.680);tl.set("#cg76",{visibility:"hidden"},112.780);
+    tl.set("#cw76_0",{backgroundColor:"#40E0D0"},111.660);tl.set("#cw76_0",{backgroundColor:"rgba(64,224,208,0)"},111.890);
+    tl.set("#cw76_1",{backgroundColor:"#40E0D0"},111.890);tl.set("#cw76_1",{backgroundColor:"rgba(64,224,208,0)"},112.030);
+    tl.set("#cw76_2",{backgroundColor:"#40E0D0"},112.030);tl.set("#cw76_2",{backgroundColor:"rgba(64,224,208,0)"},112.290);
+    tl.set("#cw76_3",{backgroundColor:"#40E0D0"},112.290);tl.set("#cw76_3",{backgroundColor:"rgba(64,224,208,0)"},112.780);
+    tl.set("#cw76_4",{backgroundColor:"#40E0D0"},112.780);tl.set("#cw76_4",{backgroundColor:"rgba(64,224,208,0)"},112.830);
+    tl.set("#cg77",{visibility:"visible"},112.750);tl.fromTo("#cg77",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},112.750);tl.to("#cg77",{opacity:0,duration:0.1,ease:"power2.in"},114.150);tl.set("#cg77",{visibility:"hidden"},114.250);
+    tl.set("#cw77_0",{backgroundColor:"#40E0D0"},112.800);tl.set("#cw77_0",{backgroundColor:"rgba(64,224,208,0)"},113.240);
+    tl.set("#cw77_1",{backgroundColor:"#40E0D0"},113.240);tl.set("#cw77_1",{backgroundColor:"rgba(64,224,208,0)"},113.500);
+    tl.set("#cw77_2",{backgroundColor:"#40E0D0"},113.500);tl.set("#cw77_2",{backgroundColor:"rgba(64,224,208,0)"},113.850);
+    tl.set("#cw77_3",{backgroundColor:"#40E0D0"},113.850);tl.set("#cw77_3",{backgroundColor:"rgba(64,224,208,0)"},113.990);
+    tl.set("#cw77_4",{backgroundColor:"#40E0D0"},113.990);tl.set("#cw77_4",{backgroundColor:"rgba(64,224,208,0)"},114.150);
+    tl.set("#cg78",{visibility:"visible"},114.220);tl.fromTo("#cg78",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},114.220);tl.to("#cg78",{opacity:0,duration:0.1,ease:"power2.in"},115.270);tl.set("#cg78",{visibility:"hidden"},115.370);
+    tl.set("#cw78_0",{backgroundColor:"#40E0D0"},114.270);tl.set("#cw78_0",{backgroundColor:"rgba(64,224,208,0)"},114.480);
+    tl.set("#cw78_1",{backgroundColor:"#40E0D0"},114.480);tl.set("#cw78_1",{backgroundColor:"rgba(64,224,208,0)"},114.990);
+    tl.set("#cw78_2",{backgroundColor:"#40E0D0"},114.990);tl.set("#cw78_2",{backgroundColor:"rgba(64,224,208,0)"},115.040);
+    tl.set("#cw78_3",{backgroundColor:"#40E0D0"},115.040);tl.set("#cw78_3",{backgroundColor:"rgba(64,224,208,0)"},115.250);
+    tl.set("#cw78_4",{backgroundColor:"#40E0D0"},115.250);tl.set("#cw78_4",{backgroundColor:"rgba(64,224,208,0)"},115.300);
+    tl.set("#cg79",{visibility:"visible"},115.340);tl.fromTo("#cg79",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},115.340);tl.to("#cg79",{opacity:0,duration:0.1,ease:"power2.in"},117.720);tl.set("#cg79",{visibility:"hidden"},117.820);
+    tl.set("#cw79_0",{backgroundColor:"#40E0D0"},115.390);tl.set("#cw79_0",{backgroundColor:"rgba(64,224,208,0)"},115.460);
+    tl.set("#cw79_1",{backgroundColor:"#40E0D0"},115.460);tl.set("#cw79_1",{backgroundColor:"rgba(64,224,208,0)"},116.240);
+    tl.set("#cw79_2",{backgroundColor:"#40E0D0"},116.240);tl.set("#cw79_2",{backgroundColor:"rgba(64,224,208,0)"},117.340);
+    tl.set("#cw79_3",{backgroundColor:"#40E0D0"},117.340);tl.set("#cw79_3",{backgroundColor:"rgba(64,224,208,0)"},117.390);
+    tl.set("#cw79_4",{backgroundColor:"#40E0D0"},117.350);tl.set("#cw79_4",{backgroundColor:"rgba(64,224,208,0)"},117.720);
+    tl.set("#cg80",{visibility:"visible"},117.790);tl.fromTo("#cg80",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},117.790);tl.to("#cg80",{opacity:0,duration:0.1,ease:"power2.in"},119.700);tl.set("#cg80",{visibility:"hidden"},119.800);
+    tl.set("#cw80_0",{backgroundColor:"#40E0D0"},117.840);tl.set("#cw80_0",{backgroundColor:"rgba(64,224,208,0)"},118.090);
+    tl.set("#cw80_1",{backgroundColor:"#40E0D0"},118.090);tl.set("#cw80_1",{backgroundColor:"rgba(64,224,208,0)"},118.920);
+    tl.set("#cw80_2",{backgroundColor:"#40E0D0"},118.920);tl.set("#cw80_2",{backgroundColor:"rgba(64,224,208,0)"},119.080);
+    tl.set("#cw80_3",{backgroundColor:"#40E0D0"},119.080);tl.set("#cw80_3",{backgroundColor:"rgba(64,224,208,0)"},119.530);
+    tl.set("#cw80_4",{backgroundColor:"#40E0D0"},119.530);tl.set("#cw80_4",{backgroundColor:"rgba(64,224,208,0)"},119.700);
+    tl.set("#cg81",{visibility:"visible"},119.770);tl.fromTo("#cg81",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},119.770);tl.to("#cg81",{opacity:0,duration:0.1,ease:"power2.in"},122.540);tl.set("#cg81",{visibility:"hidden"},122.640);
+    tl.set("#cw81_0",{backgroundColor:"#40E0D0"},119.820);tl.set("#cw81_0",{backgroundColor:"rgba(64,224,208,0)"},120.670);
+    tl.set("#cw81_1",{backgroundColor:"#40E0D0"},120.670);tl.set("#cw81_1",{backgroundColor:"rgba(64,224,208,0)"},120.930);
+    tl.set("#cw81_2",{backgroundColor:"#40E0D0"},120.930);tl.set("#cw81_2",{backgroundColor:"rgba(64,224,208,0)"},121.550);
+    tl.set("#cw81_3",{backgroundColor:"#40E0D0"},121.550);tl.set("#cw81_3",{backgroundColor:"rgba(64,224,208,0)"},122.290);
+    tl.set("#cw81_4",{backgroundColor:"#40E0D0"},122.290);tl.set("#cw81_4",{backgroundColor:"rgba(64,224,208,0)"},122.540);
+    tl.set("#cg82",{visibility:"visible"},122.610);tl.fromTo("#cg82",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},122.610);tl.to("#cg82",{opacity:0,duration:0.1,ease:"power2.in"},123.770);tl.set("#cg82",{visibility:"hidden"},123.870);
+    tl.set("#cw82_0",{backgroundColor:"#40E0D0"},122.660);tl.set("#cw82_0",{backgroundColor:"rgba(64,224,208,0)"},123.770);
+    tl.set("#cg83",{visibility:"visible"},123.840);tl.fromTo("#cg83",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},123.840);tl.to("#cg83",{opacity:0,duration:0.1,ease:"power2.in"},125.520);tl.set("#cg83",{visibility:"hidden"},125.620);
+    tl.set("#cw83_0",{backgroundColor:"#40E0D0"},123.890);tl.set("#cw83_0",{backgroundColor:"rgba(64,224,208,0)"},124.190);
+    tl.set("#cw83_1",{backgroundColor:"#40E0D0"},124.190);tl.set("#cw83_1",{backgroundColor:"rgba(64,224,208,0)"},124.390);
+    tl.set("#cw83_2",{backgroundColor:"#40E0D0"},124.390);tl.set("#cw83_2",{backgroundColor:"rgba(64,224,208,0)"},124.800);
+    tl.set("#cw83_3",{backgroundColor:"#40E0D0"},124.800);tl.set("#cw83_3",{backgroundColor:"rgba(64,224,208,0)"},125.280);
+    tl.set("#cw83_4",{backgroundColor:"#40E0D0"},125.280);tl.set("#cw83_4",{backgroundColor:"rgba(64,224,208,0)"},125.520);
+    tl.set("#cg84",{visibility:"visible"},125.590);tl.fromTo("#cg84",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},125.590);tl.to("#cg84",{opacity:0,duration:0.1,ease:"power2.in"},126.260);tl.set("#cg84",{visibility:"hidden"},126.360);
+    tl.set("#cw84_0",{backgroundColor:"#40E0D0"},125.640);tl.set("#cw84_0",{backgroundColor:"rgba(64,224,208,0)"},126.260);
+    tl.set("#cg85",{visibility:"visible"},126.330);tl.fromTo("#cg85",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},126.330);tl.to("#cg85",{opacity:0,duration:0.1,ease:"power2.in"},127.860);tl.set("#cg85",{visibility:"hidden"},127.960);
+    tl.set("#cw85_0",{backgroundColor:"#40E0D0"},126.380);tl.set("#cw85_0",{backgroundColor:"rgba(64,224,208,0)"},126.630);
+    tl.set("#cw85_1",{backgroundColor:"#40E0D0"},126.630);tl.set("#cw85_1",{backgroundColor:"rgba(64,224,208,0)"},126.720);
+    tl.set("#cw85_2",{backgroundColor:"#40E0D0"},126.720);tl.set("#cw85_2",{backgroundColor:"rgba(64,224,208,0)"},127.500);
+    tl.set("#cw85_3",{backgroundColor:"#40E0D0"},127.500);tl.set("#cw85_3",{backgroundColor:"rgba(64,224,208,0)"},127.550);
+    tl.set("#cw85_4",{backgroundColor:"#40E0D0"},127.530);tl.set("#cw85_4",{backgroundColor:"rgba(64,224,208,0)"},127.860);
+    tl.set("#cg86",{visibility:"visible"},127.930);tl.fromTo("#cg86",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},127.930);tl.to("#cg86",{opacity:0,duration:0.1,ease:"power2.in"},130.110);tl.set("#cg86",{visibility:"hidden"},130.210);
+    tl.set("#cw86_0",{backgroundColor:"#40E0D0"},127.980);tl.set("#cw86_0",{backgroundColor:"rgba(64,224,208,0)"},128.570);
+    tl.set("#cw86_1",{backgroundColor:"#40E0D0"},128.570);tl.set("#cw86_1",{backgroundColor:"rgba(64,224,208,0)"},129.150);
+    tl.set("#cw86_2",{backgroundColor:"#40E0D0"},129.150);tl.set("#cw86_2",{backgroundColor:"rgba(64,224,208,0)"},129.420);
+    tl.set("#cw86_3",{backgroundColor:"#40E0D0"},129.420);tl.set("#cw86_3",{backgroundColor:"rgba(64,224,208,0)"},129.710);
+    tl.set("#cw86_4",{backgroundColor:"#40E0D0"},129.710);tl.set("#cw86_4",{backgroundColor:"rgba(64,224,208,0)"},130.110);
+    tl.set("#cg87",{visibility:"visible"},130.180);tl.fromTo("#cg87",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},130.180);tl.to("#cg87",{opacity:0,duration:0.1,ease:"power2.in"},131.560);tl.set("#cg87",{visibility:"hidden"},131.660);
+    tl.set("#cw87_0",{backgroundColor:"#40E0D0"},130.230);tl.set("#cw87_0",{backgroundColor:"rgba(64,224,208,0)"},130.500);
+    tl.set("#cw87_1",{backgroundColor:"#40E0D0"},130.500);tl.set("#cw87_1",{backgroundColor:"rgba(64,224,208,0)"},130.860);
+    tl.set("#cw87_2",{backgroundColor:"#40E0D0"},130.860);tl.set("#cw87_2",{backgroundColor:"rgba(64,224,208,0)"},131.310);
+    tl.set("#cw87_3",{backgroundColor:"#40E0D0"},131.310);tl.set("#cw87_3",{backgroundColor:"rgba(64,224,208,0)"},131.440);
+    tl.set("#cw87_4",{backgroundColor:"#40E0D0"},131.440);tl.set("#cw87_4",{backgroundColor:"rgba(64,224,208,0)"},131.560);
+    tl.set("#cg88",{visibility:"visible"},131.630);tl.fromTo("#cg88",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},131.630);tl.to("#cg88",{opacity:0,duration:0.1,ease:"power2.in"},133.250);tl.set("#cg88",{visibility:"hidden"},133.350);
+    tl.set("#cw88_0",{backgroundColor:"#40E0D0"},131.680);tl.set("#cw88_0",{backgroundColor:"rgba(64,224,208,0)"},132.510);
+    tl.set("#cw88_1",{backgroundColor:"#40E0D0"},132.510);tl.set("#cw88_1",{backgroundColor:"rgba(64,224,208,0)"},132.890);
+    tl.set("#cw88_2",{backgroundColor:"#40E0D0"},132.890);tl.set("#cw88_2",{backgroundColor:"rgba(64,224,208,0)"},133.120);
+    tl.set("#cw88_3",{backgroundColor:"#40E0D0"},133.120);tl.set("#cw88_3",{backgroundColor:"rgba(64,224,208,0)"},133.250);
+    tl.set("#cg89",{visibility:"visible"},133.320);tl.fromTo("#cg89",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},133.320);tl.to("#cg89",{opacity:0,duration:0.1,ease:"power2.in"},133.670);tl.set("#cg89",{visibility:"hidden"},133.770);
+    tl.set("#cw89_0",{backgroundColor:"#40E0D0"},133.370);tl.set("#cw89_0",{backgroundColor:"rgba(64,224,208,0)"},133.670);
+    tl.set("#cg90",{visibility:"visible"},133.740);tl.fromTo("#cg90",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},133.740);tl.to("#cg90",{opacity:0,duration:0.1,ease:"power2.in"},135.170);tl.set("#cg90",{visibility:"hidden"},135.270);
+    tl.set("#cw90_0",{backgroundColor:"#40E0D0"},133.790);tl.set("#cw90_0",{backgroundColor:"rgba(64,224,208,0)"},134.250);
+    tl.set("#cw90_1",{backgroundColor:"#40E0D0"},134.250);tl.set("#cw90_1",{backgroundColor:"rgba(64,224,208,0)"},134.400);
+    tl.set("#cw90_2",{backgroundColor:"#40E0D0"},134.400);tl.set("#cw90_2",{backgroundColor:"rgba(64,224,208,0)"},134.620);
+    tl.set("#cw90_3",{backgroundColor:"#40E0D0"},134.620);tl.set("#cw90_3",{backgroundColor:"rgba(64,224,208,0)"},134.850);
+    tl.set("#cw90_4",{backgroundColor:"#40E0D0"},134.850);tl.set("#cw90_4",{backgroundColor:"rgba(64,224,208,0)"},135.170);
+    tl.set("#cg91",{visibility:"visible"},135.240);tl.fromTo("#cg91",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},135.240);tl.to("#cg91",{opacity:0,duration:0.1,ease:"power2.in"},136.370);tl.set("#cg91",{visibility:"hidden"},136.470);
+    tl.set("#cw91_0",{backgroundColor:"#40E0D0"},135.290);tl.set("#cw91_0",{backgroundColor:"rgba(64,224,208,0)"},135.430);
+    tl.set("#cw91_1",{backgroundColor:"#40E0D0"},135.430);tl.set("#cw91_1",{backgroundColor:"rgba(64,224,208,0)"},135.880);
+    tl.set("#cw91_2",{backgroundColor:"#40E0D0"},135.880);tl.set("#cw91_2",{backgroundColor:"rgba(64,224,208,0)"},135.970);
+    tl.set("#cw91_3",{backgroundColor:"#40E0D0"},135.970);tl.set("#cw91_3",{backgroundColor:"rgba(64,224,208,0)"},136.270);
+    tl.set("#cw91_4",{backgroundColor:"#40E0D0"},136.270);tl.set("#cw91_4",{backgroundColor:"rgba(64,224,208,0)"},136.370);
+    tl.set("#cg92",{visibility:"visible"},136.440);tl.fromTo("#cg92",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},136.440);tl.to("#cg92",{opacity:0,duration:0.1,ease:"power2.in"},138.370);tl.set("#cg92",{visibility:"hidden"},138.470);
+    tl.set("#cw92_0",{backgroundColor:"#40E0D0"},136.490);tl.set("#cw92_0",{backgroundColor:"rgba(64,224,208,0)"},136.790);
+    tl.set("#cw92_1",{backgroundColor:"#40E0D0"},136.790);tl.set("#cw92_1",{backgroundColor:"rgba(64,224,208,0)"},137.230);
+    tl.set("#cw92_2",{backgroundColor:"#40E0D0"},137.230);tl.set("#cw92_2",{backgroundColor:"rgba(64,224,208,0)"},137.640);
+    tl.set("#cw92_3",{backgroundColor:"#40E0D0"},137.640);tl.set("#cw92_3",{backgroundColor:"rgba(64,224,208,0)"},137.830);
+    tl.set("#cw92_4",{backgroundColor:"#40E0D0"},137.830);tl.set("#cw92_4",{backgroundColor:"rgba(64,224,208,0)"},138.370);
+    tl.set("#cg93",{visibility:"visible"},138.440);tl.fromTo("#cg93",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},138.440);tl.to("#cg93",{opacity:0,duration:0.1,ease:"power2.in"},140.260);tl.set("#cg93",{visibility:"hidden"},140.360);
+    tl.set("#cw93_0",{backgroundColor:"#40E0D0"},138.490);tl.set("#cw93_0",{backgroundColor:"rgba(64,224,208,0)"},139.230);
+    tl.set("#cw93_1",{backgroundColor:"#40E0D0"},139.230);tl.set("#cw93_1",{backgroundColor:"rgba(64,224,208,0)"},139.840);
+    tl.set("#cw93_2",{backgroundColor:"#40E0D0"},139.840);tl.set("#cw93_2",{backgroundColor:"rgba(64,224,208,0)"},140.000);
+    tl.set("#cw93_3",{backgroundColor:"#40E0D0"},140.000);tl.set("#cw93_3",{backgroundColor:"rgba(64,224,208,0)"},140.250);
+    tl.set("#cw93_4",{backgroundColor:"#40E0D0"},140.250);tl.set("#cw93_4",{backgroundColor:"rgba(64,224,208,0)"},140.300);
+    tl.set("#cg94",{visibility:"visible"},140.330);tl.fromTo("#cg94",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},140.330);tl.to("#cg94",{opacity:0,duration:0.1,ease:"power2.in"},141.240);tl.set("#cg94",{visibility:"hidden"},141.340);
+    tl.set("#cw94_0",{backgroundColor:"#40E0D0"},140.380);tl.set("#cw94_0",{backgroundColor:"rgba(64,224,208,0)"},141.020);
+    tl.set("#cw94_1",{backgroundColor:"#40E0D0"},141.020);tl.set("#cw94_1",{backgroundColor:"rgba(64,224,208,0)"},141.100);
+    tl.set("#cw94_2",{backgroundColor:"#40E0D0"},141.100);tl.set("#cw94_2",{backgroundColor:"rgba(64,224,208,0)"},141.150);
+    tl.set("#cw94_3",{backgroundColor:"#40E0D0"},141.150);tl.set("#cw94_3",{backgroundColor:"rgba(64,224,208,0)"},141.230);
+    tl.set("#cw94_4",{backgroundColor:"#40E0D0"},141.230);tl.set("#cw94_4",{backgroundColor:"rgba(64,224,208,0)"},141.280);
+    tl.set("#cg95",{visibility:"visible"},141.310);tl.fromTo("#cg95",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},141.310);tl.to("#cg95",{opacity:0,duration:0.1,ease:"power2.in"},142.110);tl.set("#cg95",{visibility:"hidden"},142.210);
+    tl.set("#cw95_0",{backgroundColor:"#40E0D0"},141.360);tl.set("#cw95_0",{backgroundColor:"rgba(64,224,208,0)"},141.570);
+    tl.set("#cw95_1",{backgroundColor:"#40E0D0"},141.570);tl.set("#cw95_1",{backgroundColor:"rgba(64,224,208,0)"},141.820);
+    tl.set("#cw95_2",{backgroundColor:"#40E0D0"},141.820);tl.set("#cw95_2",{backgroundColor:"rgba(64,224,208,0)"},141.900);
+    tl.set("#cw95_3",{backgroundColor:"#40E0D0"},141.900);tl.set("#cw95_3",{backgroundColor:"rgba(64,224,208,0)"},142.160);
+    tl.set("#cw95_4",{backgroundColor:"#40E0D0"},142.160);tl.set("#cw95_4",{backgroundColor:"rgba(64,224,208,0)"},142.210);
+    tl.set("#cg96",{visibility:"visible"},142.180);tl.fromTo("#cg96",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},142.180);tl.to("#cg96",{opacity:0,duration:0.1,ease:"power2.in"},142.780);tl.set("#cg96",{visibility:"hidden"},142.880);
+    tl.set("#cw96_0",{backgroundColor:"#40E0D0"},142.230);tl.set("#cw96_0",{backgroundColor:"rgba(64,224,208,0)"},142.280);
+    tl.set("#cw96_1",{backgroundColor:"#40E0D0"},142.240);tl.set("#cw96_1",{backgroundColor:"rgba(64,224,208,0)"},142.320);
+    tl.set("#cw96_2",{backgroundColor:"#40E0D0"},142.320);tl.set("#cw96_2",{backgroundColor:"rgba(64,224,208,0)"},142.680);
+    tl.set("#cw96_3",{backgroundColor:"#40E0D0"},142.680);tl.set("#cw96_3",{backgroundColor:"rgba(64,224,208,0)"},142.820);
+    tl.set("#cw96_4",{backgroundColor:"#40E0D0"},142.820);tl.set("#cw96_4",{backgroundColor:"rgba(64,224,208,0)"},142.870);
+    tl.set("#cg97",{visibility:"visible"},142.850);tl.fromTo("#cg97",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},142.850);tl.to("#cg97",{opacity:0,duration:0.1,ease:"power2.in"},145.250);tl.set("#cg97",{visibility:"hidden"},145.350);
+    tl.set("#cw97_0",{backgroundColor:"#40E0D0"},142.900);tl.set("#cw97_0",{backgroundColor:"rgba(64,224,208,0)"},143.290);
+    tl.set("#cw97_1",{backgroundColor:"#40E0D0"},143.290);tl.set("#cw97_1",{backgroundColor:"rgba(64,224,208,0)"},143.520);
+    tl.set("#cw97_2",{backgroundColor:"#40E0D0"},143.520);tl.set("#cw97_2",{backgroundColor:"rgba(64,224,208,0)"},144.080);
+    tl.set("#cw97_3",{backgroundColor:"#40E0D0"},144.080);tl.set("#cw97_3",{backgroundColor:"rgba(64,224,208,0)"},145.180);
+    tl.set("#cw97_4",{backgroundColor:"#40E0D0"},145.180);tl.set("#cw97_4",{backgroundColor:"rgba(64,224,208,0)"},145.250);
+    tl.set("#cg98",{visibility:"visible"},145.320);tl.fromTo("#cg98",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},145.320);tl.to("#cg98",{opacity:0,duration:0.1,ease:"power2.in"},147.070);tl.set("#cg98",{visibility:"hidden"},147.170);
+    tl.set("#cw98_0",{backgroundColor:"#40E0D0"},145.370);tl.set("#cw98_0",{backgroundColor:"rgba(64,224,208,0)"},145.640);
+    tl.set("#cw98_1",{backgroundColor:"#40E0D0"},145.640);tl.set("#cw98_1",{backgroundColor:"rgba(64,224,208,0)"},146.310);
+    tl.set("#cw98_2",{backgroundColor:"#40E0D0"},146.310);tl.set("#cw98_2",{backgroundColor:"rgba(64,224,208,0)"},146.370);
+    tl.set("#cw98_3",{backgroundColor:"#40E0D0"},146.370);tl.set("#cw98_3",{backgroundColor:"rgba(64,224,208,0)"},147.070);
+    tl.set("#cg99",{visibility:"visible"},147.140);tl.fromTo("#cg99",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},147.140);tl.to("#cg99",{opacity:0,duration:0.1,ease:"power2.in"},147.620);tl.set("#cg99",{visibility:"hidden"},147.720);
+    tl.set("#cw99_0",{backgroundColor:"#40E0D0"},147.190);tl.set("#cw99_0",{backgroundColor:"rgba(64,224,208,0)"},147.620);
+    tl.set("#cg100",{visibility:"visible"},147.690);tl.fromTo("#cg100",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},147.690);tl.to("#cg100",{opacity:0,duration:0.1,ease:"power2.in"},148.810);tl.set("#cg100",{visibility:"hidden"},148.910);
+    tl.set("#cw100_0",{backgroundColor:"#40E0D0"},147.740);tl.set("#cw100_0",{backgroundColor:"rgba(64,224,208,0)"},148.200);
+    tl.set("#cw100_1",{backgroundColor:"#40E0D0"},148.200);tl.set("#cw100_1",{backgroundColor:"rgba(64,224,208,0)"},148.810);
+    tl.set("#cg101",{visibility:"visible"},148.880);tl.fromTo("#cg101",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},148.880);tl.to("#cg101",{opacity:0,duration:0.1,ease:"power2.in"},151.350);tl.set("#cg101",{visibility:"hidden"},151.450);
+    tl.set("#cw101_0",{backgroundColor:"#40E0D0"},148.930);tl.set("#cw101_0",{backgroundColor:"rgba(64,224,208,0)"},149.110);
+    tl.set("#cw101_1",{backgroundColor:"#40E0D0"},149.110);tl.set("#cw101_1",{backgroundColor:"rgba(64,224,208,0)"},149.570);
+    tl.set("#cw101_2",{backgroundColor:"#40E0D0"},149.570);tl.set("#cw101_2",{backgroundColor:"rgba(64,224,208,0)"},150.290);
+    tl.set("#cw101_3",{backgroundColor:"#40E0D0"},150.290);tl.set("#cw101_3",{backgroundColor:"rgba(64,224,208,0)"},150.580);
+    tl.set("#cw101_4",{backgroundColor:"#40E0D0"},150.580);tl.set("#cw101_4",{backgroundColor:"rgba(64,224,208,0)"},151.350);
+    tl.set("#cg102",{visibility:"visible"},151.420);tl.fromTo("#cg102",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},151.420);tl.to("#cg102",{opacity:0,duration:0.1,ease:"power2.in"},153.540);tl.set("#cg102",{visibility:"hidden"},153.640);
+    tl.set("#cw102_0",{backgroundColor:"#40E0D0"},151.470);tl.set("#cw102_0",{backgroundColor:"rgba(64,224,208,0)"},152.070);
+    tl.set("#cw102_1",{backgroundColor:"#40E0D0"},152.070);tl.set("#cw102_1",{backgroundColor:"rgba(64,224,208,0)"},152.340);
+    tl.set("#cw102_2",{backgroundColor:"#40E0D0"},152.340);tl.set("#cw102_2",{backgroundColor:"rgba(64,224,208,0)"},152.560);
+    tl.set("#cw102_3",{backgroundColor:"#40E0D0"},152.560);tl.set("#cw102_3",{backgroundColor:"rgba(64,224,208,0)"},152.900);
+    tl.set("#cw102_4",{backgroundColor:"#40E0D0"},152.900);tl.set("#cw102_4",{backgroundColor:"rgba(64,224,208,0)"},153.540);
+    tl.set("#cg103",{visibility:"visible"},153.610);tl.fromTo("#cg103",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},153.610);tl.to("#cg103",{opacity:0,duration:0.1,ease:"power2.in"},156.320);tl.set("#cg103",{visibility:"hidden"},156.420);
+    tl.set("#cw103_0",{backgroundColor:"#40E0D0"},153.660);tl.set("#cw103_0",{backgroundColor:"rgba(64,224,208,0)"},153.780);
+    tl.set("#cw103_1",{backgroundColor:"#40E0D0"},153.780);tl.set("#cw103_1",{backgroundColor:"rgba(64,224,208,0)"},154.790);
+    tl.set("#cw103_2",{backgroundColor:"#40E0D0"},154.790);tl.set("#cw103_2",{backgroundColor:"rgba(64,224,208,0)"},155.240);
+    tl.set("#cw103_3",{backgroundColor:"#40E0D0"},155.240);tl.set("#cw103_3",{backgroundColor:"rgba(64,224,208,0)"},156.000);
+    tl.set("#cw103_4",{backgroundColor:"#40E0D0"},156.000);tl.set("#cw103_4",{backgroundColor:"rgba(64,224,208,0)"},156.320);
+    tl.set("#cg104",{visibility:"visible"},156.390);tl.fromTo("#cg104",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},156.390);tl.to("#cg104",{opacity:0,duration:0.1,ease:"power2.in"},158.120);tl.set("#cg104",{visibility:"hidden"},158.220);
+    tl.set("#cw104_0",{backgroundColor:"#40E0D0"},156.440);tl.set("#cw104_0",{backgroundColor:"rgba(64,224,208,0)"},157.000);
+    tl.set("#cw104_1",{backgroundColor:"#40E0D0"},157.000);tl.set("#cw104_1",{backgroundColor:"rgba(64,224,208,0)"},157.370);
+    tl.set("#cw104_2",{backgroundColor:"#40E0D0"},157.370);tl.set("#cw104_2",{backgroundColor:"rgba(64,224,208,0)"},157.580);
+    tl.set("#cw104_3",{backgroundColor:"#40E0D0"},157.580);tl.set("#cw104_3",{backgroundColor:"rgba(64,224,208,0)"},158.100);
+    tl.set("#cw104_4",{backgroundColor:"#40E0D0"},158.100);tl.set("#cw104_4",{backgroundColor:"rgba(64,224,208,0)"},158.150);
+    tl.set("#cg105",{visibility:"visible"},158.190);tl.fromTo("#cg105",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},158.190);tl.to("#cg105",{opacity:0,duration:0.1,ease:"power2.in"},159.330);tl.set("#cg105",{visibility:"hidden"},159.430);
+    tl.set("#cw105_0",{backgroundColor:"#40E0D0"},158.240);tl.set("#cw105_0",{backgroundColor:"rgba(64,224,208,0)"},158.590);
+    tl.set("#cw105_1",{backgroundColor:"#40E0D0"},158.590);tl.set("#cw105_1",{backgroundColor:"rgba(64,224,208,0)"},158.800);
+    tl.set("#cw105_2",{backgroundColor:"#40E0D0"},158.800);tl.set("#cw105_2",{backgroundColor:"rgba(64,224,208,0)"},159.120);
+    tl.set("#cw105_3",{backgroundColor:"#40E0D0"},159.120);tl.set("#cw105_3",{backgroundColor:"rgba(64,224,208,0)"},159.330);
+    tl.set("#cg106",{visibility:"visible"},159.400);tl.fromTo("#cg106",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},159.400);tl.to("#cg106",{opacity:0,duration:0.1,ease:"power2.in"},160.410);tl.set("#cg106",{visibility:"hidden"},160.510);
+    tl.set("#cw106_0",{backgroundColor:"#40E0D0"},159.450);tl.set("#cw106_0",{backgroundColor:"rgba(64,224,208,0)"},159.630);
+    tl.set("#cw106_1",{backgroundColor:"#40E0D0"},159.630);tl.set("#cw106_1",{backgroundColor:"rgba(64,224,208,0)"},159.820);
+    tl.set("#cw106_2",{backgroundColor:"#40E0D0"},159.820);tl.set("#cw106_2",{backgroundColor:"rgba(64,224,208,0)"},160.280);
+    tl.set("#cw106_3",{backgroundColor:"#40E0D0"},160.280);tl.set("#cw106_3",{backgroundColor:"rgba(64,224,208,0)"},160.380);
+    tl.set("#cw106_4",{backgroundColor:"#40E0D0"},160.380);tl.set("#cw106_4",{backgroundColor:"rgba(64,224,208,0)"},160.430);
+    tl.set("#cg107",{visibility:"visible"},160.480);tl.fromTo("#cg107",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},160.480);tl.to("#cg107",{opacity:0,duration:0.1,ease:"power2.in"},160.940);tl.set("#cg107",{visibility:"hidden"},161.040);
+    tl.set("#cw107_0",{backgroundColor:"#40E0D0"},160.530);tl.set("#cw107_0",{backgroundColor:"rgba(64,224,208,0)"},160.940);
+    tl.set("#cg108",{visibility:"visible"},161.010);tl.fromTo("#cg108",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},161.010);tl.to("#cg108",{opacity:0,duration:0.1,ease:"power2.in"},162.450);tl.set("#cg108",{visibility:"hidden"},162.550);
+    tl.set("#cw108_0",{backgroundColor:"#40E0D0"},161.060);tl.set("#cw108_0",{backgroundColor:"rgba(64,224,208,0)"},161.510);
+    tl.set("#cw108_1",{backgroundColor:"#40E0D0"},161.510);tl.set("#cw108_1",{backgroundColor:"rgba(64,224,208,0)"},161.780);
+    tl.set("#cw108_2",{backgroundColor:"#40E0D0"},161.780);tl.set("#cw108_2",{backgroundColor:"rgba(64,224,208,0)"},162.080);
+    tl.set("#cw108_3",{backgroundColor:"#40E0D0"},162.080);tl.set("#cw108_3",{backgroundColor:"rgba(64,224,208,0)"},162.180);
+    tl.set("#cw108_4",{backgroundColor:"#40E0D0"},162.180);tl.set("#cw108_4",{backgroundColor:"rgba(64,224,208,0)"},162.450);
+    tl.set("#cg109",{visibility:"visible"},162.520);tl.fromTo("#cg109",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},162.520);tl.to("#cg109",{opacity:0,duration:0.1,ease:"power2.in"},163.590);tl.set("#cg109",{visibility:"hidden"},163.690);
+    tl.set("#cw109_0",{backgroundColor:"#40E0D0"},162.570);tl.set("#cw109_0",{backgroundColor:"rgba(64,224,208,0)"},162.630);
+    tl.set("#cw109_1",{backgroundColor:"#40E0D0"},162.630);tl.set("#cw109_1",{backgroundColor:"rgba(64,224,208,0)"},162.930);
+    tl.set("#cw109_2",{backgroundColor:"#40E0D0"},162.930);tl.set("#cw109_2",{backgroundColor:"rgba(64,224,208,0)"},163.030);
+    tl.set("#cw109_3",{backgroundColor:"#40E0D0"},163.030);tl.set("#cw109_3",{backgroundColor:"rgba(64,224,208,0)"},163.330);
+    tl.set("#cw109_4",{backgroundColor:"#40E0D0"},163.330);tl.set("#cw109_4",{backgroundColor:"rgba(64,224,208,0)"},163.590);
+    tl.set("#cg110",{visibility:"visible"},163.660);tl.fromTo("#cg110",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},163.660);tl.to("#cg110",{opacity:0,duration:0.1,ease:"power2.in"},163.880);tl.set("#cg110",{visibility:"hidden"},163.980);
+    tl.set("#cw110_0",{backgroundColor:"#40E0D0"},163.710);tl.set("#cw110_0",{backgroundColor:"rgba(64,224,208,0)"},163.760);
+    tl.set("#cw110_1",{backgroundColor:"#40E0D0"},163.760);tl.set("#cw110_1",{backgroundColor:"rgba(64,224,208,0)"},163.880);
+    tl.set("#cg111",{visibility:"visible"},163.950);tl.fromTo("#cg111",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},163.950);tl.to("#cg111",{opacity:0,duration:0.1,ease:"power2.in"},164.980);tl.set("#cg111",{visibility:"hidden"},165.080);
+    tl.set("#cw111_0",{backgroundColor:"#40E0D0"},164.000);tl.set("#cw111_0",{backgroundColor:"rgba(64,224,208,0)"},164.170);
+    tl.set("#cw111_1",{backgroundColor:"#40E0D0"},164.170);tl.set("#cw111_1",{backgroundColor:"rgba(64,224,208,0)"},164.340);
+    tl.set("#cw111_2",{backgroundColor:"#40E0D0"},164.340);tl.set("#cw111_2",{backgroundColor:"rgba(64,224,208,0)"},164.570);
+    tl.set("#cw111_3",{backgroundColor:"#40E0D0"},164.570);tl.set("#cw111_3",{backgroundColor:"rgba(64,224,208,0)"},165.010);
+    tl.set("#cw111_4",{backgroundColor:"#40E0D0"},165.010);tl.set("#cw111_4",{backgroundColor:"rgba(64,224,208,0)"},165.060);
+    tl.set("#cg112",{visibility:"visible"},165.050);tl.fromTo("#cg112",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},165.050);tl.to("#cg112",{opacity:0,duration:0.1,ease:"power2.in"},165.230);tl.set("#cg112",{visibility:"hidden"},165.330);
+    tl.set("#cw112_0",{backgroundColor:"#40E0D0"},165.100);tl.set("#cw112_0",{backgroundColor:"rgba(64,224,208,0)"},165.230);
+    tl.set("#cg113",{visibility:"visible"},165.300);tl.fromTo("#cg113",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},165.300);tl.to("#cg113",{opacity:0,duration:0.1,ease:"power2.in"},167.170);tl.set("#cg113",{visibility:"hidden"},167.270);
+    tl.set("#cw113_0",{backgroundColor:"#40E0D0"},165.350);tl.set("#cw113_0",{backgroundColor:"rgba(64,224,208,0)"},165.680);
+    tl.set("#cw113_1",{backgroundColor:"#40E0D0"},165.680);tl.set("#cw113_1",{backgroundColor:"rgba(64,224,208,0)"},166.220);
+    tl.set("#cw113_2",{backgroundColor:"#40E0D0"},166.220);tl.set("#cw113_2",{backgroundColor:"rgba(64,224,208,0)"},166.450);
+    tl.set("#cw113_3",{backgroundColor:"#40E0D0"},166.450);tl.set("#cw113_3",{backgroundColor:"rgba(64,224,208,0)"},166.710);
+    tl.set("#cw113_4",{backgroundColor:"#40E0D0"},166.710);tl.set("#cw113_4",{backgroundColor:"rgba(64,224,208,0)"},167.170);
+    tl.set("#cg114",{visibility:"visible"},167.240);tl.fromTo("#cg114",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},167.240);tl.to("#cg114",{opacity:0,duration:0.1,ease:"power2.in"},169.880);tl.set("#cg114",{visibility:"hidden"},169.980);
+    tl.set("#cw114_0",{backgroundColor:"#40E0D0"},167.290);tl.set("#cw114_0",{backgroundColor:"rgba(64,224,208,0)"},167.520);
+    tl.set("#cw114_1",{backgroundColor:"#40E0D0"},167.520);tl.set("#cw114_1",{backgroundColor:"rgba(64,224,208,0)"},168.430);
+    tl.set("#cw114_2",{backgroundColor:"#40E0D0"},168.430);tl.set("#cw114_2",{backgroundColor:"rgba(64,224,208,0)"},168.710);
+    tl.set("#cw114_3",{backgroundColor:"#40E0D0"},168.710);tl.set("#cw114_3",{backgroundColor:"rgba(64,224,208,0)"},169.200);
+    tl.set("#cw114_4",{backgroundColor:"#40E0D0"},169.200);tl.set("#cw114_4",{backgroundColor:"rgba(64,224,208,0)"},169.880);
+    tl.set("#cg115",{visibility:"visible"},169.950);tl.fromTo("#cg115",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},169.950);tl.to("#cg115",{opacity:0,duration:0.1,ease:"power2.in"},171.250);tl.set("#cg115",{visibility:"hidden"},171.350);
+    tl.set("#cw115_0",{backgroundColor:"#40E0D0"},170.000);tl.set("#cw115_0",{backgroundColor:"rgba(64,224,208,0)"},170.050);
+    tl.set("#cw115_1",{backgroundColor:"#40E0D0"},170.000);tl.set("#cw115_1",{backgroundColor:"rgba(64,224,208,0)"},170.380);
+    tl.set("#cw115_2",{backgroundColor:"#40E0D0"},170.380);tl.set("#cw115_2",{backgroundColor:"rgba(64,224,208,0)"},170.590);
+    tl.set("#cw115_3",{backgroundColor:"#40E0D0"},170.590);tl.set("#cw115_3",{backgroundColor:"rgba(64,224,208,0)"},170.680);
+    tl.set("#cw115_4",{backgroundColor:"#40E0D0"},170.680);tl.set("#cw115_4",{backgroundColor:"rgba(64,224,208,0)"},171.250);
+    tl.set("#cg116",{visibility:"visible"},171.320);tl.fromTo("#cg116",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},171.320);tl.to("#cg116",{opacity:0,duration:0.1,ease:"power2.in"},171.630);tl.set("#cg116",{visibility:"hidden"},171.730);
+    tl.set("#cw116_0",{backgroundColor:"#40E0D0"},171.370);tl.set("#cw116_0",{backgroundColor:"rgba(64,224,208,0)"},171.630);
+    tl.set("#cg117",{visibility:"visible"},171.700);tl.fromTo("#cg117",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},171.700);tl.to("#cg117",{opacity:0,duration:0.1,ease:"power2.in"},173.290);tl.set("#cg117",{visibility:"hidden"},173.390);
+    tl.set("#cw117_0",{backgroundColor:"#40E0D0"},171.750);tl.set("#cw117_0",{backgroundColor:"rgba(64,224,208,0)"},172.230);
+    tl.set("#cw117_1",{backgroundColor:"#40E0D0"},172.230);tl.set("#cw117_1",{backgroundColor:"rgba(64,224,208,0)"},172.450);
+    tl.set("#cw117_2",{backgroundColor:"#40E0D0"},172.450);tl.set("#cw117_2",{backgroundColor:"rgba(64,224,208,0)"},172.690);
+    tl.set("#cw117_3",{backgroundColor:"#40E0D0"},172.690);tl.set("#cw117_3",{backgroundColor:"rgba(64,224,208,0)"},173.290);
+    tl.set("#cw117_4",{backgroundColor:"#40E0D0"},173.290);tl.set("#cw117_4",{backgroundColor:"rgba(64,224,208,0)"},173.340);
+    tl.set("#cg118",{visibility:"visible"},173.360);tl.fromTo("#cg118",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},173.360);tl.to("#cg118",{opacity:0,duration:0.1,ease:"power2.in"},174.520);tl.set("#cg118",{visibility:"hidden"},174.620);
+    tl.set("#cw118_0",{backgroundColor:"#40E0D0"},173.410);tl.set("#cw118_0",{backgroundColor:"rgba(64,224,208,0)"},173.630);
+    tl.set("#cw118_1",{backgroundColor:"#40E0D0"},173.630);tl.set("#cw118_1",{backgroundColor:"rgba(64,224,208,0)"},173.850);
+    tl.set("#cw118_2",{backgroundColor:"#40E0D0"},173.850);tl.set("#cw118_2",{backgroundColor:"rgba(64,224,208,0)"},174.350);
+    tl.set("#cw118_3",{backgroundColor:"#40E0D0"},174.350);tl.set("#cw118_3",{backgroundColor:"rgba(64,224,208,0)"},174.520);
+    tl.set("#cg119",{visibility:"visible"},174.590);tl.fromTo("#cg119",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},174.590);tl.to("#cg119",{opacity:0,duration:0.1,ease:"power2.in"},178.120);tl.set("#cg119",{visibility:"hidden"},178.220);
+    tl.set("#cw119_0",{backgroundColor:"#40E0D0"},174.640);tl.set("#cw119_0",{backgroundColor:"rgba(64,224,208,0)"},175.440);
+    tl.set("#cw119_1",{backgroundColor:"#40E0D0"},175.440);tl.set("#cw119_1",{backgroundColor:"rgba(64,224,208,0)"},176.040);
+    tl.set("#cw119_2",{backgroundColor:"#40E0D0"},176.040);tl.set("#cw119_2",{backgroundColor:"rgba(64,224,208,0)"},177.280);
+    tl.set("#cw119_3",{backgroundColor:"#40E0D0"},177.280);tl.set("#cw119_3",{backgroundColor:"rgba(64,224,208,0)"},177.610);
+    tl.set("#cw119_4",{backgroundColor:"#40E0D0"},177.610);tl.set("#cw119_4",{backgroundColor:"rgba(64,224,208,0)"},178.120);
+    tl.set("#cg120",{visibility:"visible"},178.190);tl.fromTo("#cg120",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},178.190);tl.to("#cg120",{opacity:0,duration:0.1,ease:"power2.in"},179.260);tl.set("#cg120",{visibility:"hidden"},179.360);
+    tl.set("#cw120_0",{backgroundColor:"#40E0D0"},178.240);tl.set("#cw120_0",{backgroundColor:"rgba(64,224,208,0)"},178.590);
+    tl.set("#cw120_1",{backgroundColor:"#40E0D0"},178.590);tl.set("#cw120_1",{backgroundColor:"rgba(64,224,208,0)"},178.700);
+    tl.set("#cw120_2",{backgroundColor:"#40E0D0"},178.700);tl.set("#cw120_2",{backgroundColor:"rgba(64,224,208,0)"},179.270);
+    tl.set("#cw120_3",{backgroundColor:"#40E0D0"},179.270);tl.set("#cw120_3",{backgroundColor:"rgba(64,224,208,0)"},179.340);
+    tl.set("#cw120_4",{backgroundColor:"#40E0D0"},179.340);tl.set("#cw120_4",{backgroundColor:"rgba(64,224,208,0)"},179.390);
+    tl.set("#cg121",{visibility:"visible"},179.330);tl.fromTo("#cg121",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},179.330);tl.to("#cg121",{opacity:0,duration:0.1,ease:"power2.in"},179.600);tl.set("#cg121",{visibility:"hidden"},179.700);
+    tl.set("#cw121_0",{backgroundColor:"#40E0D0"},179.380);tl.set("#cw121_0",{backgroundColor:"rgba(64,224,208,0)"},179.600);
+    tl.set("#cg122",{visibility:"visible"},179.670);tl.fromTo("#cg122",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},179.670);tl.to("#cg122",{opacity:0,duration:0.1,ease:"power2.in"},180.570);tl.set("#cg122",{visibility:"hidden"},180.670);
+    tl.set("#cw122_0",{backgroundColor:"#40E0D0"},179.720);tl.set("#cw122_0",{backgroundColor:"rgba(64,224,208,0)"},179.830);
+    tl.set("#cw122_1",{backgroundColor:"#40E0D0"},179.830);tl.set("#cw122_1",{backgroundColor:"rgba(64,224,208,0)"},180.110);
+    tl.set("#cw122_2",{backgroundColor:"#40E0D0"},180.110);tl.set("#cw122_2",{backgroundColor:"rgba(64,224,208,0)"},180.470);
+    tl.set("#cw122_3",{backgroundColor:"#40E0D0"},180.470);tl.set("#cw122_3",{backgroundColor:"rgba(64,224,208,0)"},180.520);
+    tl.set("#cw122_4",{backgroundColor:"#40E0D0"},180.510);tl.set("#cw122_4",{backgroundColor:"rgba(64,224,208,0)"},180.570);
+    tl.set("#cg123",{visibility:"visible"},180.640);tl.fromTo("#cg123",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},180.640);tl.to("#cg123",{opacity:0,duration:0.1,ease:"power2.in"},181.180);tl.set("#cg123",{visibility:"hidden"},181.280);
+    tl.set("#cw123_0",{backgroundColor:"#40E0D0"},180.690);tl.set("#cw123_0",{backgroundColor:"rgba(64,224,208,0)"},180.920);
+    tl.set("#cw123_1",{backgroundColor:"#40E0D0"},180.920);tl.set("#cw123_1",{backgroundColor:"rgba(64,224,208,0)"},180.970);
+    tl.set("#cw123_2",{backgroundColor:"#40E0D0"},180.960);tl.set("#cw123_2",{backgroundColor:"rgba(64,224,208,0)"},181.180);
+    tl.set("#cg124",{visibility:"visible"},181.250);tl.fromTo("#cg124",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},181.250);tl.to("#cg124",{opacity:0,duration:0.1,ease:"power2.in"},182.550);tl.set("#cg124",{visibility:"hidden"},182.650);
+    tl.set("#cw124_0",{backgroundColor:"#40E0D0"},181.300);tl.set("#cw124_0",{backgroundColor:"rgba(64,224,208,0)"},181.530);
+    tl.set("#cw124_1",{backgroundColor:"#40E0D0"},181.530);tl.set("#cw124_1",{backgroundColor:"rgba(64,224,208,0)"},181.640);
+    tl.set("#cw124_2",{backgroundColor:"#40E0D0"},181.640);tl.set("#cw124_2",{backgroundColor:"rgba(64,224,208,0)"},182.220);
+    tl.set("#cw124_3",{backgroundColor:"#40E0D0"},182.220);tl.set("#cw124_3",{backgroundColor:"rgba(64,224,208,0)"},182.560);
+    tl.set("#cw124_4",{backgroundColor:"#40E0D0"},182.560);tl.set("#cw124_4",{backgroundColor:"rgba(64,224,208,0)"},182.610);
+    tl.set("#cg125",{visibility:"visible"},182.620);tl.fromTo("#cg125",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},182.620);tl.to("#cg125",{opacity:0,duration:0.1,ease:"power2.in"},183.010);tl.set("#cg125",{visibility:"hidden"},183.110);
+    tl.set("#cw125_0",{backgroundColor:"#40E0D0"},182.670);tl.set("#cw125_0",{backgroundColor:"rgba(64,224,208,0)"},183.010);
+    tl.set("#cg126",{visibility:"visible"},183.080);tl.fromTo("#cg126",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},183.080);tl.to("#cg126",{opacity:0,duration:0.1,ease:"power2.in"},184.590);tl.set("#cg126",{visibility:"hidden"},184.690);
+    tl.set("#cw126_0",{backgroundColor:"#40E0D0"},183.130);tl.set("#cw126_0",{backgroundColor:"rgba(64,224,208,0)"},183.200);
+    tl.set("#cw126_1",{backgroundColor:"#40E0D0"},183.200);tl.set("#cw126_1",{backgroundColor:"rgba(64,224,208,0)"},183.520);
+    tl.set("#cw126_2",{backgroundColor:"#40E0D0"},183.520);tl.set("#cw126_2",{backgroundColor:"rgba(64,224,208,0)"},184.060);
+    tl.set("#cw126_3",{backgroundColor:"#40E0D0"},184.060);tl.set("#cw126_3",{backgroundColor:"rgba(64,224,208,0)"},184.450);
+    tl.set("#cw126_4",{backgroundColor:"#40E0D0"},184.450);tl.set("#cw126_4",{backgroundColor:"rgba(64,224,208,0)"},184.590);
+    tl.set("#cg127",{visibility:"visible"},184.660);tl.fromTo("#cg127",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},184.660);tl.to("#cg127",{opacity:0,duration:0.1,ease:"power2.in"},186.150);tl.set("#cg127",{visibility:"hidden"},186.250);
+    tl.set("#cw127_0",{backgroundColor:"#40E0D0"},184.710);tl.set("#cw127_0",{backgroundColor:"rgba(64,224,208,0)"},185.190);
+    tl.set("#cw127_1",{backgroundColor:"#40E0D0"},185.190);tl.set("#cw127_1",{backgroundColor:"rgba(64,224,208,0)"},185.480);
+    tl.set("#cw127_2",{backgroundColor:"#40E0D0"},185.480);tl.set("#cw127_2",{backgroundColor:"rgba(64,224,208,0)"},185.870);
+    tl.set("#cw127_3",{backgroundColor:"#40E0D0"},185.870);tl.set("#cw127_3",{backgroundColor:"rgba(64,224,208,0)"},186.060);
+    tl.set("#cw127_4",{backgroundColor:"#40E0D0"},186.060);tl.set("#cw127_4",{backgroundColor:"rgba(64,224,208,0)"},186.150);
+    tl.set("#cg128",{visibility:"visible"},186.220);tl.fromTo("#cg128",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},186.220);tl.to("#cg128",{opacity:0,duration:0.1,ease:"power2.in"},188.210);tl.set("#cg128",{visibility:"hidden"},188.310);
+    tl.set("#cw128_0",{backgroundColor:"#40E0D0"},186.270);tl.set("#cw128_0",{backgroundColor:"rgba(64,224,208,0)"},186.510);
+    tl.set("#cw128_1",{backgroundColor:"#40E0D0"},186.510);tl.set("#cw128_1",{backgroundColor:"rgba(64,224,208,0)"},186.750);
+    tl.set("#cw128_2",{backgroundColor:"#40E0D0"},186.750);tl.set("#cw128_2",{backgroundColor:"rgba(64,224,208,0)"},187.390);
+    tl.set("#cw128_3",{backgroundColor:"#40E0D0"},187.390);tl.set("#cw128_3",{backgroundColor:"rgba(64,224,208,0)"},188.080);
+    tl.set("#cw128_4",{backgroundColor:"#40E0D0"},188.080);tl.set("#cw128_4",{backgroundColor:"rgba(64,224,208,0)"},188.210);
+    tl.set("#cg129",{visibility:"visible"},188.280);tl.fromTo("#cg129",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},188.280);tl.to("#cg129",{opacity:0,duration:0.1,ease:"power2.in"},189.450);tl.set("#cg129",{visibility:"hidden"},189.550);
+    tl.set("#cw129_0",{backgroundColor:"#40E0D0"},188.330);tl.set("#cw129_0",{backgroundColor:"rgba(64,224,208,0)"},188.610);
+    tl.set("#cw129_1",{backgroundColor:"#40E0D0"},188.610);tl.set("#cw129_1",{backgroundColor:"rgba(64,224,208,0)"},188.960);
+    tl.set("#cw129_2",{backgroundColor:"#40E0D0"},188.960);tl.set("#cw129_2",{backgroundColor:"rgba(64,224,208,0)"},189.010);
+    tl.set("#cw129_3",{backgroundColor:"#40E0D0"},188.990);tl.set("#cw129_3",{backgroundColor:"rgba(64,224,208,0)"},189.200);
+    tl.set("#cw129_4",{backgroundColor:"#40E0D0"},189.200);tl.set("#cw129_4",{backgroundColor:"rgba(64,224,208,0)"},189.450);
+    tl.set("#cg130",{visibility:"visible"},189.520);tl.fromTo("#cg130",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},189.520);tl.to("#cg130",{opacity:0,duration:0.1,ease:"power2.in"},190.400);tl.set("#cg130",{visibility:"hidden"},190.500);
+    tl.set("#cw130_0",{backgroundColor:"#40E0D0"},189.570);tl.set("#cw130_0",{backgroundColor:"rgba(64,224,208,0)"},189.730);
+    tl.set("#cw130_1",{backgroundColor:"#40E0D0"},189.730);tl.set("#cw130_1",{backgroundColor:"rgba(64,224,208,0)"},190.050);
+    tl.set("#cw130_2",{backgroundColor:"#40E0D0"},190.050);tl.set("#cw130_2",{backgroundColor:"rgba(64,224,208,0)"},190.300);
+    tl.set("#cw130_3",{backgroundColor:"#40E0D0"},190.300);tl.set("#cw130_3",{backgroundColor:"rgba(64,224,208,0)"},190.360);
+    tl.set("#cw130_4",{backgroundColor:"#40E0D0"},190.360);tl.set("#cw130_4",{backgroundColor:"rgba(64,224,208,0)"},190.410);
+    tl.set("#cg131",{visibility:"visible"},190.470);tl.fromTo("#cg131",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},190.470);tl.to("#cg131",{opacity:0,duration:0.1,ease:"power2.in"},191.820);tl.set("#cg131",{visibility:"hidden"},191.920);
+    tl.set("#cw131_0",{backgroundColor:"#40E0D0"},190.520);tl.set("#cw131_0",{backgroundColor:"rgba(64,224,208,0)"},190.850);
+    tl.set("#cw131_1",{backgroundColor:"#40E0D0"},190.850);tl.set("#cw131_1",{backgroundColor:"rgba(64,224,208,0)"},191.040);
+    tl.set("#cw131_2",{backgroundColor:"#40E0D0"},191.040);tl.set("#cw131_2",{backgroundColor:"rgba(64,224,208,0)"},191.430);
+    tl.set("#cw131_3",{backgroundColor:"#40E0D0"},191.430);tl.set("#cw131_3",{backgroundColor:"rgba(64,224,208,0)"},191.650);
+    tl.set("#cw131_4",{backgroundColor:"#40E0D0"},191.650);tl.set("#cw131_4",{backgroundColor:"rgba(64,224,208,0)"},191.820);
+    tl.set("#cg132",{visibility:"visible"},191.890);tl.fromTo("#cg132",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},191.890);tl.to("#cg132",{opacity:0,duration:0.1,ease:"power2.in"},192.920);tl.set("#cg132",{visibility:"hidden"},193.020);
+    tl.set("#cw132_0",{backgroundColor:"#40E0D0"},191.940);tl.set("#cw132_0",{backgroundColor:"rgba(64,224,208,0)"},192.140);
+    tl.set("#cw132_1",{backgroundColor:"#40E0D0"},192.140);tl.set("#cw132_1",{backgroundColor:"rgba(64,224,208,0)"},192.380);
+    tl.set("#cw132_2",{backgroundColor:"#40E0D0"},192.380);tl.set("#cw132_2",{backgroundColor:"rgba(64,224,208,0)"},192.600);
+    tl.set("#cw132_3",{backgroundColor:"#40E0D0"},192.600);tl.set("#cw132_3",{backgroundColor:"rgba(64,224,208,0)"},192.860);
+    tl.set("#cw132_4",{backgroundColor:"#40E0D0"},192.860);tl.set("#cw132_4",{backgroundColor:"rgba(64,224,208,0)"},192.920);
+    tl.set("#cg133",{visibility:"visible"},192.990);tl.fromTo("#cg133",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},192.990);tl.to("#cg133",{opacity:0,duration:0.1,ease:"power2.in"},195.590);tl.set("#cg133",{visibility:"hidden"},195.690);
+    tl.set("#cw133_0",{backgroundColor:"#40E0D0"},193.040);tl.set("#cw133_0",{backgroundColor:"rgba(64,224,208,0)"},193.680);
+    tl.set("#cw133_1",{backgroundColor:"#40E0D0"},193.680);tl.set("#cw133_1",{backgroundColor:"rgba(64,224,208,0)"},194.560);
+    tl.set("#cw133_2",{backgroundColor:"#40E0D0"},194.560);tl.set("#cw133_2",{backgroundColor:"rgba(64,224,208,0)"},194.900);
+    tl.set("#cw133_3",{backgroundColor:"#40E0D0"},194.900);tl.set("#cw133_3",{backgroundColor:"rgba(64,224,208,0)"},195.660);
+    tl.set("#cw133_4",{backgroundColor:"#40E0D0"},195.660);tl.set("#cw133_4",{backgroundColor:"rgba(64,224,208,0)"},195.710);
+    tl.set("#cg134",{visibility:"visible"},195.660);tl.fromTo("#cg134",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},195.660);tl.to("#cg134",{opacity:0,duration:0.1,ease:"power2.in"},197.340);tl.set("#cg134",{visibility:"hidden"},197.440);
+    tl.set("#cw134_0",{backgroundColor:"#40E0D0"},195.710);tl.set("#cw134_0",{backgroundColor:"rgba(64,224,208,0)"},196.210);
+    tl.set("#cw134_1",{backgroundColor:"#40E0D0"},196.210);tl.set("#cw134_1",{backgroundColor:"rgba(64,224,208,0)"},196.780);
+    tl.set("#cw134_2",{backgroundColor:"#40E0D0"},196.780);tl.set("#cw134_2",{backgroundColor:"rgba(64,224,208,0)"},196.830);
+    tl.set("#cw134_3",{backgroundColor:"#40E0D0"},196.790);tl.set("#cw134_3",{backgroundColor:"rgba(64,224,208,0)"},197.060);
+    tl.set("#cw134_4",{backgroundColor:"#40E0D0"},197.060);tl.set("#cw134_4",{backgroundColor:"rgba(64,224,208,0)"},197.340);
+    tl.set("#cg135",{visibility:"visible"},197.410);tl.fromTo("#cg135",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},197.410);tl.to("#cg135",{opacity:0,duration:0.1,ease:"power2.in"},199.560);tl.set("#cg135",{visibility:"hidden"},199.660);
+    tl.set("#cw135_0",{backgroundColor:"#40E0D0"},197.460);tl.set("#cw135_0",{backgroundColor:"rgba(64,224,208,0)"},197.850);
+    tl.set("#cw135_1",{backgroundColor:"#40E0D0"},197.850);tl.set("#cw135_1",{backgroundColor:"rgba(64,224,208,0)"},198.240);
+    tl.set("#cw135_2",{backgroundColor:"#40E0D0"},198.240);tl.set("#cw135_2",{backgroundColor:"rgba(64,224,208,0)"},198.980);
+    tl.set("#cw135_3",{backgroundColor:"#40E0D0"},198.980);tl.set("#cw135_3",{backgroundColor:"rgba(64,224,208,0)"},199.030);
+    tl.set("#cw135_4",{backgroundColor:"#40E0D0"},199.000);tl.set("#cw135_4",{backgroundColor:"rgba(64,224,208,0)"},199.560);
+    tl.set("#cg136",{visibility:"visible"},199.630);tl.fromTo("#cg136",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},199.630);tl.to("#cg136",{opacity:0,duration:0.1,ease:"power2.in"},201.050);tl.set("#cg136",{visibility:"hidden"},201.150);
+    tl.set("#cw136_0",{backgroundColor:"#40E0D0"},199.680);tl.set("#cw136_0",{backgroundColor:"rgba(64,224,208,0)"},200.170);
+    tl.set("#cw136_1",{backgroundColor:"#40E0D0"},200.170);tl.set("#cw136_1",{backgroundColor:"rgba(64,224,208,0)"},200.350);
+    tl.set("#cw136_2",{backgroundColor:"#40E0D0"},200.350);tl.set("#cw136_2",{backgroundColor:"rgba(64,224,208,0)"},200.790);
+    tl.set("#cw136_3",{backgroundColor:"#40E0D0"},200.790);tl.set("#cw136_3",{backgroundColor:"rgba(64,224,208,0)"},200.980);
+    tl.set("#cw136_4",{backgroundColor:"#40E0D0"},200.980);tl.set("#cw136_4",{backgroundColor:"rgba(64,224,208,0)"},201.050);
+    tl.set("#cg137",{visibility:"visible"},201.120);tl.fromTo("#cg137",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},201.120);tl.to("#cg137",{opacity:0,duration:0.1,ease:"power2.in"},201.790);tl.set("#cg137",{visibility:"hidden"},201.890);
+    tl.set("#cw137_0",{backgroundColor:"#40E0D0"},201.170);tl.set("#cw137_0",{backgroundColor:"rgba(64,224,208,0)"},201.220);
+    tl.set("#cw137_1",{backgroundColor:"#40E0D0"},201.210);tl.set("#cw137_1",{backgroundColor:"rgba(64,224,208,0)"},201.330);
+    tl.set("#cw137_2",{backgroundColor:"#40E0D0"},201.330);tl.set("#cw137_2",{backgroundColor:"rgba(64,224,208,0)"},201.530);
+    tl.set("#cw137_3",{backgroundColor:"#40E0D0"},201.530);tl.set("#cw137_3",{backgroundColor:"rgba(64,224,208,0)"},201.770);
+    tl.set("#cw137_4",{backgroundColor:"#40E0D0"},201.770);tl.set("#cw137_4",{backgroundColor:"rgba(64,224,208,0)"},201.820);
+    tl.set("#cg138",{visibility:"visible"},201.860);tl.fromTo("#cg138",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},201.860);tl.to("#cg138",{opacity:0,duration:0.1,ease:"power2.in"},203.320);tl.set("#cg138",{visibility:"hidden"},203.420);
+    tl.set("#cw138_0",{backgroundColor:"#40E0D0"},201.910);tl.set("#cw138_0",{backgroundColor:"rgba(64,224,208,0)"},202.400);
+    tl.set("#cw138_1",{backgroundColor:"#40E0D0"},202.400);tl.set("#cw138_1",{backgroundColor:"rgba(64,224,208,0)"},202.750);
+    tl.set("#cw138_2",{backgroundColor:"#40E0D0"},202.750);tl.set("#cw138_2",{backgroundColor:"rgba(64,224,208,0)"},202.970);
+    tl.set("#cw138_3",{backgroundColor:"#40E0D0"},202.970);tl.set("#cw138_3",{backgroundColor:"rgba(64,224,208,0)"},203.120);
+    tl.set("#cw138_4",{backgroundColor:"#40E0D0"},203.120);tl.set("#cw138_4",{backgroundColor:"rgba(64,224,208,0)"},203.320);
+    tl.set("#cg139",{visibility:"visible"},203.390);tl.fromTo("#cg139",{opacity:0},{opacity:1,duration:0.1,ease:"power2.out"},203.390);tl.to("#cg139",{opacity:0,duration:0.1,ease:"power2.in"},206.700);tl.set("#cg139",{visibility:"hidden"},206.800);
+    tl.set("#cw139_0",{backgroundColor:"#40E0D0"},203.440);tl.set("#cw139_0",{backgroundColor:"rgba(64,224,208,0)"},203.680);
+    tl.set("#cw139_1",{backgroundColor:"#40E0D0"},203.680);tl.set("#cw139_1",{backgroundColor:"rgba(64,224,208,0)"},204.080);
+    tl.set("#cw139_2",{backgroundColor:"#40E0D0"},204.080);tl.set("#cw139_2",{backgroundColor:"rgba(64,224,208,0)"},205.410);
+    tl.set("#cw139_3",{backgroundColor:"#40E0D0"},205.410);tl.set("#cw139_3",{backgroundColor:"rgba(64,224,208,0)"},206.700);
+    window.__timelines["cap"] = tl;
+  </script>
+</template>

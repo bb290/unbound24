@@ -1,0 +1,744 @@
+[
+ {
+  "id": "3fe9f6e8-8800-818a-8cfb-e2afaceff9d6",
+  "type": "callout",
+  "depth": 0,
+  "text": "Status: Draft. Seeded from the Own Your 24 workbook draft on 2026-10-19. Brittany reviews and corrects it (Project Tasks 1). Sections marked \"To fill\" are open rows in Project Tasks.",
+  "has_children": false
+ },
+ {
+  "id": "4169f6e8-8800-81b9-8ffd-c79197480176",
+  "type": "callout",
+  "depth": 0,
+  "text": "New brand, 2026-11-12 (Brittany). Name stays Unbound24. Text: black. Neutrals #c4c4c4 (gray) and #f8f0e3 (cream); accents #03c0e8 (cyan), #40e0d0 (turquoise) and #d3d3ff (lavender). The neutrals and accents are for backgrounds, blocks and highlights, never text. These replace the older colors on this page.",
+  "has_children": false
+ },
+ {
+  "id": "4169f6e8-8800-8126-9037-df1da46f5db7",
+  "type": "callout",
+  "depth": 0,
+  "text": "Inspiration (Brittany, 2026-11-12): strongbrandsocial.com. What we take is the feel, not the look: a huge, bold headline type, black for text, thin black lines framing sections, flat color blocks, real candid photos of people, plain short copy with personality. We use our own colors, type and layout; never copy their name, logo, wording or page.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-817c-b829-cf2409eb8930",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Who we are",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8141-819f-f9596174cb22",
+  "type": "paragraph",
+  "depth": 0,
+  "text": "Unbound24 is the public brand of Unbound Consulting LLC, run by Brittany French. We write as \"we\" in our internal docs. The Own Your 24 course and the website are written as \"I\" (Brittany, 2026-10-30).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81f8-8089-ed2cdc9aa93f",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Primary offer: Own Your 24",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8185-a2da-d50872eb8894",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What it helps: Reclaim time. Increase focus. Make progress. Simplify business and life.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81d3-a790-fd36ec79ff97",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "The result: business and personal growth.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81e7-98e4-c75e3c6e8b77",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Who it's for: 1-3 person service business owners, in the field or booked by appointment.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-813e-ab7d-fa1a38a31940",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What's different: we build their systems together. We don't say \"buy our system.\" We say \"show us what you've built so far,\" roll up our sleeves, and improve it systematically from the bottom up.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81fd-bb1b-cd3a25d01682",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "How it's delivered: To fill (Project Tasks 2).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81af-b135-c2ca09084e98",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Price: To fill (Project Tasks 3).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8155-893e-dfc7cc7dd525",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Values",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ce-9e4a-f9d2d89a4cd6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Freedom Through Discipline.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8154-b2d9-c37e378d90d6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Simple Wins.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-814b-8e5c-c74c0b5805ca",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "What we believe",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-814f-8030-d68152f1a78d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Solid documentation and data integrity make everything else easier.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8164-9c47-e9b30163a3dd",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Pre-qualifying leads and ungated pricing increase sales conversions: fewer leads, higher close rate.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8108-9533-d9a08a3b6b0b",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Everything works, even the thing that's not working.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8182-823a-c83111594038",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "You don't need a new system. You need to document the one you have.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8164-bb6d-cf3ef0c31294",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Systems and processes iterate over time. Change is constant; time is the most important resource.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81fb-92f3-f4ccde155354",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "What we're great at",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8199-90ae-e4e782bd7423",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Seeing how a business really runs and turning it into a clear, simple process.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-818a-b3d0-de2ff8833b04",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Making the overwhelming feel doable.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-817a-a9cc-e44d7ae516d7",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Documentation, workflows, and breaking big projects into steps a small team can actually finish.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-817e-916d-f07916baf2e5",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Creating systems around the founder's strengths.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8176-aad1-c6631402fc7b",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Taking work off their plate, iterating and building on what's already working.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8112-a5d6-e8dcc1006ce0",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Our ideal client",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ce-8598-d03ea479bd0e",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Who: a busy business owner up to their eyeballs in service delivery.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-815e-b01b-eb36a9486846",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Where they are: overwhelmed and anxious. Information overload. Task overload.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-814e-a103-e9abd1b0c51d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What they want: time, without sacrificing success.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8153-b4f9-d1feb48d0620",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What they're tired of: more information, more options, more to-dos and should-dos.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81dc-af93-d0c8481ec97e",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "How they think: it depends on the day, and swings between two extremes. \"Everything! We should revamp our sales process TODAY!\" and \"Nothing! We should go off grid.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-817a-a43a-dde837303b9b",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Objections: \"I don't have time to work on the business. I can barely keep up as is.\" \"I've paid for courses, templates, and software I never used, and I'm not repeating that.\" \"Nobody understands my business the way I do.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ca-b785-ec133f35c1e3",
+  "type": "heading_3",
+  "depth": 0,
+  "text": "What they say now",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8140-8231-de8571b6468a",
+  "type": "quote",
+  "depth": 0,
+  "text": "I have no time. I feel pulled in 15 directions. I'm so far behind. Everything goes through me. We need an overhaul.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-814e-a3b6-cae01378e133",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What's a day off? Yes, I can take a vacation, but I have to work 1-2 hours each day.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8133-aaf3-eeae91cc5df6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Cancelled plans with family and friends, again. Distracted when I'm with them, again. The invitations slowly stop.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81f6-8aa1-fe154d9838f5",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Website refresh, SOPs, a real CRM, a review system. I need to network!",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81f7-a2ae-f643ca998804",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Spent 6 hours building a Claude skill, forgot I had it for 2 months, and now it's outdated.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8120-b319-cb069fd2995d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Hundreds of bookmarked videos, posts, and screenshots. What was that video editing thing? I know it's here somewhere.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8186-a284-d24d5106f7c6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Took a course, spent the weekend implementing it, broke the systems by Tuesday.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81c1-8dc8-c186496666b6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Passwords in a Google Sheet, and some saved on my phone.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81f9-b0df-c9fff4b0002e",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "I need to hire an assistant, but I need SOPs so they know what to do, so I need to write my SOPs, but I'm so busy.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-810f-9f7d-d3417207e671",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "I tried a new system, and now I have 4 new apps and even less time.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81d7-8171-f5133eecc63a",
+  "type": "heading_3",
+  "depth": 0,
+  "text": "What they want to say",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8143-a447-dcd6fa003daa",
+  "type": "quote",
+  "depth": 0,
+  "text": "Regular, scheduled time off. Feel caught up and confident. Hand things off and life gets easier.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8114-adf6-cd2d690fef99",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "A Saturday where nobody needs me.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8177-8bf3-c045d5024e1f",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "I made progress on the most important work today. I'm on track.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8172-ad5e-f0160d34fe51",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "We fell short last month; I know why and I know how we're fixing it.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-819b-9724-d488d023d983",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "My team follows a checklist instead of calling or asking.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8162-877c-d7fb2fdce707",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "I can hire and onboard quickly.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-810c-892f-ef859382a662",
+  "type": "heading_3",
+  "depth": 0,
+  "text": "What's really going on",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-813e-9617-d97018f20cd6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Too many priorities, no order: they bounce between projects and finish none.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8114-804f-e418bdb9b837",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "The owner does everything: they work nights and weekends.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-819e-9098-d68cb162be58",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Nothing is written down, or it's outdated: the team calls with every question.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8174-97e7-f40dfed47218",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Numbers are a guess: they don't know which jobs make money.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81d9-8c52-cbccfd62e186",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Marketing is random: they post when there's time, which is never.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81b5-82ee-c14e7803f627",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "The shifts we create",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ad-bbe2-ec88f4761465",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "From \"I need to fix everything\" to \"I'm focused on this, 9am to 10am, Monday, Wednesday, Friday.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8156-97ab-ea19c226b955",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "From \"it's in my head\" to \"it's in the system.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8157-9ddf-dce88a81fb3a",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "From \"time off is a waste of time\" to \"rest and relationships improve the quality of my work.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81d0-969b-fe59985185f3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "From \"I need a complete overhaul before things get better\" to \"change is constant, and time is the most important resource.\" ",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8069-9f0c-e878ada7f3a3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Complete overhauls stall and leave more chaos behind; systems improve a little at a time.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81cc-8980-d9e98179e2dc",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "What we push back on",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ba-ab9b-e6d51fd1a90c",
+  "type": "paragraph",
+  "depth": 0,
+  "text": "Hustle culture: \"just work harder,\" \"no one cares,\" \"grind, baby, grind.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81e4-919f-dedbeab10ae6",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Who it's for, and who it's not for",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8111-954d-cd0fbf1bf502",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "For: 1-3 person service business owners in the field or booked by appointment.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8151-a8d8-d67ef71ae28d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Not for: people who want a done-for-you system. People who want an admin assistant (we're not sending your invoices). Anyone looking for another course to bookmark.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81cf-b119-e8a63a044d8a",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Lines we use (matches unbound24.com, 2026-10-31)",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-810a-a989-ebea2f614bba",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Headline: Business is Simple. Why is it so complicated?",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8173-83bb-c1faf0ac8777",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "What we do: Unbound24 helps service business operators break free from never-ending to-do lists & roller coaster sales.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8178-b94b-dae3fe53eb85",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Simple habits beat fancy marketing. Simple \u2260 easy.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81dd-811c-e3d27b6a84b3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "No need to get fancy. Stay focused on the core 4: fast answers, easy to find, earn reviews, follow up.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-814c-8d8d-cfcb134b0fc9",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "One brick at a time. Build it once. Brick by brick.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8194-b2a5-c3f580c972f1",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Nobody should need a $2,000 a month coach to write down how their own business works.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-81a3-943c-d3090779979d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Free. No sales call. No catch.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-816a-99a6-c59ac305955d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Your \"one day\" projects, finished one day at a time.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8153-bdb9-d1c9fdd6b539",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "I'm not selling you my system. I'll help you build yours.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-81b5-8b98-f59715cc9fb9",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Tired of more information and more to-dos? Reclaim your calendar and Own Your 24.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-813c-9145-c1bbec2593b3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Site and course lines are written as \"I\"; \"Unbound24 helps...\" is the one brand-voice line. No em dashes.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-8170-9750-fe13e664e588",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Voice",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ee-9a62-f59238ed2f92",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "\"I\" on the website and in the Own Your 24 course, because owners trust a real person who ran a shop (Brittany, 2026-10-30). \"We\" stays for internal docs.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81b5-ad21-fb4e900ef83d",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Plain, direct, calm. Make the overwhelming feel doable.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81c0-ba1c-e0e1effd6107",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "No em dashes in anything published.",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81a8-aaa5-cf57126f88c3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "No hype and no hustle language. No \"buy my system.\"",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81e5-82a4-e5ff5c86c22b",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "Visual identity (new direction, 2026-10-30)",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-81f5-b090-c8a1c4c50901",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Feel: simple and friendly, like Stan Store. Lots of white space, one idea per screen, one button per section. The opposite of the loud, complicated look most of our competitors use.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-814d-bc2b-eaed18fbd7a7",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Background: white #FFFFFF. Cards: soft grey #F3F6FA with a light outline #DCE3EC. Highlight cards: pale cyan #E6F9FC.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-8164-acca-ddac884d7ec2",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Accent: cyan #2ED4E8 (kept from before) for bricks, header bars, and buttons. Cyan text uses a deeper shade, #0B9CB0, so it's readable on white.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-81b1-801c-d3f8ec26d479",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Secondary accent (Brittany, 2026-10-30): magenta #E8399B to break up the cyan. Magenta text uses #C01F7A so it's readable on white; soft magenta #FDEAF4 for backgrounds. Rule of thumb: cyan for buttons, links you click, and progress; magenta for labels, subheadlines, dividers, and every other brick accent.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-81c5-b186-cd8221186449",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Text: navy #0A1C33. Muted text: #5B6B80.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-811b-8c04-e08e9f127ccd",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Font: Nunito (rounded and friendly), bold headlines.",
+  "has_children": false
+ },
+ {
+  "id": "4099f6e8-8800-8161-97a7-c62bf99184b3",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Status: in use on unbound24.com (live 2026-10-30), the competitive research deck, and the 'light brand test' copy of the 0.1 deck. The other course decks still use the old dark look.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8058-a2f8-e7a5d933ddb8",
+  "type": "heading_4",
+  "depth": 0,
+  "text": "Graphic Prompt",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-806b-a88e-e3697841a3e1",
+  "type": "paragraph",
+  "depth": 0,
+  "text": "Simple hand-drawn stick figure doodle, thick rounded navy (#0A1C33) marker lines, flat cyan (#2ED4E8) or magenta (#E8399B) accent fills on one to three objects, transparent background, no shading, no text, lots of white space, friendly and calm. a stick figure [Fill in the blank]",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-815c-ac32-d0db94dec7d8",
+  "type": "heading_4",
+  "depth": 0,
+  "text": "Diagram Prompt (on hold, not in use: first test on 2026-10-31 was too far off; stick figure drawings only for now)",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8126-9db4-ce65c790fdf6",
+  "type": "paragraph",
+  "depth": 0,
+  "text": "Simple hand-drawn explainer diagram in the same doodle style: thick rounded navy (#0A1C33) marker lines, transparent background. Flat fills only: cyan (#2ED4E8) for the main shapes or path, magenta (#E8399B) on one highlight, soft grey (#F3F6FA) inside boxes. Rounded boxes, simple hand-drawn arrows, and a small stick figure only where a person is involved. Labels are short (one to three words), bold rounded sans serif like Nunito, navy, spelled exactly as given, and no other text. No shading, no gradients, no 3D, no icons beyond simple doodles, lots of white space, reads left to right or top to bottom, friendly and calm. Diagram: [what it shows]. Labels, exactly: [label 1], [label 2], [label 3].",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-8180-904a-ebe4ad32ddeb",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Example: a simple house. Foundation row of four bricks labeled Delivery, Documentation, Data, Reputation. Three pillars on top labeled Attract, Convert, Retain. A cyan roof labeled Brand.",
+  "has_children": false
+ },
+ {
+  "id": "40a9f6e8-8800-814e-a1b2-e12ff9fa32f0",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Image models still misspell words sometimes. Keep labels to a few words, check every one, and for diagrams with lots of text, have Claude build it as a drawing on the website instead (exact text, and search engines can read it).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-810e-93fd-e863eb5a55d8",
+  "type": "heading_2",
+  "depth": 0,
+  "text": "To fill",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-811e-950d-d995ed6dbf43",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "How it's delivered and the price (Project Tasks 2 and 3).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81ac-8958-ccd23d6532e6",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Our story: before, stuck, the shift, after, the lesson (Project Tasks 4).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-819c-a771-db013ac396ae",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Client stories (Project Tasks 5) and results (Project Tasks 6).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-817d-8b18-d1de2b0330e7",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Worldview, standards, methods, and edge (Project Tasks 7).",
+  "has_children": false
+ },
+ {
+  "id": "3fe9f6e8-8800-81b8-aca1-ff37c52d5e7e",
+  "type": "bulleted_list_item",
+  "depth": 0,
+  "text": "Perspectives: the slightly controversial opinions that attract the right clients and repel the wrong ones (Project Tasks 8).",
+  "has_children": false
+ }
+]

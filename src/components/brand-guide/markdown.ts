@@ -1,7 +1,7 @@
 // Tiny reader for the limited Markdown the brand guide model is told to write: # / ## / ### headings, "- " bullets,
 // **bold** and plain paragraphs. Used by both the on-page preview and the PDF.
 
-export type Block = { type: "h1" | "h2" | "h3" | "li" | "p"; text: string };
+export type Block = { type: "h1" | "h2" | "h3" | "li" | "p"; text: string; sub?: boolean };
 export type Run = { text: string; bold: boolean };
 
 export function parse(md: string): Block[] {
@@ -17,7 +17,7 @@ export function parse(md: string): Block[] {
     const h = /^(#{1,3})\s+(.*)$/.exec(line);
     if (h) { flush(); out.push({ type: (["h1", "h2", "h3"] as const)[h[1].length - 1], text: h[2] }); continue; }
     const li = /^[-*•]\s+(.*)$/.exec(line) ?? /^\d+[.)]\s+(.*)$/.exec(line);
-    if (li) { flush(); out.push({ type: "li", text: li[1] }); continue; }
+    if (li) { flush(); out.push({ type: "li", text: li[1], sub: /^\s{2,}/.test(raw) }); continue; }
     para.push(line);
   }
   flush();

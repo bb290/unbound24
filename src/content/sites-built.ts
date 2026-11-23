@@ -1,0 +1,65 @@
+// "Sites I've Built" pop-up on /websites (Brittany, 2026-11-17). Proof: Brittany OK'd showing all five sites
+// (2026-11-17), but never their customers' or owners' details: previews are cropped above any reviews.
+// Service / Vibe / Components are Claude's drafts from each live site, for Brittany to edit. No status pills
+// (Brittany, 2026-11-17). D2 added 2026-11-17.
+// Previews: public/sites/<slug>.jpg (1280x530, top of the homepage).
+
+export type SiteBuilt = {
+  slug: string;
+  name: string;
+  url: string;
+  service: string;
+  vibe: string;
+  components: string[];
+};
+
+export const SITES_BUILT: SiteBuilt[] = [
+  {
+    slug: "french-roofing",
+    name: "French Roofing",
+    url: "https://frenchroofing.com",
+    service: "Roofing contractor, Damascus, Oregon",
+    vibe: "Hometown, friendly, straight-talking",
+    components: ["Instant roof estimate", "Before/after slider", "Service area pages", "Roofing guides", "Recent work feed", "Reviews"],
+  },
+  {
+    slug: "sagareus",
+    name: "Sagareus",
+    url: "https://www.sagareus.com",
+    service: "Property management, Seattle and the Puget Sound",
+    vibe: "Calm, clear, owner-first",
+    components: ["Free owner audit", "Proposal request", "Pricing page", "City pages for 31 cities", "Google reviews", "FAQ answers"],
+  },
+  {
+    slug: "d2-scheduler",
+    name: "D² Scheduler",
+    url: "https://www.d2scheduling.com",
+    service: "Production scheduling software for shops on OrderTime",
+    vibe: "Practical, shop-floor plain, confident",
+    components: ["Product tour", "Demo request", "45-day free trial", "Live app preview", "Integrations page", "Pricing page", "FAQ"],
+  },
+  {
+    slug: "malorie-moon",
+    name: "Malorie Moon Sleep Consulting",
+    url: "https://maloriemoonsleep.com",
+    service: "Pediatric sleep consulting, online across the US",
+    vibe: "Gentle, warm, reassuring",
+    components: ["Free sleep assessment", "Free sleep guide", "Reviews page", "Story-led about page", "FAQ"],
+  },
+  {
+    slug: "rise-counselling",
+    name: "Rise Counselling",
+    url: "https://rise-counselling.com",
+    service: "Trauma-focused counselling and EMDR, online across Australia",
+    vibe: "Calm, grounded, unhurried",
+    components: ["2-minute reflection", "Online booking", "Services pages", "Questions page"],
+  },
+  {
+    slug: "unbound24",
+    name: "Unbound24",
+    url: "https://www.unbound24.com",
+    service: "Marketing for local service businesses",
+    vibe: "Playful, bold, no fluff",
+    components: ["Free brand guide", "Chaos Spinner", "Value Vending Machine", "Beast Mode timer", "Free courses"],
+  },
+];

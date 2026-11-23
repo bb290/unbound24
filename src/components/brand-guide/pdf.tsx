@@ -1,6 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, pdf } from "@react-pdf/renderer";
 import { PROMPTS, PROMPTS_INTRO } from "@/content/brand-guide";
-import { parse, runs } from "./markdown";
+import { parse, runs, type Block } from "./markdown";
 
 // The brand guide PDF. Loaded only when someone clicks "Download PDF" (keeps react-pdf out of the page bundle).
 
@@ -51,18 +51,28 @@ function GuideDoc({ markdown }: { markdown: string }) {
           <Text style={s.kicker}>Brand guide</Text>
           <Text style={s.h1}>{title}</Text>
         </View>
-        {body.map((b, i) =>
-          b.type === "h2" ? <Text key={i} style={s.h2} minPresenceAhead={40}>{b.text}</Text>
-          : b.type === "h3" ? <Text key={i} style={s.h3} minPresenceAhead={30}>{b.text}</Text>
-          : b.type === "li" ? <View key={i} style={s.li} wrap={false}><Text style={s.dot}>•</Text><Text style={s.liText}><Rich text={b.text} /></Text></View>
-          : <Text key={i} style={s.p}><Rich text={b.text} /></Text>,
-        )}
+        {body.map((b, i) => {
+          if (i > 0 && (body[i - 1].type === "h2" || body[i - 1].type === "h3")) return null; // drawn with its heading
+          const el = (x: Block, k: number) =>
+            x.type === "h2" ? <Text key={k} style={s.h2}>{x.text}</Text>
+            : x.type === "h3" ? <Text key={k} style={s.h3}>{x.text}</Text>
+            : x.type === "li" ? <View key={k} style={x.sub ? [s.li, { marginLeft: 16 }] : s.li} wrap={false}><Text style={s.dot}>•</Text><Text style={s.liText}><Rich text={x.text} /></Text></View>
+            : <Text key={k} style={s.p}><Rich text={x.text} /></Text>;
+          // A heading never sits alone at the bottom of a page: it moves with the block after it.
+          if ((b.type === "h2" || b.type === "h3") && body[i + 1]) {
+            const next = body[i + 1];
+            const pair = [el(b, 0), el(next, 1)];
+            if (next.type === "h2" || next.type === "h3") return <View key={i}>{pair}</View>;
+            return <View key={i} wrap={false}>{pair}</View>;
+          }
+          return el(b, i);
+        })}
         <Footer />
       </Page>
       <Page size="LETTER" style={s.page}>
         <View style={s.band}>
           <Text style={s.kicker}>Put it to work</Text>
-          <Text style={s.h1}>Prompts to use with your brand guide</Text>
+          <Text style={s.h1}>Prompts to put it to work</Text>
         </View>
         <Text style={s.p}>{PROMPTS_INTRO}</Text>
         {PROMPTS.map((p, i) => (

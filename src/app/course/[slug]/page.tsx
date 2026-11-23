@@ -24,14 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${course.title}: a free course for home service owners | Unbound24`,
       description: course.description,
       alternates: { canonical: `/course/${course.slug}` },
-      openGraph: { url: `/course/${course.slug}`, images: [{ url: `/og/course-${course.slug}.png`, width: 1200, height: 630, alt: course.title }] },
-      twitter: { card: "summary_large_image", images: [`/og/course-${course.slug}.png`] },
+      openGraph: { url: `/course/${course.slug}`, images: [{ url: `/og/course-${course.slug}.png?v=2`, width: 1200, height: 630, alt: course.title }] },
+      twitter: { card: "summary_large_image", images: [`/og/course-${course.slug}.png?v=2`] },
     };
   }
   const lesson = getLesson(slug);
   if (!lesson) return {};
   // Link previews (iMessage, Slack, social): a 1200x630 card per lesson in public/og/.
-  const image = { url: `https://www.unbound24.com/og/${lesson.slug}.png`, width: 1200, height: 630, alt: `Lesson ${lesson.num}: ${lesson.title}` };
+  const image = { url: `https://www.unbound24.com/og/${lesson.slug}.png?v=2`, width: 1200, height: 630, alt: `Lesson ${lesson.num}: ${lesson.title}` };
   return {
     title: `${lesson.title} | ${courseOf(lesson).title}`,
     description: lesson.summary,

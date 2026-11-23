@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description:
     "We help local service business owners connect with the people they can help the most: a website that books jobs, a steady presence every week, and reviews on repeat.",
   // Every page gets a feature image for link previews (and later SEO); pages with their own card override this.
-  openGraph: { siteName: "Unbound24", type: "website", images: [{ url: "/og/home.png", width: 1200, height: 630, alt: "Unbound24" }] },
-  twitter: { card: "summary_large_image", images: ["/og/home.png"] },
+  openGraph: { siteName: "Unbound24", type: "website", images: [{ url: "/og/home.png?v=2", width: 1200, height: 630, alt: "Unbound24" }] },
+  twitter: { card: "summary_large_image", images: ["/og/home.png?v=2"] },
 };
 
 // Sets the saved theme before first paint so the page never flashes the wrong one.

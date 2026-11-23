@@ -1,0 +1,62 @@
+<template>
+  <style>
+@font-face{font-family:"Rubik";src:url('assets/fonts/rubik.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"Figtree";src:url('assets/fonts/figtree.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-500.woff2') format('woff2');font-weight:500}
+#root{position:absolute;inset:0;background:transparent}
+/* the blank wall right of Brittany, above the caption third (nothing below y=670) */
+.zone{position:absolute;left:1210px;top:54px;width:653px;height:616px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#121318}
+.st{background:#FFFBF4;border:5px solid #121318;border-radius:28px;box-shadow:10px 10px 0 #121318;padding:24px 32px;display:flex;flex-direction:column;gap:12px}
+.sm{padding:18px 24px}
+.cy{background:#03C0E8}.te{background:#40E0D0}.li{background:#D3D3FF}.gr{background:#C4C4C4}
+.h{font:800 68px/1 "Rubik";letter-spacing:-.02em}
+.h.big{font-size:88px}.h.md{font-size:52px}
+.b{font:500 34px/1.25 "Figtree"}
+.l{font:500 28px/1.2 "DM Mono";letter-spacing:.06em;text-transform:uppercase}
+.pill{align-self:flex-start;font:500 28px/1 "DM Mono";letter-spacing:.08em;text-transform:uppercase;background:#121318;color:#F8F0E3;border-radius:999px;padding:12px 22px}
+.tag{display:inline-block;white-space:nowrap;border:5px solid #121318;border-radius:999px;padding:10px 26px;font:700 34px/1.1 "Figtree";box-shadow:7px 7px 0 #121318;color:#121318}
+.num{font:800 120px/1 "Rubik";font-variant-numeric:tabular-nums}
+.row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:18px}
+.list li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;align-items:baseline}
+.list .n{font:800 40px/1 "Rubik"}
+.list b{font:800 42px/1.05 "Rubik"}
+.list span:not(.n){grid-column:2;font:500 28px/1.2 "Figtree"}
+.under{background:#FFFBF4;border:4px solid #121318;border-radius:12px;padding:8px 16px}
+
+.list.tight{gap:8px}.list.tight li{grid-template-columns:44px 1fr;gap:0 10px}.list.tight b{font-size:36px}.list.tight span:not(.n){font-size:28px}.list.tight .n{font-size:34px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:6px}
+.down{font:500 28px/1 "DM Mono";letter-spacing:.06em;text-transform:uppercase;background:#FFFBF4;border:3px solid #121318;border-radius:999px;padding:6px 14px}
+.cube{display:grid;grid-template-columns:repeat(3,92px);gap:8px;padding:12px;background:#121318;border-radius:20px;box-shadow:10px 10px 0 rgba(18,19,24,.35)}
+.cube span{height:92px;border-radius:10px}
+</style>
+  <div id="root" data-composition-id="s08" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div class="zone">
+    <div id="s08h" class="st gr" style="position:absolute;rotate:-2deg"><div class="h">Common<br>constraints</div><div class="l">Hormozi · The Game #894</div></div>
+    <div id="s08l" class="st" style="position:relative;width:560px;padding:20px 26px">
+      <ul class="list tight"><li id="s08i0"><span class="n">1</span><b>Not enough leads</b></li><li id="s08i1"><span class="n">2</span><b>Poor conversion</b></li><li id="s08i2"><span class="n">3</span><b>Poorly defined customer</b></li><li id="s08i3"><span class="n">4</span><b>Missing data</b></li><li id="s08i4"><span class="n">5</span><b>Wheels falling off the bus</b></li><li id="s08i5"><span class="n">6</span><b>No profit</b><span>pricier techs ate it</span></li><li id="s08i6"><span class="n">7</span><b>Underpriced</b><span>can't pay good techs</span></li><li id="s08i7"><span class="n">8</span><b>One and done</b></li></ul>
+      <svg id="s08arr" viewBox="0 0 40 400" width="40" height="400" preserveAspectRatio="none" style="position:absolute;left:-52px;top:28px;height:calc(100% - 56px);overflow:visible"><path d="M30 395 Q4 395 4 360 L4 30 Q4 6 24 6" fill="none" stroke="#121318" stroke-width="5" stroke-linecap="round"/><path d="M14 -4 L28 6 L14 16" fill="none" stroke="#121318" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    gsap.set("#s08l", {"opacity":0});
+    gsap.set("#s08i0,#s08i1,#s08i2,#s08i3,#s08i4,#s08i5,#s08i6,#s08i7", {"opacity":0});
+    tl.fromTo("#s08h", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":-40}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 0.04);
+    tl.to("#s08h", {"opacity":0,"filter":"blur(6px)","duration":0.28,"ease":"power2.in","stagger":0}, 17.855);
+    tl.to("#s08l", {"opacity":1,"duration":0.25}, 18.055);
+    tl.fromTo("#s08i0", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 18.995);
+    tl.fromTo("#s08i1", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 22.755);
+    tl.fromTo("#s08i2", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 32.675);
+    tl.fromTo("#s08i3", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 48.736);
+    tl.fromTo("#s08i4", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 62.717);
+    tl.fromTo("#s08i5", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 93.133);
+    tl.fromTo("#s08i6", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 110.273);
+    tl.fromTo("#s08i7", {"opacity":0,"scale":1,"filter":"blur(8px)","x":-24}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.4,"ease":"expo.out","stagger":0}, 124.8);
+    tl.fromTo("#s08arr", {"opacity":1,"clipPath":"inset(100% 0 0 0)"}, {"opacity":1,"clipPath":"inset(0% 0 0 0)","duration":0.7,"ease":"power2.inOut"}, 136.22);
+    tl.to("#s08l", {"opacity":0,"filter":"blur(6px)","duration":0.28,"ease":"power2.in","stagger":0}, 144.10600000000017);
+    window.__timelines["s08"] = tl;
+  </script>
+</template>

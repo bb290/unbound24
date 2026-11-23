@@ -65,9 +65,12 @@ export function normalizeEmail(raw: unknown) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) && email.length <= 254 ? email : null;
 }
 
-// The sign-in feature turns on only once every secret it needs is set in the environment.
+// The sign-in feature turns on only once every secret it needs is set in the environment. EMAIL_FROM is required too
+// (2026-11-17): RESEND_API_KEY alone now powers the lead alert, and sign-in emails can't send until unbound24.com is
+// verified in Resend, so set EMAIL_FROM (e.g. "Brittany at Unbound24 <course@unbound24.com>") only after that.
 export function accountsEnabled() {
   return Boolean(
-    process.env.AUTH_SECRET && process.env.NOTION_TOKEN && process.env.NOTION_CRM_DATABASE_ID && process.env.RESEND_API_KEY,
+    process.env.AUTH_SECRET && process.env.NOTION_TOKEN && process.env.NOTION_CRM_DATABASE_ID && process.env.RESEND_API_KEY &&
+      process.env.EMAIL_FROM,
   );
 }

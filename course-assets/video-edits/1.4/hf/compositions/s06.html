@@ -1,0 +1,48 @@
+<template>
+  <style>
+@font-face{font-family:"Rubik";src:url('assets/fonts/rubik.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"Figtree";src:url('assets/fonts/figtree.woff2') format('woff2');font-weight:300 900}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:"DM Mono";src:url('assets/fonts/dmmono-500.woff2') format('woff2');font-weight:500}
+#root{position:absolute;inset:0;background:transparent}
+/* the blank wall right of Brittany, above the caption third (nothing below y=670) */
+.zone{position:absolute;left:1210px;top:54px;width:653px;height:616px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;color:#121318}
+.st{background:#FFFBF4;border:5px solid #121318;border-radius:28px;box-shadow:10px 10px 0 #121318;padding:24px 32px;display:flex;flex-direction:column;gap:12px}
+.sm{padding:18px 24px}
+.cy{background:#03C0E8}.te{background:#40E0D0}.li{background:#D3D3FF}.gr{background:#C4C4C4}
+.h{font:800 68px/1 "Rubik";letter-spacing:-.02em}
+.h.big{font-size:88px}.h.md{font-size:52px}
+.b{font:500 34px/1.25 "Figtree"}
+.l{font:500 28px/1.2 "DM Mono";letter-spacing:.06em;text-transform:uppercase}
+.pill{align-self:flex-start;font:500 28px/1 "DM Mono";letter-spacing:.08em;text-transform:uppercase;background:#121318;color:#F8F0E3;border-radius:999px;padding:12px 22px}
+.tag{display:inline-block;white-space:nowrap;border:5px solid #121318;border-radius:999px;padding:10px 26px;font:700 34px/1.1 "Figtree";box-shadow:7px 7px 0 #121318;color:#121318}
+.num{font:800 120px/1 "Rubik";font-variant-numeric:tabular-nums}
+.row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:18px}
+.list li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;align-items:baseline}
+.list .n{font:800 40px/1 "Rubik"}
+.list b{font:800 42px/1.05 "Rubik"}
+.list span:not(.n){grid-column:2;font:500 28px/1.2 "Figtree"}
+.under{background:#FFFBF4;border:4px solid #121318;border-radius:12px;padding:8px 16px}
+
+.list.tight{gap:8px}.list.tight li{grid-template-columns:44px 1fr;gap:0 10px}.list.tight b{font-size:36px}.list.tight span:not(.n){font-size:28px}.list.tight .n{font-size:34px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:6px}
+.down{font:500 28px/1 "DM Mono";letter-spacing:.06em;text-transform:uppercase;background:#FFFBF4;border:3px solid #121318;border-radius:999px;padding:6px 14px}
+.math{display:flex;align-items:baseline;gap:14px;font:800 64px/1 "Rubik";letter-spacing:-.02em}
+.math .op{font-size:48px}
+.strike{position:relative}.strike::after{content:"";position:absolute;left:-6px;right:-6px;top:52%;height:7px;background:#121318;border-radius:4px;transform:scaleX(var(--s,0));transform-origin:left}
+</style>
+  <div id="root" data-composition-id="s06" data-width="1920" data-height="1080" data-layout-allow-overlap>
+    <div class="zone">
+    <div id="s06a" class="st gr" style="rotate:-2deg"><div class="h big">Don't<br>sugarcoat it.</div></div>
+    <span id="s06t" class="tag cy" style="rotate:2deg">Who are you lying to?</span>
+  </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s06a", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":-60}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 0.6);
+    tl.fromTo("#s06t", {"opacity":0,"scale":0.86,"filter":"blur(8px)","y":40}, {"opacity":1,"scale":1,"x":0,"y":0,"filter":"blur(0px)","duration":0.5,"ease":"expo.out","stagger":0}, 6.82);
+    tl.to("#s06a, #s06t", {"opacity":0,"filter":"blur(6px)","duration":0.28,"ease":"power2.in","stagger":0.04}, 15.030000000000001);
+    window.__timelines["s06"] = tl;
+  </script>
+</template>
