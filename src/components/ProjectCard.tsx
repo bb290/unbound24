@@ -43,7 +43,13 @@ export function ProjectCard({ site }: { site: SiteBuilt }) {
             </div>
           ))}
         </div>
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex rounded-full border-2 border-ink bg-[#FFFDF8] px-1" role="group" aria-label="Choose a screen">
+      </div>
+
+      {/* Below the image: the dots, then the centered details toggle; the name lives in the alt text and a screen-reader
+          heading, and the site link sits inside the reveal (Brittany, 2026-11-23). */}
+      <div className="px-5 pt-2.5 pb-3 sm:px-6 flex flex-col items-center gap-1">
+        <h2 className="sr-only">{site.name}</h2>
+        <div className="flex justify-center" role="group" aria-label="Choose a screen">
           {site.shots.map((label, i) => (
             <button
               key={i}
@@ -53,16 +59,10 @@ export function ProjectCard({ site }: { site: SiteBuilt }) {
               aria-current={i === idx}
               className="group grid place-items-center w-7 h-7"
             >
-              <span className={`block w-2.5 h-2.5 rounded-full border border-ink transition ${i === idx ? "bg-ink" : "bg-transparent group-hover:bg-ink/30"}`} />
+              <span className={`block w-2.5 h-2.5 rounded-full border-2 border-foreground transition ${i === idx ? "bg-foreground" : "bg-transparent group-hover:bg-foreground/30"}`} />
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Below the image: just the details toggle; the name lives in the alt text and a screen-reader heading,
-          and the site link sits inside the reveal (Brittany, 2026-11-23). */}
-      <div className="px-5 py-3 sm:px-6">
-        <h2 className="sr-only">{site.name}</h2>
         <button
           type="button"
           onClick={() => setOpen(!open)}
@@ -76,7 +76,7 @@ export function ProjectCard({ site }: { site: SiteBuilt }) {
           </svg>
         </button>
 
-        <div id={detailsId} hidden={!open} className="mt-3 border-t-2 border-line pt-4 pb-2 flex flex-col gap-3">
+        <div id={detailsId} hidden={!open} className="self-stretch mt-2 border-t-2 border-line pt-4 pb-2 flex flex-col gap-3">
           <dl className="grid gap-2.5 text-[16px] leading-snug">
             <div><dt className="inline font-bold">Service: </dt><dd className="inline">{site.service}</dd></div>
             <div><dt className="inline font-bold">Vibe: </dt><dd className="inline">{site.vibe}</dd></div>
