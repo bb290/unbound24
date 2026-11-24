@@ -3,7 +3,7 @@
 // Service / Vibe / Components are Claude's drafts from each live site, for Brittany to edit. No status pills
 // (Brittany, 2026-11-17). D2 added 2026-11-17; Double Take 2026-11-23.
 // Previews: public/sites/<slug>.jpg (1280x530, top of the homepage) for the pop-up; public/projects/<slug>-1..6.jpg for
-// /projects (Brittany, 2026-11-23). Every shot is checked for reviews, customer names, owner photos and contact details.
+// /projects (Brittany, 2026-11-23). Reviews may show (Brittany, 2026-11-23); owner photos and contact details stay out.
 
 export type SiteBuilt = {
   slug: string;
@@ -24,7 +24,7 @@ export const SITES_BUILT: SiteBuilt[] = [
     service: "Roofing contractor, Damascus, Oregon",
     vibe: "Hometown, friendly, straight-talking",
     components: ["Instant roof estimate", "Before/after slider", "Service area pages", "Roofing guides", "Recent work feed", "Reviews"],
-    shots: ["Homepage services", "Before/after slider", "Recent work feed", "Recent work photos", "Instant roof estimate", "Roofing guides"],
+    shots: ["Homepage", "Before/after slider", "Recent work feed", "Roof replacement page", "Instant roof estimate", "Roofing guides"],
   },
   {
     slug: "sagareus",
